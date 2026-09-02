@@ -48,6 +48,8 @@ app.use("/", require("./routes/configure"));
 app.use("/", require("./routes/catalog"));
 app.use("/", require("./routes/play"));
 app.use("/", require("./routes/stream"));
+app.use("/", require("./routes/admin"));
+app.use("/", require("./routes/adminApi"));
 
 app.listen(ENV.port, "0.0.0.0", () => {
   console.log(`===== Application Startup at ${new Date().toISOString().replace('T', ' ').slice(0, 19)} =====`);

@@ -16,6 +16,7 @@ const ENV = {
   port:            parseInt(process.env.PORT || "7014", 10),
   addonPublicUrl:  normalizePublicUrl(process.env.ADDON_PUBLIC_URL || ""),
   accessToken:     (process.env.ACCESS_TOKEN || "").trim(),
+  adminPassword:   (process.env.ADMIN_PASSWORD || "").trim(),
   scrapManifests:  (process.env.SCRAP_MANIFEST_URLS || "").split(",").map(s => s.trim()).filter(Boolean),
   rssUpdateIntervalMinutes: parseInt(process.env.RSS_UPDATE_INTERVAL_MINUTES || "30", 10),
 };
