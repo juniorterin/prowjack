@@ -32,6 +32,7 @@ const POLL_INTERVAL  = 3000;
 const DOCKER_PATH_MAPPING = process.env.QBIT_DOCKER_PATH_MAPPING || "";
 
 const sessionCookies = new Map();
+const loginPromises = new Map();
 
 function resolveCreds(creds = null) {
   return {
@@ -90,16 +91,34 @@ async function qbitFetch(endpoint, options = {}, creds = null) {
 
 async function login(force = false, creds = null) {
   if (!force && getSessionCookie(creds)) return;
-  const { user, pass } = resolveCreds(creds);
-  const body = new URLSearchParams({ username: user, password: pass });
-  const res = await qbitFetch("/api/v2/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: body.toString(),
-  }, creds);
-  const text = await res.text();
-  // qBit >= 5.x retorna 204 com body vazio; versões anteriores retornam "Ok."
-  if (text !== "Ok." && text.trim() !== "" && res.status !== 204) throw new Error(`qBittorrent login falhou: ${text}`);
+
+  // Chamadas concorrentes (Promise.all em vários candidatos) sem cookie em cache
+  // disparavam um POST de login cada uma, em rajada — suficiente para acionar o
+  // banimento de IP por brute-force do próprio qBittorrent. Login em andamento é
+  // compartilhado entre chamadas concorrentes com a mesma credencial.
+  const key = getSessionKey(creds);
+  const inFlight = loginPromises.get(key);
+  if (inFlight) return inFlight;
+
+  const p = (async () => {
+    const { user, pass } = resolveCreds(creds);
+    const body = new URLSearchParams({ username: user, password: pass });
+    const res = await qbitFetch("/api/v2/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body.toString(),
+    }, creds);
+    const text = await res.text();
+    // qBit >= 5.x retorna 204 com body vazio; versões anteriores retornam "Ok."
+    if (text !== "Ok." && text.trim() !== "" && res.status !== 204) throw new Error(`qBittorrent login falhou: ${text}`);
+  })();
+
+  loginPromises.set(key, p);
+  try {
+    await p;
+  } finally {
+    loginPromises.delete(key);
+  }
 }
 
 async function qbitApi(endpoint, options = {}, creds = null) {
