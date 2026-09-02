@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
     volumes:
       - torrserver-data:/opt/ts
-    mem_limit: 4g
+    mem_limit: 5g
     ports:
       - "6881:6881"
       - "6881:6881/udp"
