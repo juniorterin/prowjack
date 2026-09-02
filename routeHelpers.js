@@ -2,8 +2,6 @@ const path = require("path");
 const axios = require("axios");
 const { ENV, PUBLIC_TRACKERS } = require("./constants");
 const { stripSourceBadges } = require("./scoring");
-const { isConfigured: isQbitConfigured } = require("./providers/qbittorrent");
-const { isConfigured: isTorrServerConfigured } = require("./providers/torrserver");
 
 const rateLimitStore = new Map();
 const RATE_LIMIT_WINDOW = 60000;
@@ -42,52 +40,6 @@ function getPublicBase(req) {
   return `${protocol}://${host}`;
 }
 
-// Garante que a URL usada como upstream interno no StremThru tenha protocolo
-// válido. Sem o "https://", o StremThru não conseguia alcançar o upstream e a
-// busca retornava vazio.
-function absolutePublicBase(req) {
-  const base = getPublicBase(req);
-  return /^[a-z][a-z0-9+.-]*:\/\//i.test(base) ? base : `https://${base}`;
-}
-
-function buildStremThruProxyManifestUrl(req, prefs, userConfig) {
-  if (!prefs?.stConfig?.url || !Array.isArray(prefs.stConfig.stores) || !prefs.stConfig.stores.length) {
-    return null;
-  }
-  // Usa a rota interna como upstream — evita loop de StremThru chamando StremThru
-  const internalManifest = `${absolutePublicBase(req)}/internal/${userConfig}/manifest.json`;
-  // Addons externos (SCRAP_MANIFEST_URLS) entram como upstreams adicionais:
-  // assim seus torrents passam pelo Wrap apenas para resolução/inclusão na store
-  // de debrid, sem passar pelos filtros do ProwJack. Válido para todos os modos
-  // com StremThru; nos modos debrid nativo e sem debrid o scrap é buscado
-  // diretamente pela rota de stream.
-  const upstreams = [{ u: internalManifest }];
-  for (const m of ENV.scrapManifests) {
-    if (/^https?:\/\//i.test(m)) upstreams.push({ u: m });
-  }
-  const storeCodeMap = { torbox: "tb", realdebrid: "rd", alldebrid: "ad", debridlink: "dl", premiumize: "pm", offcloud: "oc" };
-  const wrapEncoded = Buffer.from(JSON.stringify({
-    upstreams,
-    stores: prefs.stConfig.stores.map(s => ({ c: storeCodeMap[s.c] || s.c, t: s.t })),
-    name: prefs.addonName || "ProwJack [ST]",
-  }), "utf8").toString("base64");
-  return `${prefs.stConfig.url.replace(/\/+$/, "")}/stremio/wrap/${encodeURIComponent(wrapEncoded)}/manifest.json`;
-}
-
-function isQbitEnabledForPrefs(prefs, creds = null) {
-  if (prefs?.enableP2P === false) return false;
-  if (!["always", "private"].includes(String(prefs?.qbitMode || ""))) return false;
-  // TorrServer substitui o qBittorrent como motor de streaming quando configurado
-  // (TS_URL) — a oferta do stream não deve depender de credenciais do qBittorrent
-  // nesse caso, já que ele nunca chega a ser contatado.
-  return isTorrServerConfigured() || isQbitConfigured(creds);
-}
-
-function shouldOfferQbitForResult(prefs, isPrivateTracker, creds = null) {
-  if (!isQbitEnabledForPrefs(prefs, creds)) return false;
-  return prefs.qbitMode === "always" || (prefs.qbitMode === "private" && isPrivateTracker);
-}
-
 function getRequestAccessToken(req) {
   return String(req.headers["x-access-token"] || req.query.token || "").trim();
 }
@@ -112,9 +64,9 @@ function extractScrapIndexer(...texts) {
   return m ? m[1].trim().slice(0, 80) : "";
 }
 
-// Descrição normalizada para streams de addons externos (modo StremThru e
-// passthrough sem infoHash): reconstrói as linhas de metadados marcadas pelo
-// addon (🌱 seeds, ⚙️ indexador, 🌐 idioma) e acrescenta a fonte com 📡.
+// Descrição normalizada para streams de addons externos (sem infoHash):
+// reconstrói as linhas de metadados marcadas pelo addon (🌱 seeds, ⚙️ indexador,
+// 🌐 idioma) e acrescenta a fonte com 📡.
 function scrapExternalDescription(stream, source) {
   const text = [stream.title, stream.description, stream._title].filter(Boolean).join("\n");
   const seedMatch = text.match(/(?:🔗|🌱|👤|👥)\s*(\d{1,6})/i);
@@ -165,7 +117,6 @@ async function fetchScrapStreams(manifestUrl, type, id, options = {}) {
         // Extrai título do campo name ou title para scoring de idioma/resolução
         const rawName = cleanStream.name || "";
         const desc    = cleanStream.description || cleanStream.title || "";
-        // Combina name + description para que os filtros de idioma/qualidade encontrem as tags
         const titleForFilters = [rawName, desc].filter(Boolean).join(" ");
         const size = cleanStream.behaviorHints?.videoSize || 0;
         let seeders = Number(cleanStream._seeders ?? cleanStream.seeders ?? cleanStream.seeds ??
@@ -182,14 +133,9 @@ async function fetchScrapStreams(manifestUrl, type, id, options = {}) {
           const match = seedText.match(/(?:🌱|👤|👥|seeders?|seeds?|s:)\s*(\d{1,6})/i);
           if (match) seeders = parseInt(match[1], 10) || 0;
         }
-        const directUrl = typeof cleanStream.url === "string" && cleanStream.url && !cleanStream.url.startsWith("magnet:");
-        const directExternal = typeof cleanStream.externalUrl === "string" && cleanStream.externalUrl;
-        const cached = cleanStream._cached === true || cleanStream.cached === true || cleanStream.behaviorHints?.cached === true || directUrl || directExternal;
         return {
           ...cleanStream,
-          _sourceType:  "debrid",
           _scrapSource: true,
-          _cached:      cached,
           _title:       titleForFilters,
           _filename:    cleanStream.behaviorHints?.filename || "",
           _sizeBytes:   size,
@@ -225,9 +171,6 @@ function isPrivateTrackerCandidate(r, resolved = null) {
 
 module.exports = {
   getPublicBase,
-  buildStremThruProxyManifestUrl,
-  isQbitEnabledForPrefs,
-  shouldOfferQbitForResult,
   getRequestAccessToken,
   hasAdminAccess,
   requireAdminAccess,

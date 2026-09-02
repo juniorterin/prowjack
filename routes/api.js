@@ -1,11 +1,10 @@
 const express = require("express");
-const axios = require("axios");
-const { isConfigured: isQbitConfigured } = require("../providers/qbittorrent");
+const { isConfigured: isTorrServerConfigured } = require("../providers/torrserver");
 const { ENV } = require("../constants");
 const { rc, redis } = require("../cache");
 const { saveStoredConfig } = require("../configStore");
 const { normalizePrefs, sanitizeUserPrefs, validateServiceUrl } = require("../prefs");
-const { getPublicBase, buildStremThruProxyManifestUrl, getRequestAccessToken, requireAdminAccess } = require("../routeHelpers");
+const { getPublicBase, getRequestAccessToken, requireAdminAccess } = require("../routeHelpers");
 const { jackettFetchIndexers, fetchIndexerPrivacyMap, isProwlarrServer } = require("../jackettSearch");
 
 const router = express.Router();
@@ -19,53 +18,21 @@ router.post("/api/config", async (req, res) => {
       return res.status(403).json({ ok: false, error: "Acesso negado" });
     }
     const userConfig = await saveStoredConfig(prefs);
-    const normalizedPrefs = normalizePrefs(prefs);
+    normalizePrefs(prefs);
 
-    // ✨ FIX: Sempre retornar addonUrl como principal, StremThru só para resolver streams
     const addonUrl = `${getPublicBase(req)}/${userConfig}/manifest.json`;
-    const stremthruUrl = normalizedPrefs.stConfig ? buildStremThruProxyManifestUrl(req, normalizedPrefs, userConfig) : null;
 
-    res.json({ ok: true, userConfig, addonUrl, stremthruUrl });
+    res.json({ ok: true, userConfig, addonUrl });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
   }
 });
-
-router.use("/api/debrid", requireAdminAccess);
 
 router.use("/api/indexers", requireAdminAccess);
 
 router.use("/api/test", requireAdminAccess);
 
 router.use("/api/metrics", requireAdminAccess);
-
-router.get("/api/debrid/test/:provider", async (req, res) => {
-  const { provider } = req.params;
-  const key = (req.query.key || "").trim();
-  if (!key) return res.json({ ok: false, error: "API Key não informada" });
-  try {
-    if (provider === "torbox") {
-      const r = await axios.get("https://api.torbox.app/v1/api/user/me",
-        { headers: { Authorization: `Bearer ${key}` }, timeout: 8000 });
-      const d = r.data?.data || {};
-      return res.json({ ok: true, name: d.email || d.customer || "Usuário", plan: d.plan || "" });
-    }
-    if (provider === "realdebrid") {
-      const r = await axios.get("https://api.real-debrid.com/rest/1.0/user",
-        { headers: { Authorization: `Bearer ${key}` }, timeout: 8000 });
-      return res.json({ ok: true, name: r.data?.username || "Usuário", plan: r.data?.type || "" });
-    }
-    if (provider === "stremthru") {
-      const r = await axios.get("https://stremthru.13377001.xyz/api/v1/user",
-        { headers: { Authorization: `Bearer ${key}` }, timeout: 8000 });
-      return res.json({ ok: true, name: r.data?.email || "Usuário", plan: r.data?.subscription || "" });
-    }
-    return res.json({ ok: false, error: "Provider desconhecido" });
-  } catch (err) {
-    const s = err.response?.status;
-    return res.json({ ok: false, error: s === 401 ? "Key inválida (401)" : s === 403 ? "Acesso negado (403)" : err.message });
-  }
-});
 
 router.get("/api/env", async (_, res) => {
   let redisOk = false;
@@ -83,7 +50,7 @@ router.get("/api/env", async (_, res) => {
     jackettKeyConfigured: !!ENV.apiKey,
     isProwlarr: isProwlarr === true,
     serverType: isProwlarr === true ? "prowlarr" : isProwlarr === false ? "jackett" : "unknown",
-    qbitConfigured: isQbitConfigured(),
+    torrServerConfigured: isTorrServerConfigured(),
     redisOk,
     port: ENV.port,
     accessProtected: !!ENV.accessToken,

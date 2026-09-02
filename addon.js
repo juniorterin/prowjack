@@ -1,12 +1,10 @@
 "use strict";
-// Precisa rodar ANTES de qualquer módulo que leia process.env no require
-// (ex.: providers/qbittorrent.js lê QBIT_URL/QBIT_USER/QBIT_PASS no load).
 require("dotenv").config();
 const express = require("express");
 const path    = require("path");
 
 const { rc, redis } = require("./cache");
-const { isConfigured: isQbitConfigured } = require("./providers/qbittorrent");
+const { isConfigured: isTorrServerConfigured } = require("./providers/torrserver");
 const { startRssPoller } = require("./rssPoller");
 const { ENV } = require("./constants");
 const { checkRateLimit } = require("./routeHelpers");
@@ -54,8 +52,8 @@ app.use("/", require("./routes/stream"));
 app.listen(ENV.port, "0.0.0.0", () => {
   console.log(`===== Application Startup at ${new Date().toISOString().replace('T', ' ').slice(0, 19)} =====`);
   console.log(`ProwJack v3.3.1 -> http://localhost:${ENV.port}/configure`);
-  console.log(`   Jackett : ${ENV.jackettUrl}`);
-  console.log(`   Redis   : ${ENV.redisUrl}`);
-  console.log(`   qBittorrent: ${isQbitConfigured() ? "ativo" : "desativado"}`);
+  console.log(`   Jackett   : ${ENV.jackettUrl}`);
+  console.log(`   Redis     : ${ENV.redisUrl}`);
+  console.log(`   TorrServer: ${isTorrServerConfigured() ? "ativo" : "desativado"}`);
   startRssPoller(ENV.jackettUrl, ENV.apiKey, rc, redis);
 });

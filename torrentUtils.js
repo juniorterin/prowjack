@@ -11,6 +11,30 @@ const {
 // Constante definida no addon, mas trazemos para cá para falhas
 const TORRENT_FAILURE_TTL = 3600 * 24; // 1 dia
 
+const MAGNET_TRACKERS = [
+  "udp://tracker.opentrackr.org:1337/announce",
+  "udp://open.stealth.si:80/announce",
+  "udp://open.demonii.com:1337/announce",
+  "udp://open.tracker.cl:1337/announce",
+  "udp://open.dstud.io:6969/announce",
+  "udp://exodus.desync.com:6969/announce",
+  "udp://explodie.org:6969/announce",
+  "udp://tracker.torrent.eu.org:451/announce",
+  "udp://tracker.dler.com:6969/announce",
+  "udp://tracker.dler.org:6969/announce",
+  "udp://p4p.arenabg.com:1337/announce",
+  "udp://bt.ktrackers.com:6666/announce",
+  "http://tracker.bt4g.com:2095/announce",
+  "http://open.trackerlist.xyz:80/announce",
+];
+
+function buildMagnet(infoHash, existingMagnet, title) {
+  if (existingMagnet && existingMagnet.startsWith("magnet:")) return existingMagnet;
+  const dn = title ? `&dn=${encodeURIComponent(title)}` : "";
+  const tr = MAGNET_TRACKERS.map(t => `&tr=${encodeURIComponent(t)}`).join("");
+  return `magnet:?xt=urn:btih:${infoHash}${dn}${tr}`;
+}
+
 function base32ToHex(b32) {
   const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
   let bits = "";
@@ -387,7 +411,7 @@ async function resolveInfoHash(r, reqCtx = {}) {
       return await downloadPromise;
     }
 
-    const timeoutMs = reqCtx.stremthruMode ? 14000 : 6000;
+    const timeoutMs = 6000;
     const timeoutPromise = new Promise(resolve => setTimeout(() => resolve("TIMEOUT"), timeoutMs));
     const result = await Promise.race([downloadPromise, timeoutPromise]);
     
@@ -419,5 +443,6 @@ module.exports = {
   infoHashQueueKey,
   InfoHashQueue,
   infoHashQueue,
-  resolveInfoHash
+  resolveInfoHash,
+  buildMagnet
 };
