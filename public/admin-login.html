@@ -6,7 +6,7 @@
 <title>TorrStremio · Admin</title>
 <link rel="icon" href="/logo.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: dark;
@@ -14,10 +14,10 @@
     --ink: #f6ece6; --ink-2: #cbaea5; --muted: #8c6b62;
     --border: rgba(246,236,230,0.09); --border-2: rgba(246,236,230,0.16);
     --accent: #dda23f; --accent-ink: #1c1206;
-    --brand: #b7392b; --brand-soft: rgba(183,57,43,0.18);
+    --brand: #e0432e; --brand-soft: rgba(224,67,46,0.20);
     --bad: #e2506b; --bad-soft: rgba(226,80,107,0.14);
-    --font-display: 'Sora', system-ui, sans-serif;
-    --font-body: 'Manrope', system-ui, sans-serif;
+    --font-display: 'Oswald', system-ui, sans-serif;
+    --font-body: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
     --shadow: 0 20px 50px -20px rgba(0,0,0,0.6);
   }
   @media (prefers-color-scheme: light) {
@@ -27,7 +27,7 @@
       --ink: #241511; --ink-2: #6b4c42; --muted: #9c7c70;
       --border: rgba(36,21,17,0.09); --border-2: rgba(36,21,17,0.16);
       --accent: #a97620; --accent-ink: #ffffff;
-      --brand: #9c2e22; --brand-soft: rgba(156,46,34,0.12);
+      --brand: #c23a26; --brand-soft: rgba(194,58,38,0.14);
       --bad: #c2355a; --bad-soft: rgba(194,53,90,0.12);
       --shadow: 0 20px 50px -24px rgba(24,21,31,0.25);
     }
@@ -43,7 +43,7 @@
     padding: 32px; width: 100%; max-width: 340px; box-shadow: var(--shadow);
   }
   .brand-mark { width: 40px; height: 40px; border-radius: 50%; display: block; margin-bottom: 16px; }
-  h1 { font-family: var(--font-display); font-size: 19px; margin: 0 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; font-size: 19px; margin: 0 0 4px; }
   p.sub { color: var(--ink-2); font-size: 13px; margin: 0 0 22px; }
   label { display: block; font-size: 12px; font-weight: 600; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 7px; }
   input {

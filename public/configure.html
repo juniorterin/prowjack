@@ -6,7 +6,7 @@
 <title>TorrStremio · Configuração</title>
 <link rel="icon" href="/logo.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: dark;
@@ -22,14 +22,14 @@
     --accent: #dda23f;
     --accent-ink: #1c1206;
     --accent-soft: rgba(221,162,63,0.14);
-    --brand: #b7392b;
-    --brand-soft: rgba(183,57,43,0.18);
+    --brand: #e0432e;
+    --brand-soft: rgba(224,67,46,0.20);
     --good: #4c9a63;
     --good-soft: rgba(76,154,99,0.14);
     --bad: #e2506b;
     --bad-soft: rgba(226,80,107,0.14);
-    --font-display: 'Sora', system-ui, sans-serif;
-    --font-body: 'Manrope', system-ui, sans-serif;
+    --font-display: 'Oswald', system-ui, sans-serif;
+    --font-body: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
     --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
     --shadow: 0 20px 50px -20px rgba(0,0,0,0.6);
   }
@@ -48,8 +48,8 @@
       --accent: #a97620;
       --accent-ink: #ffffff;
       --accent-soft: rgba(169,118,32,0.12);
-      --brand: #9c2e22;
-      --brand-soft: rgba(156,46,34,0.12);
+      --brand: #c23a26;
+      --brand-soft: rgba(194,58,38,0.14);
       --good: #1f7a4c;
       --good-soft: rgba(31,122,76,0.12);
       --bad: #c2355a;
@@ -68,7 +68,7 @@
     line-height: 1.5;
     min-height: 100vh;
   }
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; margin: 0; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; text-wrap: balance; margin: 0; }
   code, .mono { font-family: var(--font-mono); }
   a { color: inherit; }
   button { font-family: inherit; cursor: pointer; }
@@ -90,7 +90,34 @@
     height: 100vh;
     overflow-y: auto;
   }
-  @media (max-width: 880px) { .sidebar { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; } }
+
+  /* ── Menu mobile (hambúrguer) ────────────────────────────── */
+  .mobile-topbar { display: none; }
+  .sidebar-backdrop { display: none; }
+  @media (max-width: 880px) {
+    .mobile-topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      position: sticky; top: 0; z-index: 40;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+    }
+    .hamburger-btn {
+      background: var(--surface-2); border: 1px solid var(--border-2); color: var(--ink);
+      width: 38px; height: 38px; border-radius: 9px; flex: none;
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .mobile-topbar .brand { padding: 0; }
+    .sidebar {
+      position: fixed; inset: 0 auto 0 0; width: 260px; height: 100vh; z-index: 50;
+      transform: translateX(-100%); transition: transform .25s ease;
+    }
+    .sidebar.open { transform: translateX(0); }
+    .sidebar-backdrop {
+      display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+      z-index: 45; opacity: 0; pointer-events: none; transition: opacity .25s ease;
+    }
+    .sidebar-backdrop.open { opacity: 1; pointer-events: auto; }
+  }
 
   .brand { display: flex; align-items: center; gap: 10px; padding: 0 8px; }
   .brand-mark { width: 34px; height: 34px; border-radius: 50%; flex: none; display: block; }
@@ -315,8 +342,18 @@
 </head>
 <body>
 
+<div class="mobile-topbar">
+  <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu">☰</button>
+  <div class="brand">
+    <img class="brand-mark" src="/logo.svg" alt="TorrStremio" style="width:28px;height:28px">
+    <div class="brand-text"><b style="font-size:13px">TorrStremio</b></div>
+  </div>
+  <span style="width:38px"></span>
+</div>
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
 <div class="shell">
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="brand">
       <img class="brand-mark" src="/logo.svg" alt="TorrStremio">
       <div class="brand-text"><b>TorrStremio</b><span>Prowlarr + TorrServer</span></div>
@@ -509,6 +546,7 @@
 </div>
 
 <div class="actionbar">
+  <button class="btn-ghost" id="install-direct-btn">📲 Instalar no Stremio</button>
   <button class="btn-primary" id="generate-btn">⚡ Gerar URL do Addon</button>
 </div>
 
@@ -582,16 +620,16 @@ const DEFAULT_SORT = ["keyword","language","resolution","quality","size","seeder
 // scoring.js usa de verdade (RESOLUTION/QUALITY), só que fixada aqui em vez
 // de recalculada de um título, já que não existe busca real nessa tela.
 const SAMPLE_ITEMS = [
-  { res: "4K",   resScore: 4,   quality: "REMUX",  qualScore: 5,   sizeGb: 65,   seeders: 340, indexer: "1337x",          hasKeyword: true,  hasPriorityLang: true  },
-  { res: "FHD",  resScore: 3,   quality: "BluRay",  qualScore: 4,   sizeGb: 18,   seeders: 512, indexer: "YTS",             hasKeyword: false, hasPriorityLang: true  },
-  { res: "4K",   resScore: 4,   quality: "WEB-DL",  qualScore: 3,   sizeGb: 22,   seeders: 89,  indexer: "TorrentGalaxy",   hasKeyword: false, hasPriorityLang: false },
-  { res: "HD",   resScore: 2,   quality: "HDTV",     qualScore: 1,   sizeGb: 2.1,  seeders: 14,  indexer: "EZTV",            hasKeyword: false, hasPriorityLang: false },
-  { res: "FHD",  resScore: 3,   quality: "WEBRip",   qualScore: 2.5, sizeGb: 4.3,  seeders: 203, indexer: "Comando",         hasKeyword: true,  hasPriorityLang: true  },
-  { res: "4K",   resScore: 4,   quality: "REMUX",  qualScore: 5,   sizeGb: 78,   seeders: 12,  indexer: "RARBG",           hasKeyword: false, hasPriorityLang: false },
-  { res: "SD",   resScore: 0.5, quality: "DVDRip",   qualScore: 1.5, sizeGb: 0.9,  seeders: 5,   indexer: "LimeTorrents",    hasKeyword: false, hasPriorityLang: false },
-  { res: "2K",   resScore: 3.5, quality: "WEB-DL",  qualScore: 3,   sizeGb: 15,   seeders: 167, indexer: "Nyaa.si",         hasKeyword: false, hasPriorityLang: false },
-  { res: "FHD",  resScore: 3,   quality: "HDRip",    qualScore: 2,   sizeGb: 3.5,  seeders: 41,  indexer: "BitSearch",       hasKeyword: false, hasPriorityLang: true  },
-  { res: "576p", resScore: 1,   quality: "WEBRip",   qualScore: 2.5, sizeGb: 1.2,  seeders: 29,  indexer: "SolidTorrents",   hasKeyword: false, hasPriorityLang: false },
+  { release: "The.Matrix.1999.2160p.UHD.BluRay.REMUX.HDR.DDP5.1-FraMeSToR",  res: "4K",   resScore: 4,   quality: "REMUX",  qualScore: 5,   sizeGb: 65,   seeders: 340, indexer: "1337x",          hasKeyword: true,  hasPriorityLang: true  },
+  { release: "The.Matrix.1999.1080p.BluRay.x264-YTS",                       res: "FHD",  resScore: 3,   quality: "BluRay",  qualScore: 4,   sizeGb: 18,   seeders: 512, indexer: "YTS",             hasKeyword: false, hasPriorityLang: true  },
+  { release: "The.Matrix.1999.2160p.WEB-DL.DDP5.1.H265-GROUP",              res: "4K",   resScore: 4,   quality: "WEB-DL",  qualScore: 3,   sizeGb: 22,   seeders: 89,  indexer: "TorrentGalaxy",   hasKeyword: false, hasPriorityLang: false },
+  { release: "The.Matrix.1999.720p.HDTV.x264-GROUP",                        res: "HD",   resScore: 2,   quality: "HDTV",     qualScore: 1,   sizeGb: 2.1,  seeders: 14,  indexer: "EZTV",            hasKeyword: false, hasPriorityLang: false },
+  { release: "Matrix.1999.DUBLADO.1080p.WEBRip.x264-Comando",               res: "FHD",  resScore: 3,   quality: "WEBRip",   qualScore: 2.5, sizeGb: 4.3,  seeders: 203, indexer: "Comando",         hasKeyword: true,  hasPriorityLang: true  },
+  { release: "The.Matrix.1999.2160p.UHD.BluRay.REMUX.DV.Atmos-RARBG",       res: "4K",   resScore: 4,   quality: "REMUX",  qualScore: 5,   sizeGb: 78,   seeders: 12,  indexer: "RARBG",           hasKeyword: false, hasPriorityLang: false },
+  { release: "The.Matrix.1999.DVDRip.XviD-GROUP",                          res: "SD",   resScore: 0.5, quality: "DVDRip",   qualScore: 1.5, sizeGb: 0.9,  seeders: 5,   indexer: "LimeTorrents",    hasKeyword: false, hasPriorityLang: false },
+  { release: "The.Matrix.1999.1440p.WEB-DL.x265-GROUP",                    res: "2K",   resScore: 3.5, quality: "WEB-DL",  qualScore: 3,   sizeGb: 15,   seeders: 167, indexer: "Nyaa.si",         hasKeyword: false, hasPriorityLang: false },
+  { release: "The.Matrix.1999.1080p.HDRip.x264-GROUP",                     res: "FHD",  resScore: 3,   quality: "HDRip",    qualScore: 2,   sizeGb: 3.5,  seeders: 41,  indexer: "BitSearch",       hasKeyword: false, hasPriorityLang: true  },
+  { release: "The.Matrix.1999.576p.WEBRip.x264-GROUP",                     res: "576p", resScore: 1,   quality: "WEBRip",   qualScore: 2.5, sizeGb: 1.2,  seeders: 29,  indexer: "SolidTorrents",   hasKeyword: false, hasPriorityLang: false },
 ];
 // Mesmos comparadores de routes/stream.js (sortComparators), só que sobre os
 // campos fixos acima em vez de resultados reais de busca.
@@ -649,6 +687,7 @@ document.getElementById("nav").addEventListener("click", (e) => {
   const btn = e.target.closest(".nav-btn");
   if (!btn) return;
   showPane(btn.dataset.pane);
+  closeMobileMenu();
 });
 function showPane(id) {
   document.querySelectorAll(".nav-btn").forEach(b => b.classList.toggle("on", b.dataset.pane === id));
@@ -656,6 +695,18 @@ function showPane(id) {
   document.getElementById("pane-title").textContent = PANE_META[id][0];
   document.getElementById("pane-sub").textContent = PANE_META[id][1];
 }
+
+// ── Menu mobile ───────────────────────────────────────────
+function openMobileMenu() {
+  document.getElementById("sidebar").classList.add("open");
+  document.getElementById("sidebar-backdrop").classList.add("open");
+}
+function closeMobileMenu() {
+  document.getElementById("sidebar").classList.remove("open");
+  document.getElementById("sidebar-backdrop").classList.remove("open");
+}
+document.getElementById("hamburger-btn").addEventListener("click", openMobileMenu);
+document.getElementById("sidebar-backdrop").addEventListener("click", closeMobileMenu);
 
 // ── Categorias ────────────────────────────────────────────
 document.getElementById("cat-chips").addEventListener("click", (e) => {
@@ -921,18 +972,42 @@ function renderSortList() {
 function renderSortPreview() {
   const list = document.getElementById("sort-preview-list");
   if (!list) return;
+
+  // FLIP: guarda a posição atual de cada linha (pela chave estável do release)
+  // antes de reordenar, pra animar do lugar antigo pro novo em vez de piscar.
+  const before = new Map();
+  list.querySelectorAll(".preview-row").forEach(el => {
+    before.set(el.dataset.key, el.getBoundingClientRect().top);
+  });
+
   list.innerHTML = "";
   sortSample().forEach((item, idx) => {
     const row = document.createElement("div");
     row.className = "preview-row";
+    row.dataset.key = item.release;
     row.innerHTML = `
       <span class="prank">${idx + 1}</span>
-      <span class="ptitle">${item.res} · ${item.quality}${item.hasKeyword ? ` <span class="pflag" title="Bate palavra-chave de boost">🔑</span>` : ""}${item.hasPriorityLang ? ` <span class="pflag" title="Idioma prioritário">🗣️</span>` : ""}</span>
+      <span class="ptitle">${item.release}${item.hasKeyword ? ` <span class="pflag" title="Bate palavra-chave de boost">🔑</span>` : ""}${item.hasPriorityLang ? ` <span class="pflag" title="Idioma prioritário">🗣️</span>` : ""}</span>
       <span class="pmeta">💾 ${item.sizeGb >= 10 ? item.sizeGb.toFixed(0) : item.sizeGb.toFixed(1)} GB</span>
       <span class="pmeta">🌱 ${item.seeders}</span>
       <span class="pix">${item.indexer}</span>
     `;
     list.appendChild(row);
+  });
+
+  // Play: se a linha já existia numa posição diferente, parte de lá (sem
+  // transição) e anima até o lugar novo — efeito de "deslizar" no reorder.
+  list.querySelectorAll(".preview-row").forEach(el => {
+    const prevTop = before.get(el.dataset.key);
+    if (prevTop === undefined) return;
+    const deltaY = prevTop - el.getBoundingClientRect().top;
+    if (!deltaY) return;
+    el.style.transition = "none";
+    el.style.transform = `translateY(${deltaY}px)`;
+    requestAnimationFrame(() => {
+      el.style.transition = "transform .35s cubic-bezier(.2,.8,.2,1)";
+      el.style.transform = "";
+    });
   });
 }
 
@@ -1012,31 +1087,55 @@ function getValidationErrors() {
   if (!state.selectedIndexers.size) errors.push({ pane: "indexers", message: "Selecione pelo menos um indexador." });
   return errors;
 }
-document.getElementById("generate-btn").addEventListener("click", async () => {
+// Compartilhado pelos dois botões da actionbar — só muda o que cada um faz
+// com o addonUrl resultante (mostrar modal vs. abrir o Stremio direto).
+async function generateConfig() {
   const errors = getValidationErrors();
   if (errors.length) {
     showPane(errors[0].pane);
     toast(errors[0].message, true);
-    return;
+    return null;
   }
+  const res = await fetch("/api/config", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(collectPrefs()),
+  }).then(r => r.json());
+  if (!res.ok) throw new Error(res.error || "Falha ao gerar");
+  history.replaceState(null, "", `/${res.userConfig}/configure`);
+  return res.addonUrl;
+}
+
+document.getElementById("generate-btn").addEventListener("click", async () => {
   const btn = document.getElementById("generate-btn");
   btn.disabled = true;
   btn.textContent = "Gerando…";
   try {
-    const res = await fetch("/api/config", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(collectPrefs()),
-    }).then(r => r.json());
-    if (!res.ok) throw new Error(res.error || "Falha ao gerar");
-    document.getElementById("result-url").textContent = res.addonUrl;
-    document.getElementById("install-link").href = res.addonUrl.replace(/^https?:\/\//, "stremio://");
+    const addonUrl = await generateConfig();
+    if (!addonUrl) return;
+    document.getElementById("result-url").textContent = addonUrl;
+    document.getElementById("install-link").href = addonUrl.replace(/^https?:\/\//, "stremio://");
     document.getElementById("overlay").classList.add("on");
-    history.replaceState(null, "", `/${res.userConfig}/configure`);
   } catch (err) {
     toast(err.message, true);
   } finally {
     btn.disabled = false;
     btn.textContent = "⚡ Gerar URL do Addon";
+  }
+});
+document.getElementById("install-direct-btn").addEventListener("click", async () => {
+  const btn = document.getElementById("install-direct-btn");
+  btn.disabled = true;
+  btn.textContent = "Gerando…";
+  try {
+    const addonUrl = await generateConfig();
+    if (!addonUrl) return;
+    location.href = addonUrl.replace(/^https?:\/\//, "stremio://");
+    toast("Abrindo o Stremio…");
+  } catch (err) {
+    toast(err.message, true);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "📲 Instalar no Stremio";
   }
 });
 document.getElementById("copy-url").addEventListener("click", () => {
