@@ -484,6 +484,11 @@
     <!-- ── Instalação ─────────────────────────────────────── -->
     <section class="pane" id="pane-install">
       <div class="card">
+        <div class="card-head"><h3>Chave de acesso</h3></div>
+        <p class="field-note" style="margin-top:0">Peça essa chave a quem administra o servidor. Sem ela, você só vê o catálogo — busca e reprodução não funcionam. A chave trava automaticamente no seu IP no primeiro uso.</p>
+        <input type="text" id="accessKey" placeholder="key_xxxxxxxxxxxxxxxxxxxx">
+      </div>
+      <div class="card">
         <div class="card-head"><h3>Identidade do addon</h3></div>
         <div class="row-2">
           <div>
@@ -977,6 +982,7 @@ function applyPrefs(p) {
   }
   if (p.enableCatalog === false) document.getElementById("enableCatalog").checked = false;
   if (p.addonName) document.getElementById("addonName").value = p.addonName;
+  if (p.accessKey) document.getElementById("accessKey").value = p.accessKey;
   if (p.dedupe === false) document.getElementById("dedupe").checked = false;
   renderSortList();
   validateFormatting();
@@ -1000,6 +1006,7 @@ function collectPrefs() {
     enableCatalog: document.getElementById("enableCatalog").checked,
     addonName: document.getElementById("addonName").value,
     token: document.getElementById("accessToken").value,
+    accessKey: document.getElementById("accessKey").value.trim(),
     dedupe: document.getElementById("dedupe").checked,
   };
 }
