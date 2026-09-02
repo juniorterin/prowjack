@@ -23,26 +23,6 @@ services:
     networks:
       - prowjack-net
 
-  qbittorrent:
-    image: mhdzumair/qbittorrent-webdav:latest
-    container_name: prowjack-qbittorrent
-    restart: unless-stopped
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - QBT_WEBUI_PORT=8080
-      - QBT_LEGAL_NOTICE=confirm
-    volumes:
-      - qbittorrent-config:/config
-      - qbittorrent-downloads:/downloads
-    ports:
-      - "8090:8080"
-      - "8091:80"
-      - "6881:6881"
-      - "6881:6881/udp"
-    networks:
-      - prowjack-net
-
   torrserver:
     image: ghcr.io/yourok/torrserver:latest
     container_name: prowjack-torrserver
@@ -61,12 +41,11 @@ services:
     depends_on:
       - redis
       - prowlarr
-      - qbittorrent
+      - torrserver
     env_file:
       - .env.local-stack
     volumes:
       - prowjack-data:/data
-      - qbittorrent-downloads:/downloads
     ports:
       - "7015:7860"
     networks:
@@ -79,7 +58,5 @@ networks:
 volumes:
   redis-data:
   prowlarr-config:
-  qbittorrent-config:
-  qbittorrent-downloads:
   prowjack-data:
   torrserver-data:
