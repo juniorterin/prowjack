@@ -2,6 +2,7 @@ services:
   redis:
     image: redis:7-alpine
     restart: unless-stopped
+
     volumes:
       - redis-data:/data
 
@@ -20,6 +21,7 @@ services:
     restart: unless-stopped
     volumes:
       - torrserver-data:/opt/ts
+    mem_limit: 4g
     ports:
       - "6881:6881"
       - "6881:6881/udp"
@@ -27,7 +29,6 @@ services:
   prowjack:
     build: .
     restart: unless-stopped
-    mem_limit: 4g
     depends_on:
       - redis
       - prowlarr
