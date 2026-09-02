@@ -7,7 +7,7 @@ const { rc, redis } = require("./cache");
 const { isConfigured: isTorrServerConfigured } = require("./providers/torrserver");
 const { startRssPoller } = require("./rssPoller");
 const { ENV } = require("./constants");
-const { checkRateLimit } = require("./routeHelpers");
+const { checkRateLimit, getClientIp } = require("./routeHelpers");
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res, next) => {
-  const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket.remoteAddress;
+  const ip = getClientIp(req);
   if (!checkRateLimit(ip)) {
     return res.status(429).json({ error: "Rate limit excedido" });
   }

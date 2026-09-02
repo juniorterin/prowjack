@@ -3,6 +3,7 @@ const router = express.Router();
 const { ENV, CACHE_VERSION, STREAM_CACHE_VERSION, BAD_RE, BAD_EXT_RE, MIN_STREAM_SEEDS } = require("../constants");
 const { rc, saveQbitJob } = require("../cache");
 const { resolvePrefs } = require("../configStore");
+const { checkAccessKey } = require("../accessKeys");
 const {
   getPublicBase,
   fetchScrapStreams,
@@ -33,6 +34,9 @@ const { injectTrackers } = require("../torrentEnrich");
 
 router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
   const prefs = await resolvePrefs(req.params.userConfig);
+  // Sem chave de acesso válida (travada no IP de quem a usa), só o catálogo
+  // funciona — busca/stream deste addon voltam vazios.
+  if (!(await checkAccessKey(prefs, req))) return res.json({ streams: [] });
   const { type, id } = req.params;
   console.log(`\n=========================================`);
   console.log(`NOVA BUSCA: [${type}] ${id}`);

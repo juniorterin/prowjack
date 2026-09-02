@@ -33,6 +33,13 @@ function checkRateLimit(ip) {
   return true;
 }
 
+// IP real do cliente atrás do proxy reverso (Coolify etc.) — mesmo padrão já
+// usado pelo rate limiter em addon.js, promovido aqui pra ser reaproveitado
+// pelo gate de chave de acesso (accessKeys.js).
+function getClientIp(req) {
+  return req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.socket.remoteAddress;
+}
+
 function getPublicBase(req) {
   if (ENV.addonPublicUrl) return ENV.addonPublicUrl.replace(/\/+$/, "");
   const protocol = req.headers["x-forwarded-proto"] || req.protocol || "https";
@@ -170,6 +177,7 @@ function isPrivateTrackerCandidate(r, resolved = null) {
 }
 
 module.exports = {
+  getClientIp,
   getPublicBase,
   getRequestAccessToken,
   hasAdminAccess,

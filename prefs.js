@@ -67,6 +67,7 @@ function defaultPrefs() {
     enableCatalog:   true,
     rssIndexers:     [],
     token:           "",
+    accessKey:       "",
     nameTemplate:        "",
     descriptionTemplate: "",
     sortBy:              DEFAULT_SORT_BY.slice(),
@@ -110,6 +111,7 @@ function sanitizeUserPrefs(input = {}) {
   out.enableCatalog = src.enableCatalog !== false;
   out.rssIndexers = cleanStringArray(src.rssIndexers, 100, 120);
   out.token = cleanString(src.token, 200);
+  out.accessKey = cleanString(src.accessKey, 100);
   out.addonName = cleanString(src.addonName, 80);
   out.nameTemplate = cleanTemplate(src.nameTemplate, 300);
   out.descriptionTemplate = cleanTemplate(src.descriptionTemplate, 800);

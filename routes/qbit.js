@@ -3,6 +3,8 @@ const axios = require("axios");
 const torrServer = require("../providers/torrserver");
 const { TORRENT_DOWNLOAD_TIMEOUT_MS } = require("../constants");
 const { loadQbitJob } = require("../cache");
+const { resolvePrefs } = require("../configStore");
+const { checkAccessKey } = require("../accessKeys");
 const { torrentDownloadRecentlyFailed, markTorrentDownloadFailed } = require("../torrentUtils");
 const { injectTrackers } = require("../torrentEnrich");
 
@@ -13,6 +15,8 @@ const router = express.Router();
 // leitura do player, então suporta seek de verdade em qualquer ponto do
 // arquivo, mesmo ainda baixando.
 router.get("/:userConfig/qbit/:jobToken", async (req, res) => {
+  const prefs = await resolvePrefs(req.params.userConfig);
+  if (!(await checkAccessKey(prefs, req))) return res.status(403).send("Acesso negado.");
   const job = await loadQbitJob(req.params.jobToken);
   if (!job?.infoHash) return res.status(404).send("Job expirado ou inválido.");
   if (!torrServer.isConfigured()) return res.status(503).send("TorrServer não configurado (TS_URL ausente).");

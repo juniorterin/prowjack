@@ -2,6 +2,7 @@
 const crypto = require("crypto");
 const fs     = require("fs");
 const { normalizePrefs } = require("./prefs");
+const { getPgPool } = require("./dbPool");
 const path   = require("path");
 
 // Lidos diretamente do ambiente para que rotas e streams compartilhem a mesma
@@ -19,62 +20,16 @@ function getConfigDbTable(value) {
 }
 
 // ─── Postgres ────────────────────────────────────────────────────────────────
-let configPgPool = null;
 let configPgInit = null;
 
 function shouldUseConfigDb(configDbUrl) {
   return !!getConfigDbUrl(configDbUrl);
 }
 
-function buildConfigPgOptions(rawUrl) {
-  let connectionString = rawUrl;
-  let sslMode = "";
-  let hostname = "";
-  try {
-    const parsed = new URL(rawUrl);
-    hostname = parsed.hostname;
-    sslMode = String(parsed.searchParams.get("sslmode") || "").toLowerCase();
-    // postgres.js e alguns clientes precisam de 'sslmode' na string, mas o
-    // node-postgres (pg) usa a opção 'ssl' configurada acima. Removemos para
-    // evitar conflito de propagação de 'sslmode' para o backend.
-    parsed.searchParams.delete("sslmode");
-    parsed.searchParams.delete("uselibpqcompat");
-    connectionString = parsed.toString();
-  } catch {}
-
-  const isRemote = /^postgres/i.test(rawUrl) && !/^(localhost|127\.0\.0\.1|::1)$/i.test(hostname);
-  const isSupabasePooler = /pooler\.supabase\.com|supabase\.co/i.test(hostname);
-  // Supabase (pooler) em runtime serverless (Vercel/Functions) exige SSL, mas o
-  // bundle de CA do runtime nem sempre contém o certificado → rejectUnauthorized:true
-  // dispara "self-signed certificate"/"unable to verify". Para o pooler do Supabase
-  // sempre conectamos com rejectUnauthorized:false (não honramos DB_SSL_REJECT_UNAUTHORIZED
-  // para esse caso, pois validação de CA não funciona no serverless com o pooler).
-  let ssl = undefined;
-  if (isRemote && isSupabasePooler) {
-    ssl = { rejectUnauthorized: false };
-  } else if (isRemote && sslMode && sslMode !== "disable") {
-    const reject = process.env.DB_SSL_REJECT_UNAUTHORIZED;
-    ssl = reject === "true" ? { rejectUnauthorized: true } : { rejectUnauthorized: false };
-  }
-  return { connectionString, ssl };
-}
-
 function getConfigPgPool(configDbUrl) {
   configDbUrl = getConfigDbUrl(configDbUrl);
   if (!shouldUseConfigDb(configDbUrl)) return null;
-  if (configPgPool) return configPgPool;
-  let Pool;
-  try {
-    ({ Pool } = require("pg"));
-  } catch (err) {
-    throw new Error("CONFIG_DATABASE_URL/POSTGRES_URL configurado, mas a dependência 'pg' não está instalada. Rode npm install.");
-  }
-  const opts = buildConfigPgOptions(configDbUrl);
-  let hostname = "";
-  try { hostname = new URL(opts.connectionString).hostname; } catch {}
-  console.log(`[CFG] Postgres inicializado (host=${hostname || '?'}, ssl=${opts.ssl ? JSON.stringify(opts.ssl) : 'off'})`);
-  configPgPool = new Pool(opts);
-  return configPgPool;
+  return getPgPool(configDbUrl);
 }
 
 async function ensureConfigDb(configDbUrl, configDbTable) {
