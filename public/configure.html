@@ -169,7 +169,7 @@
   /* Chip / pill buttons */
   .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip {
-    display: inline-flex; align-items: center; gap: 6px;
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
     background: var(--surface-2); border: 1px solid var(--border-2); color: var(--ink-2);
     padding: 7px 13px; border-radius: 20px; font-size: 12.5px; font-weight: 600;
     transition: all .15s;
@@ -178,6 +178,11 @@
   .chip.on { background: var(--brand-soft); border-color: var(--brand); color: var(--brand); }
   .chip.token { font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; padding: 5px 10px; }
   .chip.token:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .chip.removable { background: var(--brand-soft); border-color: var(--brand); color: var(--brand); }
+  .chip.removable:hover { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+  .chip.removable .x { opacity: .7; }
+  .add-row { display: flex; gap: 8px; margin-top: 10px; }
+  .add-row input { flex: 1; }
 
   /* Indexer grid */
   .ix-toolbar { display: flex; gap: 10px; margin-bottom: 14px; align-items: center; flex-wrap: wrap; }
@@ -201,6 +206,11 @@
   .fmt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 720px) { .fmt-grid { grid-template-columns: 1fr; } }
   textarea.tpl { font-family: var(--font-mono); font-size: 12.5px; }
+  textarea.tpl.invalid { border-color: var(--bad); box-shadow: 0 0 0 3px var(--bad-soft); }
+  .tpl-error { font-size: 11.5px; color: var(--bad); margin-top: 6px; line-height: 1.5; display: none; }
+  .tpl-error.show { display: block; }
+  .btn-text { background: none; border: none; color: var(--brand); font-size: 12.5px; font-weight: 700; padding: 4px 2px; }
+  .btn-text:hover { text-decoration: underline; }
 
   .stream-preview {
     background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 12px;
@@ -226,6 +236,23 @@
   .sort-row .mv:hover:not(:disabled) { border-color: var(--brand); color: var(--brand); }
   .sort-row .mv:disabled { opacity: 0.3; cursor: default; }
   .sort-row input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--brand); flex: none; }
+
+  /* Sort preview rows (sample results) */
+  .preview-list { display: flex; flex-direction: column; gap: 4px; }
+  .preview-row {
+    display: grid; grid-template-columns: 22px 1fr auto auto auto; align-items: center; gap: 12px;
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 12px;
+  }
+  .preview-row .prank { font-family: var(--font-mono); color: var(--muted); }
+  .preview-row .ptitle { display: flex; align-items: center; gap: 6px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .preview-row .pflag { font-size: 12px; }
+  .preview-row .pmeta { color: var(--ink-2); font-family: var(--font-mono); font-size: 11.5px; white-space: nowrap; }
+  .preview-row .pix { color: var(--muted); font-size: 11px; white-space: nowrap; text-align: right; }
+  @media (max-width: 640px) {
+    .preview-row { grid-template-columns: 18px 1fr; row-gap: 4px; }
+    .preview-row .pmeta, .preview-row .pix { grid-column: 2; text-align: left; }
+  }
 
   /* Range slider */
   .range-row { display: flex; align-items: center; gap: 12px; }
@@ -368,9 +395,13 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-head"><h3>Palavras-chave de boost</h3><span class="hint">regex, separado por |</span></div>
-        <textarea id="keywordBoost" placeholder="ex: DUBLADO|MULTI|PT-?BR"></textarea>
-        <p class="field-note">Releases que baterem aqui furam a fila, mesmo com filtro de idioma ligado.</p>
+        <div class="card-head"><h3>Palavras-chave de boost</h3></div>
+        <p class="field-note" style="margin-top:0">Releases que baterem em alguma dessas palavras furam a fila, mesmo com filtro de idioma ligado. Clique pra ligar/desligar, ou crie as suas.</p>
+        <div class="chip-row" id="keyword-chips"></div>
+        <div class="add-row">
+          <input type="text" id="keyword-custom-input" placeholder="Criar palavra-chave própria… (ex: WEB-DL)">
+          <button class="btn-ghost" id="keyword-custom-add">Adicionar</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-head"><h3>Indexadores prioritários</h3><span class="hint">opcional</span></div>
@@ -395,18 +426,23 @@
     <!-- ── Formatação ─────────────────────────────────────── -->
     <section class="pane" id="pane-format">
       <div class="card">
-        <div class="card-head"><h3>Como os streams aparecem no Stremio</h3></div>
-        <p class="field-note" style="margin-top:0">Monte o texto com os tokens abaixo — clique num token pra inserir. Deixe em branco pra usar o formato padrão. Uma linha some sozinha quando o dado dela não existe (ex: sem tamanho detectado, a linha de tamanho não aparece).</p>
+        <div class="card-head">
+          <h3>Como os streams aparecem no Stremio</h3>
+          <button class="btn-text" id="format-reset">↺ Restaurar padrão</button>
+        </div>
+        <p class="field-note" style="margin-top:0">Monte o texto com os tokens abaixo — clique num token pra inserir. Já vem preenchido com o formato padrão; edite à vontade. Uma linha some sozinha quando o dado dela não existe (ex: sem tamanho detectado, a linha de tamanho não aparece).</p>
         <div class="chip-row" id="token-palette" style="margin:14px 0 18px"></div>
         <div class="fmt-grid">
           <div class="row">
             <div>
               <label class="lbl">Nome (título do stream)</label>
-              <textarea class="tpl" id="nameTemplate" data-target="nameTemplate" placeholder="{addon}&#10;{resolution}" style="min-height:56px"></textarea>
+              <textarea class="tpl" id="nameTemplate" data-target="nameTemplate" style="min-height:56px"></textarea>
+              <div class="tpl-error" id="nameTemplate-error"></div>
             </div>
             <div>
               <label class="lbl">Descrição</label>
-              <textarea class="tpl" id="descriptionTemplate" data-target="descriptionTemplate" placeholder="🎬 {title} ({year}) {season}&#10;💾 {size}  🎞️ {codec}  🎥 {quality}&#10;🔊 {language}  🎧 {audio}&#10;🌱 {seeders}  {visual}&#10;{group}  ⚙️ {indexer}" style="min-height:150px"></textarea>
+              <textarea class="tpl" id="descriptionTemplate" data-target="descriptionTemplate" style="min-height:150px"></textarea>
+              <div class="tpl-error" id="descriptionTemplate-error"></div>
             </div>
           </div>
           <div class="stream-preview">
@@ -427,6 +463,11 @@
         <div class="card-head"><h3>Prioridade de agrupamento e ordenação</h3></div>
         <p class="field-note" style="margin-top:0">O primeiro critério da lista domina — na prática funciona como "agrupar por", já que o Stremio mostra tudo numa lista só. Use as setas pra reordenar e o check pra desligar um critério.</p>
         <div class="sort-list" id="sort-list"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Prévia com resultados de exemplo</h3><span class="hint">10 itens fictícios</span></div>
+        <p class="field-note" style="margin-top:0">Mostra a ordem final que 10 resultados variados assumiriam com os critérios acima. 🔑 = bate palavra-chave de boost · 🗣️ = no idioma prioritário.</p>
+        <div class="preview-list" id="sort-preview-list"></div>
       </div>
     </section>
 
@@ -505,6 +546,27 @@ const TOKENS = [
   ["seeders","Seeders"], ["language","Idioma"], ["audio","Áudio"], ["visual","HDR/DV"],
   ["group","Grupo release"], ["indexer","Indexador"],
 ];
+const KNOWN_TOKEN_KEYS = new Set(TOKENS.map(([key]) => key));
+// Mesmo formato que scoring.js usa quando nameTemplate/descriptionTemplate
+// não estão definidos — pré-preenchido aqui pra edição, não como texto morto.
+const DEFAULT_NAME_TEMPLATE = "{addon}\n{resolution}";
+const DEFAULT_DESCRIPTION_TEMPLATE =
+  "🎬 {title} ({year}) 🍂 {season}\n" +
+  "💾 {size}  🎞️ {codec}  🎥 {quality}\n" +
+  "🔊 {language}  🎧 {audio}\n" +
+  "🌱 {seeders}  {visual}\n" +
+  "🫟 {group}  ⚙️ {indexer}";
+
+const PRESET_KEYWORDS = [
+  { label: "Dublado", value: "dublado" },
+  { label: "Dual Áudio", value: "dual.?audio" },
+  { label: "Nacional", value: "nacional" },
+  { label: "Legendado", value: "legendado" },
+  { label: "Multi", value: "multi" },
+  { label: "PT-BR", value: "pt[-_. ]?br" },
+  { label: "REMUX", value: "remux" },
+  { label: "HDR", value: "hdr" },
+];
 const SORT_META = {
   keyword:    ["Palavra-chave", "Releases que batem com o boost de keywords"],
   language:   ["Idioma prioritário", "Releases no idioma escolhido em Filtros"],
@@ -516,18 +578,58 @@ const SORT_META = {
 };
 const DEFAULT_SORT = ["keyword","language","resolution","quality","size","seeders"];
 
+// 10 resultados fictícios pra prévia da Ordenação — mesma escala de score que
+// scoring.js usa de verdade (RESOLUTION/QUALITY), só que fixada aqui em vez
+// de recalculada de um título, já que não existe busca real nessa tela.
+const SAMPLE_ITEMS = [
+  { res: "4K",   resScore: 4,   quality: "REMUX",  qualScore: 5,   sizeGb: 65,   seeders: 340, indexer: "1337x",          hasKeyword: true,  hasPriorityLang: true  },
+  { res: "FHD",  resScore: 3,   quality: "BluRay",  qualScore: 4,   sizeGb: 18,   seeders: 512, indexer: "YTS",             hasKeyword: false, hasPriorityLang: true  },
+  { res: "4K",   resScore: 4,   quality: "WEB-DL",  qualScore: 3,   sizeGb: 22,   seeders: 89,  indexer: "TorrentGalaxy",   hasKeyword: false, hasPriorityLang: false },
+  { res: "HD",   resScore: 2,   quality: "HDTV",     qualScore: 1,   sizeGb: 2.1,  seeders: 14,  indexer: "EZTV",            hasKeyword: false, hasPriorityLang: false },
+  { res: "FHD",  resScore: 3,   quality: "WEBRip",   qualScore: 2.5, sizeGb: 4.3,  seeders: 203, indexer: "Comando",         hasKeyword: true,  hasPriorityLang: true  },
+  { res: "4K",   resScore: 4,   quality: "REMUX",  qualScore: 5,   sizeGb: 78,   seeders: 12,  indexer: "RARBG",           hasKeyword: false, hasPriorityLang: false },
+  { res: "SD",   resScore: 0.5, quality: "DVDRip",   qualScore: 1.5, sizeGb: 0.9,  seeders: 5,   indexer: "LimeTorrents",    hasKeyword: false, hasPriorityLang: false },
+  { res: "2K",   resScore: 3.5, quality: "WEB-DL",  qualScore: 3,   sizeGb: 15,   seeders: 167, indexer: "Nyaa.si",         hasKeyword: false, hasPriorityLang: false },
+  { res: "FHD",  resScore: 3,   quality: "HDRip",    qualScore: 2,   sizeGb: 3.5,  seeders: 41,  indexer: "BitSearch",       hasKeyword: false, hasPriorityLang: true  },
+  { res: "576p", resScore: 1,   quality: "WEBRip",   qualScore: 2.5, sizeGb: 1.2,  seeders: 29,  indexer: "SolidTorrents",   hasKeyword: false, hasPriorityLang: false },
+];
+// Mesmos comparadores de routes/stream.js (sortComparators), só que sobre os
+// campos fixos acima em vez de resultados reais de busca.
+const SORT_COMPARATORS = {
+  keyword:    (a, b) => (a.hasKeyword ? 0 : 1) - (b.hasKeyword ? 0 : 1),
+  language:   (a, b) => (a.hasPriorityLang ? 0 : 1) - (b.hasPriorityLang ? 0 : 1),
+  resolution: (a, b) => b.resScore - a.resScore,
+  quality:    (a, b) => b.qualScore - a.qualScore,
+  size:       (a, b) => b.sizeGb - a.sizeGb,
+  seeders:    (a, b) => b.seeders - a.seeders,
+  indexer:    (a, b) => a.indexer.localeCompare(b.indexer),
+};
+function sortSample() {
+  return SAMPLE_ITEMS.slice().sort((a, b) => {
+    for (const key of state.sortBy) {
+      const cmp = SORT_COMPARATORS[key];
+      if (!cmp) continue;
+      const d = cmp(a, b);
+      if (d !== 0) return d;
+    }
+    return 0;
+  });
+}
+
 const state = {
   indexers: [],
   selectedIndexers: new Set(),
   categories: new Set(["movie","series"]),
   priorityLang: "pt-br",
   onlyDubbed: false,
-  keywordBoost: "",
+  keywordBoostOn: new Set(),
+  customKeywords: [],
   priorityIndexers: new Set(),
   maxResults: 20,
   maxResultsPerIndexer: 0,
   nameTemplate: "",
   descriptionTemplate: "",
+  formatValid: true,
   sortBy: DEFAULT_SORT.slice(),
   sortAll: [...DEFAULT_SORT, "indexer"],
   enableCatalog: true,
@@ -630,6 +732,75 @@ document.getElementById("maxResults").addEventListener("input", (e) => {
   document.getElementById("maxResults-val").textContent = e.target.value;
 });
 
+// ── Palavras-chave de boost (chips + criação livre) ─────────
+function escapeRegexLite(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function renderKeywordChips() {
+  const box = document.getElementById("keyword-chips");
+  box.innerHTML = "";
+  PRESET_KEYWORDS.forEach(p => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "chip" + (state.keywordBoostOn.has(p.value) ? " on" : "");
+    b.textContent = p.label;
+    b.addEventListener("click", () => {
+      if (state.keywordBoostOn.has(p.value)) state.keywordBoostOn.delete(p.value);
+      else state.keywordBoostOn.add(p.value);
+      renderKeywordChips();
+    });
+    box.appendChild(b);
+  });
+  state.customKeywords.forEach(c => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "chip removable";
+    b.title = "Clique pra remover";
+    b.innerHTML = `${c.label} <span class="x">✕</span>`;
+    b.addEventListener("click", () => {
+      state.customKeywords = state.customKeywords.filter(k => k !== c);
+      renderKeywordChips();
+    });
+    box.appendChild(b);
+  });
+}
+function addCustomKeyword(raw) {
+  const label = String(raw || "").trim().slice(0, 60);
+  if (!label) return;
+  const value = escapeRegexLite(label.toLowerCase());
+  const exists = state.customKeywords.some(c => c.value === value) || PRESET_KEYWORDS.some(p => p.value === value);
+  if (exists) return;
+  state.customKeywords.push({ label, value });
+  renderKeywordChips();
+}
+function collectKeywordBoostString() {
+  const parts = [];
+  PRESET_KEYWORDS.forEach(p => { if (state.keywordBoostOn.has(p.value)) parts.push(p.value); });
+  state.customKeywords.forEach(c => parts.push(c.value));
+  return parts.join("|");
+}
+function applyKeywordBoost(raw) {
+  state.keywordBoostOn = new Set();
+  state.customKeywords = [];
+  String(raw || "").split("|").map(s => s.trim()).filter(Boolean).forEach(frag => {
+    const preset = PRESET_KEYWORDS.find(p => p.value === frag);
+    if (preset) state.keywordBoostOn.add(preset.value);
+    else state.customKeywords.push({ label: frag, value: frag });
+  });
+  renderKeywordChips();
+}
+document.getElementById("keyword-custom-add").addEventListener("click", () => {
+  const input = document.getElementById("keyword-custom-input");
+  addCustomKeyword(input.value);
+  input.value = "";
+  input.focus();
+});
+document.getElementById("keyword-custom-input").addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") return;
+  e.preventDefault();
+  document.getElementById("keyword-custom-add").click();
+});
+
 // ── Formatação ────────────────────────────────────────────
 const paletteEl = document.getElementById("token-palette");
 TOKENS.forEach(([key, label]) => {
@@ -676,9 +847,42 @@ async function renderPreview() {
     document.getElementById("preview-desc").textContent = "Não foi possível gerar a prévia.";
   }
 }
-document.getElementById("nameTemplate").addEventListener("input", schedulePreview);
-document.getElementById("descriptionTemplate").addEventListener("input", schedulePreview);
+
+// Tokens desconhecidos (typo tipo {resoluton}) travam o Gerar até corrigir —
+// evita salvar um template que nunca vai render o que a pessoa queria.
+function unknownTokensIn(text) {
+  const found = [...String(text || "").matchAll(/\{(\w+)\}/g)].map(m => m[1]);
+  return [...new Set(found.filter(k => !KNOWN_TOKEN_KEYS.has(k)))];
+}
+function validateTemplateField(id) {
+  const el = document.getElementById(id);
+  const errEl = document.getElementById(`${id}-error`);
+  const bad = unknownTokensIn(el.value);
+  el.classList.toggle("invalid", bad.length > 0);
+  errEl.textContent = bad.length ? `Token${bad.length > 1 ? "s" : ""} desconhecido${bad.length > 1 ? "s" : ""}: ${bad.map(k => `{${k}}`).join(", ")}` : "";
+  errEl.classList.toggle("show", bad.length > 0);
+  return bad.length === 0;
+}
+function validateFormatting() {
+  const nameOk = validateTemplateField("nameTemplate");
+  const descOk = validateTemplateField("descriptionTemplate");
+  state.formatValid = nameOk && descOk;
+  return state.formatValid;
+}
+function onTemplateInput() {
+  validateFormatting();
+  schedulePreview();
+}
+document.getElementById("nameTemplate").addEventListener("input", onTemplateInput);
+document.getElementById("descriptionTemplate").addEventListener("input", onTemplateInput);
 document.getElementById("addonName").addEventListener("input", schedulePreview);
+document.getElementById("format-reset").addEventListener("click", () => {
+  document.getElementById("nameTemplate").value = DEFAULT_NAME_TEMPLATE;
+  document.getElementById("descriptionTemplate").value = DEFAULT_DESCRIPTION_TEMPLATE;
+  validateFormatting();
+  schedulePreview();
+  toast("Formatação restaurada ao padrão");
+});
 
 // ── Ordenação ─────────────────────────────────────────────
 function renderSortList() {
@@ -712,6 +916,24 @@ function renderSortList() {
     });
     list.appendChild(row);
   });
+  renderSortPreview();
+}
+function renderSortPreview() {
+  const list = document.getElementById("sort-preview-list");
+  if (!list) return;
+  list.innerHTML = "";
+  sortSample().forEach((item, idx) => {
+    const row = document.createElement("div");
+    row.className = "preview-row";
+    row.innerHTML = `
+      <span class="prank">${idx + 1}</span>
+      <span class="ptitle">${item.res} · ${item.quality}${item.hasKeyword ? ` <span class="pflag" title="Bate palavra-chave de boost">🔑</span>` : ""}${item.hasPriorityLang ? ` <span class="pflag" title="Idioma prioritário">🗣️</span>` : ""}</span>
+      <span class="pmeta">💾 ${item.sizeGb >= 10 ? item.sizeGb.toFixed(0) : item.sizeGb.toFixed(1)} GB</span>
+      <span class="pmeta">🌱 ${item.seeders}</span>
+      <span class="pix">${item.indexer}</span>
+    `;
+    list.appendChild(row);
+  });
 }
 
 // ── Toast ─────────────────────────────────────────────────
@@ -743,7 +965,7 @@ function applyPrefs(p) {
   if (Array.isArray(p.indexers) && !p.indexers.includes("all")) { state.selectedIndexers = new Set(p.indexers); state._indexersPreset = true; }
   if (p.priorityLang !== undefined) document.getElementById("priorityLang").value = p.priorityLang;
   if (p.onlyDubbed) document.getElementById("onlyDubbed").checked = true;
-  if (p.keywordBoost) document.getElementById("keywordBoost").value = p.keywordBoost;
+  if (p.keywordBoost) applyKeywordBoost(p.keywordBoost);
   if (Array.isArray(p.priorityIndexers) && p.priorityIndexers.length) { state.priorityIndexers = new Set(p.priorityIndexers); renderPriorityIndexers(); }
   if (p.maxResults) { document.getElementById("maxResults").value = p.maxResults; document.getElementById("maxResults-val").textContent = p.maxResults; }
   if (p.maxResultsPerIndexer !== undefined) document.getElementById("maxResultsPerIndexer").value = p.maxResultsPerIndexer;
@@ -757,6 +979,7 @@ function applyPrefs(p) {
   if (p.addonName) document.getElementById("addonName").value = p.addonName;
   if (p.dedupe === false) document.getElementById("dedupe").checked = false;
   renderSortList();
+  validateFormatting();
   schedulePreview();
 }
 
@@ -767,7 +990,7 @@ function collectPrefs() {
     categories: [...state.categories],
     priorityLang: document.getElementById("priorityLang").value,
     onlyDubbed: document.getElementById("onlyDubbed").checked,
-    keywordBoost: document.getElementById("keywordBoost").value,
+    keywordBoost: collectKeywordBoostString(),
     priorityIndexers: [...state.priorityIndexers],
     maxResults: Number(document.getElementById("maxResults").value) || 20,
     maxResultsPerIndexer: Number(document.getElementById("maxResultsPerIndexer").value) || 0,
@@ -780,7 +1003,20 @@ function collectPrefs() {
     dedupe: document.getElementById("dedupe").checked,
   };
 }
+// Só deixa gerar/salvar com tudo válido — trava direto no critério que falhou.
+function getValidationErrors() {
+  const errors = [];
+  if (!validateFormatting()) errors.push({ pane: "format", message: "Corrija os tokens desconhecidos na Formatação antes de salvar." });
+  if (!state.selectedIndexers.size) errors.push({ pane: "indexers", message: "Selecione pelo menos um indexador." });
+  return errors;
+}
 document.getElementById("generate-btn").addEventListener("click", async () => {
+  const errors = getValidationErrors();
+  if (errors.length) {
+    showPane(errors[0].pane);
+    toast(errors[0].message, true);
+    return;
+  }
   const btn = document.getElementById("generate-btn");
   btn.disabled = true;
   btn.textContent = "Gerando…";
@@ -818,9 +1054,13 @@ async function loadEnvStatus() {
 
 // ── Init ──────────────────────────────────────────────────
 (async function init() {
+  document.getElementById("nameTemplate").value = DEFAULT_NAME_TEMPLATE;
+  document.getElementById("descriptionTemplate").value = DEFAULT_DESCRIPTION_TEMPLATE;
+  renderKeywordChips();
   renderSortList();
   await Promise.all([loadIndexers(), loadEnvStatus()]);
   await loadExistingConfig();
+  validateFormatting();
   renderPreview();
   const hashPane = location.hash.replace("#", "");
   if (PANES.includes(hashPane)) showPane(hashPane);
