@@ -27,6 +27,7 @@ services:
   prowjack:
     build: .
     restart: unless-stopped
+    mem_limit: 4g
     depends_on:
       - redis
       - prowlarr
