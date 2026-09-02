@@ -2,7 +2,7 @@ const express = require("express");
 const { isConfigured: isTorrServerConfigured } = require("../providers/torrserver");
 const { ENV } = require("../constants");
 const { rc, redis } = require("../cache");
-const { saveStoredConfig } = require("../configStore");
+const { saveStoredConfig, resolvePrefs } = require("../configStore");
 const { normalizePrefs, sanitizeUserPrefs, validateServiceUrl, cleanTemplate } = require("../prefs");
 const { getPublicBase, getRequestAccessToken, requireAdminAccess } = require("../routeHelpers");
 const { jackettFetchIndexers, fetchIndexerPrivacyMap, isProwlarrServer } = require("../jackettSearch");
@@ -26,6 +26,18 @@ router.post("/api/config", async (req, res) => {
     res.json({ ok: true, userConfig, addonUrl });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// Recarrega uma config salva pra edição na tela de /configure — o token
+// cfg_... na URL já é o mesmo segredo usado pra manifest/stream/catálogo,
+// então reaproveita o mesmo modelo de acesso do resto do app.
+router.get("/api/config/:userConfig", async (req, res) => {
+  try {
+    const prefs = await resolvePrefs(req.params.userConfig);
+    res.json({ ok: true, prefs });
+  } catch (err) {
+    res.status(404).json({ ok: false, error: "Configuração não encontrada" });
   }
 });
 
