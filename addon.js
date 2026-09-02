@@ -46,7 +46,7 @@ app.use("/", require("./routes/api"));
 app.use("/", require("./routes/manifest"));
 app.use("/", require("./routes/configure"));
 app.use("/", require("./routes/catalog"));
-app.use("/", require("./routes/qbit"));
+app.use("/", require("./routes/play"));
 app.use("/", require("./routes/stream"));
 
 app.listen(ENV.port, "0.0.0.0", () => {

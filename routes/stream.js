@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { ENV, CACHE_VERSION, STREAM_CACHE_VERSION, BAD_RE, BAD_EXT_RE, MIN_STREAM_SEEDS } = require("../constants");
-const { rc, saveQbitJob } = require("../cache");
+const { rc, savePlayJob } = require("../cache");
 const { resolvePrefs } = require("../configStore");
 const { checkAccessKey } = require("../accessKeys");
 const {
@@ -516,7 +516,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
             try { torrentB64 = injectTrackers(resolved.buffer).toString("base64"); }
             catch { torrentB64 = resolved.buffer.toString("base64"); }
           }
-          const jobToken = await saveQbitJob({
+          const jobToken = await savePlayJob({
             infoHash: resolved.infoHash,
             link:     (r.Link && !r.Link.startsWith("magnet:")) ? r.Link : null,
             magnet,
@@ -528,7 +528,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
           return {
             name: `${prefs.addonName || "TorrStremio"}\n⬇️ ${resLabel || "Links"} [TS]`,
             description: [description, filenameLine, isPrivateTracker ? "🔒 Tracker Privado" : ""].filter(Boolean).join("\n"),
-            url:   `${publicBase}/${req.params.userConfig}/qbit/${jobToken}`,
+            url:   `${publicBase}/${req.params.userConfig}/play/${jobToken}`,
             indexer: renameIndexer(indexerName),
             _priorityIndexer: !!r._priorityIndexer,
             behaviorHints: {

@@ -106,14 +106,14 @@ const rc = {
   },
 };
 
-async function saveQbitJob(payload, ttl = 6 * 3600) {
+async function savePlayJob(payload, ttl = 6 * 3600) {
   const token = crypto.randomBytes(18).toString("base64url");
-  await rc.set(`qbitjob:${token}`, JSON.stringify(payload), ttl);
+  await rc.set(`playjob:${token}`, JSON.stringify(payload), ttl);
   return token;
 }
 
-async function loadQbitJob(token) {
-  const raw = await rc.get(`qbitjob:${token}`);
+async function loadPlayJob(token) {
+  const raw = await rc.get(`playjob:${token}`);
   if (!raw) return null;
   try { return JSON.parse(raw); } catch (e) { return null; }
 }
@@ -121,5 +121,5 @@ async function loadQbitJob(token) {
 module.exports = {
   rc,
   redis,
-  saveQbitJob,
-  loadQbitJob, };
+  savePlayJob,
+  loadPlayJob, };

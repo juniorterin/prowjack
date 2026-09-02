@@ -176,7 +176,7 @@ async function resetAccessKeyIp(id) {
   return record;
 }
 
-// Gate usado em routes/stream.js e routes/qbit.js. Sem chave -> nega. Chave
+// Gate usado em routes/stream.js e routes/play.js. Sem chave -> nega. Chave
 // desconhecida -> nega. Primeiro uso -> trava no IP atual e libera. IP
 // diferente do travado -> nega.
 async function checkAccessKey(prefs, req) {
