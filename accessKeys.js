@@ -120,14 +120,20 @@ function newKeyId() {
   return "key_" + crypto.randomBytes(12).toString("base64url");
 }
 
-async function createAccessKey(label) {
+const DEFAULT_EXPIRY_MS = 30 * 24 * 3600 * 1000; // 1 mês — padrão quando não especificado
+
+// `expiresAt` undefined -> aplica o padrão de 1 mês. `expiresAt` null explícito
+// -> chave sem validade (admin desmarcou "expira"). `ipLimited` default true.
+async function createAccessKey(label, { expiresAt, ipLimited = true } = {}) {
   const record = {
     id: newKeyId(),
     label: String(label || "").trim().slice(0, 80),
     ip: null,
+    ipLimited: ipLimited !== false,
     createdAt: Date.now(),
     lockedAt: null,
     lastUsedAt: null,
+    expiresAt: expiresAt === undefined ? Date.now() + DEFAULT_EXPIRY_MS : expiresAt,
   };
   if (shouldUseKeysDb()) {
     await dbUpsert(record);
@@ -176,14 +182,37 @@ async function resetAccessKeyIp(id) {
   return record;
 }
 
+// `expiresAt`: number (epoch ms) ou null (nunca expira) — omitido não altera.
+// `ipLimited`: boolean — desativar limpa a trava de IP existente também.
+async function updateAccessKeySettings(id, { expiresAt, ipLimited } = {}) {
+  const record = await getAccessKey(id);
+  if (!record) return null;
+  if (expiresAt !== undefined) record.expiresAt = expiresAt;
+  if (ipLimited !== undefined) {
+    record.ipLimited = !!ipLimited;
+    if (!record.ipLimited) { record.ip = null; record.lockedAt = null; }
+  }
+  await saveAccessKey(record);
+  return record;
+}
+
 // Gate usado em routes/stream.js e routes/play.js. Sem chave -> nega. Chave
-// desconhecida -> nega. Primeiro uso -> trava no IP atual e libera. IP
-// diferente do travado -> nega.
+// desconhecida ou expirada -> nega. Com limite de IP (padrão): primeiro uso
+// trava no IP atual e libera; IP diferente do travado -> nega. Sem limite de
+// IP: libera de qualquer IP.
 async function checkAccessKey(prefs, req) {
   const keyId = prefs?.accessKey;
   if (!keyId) return false;
   const record = await getAccessKey(keyId);
   if (!record) return false;
+  if (record.expiresAt && Date.now() > record.expiresAt) return false;
+
+  if (record.ipLimited === false) {
+    record.lastUsedAt = Date.now();
+    saveAccessKey(record).catch(() => {});
+    return true;
+  }
+
   const ip = getClientIp(req);
   if (!record.ip) {
     record.ip = ip;
@@ -204,5 +233,6 @@ module.exports = {
   getAccessKey,
   deleteAccessKey,
   resetAccessKeyIp,
+  updateAccessKeySettings,
   checkAccessKey,
 };

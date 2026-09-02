@@ -79,11 +79,19 @@
   .pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 3px 9px; border-radius: 20px; }
   .pill.locked { background: var(--good-soft); color: var(--good); }
   .pill.open { background: var(--surface-3); color: var(--muted); }
-  .row-actions { display: flex; gap: 6px; justify-content: flex-end; }
-  .row-actions button { background: none; border: 1px solid var(--border-2); color: var(--ink-2); border-radius: 7px; padding: 5px 10px; font-size: 11.5px; font-weight: 600; }
+  .row-actions { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; }
+  .row-actions button { background: none; border: 1px solid var(--border-2); color: var(--ink-2); border-radius: 7px; padding: 5px 10px; font-size: 11.5px; font-weight: 600; white-space: nowrap; }
   .row-actions button:hover { border-color: var(--brand); color: var(--brand); }
   .row-actions button.danger:hover { border-color: var(--bad); color: var(--bad); }
   .empty { text-align: center; padding: 30px; color: var(--muted); font-size: 13px; }
+  .pill.warn { background: var(--bad-soft); color: var(--bad); }
+
+  .new-opts { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+  .opt-check { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); cursor: pointer; }
+  .opt-check input { width: 15px; height: 15px; accent-color: var(--brand); }
+  .new-opts input[type="date"] { background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 8px; padding: 6px 9px; font-size: 12.5px; outline: none; }
+  .new-opts input[type="date"]:focus { border-color: var(--brand); }
+  .new-opts input[type="date"]:disabled { opacity: .4; }
 
   .tabs { display: flex; gap: 4px; margin-bottom: 22px; border-bottom: 1px solid var(--border); }
   .tab-btn { background: none; border: none; color: var(--ink-2); padding: 9px 4px; margin-right: 18px; font-size: 13.5px; font-weight: 600; border-bottom: 2px solid transparent; }
@@ -145,11 +153,16 @@
       </div>
       <div class="new-row">
         <input type="text" id="new-label" placeholder="Rótulo (ex: nome da pessoa)" maxlength="80">
+      </div>
+      <div class="new-opts">
+        <label class="opt-check"><input type="checkbox" id="new-expires" checked> Expira em</label>
+        <input type="date" id="new-expiry-date">
+        <label class="opt-check"><input type="checkbox" id="new-ip-limited" checked> Limitar por IP</label>
         <button class="btn-primary" id="new-btn">+ Nova chave</button>
       </div>
       <table>
         <thead>
-          <tr><th>Rótulo</th><th>Chave</th><th>IP</th><th>Criada em</th><th></th></tr>
+          <tr><th>Rótulo</th><th>Chave</th><th>IP</th><th>Expira</th><th></th></tr>
         </thead>
         <tbody id="keys-body"></tbody>
       </table>
@@ -196,6 +209,18 @@ function fmtDate(ms) {
   if (!ms) return "—";
   return new Date(ms).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "2-digit" });
 }
+function toDateInputValue(ms) {
+  return new Date(ms).toISOString().slice(0, 10);
+}
+function onePlusMonth() {
+  const d = new Date();
+  d.setMonth(d.getMonth() + 1);
+  return d.getTime();
+}
+document.getElementById("new-expiry-date").value = toDateInputValue(onePlusMonth());
+document.getElementById("new-expires").addEventListener("change", (e) => {
+  document.getElementById("new-expiry-date").disabled = !e.target.checked;
+});
 
 async function api(path, opts) {
   const res = await fetch(path, { headers: { "Content-Type": "application/json" }, ...opts }).then(r => r.json());
@@ -208,16 +233,26 @@ async function loadKeys() {
   const body = document.getElementById("keys-body");
   document.getElementById("keys-empty").style.display = keys.length ? "none" : "block";
   body.innerHTML = "";
+  const now = Date.now();
   for (const k of keys) {
     const tr = document.createElement("tr");
+    const expired = k.expiresAt && k.expiresAt < now;
+    const ipCell = k.ipLimited === false
+      ? `<span class="pill open">sem limite</span>`
+      : (k.ip ? `<span class="pill locked">🔒 ${k.ip}</span>` : `<span class="pill open">aberta</span>`);
+    const expiryCell = k.expiresAt
+      ? `<span class="pill ${expired ? "warn" : "open"}">${expired ? "expirada em " : ""}${fmtDate(k.expiresAt)}</span>`
+      : `<span class="pill open">nunca</span>`;
     tr.innerHTML = `
       <td>${k.label || "—"}</td>
       <td><span class="kv"><span>${k.id}</span><button class="icon-btn" data-copy="${k.id}" title="Copiar">📋</button></span></td>
-      <td>${k.ip ? `<span class="pill locked">🔒 ${k.ip}</span>` : `<span class="pill open">aberta</span>`}</td>
-      <td>${fmtDate(k.createdAt)}</td>
+      <td>${ipCell}</td>
+      <td>${expiryCell}</td>
       <td>
         <div class="row-actions">
-          <button data-reset="${k.id}" ${k.ip ? "" : "disabled"}>Resetar IP</button>
+          <button data-reset="${k.id}" ${k.ip && k.ipLimited !== false ? "" : "disabled"}>Resetar IP</button>
+          <button data-toggle-ip="${k.id}" data-current="${k.ipLimited !== false}">${k.ipLimited === false ? "Limitar IP" : "Liberar IP"}</button>
+          <button data-expiry="${k.id}">Validade</button>
           <button data-del="${k.id}" class="danger">Excluir</button>
         </div>
       </td>
@@ -230,10 +265,14 @@ document.getElementById("new-btn").addEventListener("click", async () => {
   const input = document.getElementById("new-label");
   const label = input.value.trim();
   if (!label) return toast("Digite um rótulo", true);
+  const expires = document.getElementById("new-expires").checked;
+  const expiryDate = document.getElementById("new-expiry-date").value;
+  const expiresAt = expires ? (expiryDate ? new Date(expiryDate + "T23:59:59").getTime() : onePlusMonth()) : null;
+  const ipLimited = document.getElementById("new-ip-limited").checked;
   const btn = document.getElementById("new-btn");
   btn.disabled = true;
   try {
-    await api("/admin/api/keys", { method: "POST", body: JSON.stringify({ label }) });
+    await api("/admin/api/keys", { method: "POST", body: JSON.stringify({ label, expiresAt, ipLimited }) });
     input.value = "";
     await loadKeys();
     toast("Chave criada");
@@ -254,6 +293,26 @@ document.getElementById("keys-body").addEventListener("click", async (e) => {
   const resetId = e.target.closest("[data-reset]")?.dataset.reset;
   if (resetId) {
     try { await api(`/admin/api/keys/${resetId}/reset-ip`, { method: "POST" }); await loadKeys(); toast("IP resetado"); }
+    catch (err) { toast(err.message, true); }
+    return;
+  }
+
+  const toggleBtn = e.target.closest("[data-toggle-ip]");
+  if (toggleBtn) {
+    const id = toggleBtn.dataset.toggleIp;
+    const current = toggleBtn.dataset.current === "true";
+    try { await api(`/admin/api/keys/${id}`, { method: "PATCH", body: JSON.stringify({ ipLimited: !current }) }); await loadKeys(); toast(current ? "IP liberado" : "Limite de IP reativado"); }
+    catch (err) { toast(err.message, true); }
+    return;
+  }
+
+  const expiryId = e.target.closest("[data-expiry]")?.dataset.expiry;
+  if (expiryId) {
+    const input = prompt("Nova data de validade (AAAA-MM-DD), ou deixe em branco pra nunca expirar:");
+    if (input === null) return;
+    const expiresAt = input.trim() ? new Date(input.trim() + "T23:59:59").getTime() : null;
+    if (input.trim() && Number.isNaN(expiresAt)) return toast("Data inválida", true);
+    try { await api(`/admin/api/keys/${expiryId}`, { method: "PATCH", body: JSON.stringify({ expiresAt }) }); await loadKeys(); toast("Validade atualizada"); }
     catch (err) { toast(err.message, true); }
     return;
   }

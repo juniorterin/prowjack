@@ -1,6 +1,6 @@
 const express = require("express");
 const { requireAdminSession } = require("../adminAuth");
-const { createAccessKey, listAccessKeys, deleteAccessKey, resetAccessKeyIp } = require("../accessKeys");
+const { createAccessKey, listAccessKeys, deleteAccessKey, resetAccessKeyIp, updateAccessKeySettings } = require("../accessKeys");
 const { listCatalogs, createCatalog, renameCatalog, deleteCatalog, addCatalogItem, removeCatalogItem } = require("../catalogs");
 
 const router = express.Router();
@@ -20,7 +20,8 @@ router.post("/admin/api/keys", async (req, res) => {
   try {
     const label = String(req.body?.label || "").trim();
     if (!label) return res.status(400).json({ ok: false, error: "Rótulo é obrigatório" });
-    const key = await createAccessKey(label);
+    const { expiresAt, ipLimited } = req.body || {};
+    const key = await createAccessKey(label, { expiresAt, ipLimited });
     res.json({ ok: true, key });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
@@ -30,6 +31,17 @@ router.post("/admin/api/keys", async (req, res) => {
 router.post("/admin/api/keys/:id/reset-ip", async (req, res) => {
   try {
     const key = await resetAccessKeyIp(req.params.id);
+    if (!key) return res.status(404).json({ ok: false, error: "Chave não encontrada" });
+    res.json({ ok: true, key });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+router.patch("/admin/api/keys/:id", async (req, res) => {
+  try {
+    const { expiresAt, ipLimited } = req.body || {};
+    const key = await updateAccessKeySettings(req.params.id, { expiresAt, ipLimited });
     if (!key) return res.status(404).json({ ok: false, error: "Chave não encontrada" });
     res.json({ ok: true, key });
   } catch (err) {
