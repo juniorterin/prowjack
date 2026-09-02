@@ -1,7 +1,7 @@
 {
-  "name": "prowjack",
-  "version": "3.3.1",
-  "description": "Qbittorrent+Prowlarr/Jackett+Debrid",
+  "name": "torrstremio",
+  "version": "1.0.0",
+  "description": "Stremio addon: Prowlarr/Jackett + TorrServer",
   "main": "addon.js",
   "scripts": {
     "start": "node addon.js",

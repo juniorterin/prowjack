@@ -51,7 +51,7 @@ app.use("/", require("./routes/stream"));
 
 app.listen(ENV.port, "0.0.0.0", () => {
   console.log(`===== Application Startup at ${new Date().toISOString().replace('T', ' ').slice(0, 19)} =====`);
-  console.log(`ProwJack v3.3.1 -> http://localhost:${ENV.port}/configure`);
+  console.log(`TorrStremio v1.0.0 -> http://localhost:${ENV.port}/configure`);
   console.log(`   Jackett   : ${ENV.jackettUrl}`);
   console.log(`   Redis     : ${ENV.redisUrl}`);
   console.log(`   TorrServer: ${isTorrServerConfigured() ? "ativo" : "desativado"}`);

@@ -522,7 +522,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
           });
 
           return {
-            name: `${prefs.addonName || "ProwJack"}\n⬇️ ${resLabel || "Links"} [TS]`,
+            name: `${prefs.addonName || "TorrStremio"}\n⬇️ ${resLabel || "Links"} [TS]`,
             description: [description, filenameLine, isPrivateTracker ? "🔒 Tracker Privado" : ""].filter(Boolean).join("\n"),
             url:   `${publicBase}/${req.params.userConfig}/qbit/${jobToken}`,
             indexer: renameIndexer(indexerName),

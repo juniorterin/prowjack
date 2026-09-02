@@ -524,7 +524,7 @@ function formatStream(r, indexerName, isAnime = false, prefs = {}, showSeeds = t
   }
   const seeds = r._displaySeeds ?? r.Seeders ?? 0;
   const cleanIndexer = renameIndexer(indexerName);
-  const addonName = prefs.addonName || "ProwJack";
+  const addonName = prefs.addonName || "TorrStremio";
 
   const resMap = {
     "2160p": "🟣 4K",
