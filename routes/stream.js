@@ -587,16 +587,31 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
     const _sizeScore = (s) => { const size = Number(s._sizeGb || 0); return size > 0 ? size : 0; };
     const _priorityIndexerRank = (s) => s._priorityIndexer ? 0 : 1;
 
-    // Ordenação: keywords → idioma prioritário → resolução → demais critérios de desempate.
+    // Ordenação/agrupamento: prefs.sortBy é uma lista ordenada de critérios
+    // (o primeiro domina — na prática funciona como "agrupar por", já que o
+    // Stremio renderiza uma lista linear). Configurável na tela de config.
+    const sortComparators = {
+      keyword:    (a, b) => (_hasKeyword(a) ? 0 : 1) - (_hasKeyword(b) ? 0 : 1),
+      language:   (a, b) => (_hasPriorityLang(a) ? 0 : 1) - (_hasPriorityLang(b) ? 0 : 1),
+      resolution: (a, b) => _resScore(b) - _resScore(a),
+      quality:    (a, b) => _qualScore(b) - _qualScore(a),
+      size:       (a, b) => _sizeScore(b) - _sizeScore(a),
+      seeders:    (a, b) => (b._seeders || 0) - (a._seeders || 0),
+      indexer:    (a, b) => String(a._indexerKey || "").localeCompare(String(b._indexerKey || "")),
+    };
+    const activeSortBy = Array.isArray(prefs.sortBy) && prefs.sortBy.length
+      ? prefs.sortBy
+      : ["keyword", "language", "resolution", "quality", "size", "seeders"];
+
     dedupedStreams.sort((a, b) => {
-      const dk = (_hasKeyword(a) ? 0 : 1) - (_hasKeyword(b) ? 0 : 1); if (dk !== 0) return dk;
-      const dl = (_hasPriorityLang(a) ? 0 : 1) - (_hasPriorityLang(b) ? 0 : 1); if (dl !== 0) return dl;
-      const dr = _resScore(b)  - _resScore(a);  if (dr !== 0) return dr;
+      for (const key of activeSortBy) {
+        const cmp = sortComparators[key];
+        if (!cmp) continue;
+        const d = cmp(a, b);
+        if (d !== 0) return d;
+      }
       const dpi = _priorityIndexerRank(a) - _priorityIndexerRank(b); if (dpi !== 0) return dpi;
-      const ds = (b._originalScore || 0) - (a._originalScore || 0); if (ds !== 0) return ds;
-      const dq = _qualScore(b) - _qualScore(a); if (dq !== 0) return dq;
-      const dz = _sizeScore(b) - _sizeScore(a); if (dz !== 0) return dz;
-      return (b._seeders || 0) - (a._seeders || 0);
+      return (b._originalScore || 0) - (a._originalScore || 0);
     });
 
     let finalStreams = (() => {

@@ -508,6 +508,21 @@ function extractInfoHashFromMagnet(magnet) {
 // Sem cache: a saída depende de prefs.addonName e streamMeta (título/ano/temporada),
 // que não podem fazer parte de uma chave leve — cache aqui causava nome/descrição
 // errados entre usuários e títulos diferentes.
+// Substitui {token} pelos valores em `tokens`. Cada linha do template é uma
+// unidade própria: se ela referencia algum {token} e TODOS os tokens
+// referenciados nessa linha estão vazios, a linha inteira some — assim o
+// usuário escreve "💾 {size}" e ela só aparece quando existe tamanho, sem
+// precisar de lógica condicional.
+function renderTemplate(template, tokens) {
+  const lines = String(template || "").split("\n");
+  const rendered = lines.map(line => {
+    const refs = [...line.matchAll(/\{(\w+)\}/g)].map(m => m[1]);
+    if (refs.length && refs.every(k => !tokens[k])) return null;
+    return line.replace(/\{(\w+)\}/g, (_, k) => (tokens[k] != null ? String(tokens[k]) : ""));
+  }).filter(l => l !== null && l.trim() !== "");
+  return rendered.join("\n");
+}
+
 function formatStream(r, indexerName, isAnime = false, prefs = {}, showSeeds = true, streamMeta = {}) {
   const t = r.Title || "";
   const res = first(RESOLUTION, t);
@@ -558,8 +573,33 @@ function formatStream(r, indexerName, isAnime = false, prefs = {}, showSeeds = t
     [group ? `${brGroup}🫟 ${group}` : "", cleanIndexer ? `⚙️ ${cleanIndexer}` : ""].filter(Boolean).join("  "),
   ].filter(Boolean).join("\n");
 
-  const result = { name: `${addonName}\n${resLabel}`, description: desc.trim(), resLabel };
-  return result;
+  // Tokens disponíveis pros templates customizáveis (área "Formatação" da
+  // config) — mesmos dados que o formato padrão acima já usa, só nomeados.
+  const tokens = {
+    addon: addonName,
+    title: streamMeta.title || "",
+    year: streamMeta.year || "",
+    season: streamMeta.formattedSeasons || "",
+    resolution: resLabel !== "Links" ? resLabel : "",
+    quality: qual ? qual.label : "",
+    codec: codecLabel,
+    size,
+    seeders: showSeeds && seeds > 0 ? String(seeds) : "",
+    language: langs.length ? langs.map(l => l.label).join(" • ") : "",
+    audio: audios.length ? audios.map(a => a.label).join(" • ") : "",
+    visual: visualLabel,
+    group: group ? `${brGroup}${group}`.trim() : "",
+    indexer: cleanIndexer || "",
+  };
+
+  const name = prefs.nameTemplate
+    ? renderTemplate(prefs.nameTemplate, tokens) || addonName
+    : `${addonName}\n${resLabel}`;
+  const description = prefs.descriptionTemplate
+    ? renderTemplate(prefs.descriptionTemplate, tokens)
+    : desc.trim();
+
+  return { name, description, resLabel, tokens };
 }
 
 module.exports = {
@@ -580,5 +620,5 @@ module.exports = {
   visibleSeedCount, matchesKeywordBoost,
   splitFilterTerms, textHasAnyTerm,
   resultIndexerText, isPriorityIndexerResult, isRdExcludedResult,
-  hasDirectInfoHash, formatStream,
+  hasDirectInfoHash, formatStream, renderTemplate,
 };

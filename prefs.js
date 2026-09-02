@@ -11,9 +11,27 @@ function cleanString(value, max = 300) {
   return String(value || "").replace(/[\x00-\x1f\x7f]/g, "").trim().slice(0, max);
 }
 
+// Como cleanString, mas preserva quebras de linha — usado pelos templates de
+// formatação, onde cada linha é uma unidade própria (placeholder vazio = linha some).
+function cleanTemplate(value, max = 800) {
+  return String(value || "").replace(/[\x00-\x09\x0b\x0c\x0e-\x1f\x7f]/g, "").trim().slice(0, max);
+}
+
 function cleanStringArray(value, maxItems = 100, maxLen = 120) {
   if (!Array.isArray(value)) return [];
   return value.map(v => cleanString(v, maxLen)).filter(Boolean).slice(0, maxItems);
+}
+
+// Critérios disponíveis pra ordenar/agrupar os streams exibidos — o primeiro
+// da lista domina (na prática funciona como "agrupar por", já que o Stremio
+// só renderiza uma lista linear e não tem seções nativas).
+const SORT_KEYS = ["keyword", "language", "resolution", "quality", "size", "seeders", "indexer"];
+const DEFAULT_SORT_BY = ["keyword", "language", "resolution", "quality", "size", "seeders"];
+
+function sanitizeSortBy(value) {
+  if (!Array.isArray(value)) return DEFAULT_SORT_BY.slice();
+  const cleaned = [...new Set(value.filter(v => SORT_KEYS.includes(v)))];
+  return cleaned.length ? cleaned : DEFAULT_SORT_BY.slice();
 }
 
 function validateServiceUrl(value) {
@@ -49,6 +67,9 @@ function defaultPrefs() {
     enableCatalog:   true,
     rssIndexers:     [],
     token:           "",
+    nameTemplate:        "",
+    descriptionTemplate: "",
+    sortBy:              DEFAULT_SORT_BY.slice(),
   };
 }
 
@@ -90,6 +111,9 @@ function sanitizeUserPrefs(input = {}) {
   out.rssIndexers = cleanStringArray(src.rssIndexers, 100, 120);
   out.token = cleanString(src.token, 200);
   out.addonName = cleanString(src.addonName, 80);
+  out.nameTemplate = cleanTemplate(src.nameTemplate, 300);
+  out.descriptionTemplate = cleanTemplate(src.descriptionTemplate, 800);
+  out.sortBy = sanitizeSortBy(src.sortBy);
 
   if (src.jackett && typeof src.jackett === "object" && !Array.isArray(src.jackett)) {
     const url = src.jackett.url ? safeServiceUrl(src.jackett.url) : "";
@@ -119,4 +143,7 @@ module.exports = {
   clampNumber,
   cleanString,
   cleanStringArray,
+  cleanTemplate,
+  SORT_KEYS,
+  DEFAULT_SORT_BY,
 };

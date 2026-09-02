@@ -3,9 +3,10 @@ const { isConfigured: isTorrServerConfigured } = require("../providers/torrserve
 const { ENV } = require("../constants");
 const { rc, redis } = require("../cache");
 const { saveStoredConfig } = require("../configStore");
-const { normalizePrefs, sanitizeUserPrefs, validateServiceUrl } = require("../prefs");
+const { normalizePrefs, sanitizeUserPrefs, validateServiceUrl, cleanTemplate } = require("../prefs");
 const { getPublicBase, getRequestAccessToken, requireAdminAccess } = require("../routeHelpers");
 const { jackettFetchIndexers, fetchIndexerPrivacyMap, isProwlarrServer } = require("../jackettSearch");
+const { formatStream } = require("../scoring");
 
 const router = express.Router();
 
@@ -33,6 +34,28 @@ router.use("/api/indexers", requireAdminAccess);
 router.use("/api/test", requireAdminAccess);
 
 router.use("/api/metrics", requireAdminAccess);
+
+// Preview ao vivo pro construtor de formatação — usa um resultado fictício
+// pra renderizar name/description exatamente como o formatStream real faria.
+router.post("/api/preview-format", (req, res) => {
+  const nameTemplate = cleanTemplate(req.body?.nameTemplate, 300);
+  const descriptionTemplate = cleanTemplate(req.body?.descriptionTemplate, 800);
+  const addonName = String(req.body?.addonName || "TorrStremio").slice(0, 80);
+
+  const sampleResult = {
+    Title: "The.Matrix.1999.2160p.UHD.BluRay.REMUX.HDR.DDP5.1.Atmos.x265-GROUP",
+    Size: 37000000000,
+    Seeders: 214,
+  };
+  const streamMeta = { title: "The Matrix", year: 1999, formattedSeasons: "" };
+
+  try {
+    const preview = formatStream(sampleResult, "1337x", false, { addonName, nameTemplate, descriptionTemplate }, true, streamMeta);
+    res.json({ ok: true, name: preview.name, description: preview.description, tokens: preview.tokens });
+  } catch (err) {
+    res.status(400).json({ ok: false, error: err.message });
+  }
+});
 
 router.get("/api/env", async (_, res) => {
   let redisOk = false;
