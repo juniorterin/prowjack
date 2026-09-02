@@ -485,6 +485,54 @@ function resolveFilePath(info, file) {
   return null; // Mudança importante: retornar null se não encontrar em vez de string falsa
 }
 
+const pieceSizeCache = new Map();
+const pieceStatesCache = new Map();
+const PIECE_STATES_TTL_MS = 2000;
+
+async function getPieceSize(infoHash, creds) {
+  const key = `${getSessionKey(creds)}\n${infoHash}`;
+  if (pieceSizeCache.has(key)) return pieceSizeCache.get(key);
+  const res = await qbitApi(`/api/v2/torrents/properties?hash=${encodeURIComponent(infoHash.toLowerCase())}`, {}, creds);
+  const props = await res.json();
+  const size = Number(props?.piece_size) || 0;
+  if (size) pieceSizeCache.set(key, size);
+  return size;
+}
+
+async function getPieceStates(infoHash, creds) {
+  const key = `${getSessionKey(creds)}\n${infoHash}`;
+  const cached = pieceStatesCache.get(key);
+  if (cached && Date.now() - cached.at < PIECE_STATES_TTL_MS) return cached.states;
+  const res = await qbitApi(`/api/v2/torrents/pieceStates?hash=${encodeURIComponent(infoHash.toLowerCase())}`, {}, creds);
+  const states = await res.json();
+  pieceStatesCache.set(key, { states, at: Date.now() });
+  return states;
+}
+
+// Download sequencial preenche o arquivo em ordem — um seek para um trecho
+// ainda não baixado fazia o servidor ler bytes inexistentes/zerados do disco
+// e devolvê-los como se fossem válidos (206 Ok), corrompendo o player. Aqui
+// checamos, via piece_range do arquivo + pieceStates do torrent, se o trecho
+// pedido já foi realmente baixado antes de servi-lo.
+async function isByteRangeDownloaded(infoHash, file, start, end, creds) {
+  try {
+    if (!Array.isArray(file?.piece_range) || file.piece_range.length !== 2) return true;
+    const pieceSize = await getPieceSize(infoHash, creds);
+    if (!pieceSize) return true;
+    const [fileFirstPiece, fileLastPiece] = file.piece_range;
+    const firstPiece = Math.min(fileLastPiece, fileFirstPiece + Math.floor(start / pieceSize));
+    const lastPiece  = Math.min(fileLastPiece, fileFirstPiece + Math.floor(end / pieceSize));
+    const states = await getPieceStates(infoHash, creds);
+    if (!Array.isArray(states) || !states.length) return true;
+    for (let p = firstPiece; p <= lastPiece; p++) {
+      if (states[p] !== 2) return false;
+    }
+    return true;
+  } catch {
+    return true; // Falha ao checar não deve travar o streaming — comportamento anterior preservado
+  }
+}
+
 async function streamTorrentFile(req, res, infoHash, fileIdx, fileName, creds = null) {
   const info = await getTorrentInfo(infoHash, creds);
   if (!info) return res.status(404).json({ error: "Torrent não encontrado" });
@@ -514,6 +562,11 @@ async function streamTorrentFile(req, res, infoHash, fileIdx, fileName, creds = 
       const safeStart = Math.max(0, fileSize - suffixLength);
       const safeEnd = fileSize - 1;
 
+      if (!(await isByteRangeDownloaded(infoHash, file, safeStart, safeEnd, creds))) {
+        res.setHeader("Retry-After", "3");
+        return res.status(503).end();
+      }
+
       res.writeHead(206, {
         "Content-Range":  `bytes ${safeStart}-${safeEnd}/${fileSize}`,
         "Content-Length": safeEnd - safeStart + 1,
@@ -536,6 +589,11 @@ async function streamTorrentFile(req, res, infoHash, fileIdx, fileName, creds = 
     const requestedEnd = parsedEnd != null ? parsedEnd : Math.min(start + 5 * 1024 * 1024, fileSize - 1);
     const safeEnd      = Math.min(requestedEnd, fileSize - 1);
 
+    if (!(await isByteRangeDownloaded(infoHash, file, start, safeEnd, creds))) {
+      res.setHeader("Retry-After", "3");
+      return res.status(503).end();
+    }
+
     res.writeHead(206, {
       "Content-Range":  `bytes ${start}-${safeEnd}/${fileSize}`,
       "Content-Length": safeEnd - start + 1,
@@ -545,6 +603,11 @@ async function streamTorrentFile(req, res, infoHash, fileIdx, fileName, creds = 
     });
     fs.createReadStream(filePath, { start, end: safeEnd }).pipe(res);
     return;
+  }
+
+  if (!(await isByteRangeDownloaded(infoHash, file, 0, fileSize - 1, creds))) {
+    res.setHeader("Retry-After", "3");
+    return res.status(503).end();
   }
 
   res.writeHead(200, {
