@@ -2,7 +2,6 @@
 const axios  = require("axios");
 const https  = require("https");
 const crypto = require("crypto");
-const { enrichMetaPtBr } = require("./metadata");
 const { CACHE_VERSION } = require("./constants");
 
 https.globalAgent.setMaxListeners(50);
@@ -10,7 +9,6 @@ require("events").EventEmitter.defaultMaxListeners = 50;
 
 const POLL_INTERVAL_MS = 45 * 60 * 1000;
 const RSS_CACHE_TTL    = 24 * 3600;
-const CATALOG_TTL      = 24 * 3600;
 
 // ╔════════════════════════════════════════════════════════════════════╗
 // ║ OTIMIZAÇÃO #1: Cache compilado para regex (não recompila)         ║
@@ -233,7 +231,7 @@ function buildRssCacheKey(indexerId, type) {
   return `rss:${CACHE_VERSION}:${indexerId}:${type}:items`;
 }
 
-async function saveToRedis(rc, indexerId, indexerName, items, skipCatalog = false) {
+async function saveToRedis(rc, indexerId, indexerName, items) {
   const byType = { movie: [], series: [], anime: [] };
   for (const item of items) {
     const t = item._rssType === "anime" ? "anime" : item._rssType === "series" ? "series" : "movie";
@@ -246,8 +244,6 @@ async function saveToRedis(rc, indexerId, indexerName, items, skipCatalog = fals
     await rc.set(key, JSON.stringify(list), RSS_CACHE_TTL);
     console.log(`[RSS] ${indexerName} (${type}): ${list.length} itens salvos`);
   }
-
-  if (!skipCatalog) setImmediate(() => updateCatalog(rc, items, indexerId).catch(() => {}));
 }
 
 async function saveHashesOnly(rc, indexerId, indexerName, items) {
@@ -261,113 +257,6 @@ async function saveHashesOnly(rc, indexerId, indexerName, items) {
     // Usa a mesma chave determinística de saveToRedis (sem random)
     const key = buildRssCacheKey(indexerId, type);
     await rc.set(key, JSON.stringify(list), RSS_CACHE_TTL).catch(() => {});
-  }
-}
-
-async function updateCatalog(rc, newItems, indexerId = null) {
-  const byType = { movie: [], series: [], anime: [] };
-  for (const item of newItems) {
-    const t = item._rssType === "anime" ? "anime" : item._rssType === "series" ? "series" : "movie";
-    byType[t].push(item);
-  }
-
-  for (const [type, items] of Object.entries(byType)) {
-    if (!items.length) continue;
-
-    const seenIds  = new Set();
-    const rssKeys = await rc.keys(`rss:${CACHE_VERSION}:*:${type}:*`);
-    const activeIds = new Set();
-    for (const key of rssKeys) {
-      try {
-        const raw = await rc.get(key);
-        if (!raw) continue;
-        for (const item of JSON.parse(raw)) {
-          if (item.ImdbId) activeIds.add(item.ImdbId.startsWith("tt") ? item.ImdbId : `tt${item.ImdbId}`);
-        }
-      } catch {}
-    }
-
-    const rawCatalog = await rc.get(`rss:catalog:${type}`);
-    const existing   = rawCatalog
-      ? JSON.parse(rawCatalog).filter(m => !activeIds.size || activeIds.has(m.id))
-      : [];
-
-    const resolved = [];
-    let idx = 0;
-
-    // ╔════════════════════════════════════════════════════════════════╗
-    // ║ OTIMIZAÇÃO #4: Worker pool com limit de concorrência          ║
-    // ╚════════════════════════════════════════════════════════════════╝
-    const CONC_WORKERS = 5;
-    async function resolveWorker() {
-      while (idx < items.length) {
-        const item = items[idx++];
-        let imdbId = item.ImdbId ? (item.ImdbId.startsWith("tt") ? item.ImdbId : `tt${item.ImdbId}`) : null;
-
-        // Se não tiver ImdbId, tenta encontrar via busca por título no Cinemeta
-        if (!imdbId && item.Title) {
-          try {
-            const stremioType = type === "movie" ? "movie" : "series";
-            const searchRes = await axios.get(
-              `https://v3-cinemeta.strem.io/search/${stremioType}/${encodeURIComponent(item.Title)}.json`,
-              { timeout: 5000, validateStatus: () => true }
-            );
-            const match = searchRes.data?.metas?.[0];
-            if (match?.imdb_id) {
-              imdbId = match.imdb_id.startsWith("tt") ? match.imdb_id : `tt${match.imdb_id}`;
-              item.ImdbId = imdbId; // persiste no item para saveHashesOnly
-            }
-          } catch {}
-        }
-
-        let meta = null;
-
-        if (imdbId) {
-          try {
-            const stremioType = type === "movie" ? "movie" : "series";
-            const r = await axios.get(`https://v3-cinemeta.strem.io/meta/${stremioType}/${imdbId}.json`, { timeout: 5000 });
-            meta = r.data?.meta;
-            meta = await enrichMetaPtBr(meta, imdbId, stremioType);
-          } catch {}
-        }
-
-        if (meta && imdbId) {
-          if (seenIds.has(imdbId)) continue;
-          seenIds.add(imdbId);
-
-          resolved.push({
-            id:          type === "movie" ? `rssmovie:${imdbId}` : `rssmeta:${type}:${imdbId.replace(/^tt/i,"")}`,
-            type:        type === "movie" ? "movie" : "series",
-            name:        meta.name || meta.title || item.Title,
-            poster:      meta.poster || null,
-            background:  meta.background || null,
-            description: meta.description || null,
-            releaseInfo: meta.releaseInfo || meta.year || null,
-            imdbRating:  meta.imdbRating || null,
-            _addedAt:    Date.now(),
-          });
-        }
-      }
-    }
-
-    await Promise.all(Array.from({ length: CONC_WORKERS }, resolveWorker));
-
-    if (!resolved.length) continue;
-
-    const existingFiltered = existing.filter(m => !seenIds.has(m.id));
-    const merged = [...resolved, ...existingFiltered].slice(0, 200);
-    const CATALOG_KEY = "rss:catalog";
-    await rc.set(`${CATALOG_KEY}:${type}`, JSON.stringify(merged), CATALOG_TTL);
-    console.log(`[RSS Catalog] ${type}: +${resolved.length} novos (total ${merged.length})`);
-  }
-
-  // Salva os itens atualizados (agora com ImdbId descoberto) de volta no cache raw
-  if (indexerId) {
-    for (const [type, list] of Object.entries(byType)) {
-      if (!list.length) continue;
-      const key = buildRssCacheKey(indexerId, type);
-      await rc.set(key, JSON.stringify(list), 86400 * 3).catch(() => {});
-    }
   }
 }
 
@@ -399,8 +288,7 @@ async function pollOnce(jUrl, jKey, rc) {
 
   for (const ix of indexersToPoll) {
     const items = await fetchIndexerRss(jUrl, jKey, ix.id, ix.name, rc);
-    // skipCatalog=false: updateCatalog deve ser chamado após salvar os itens
-    if (items.length) await saveToRedis(rc, ix.id, ix.name, items, false);
+    if (items.length) await saveToRedis(rc, ix.id, ix.name, items);
     await new Promise(r => setTimeout(r, 3000));
   }
 
@@ -433,6 +321,4 @@ function startRssPoller(jUrl, jKey, rc, redisClient) {
   console.log(`[RSS] Poller agendado (intervalo: ${POLL_INTERVAL_MS / 60000} min)`);
 }
 
-const CATALOG_KEY = "rss:catalog";
-
-module.exports = { startRssPoller, buildRssCacheKey, CATALOG_KEY, updateCatalog };
+module.exports = { startRssPoller, buildRssCacheKey };
