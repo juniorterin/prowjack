@@ -1,5 +1,5 @@
 ---
-title: ProwJack
+title: TorrStremio
 emoji: 🎬
 colorFrom: indigo
 colorTo: purple
@@ -7,121 +7,90 @@ sdk: docker
 app_port: 7860
 ---
 
-# 🎬 ProwJack
+# 🎬 TorrStremio
 
-**ProwJack** é um addon avançado para Stremio (v3.2.3) que integra indexadores do **Jackett** e **Prowlarr** com serviços Debrid (**Real-Debrid**, **TorBox**), **StremThru**, e **qBittorrent** nativo. Desenvolvido para oferecer a melhor experiência de streaming com foco em velocidade, cache inteligente e priorização de conteúdo.
+**[🇧🇷 Português](#) · [🇺🇸 English](README.en.md)**
 
----
-
-## ✨ Funcionalidades Principais
-
-* **Busca Universal:** Integra-se perfeitamente com Prowlarr e Jackett para consultar dezenas de trackers simultaneamente.
-* **Múltiplos Motores de Streaming:**
-  * **Debrid Nativo:** Integração ultrarrápida com Real-Debrid e TorBox.
-  * **StremThru:** Compatibilidade total com a API do StremThru.
-  * **qBittorrent HTTP:** Streaming nativo usando seu próprio cliente qBittorrent para trackers privados.
-  * **P2P:** Links magnet diretos quando nenhum serviço premium estiver ativo.
-* **Catálogo RSS Automático:** Exibe os últimos lançamentos do Prowlarr/Jackett diretamente na página inicial do Stremio.
-* **Priorização Inteligente:** Ranking avançado priorizando dublagem (PT-BR) e resolução.
-* **Performance e Cache:** Cache distribuído em Redis para máxima velocidade e contorno de limites de taxa (Rate Limit).
+Addon para Stremio que busca torrents no **Prowlarr**/**Jackett** e transmite direto via **[TorrServer](https://github.com/YouROK/TorrServer)** — com seek de verdade (avançar/voltar sem re-baixar o arquivo do zero), sem depender de serviço debrid nem de qBittorrent.
 
 ---
 
-## 🚀 Como Iniciar (Quick Start)
+## O que ele faz
 
-A maneira mais recomendada de hospedar o ProwJack é utilizando o **Docker Compose**.
+- **Busca** filmes, séries e animes em todos os indexadores configurados no seu Prowlarr (ou Jackett).
+- **Filtra e prioriza** por idioma, palavra-chave, indexador e qualidade — do jeito que você configurar.
+- **Transmite** pelo TorrServer, que baixa e reprioriza os pedaços do torrent sob demanda conforme você assiste, permitindo pular pra qualquer ponto do vídeo sem esperar o download completar.
+- **Formata** o nome e a descrição de cada stream do seu jeito, com um construtor de template baseado em tokens (tamanho, resolução, seeders, idioma, grupo de release, etc.) — parecido com o que addons como o MediaFusion oferecem.
+- **Ordena/agrupa** os resultados pela prioridade que você escolher: palavra-chave, idioma, resolução, qualidade, tamanho, seeders ou indexador.
+- **Catálogo opcional** com os lançamentos mais recentes dos seus indexadores direto na home do Stremio.
 
-### 1. Requisitos
-* Docker e Docker Compose instalados.
-* Uma instância do **Prowlarr** ou **Jackett**.
-* (Recomendado) Uma conta Debrid (TorBox, Real-Debrid) ou StremThru.
+Não há suporte a Real-Debrid, TorBox, StremThru ou magnet puro P2P — o addon foi enxugado de propósito pra fazer bem uma coisa: Prowlarr/Jackett buscando, TorrServer entregando.
 
-### 2. Configuração Docker
+---
 
-Crie um arquivo `docker-compose.yml`:
+## Como rodar
 
-```yaml
-version: '3.8'
-services:
-  prowjack:
-    image: node:20-alpine
-    container_name: prowjack
-    working_dir: /app
-    volumes:
-      - ./:/app
-    ports:
-      - "7014:7014"
-    environment:
-      - NODE_ENV=production
-    env_file:
-      - .env
-    command: npm start
-    restart: unless-stopped
-```
-
-### 3. Variáveis de Ambiente (`.env`)
-
-Crie um arquivo `.env` no mesmo diretório:
+A forma recomendada é com Docker Compose. O repositório já traz um [`docker-compose.yaml`](docker-compose.yaml) pronto com Redis, Prowlarr e TorrServer:
 
 ```bash
-# Integração Prowlarr/Jackett (Obrigatório)
-JACKETT_URL=http://prowlarr:9696
-JACKETT_API_KEY=sua_api_key_aqui
+git clone https://github.com/juniorterin/prowjack.git torrstremio
+cd torrstremio
 
-# Cache (Recomendado)
-REDIS_URL=redis://localhost:6379
+# Preencha JACKETT_API_KEY, ADDON_PUBLIC_URL, ACCESS_TOKEN e TS_PUBLIC_URL
+cp .env.example .env
 
-# Porta do Servidor
-PORT=7014
+docker compose up -d
 ```
 
-*(Outros recursos como qBittorrent e persistência avançada podem ser configurados neste arquivo. Consulte `.env.example` no código-fonte).*
+O addon sobe na porta `7860`. Coloque um proxy reverso (Coolify, Traefik, Nginx...) na frente se for expor pra internet, e aponte `ADDON_PUBLIC_URL`/`TS_PUBLIC_URL` pros endereços públicos correspondentes.
 
-### 4. Executando
+### Variáveis de ambiente
 
-```bash
-docker-compose up -d
-```
+| Variável | Obrigatória | Descrição |
+|---|---|---|
+| `JACKETT_URL` | sim | URL do Prowlarr ou Jackett |
+| `JACKETT_API_KEY` | sim | API key do Prowlarr/Jackett |
+| `TS_URL` | sim | URL interna do TorrServer |
+| `TS_PUBLIC_URL` | recomendada | URL que o **player** do Stremio vai acessar, se for diferente de `TS_URL` (ex: atrás de proxy reverso) |
+| `TS_USER` / `TS_PASS` | não | Basic auth do TorrServer, se protegido |
+| `REDIS_URL` | recomendada | Cache de buscas — sem isso, cai para cache em memória (perdido a cada reinício) |
+| `ADDON_PUBLIC_URL` | recomendada | URL pública do addon, atrás de proxy/hosting |
+| `ACCESS_TOKEN` | não | Trava o addon contra uso não autorizado |
+| `CONFIG_DATA_DIR` / `CONFIG_DATABASE_URL` | não | Onde salvar as configurações `cfg_...` geradas pela UI — arquivo local ou Postgres |
+| `TMDB_API_KEY` / `TMDB_BEARER_TOKEN` | não | Enriquece título/sinopse em pt-BR no catálogo |
+| `RSS_CATALOG_INDEXERS` | não | Quais indexers alimentam o catálogo de lançamentos recentes |
+| `SCRAP_MANIFEST_URLS` | não | Manifests de outros addons Stremio pra somar aos resultados do Prowlarr/Jackett |
+| `ALLOWED_ORIGINS` | não | Origens permitidas por CORS (padrão: todas) |
+
+A lista completa, com comentários, está em [`.env.example`](.env.example).
 
 ---
 
-## 🎮 Como Usar no Stremio
+## Configurando no Stremio
 
-1. Com o ProwJack rodando, acesse a interface web em seu navegador:
-   👉 `http://IP_DO_SEU_SERVIDOR:7014/configure`
-2. Selecione seus indexadores, idioma de preferência e configure sua conta Debrid / StremThru.
-3. Clique em **Instalar** ou copie o link do manifest gerado e cole na barra de busca de Addons do Stremio.
+1. Com o addon rodando, acesse `http://SEU_SERVIDOR:7860/configure` no navegador.
+2. **Indexadores** — escolha quais indexadores e categorias (filmes/séries/anime) participam da busca.
+3. **Filtros** — idioma prioritário, palavras-chave de boost, indexadores prioritários, limites de resultado.
+4. **Formatação** — monte como o nome e a descrição de cada stream aparecem no Stremio, usando tokens como `{resolution}`, `{size}`, `{seeders}`, `{language}`; uma prévia ao vivo mostra o resultado real.
+5. **Ordenação** — defina a ordem de prioridade dos critérios de ranking (o primeiro da lista domina, funcionando como "agrupar por").
+6. **Catálogo** — liga/desliga o catálogo de lançamentos recentes na home do Stremio.
+7. **Instalação** — dê um nome ao addon, gere o link e instale no Stremio (ou copie o link do manifest).
+
+Voltar em `/cfg_.../configure` com o link gerado recarrega a configuração salva pra edição.
+
+### Tokens de formatação disponíveis
+
+`{addon}` `{title}` `{year}` `{season}` `{resolution}` `{quality}` `{codec}` `{size}` `{seeders}` `{language}` `{audio}` `{visual}` `{group}` `{indexer}`
+
+Cada linha do template é independente: se todos os tokens dela vierem vazios pro resultado atual (por exemplo, `{audio}` quando o release não informa áudio), a linha inteira some — sem precisar de lógica condicional.
 
 ---
 
-## 🔐 Privacidade e Segurança
-* **Auto-hospedado:** Seus dados e chaves de API não passam por servidores de terceiros.
-* **Proteção de Acesso:** O `.env` suporta a variável `ACCESS_TOKEN` para travar o addon contra acessos indesejados.
-* **Validação Rígida:** Proteções nativas contra *Path Traversal*, *ReDoS* e controle restrito de *CORS*.
+## Privacidade e segurança
 
----
-
-## 🤗 Hugging Face Spaces
-
-O projeto pode ser publicado como um **Docker Space**. O `Dockerfile` já inicia o addon na porta `7860`.
-
-Configure em **Settings → Variables and secrets**:
-
-- Secrets: `JACKETT_API_KEY`, `ACCESS_TOKEN` e chaves Debrid.
-- Variables: `JACKETT_URL`, `ADDON_PUBLIC_URL` e demais opções não sensíveis.
-- `JACKETT_URL` deve ser um endereço externo HTTPS, normalmente na porta `443`. O Hugging Face bloqueia conexões de saída para portas como `9117`, `9696`, `6379` e `5432`.
-- Para preservar os manifests `cfg_...`, anexe um **Storage Bucket** gravável em `/data`. Alternativamente, use `CONFIG_DATABASE_URL` apenas se o PostgreSQL estiver exposto por uma porta permitida pelo Space.
-- O plano gratuito entra em suspensão quando o Space fica ocioso. Para addon e catálogo RSS sempre disponíveis, use hardware pago ou outra hospedagem contínua.
-
-Exemplo:
-
-```env
-PORT=7860
-ADDON_PUBLIC_URL=https://SEU-SPACE.hf.space
-JACKETT_URL=https://prowlarr.seudominio.com
-JACKETT_API_KEY=...
-CONFIG_DATA_DIR=/data
-```
+- **Auto-hospedado** — suas chaves de API e configurações não passam por servidores de terceiros.
+- **`ACCESS_TOKEN`** trava o addon contra acesso não autorizado.
+- Validações contra *path traversal*, *ReDoS* e CORS restrito.
 
 ---
 
