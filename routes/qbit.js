@@ -2,6 +2,7 @@ const express = require("express");
 const crypto = require("crypto");
 const axios = require("axios");
 const { isConfigured: isQbitConfigured, ensureTorrentReady, getPlayableLocalFile, streamTorrentFile, waitForBuffer } = require("../providers/qbittorrent");
+const torrServer = require("../providers/torrserver");
 const { TORRENT_DOWNLOAD_TIMEOUT_MS } = require("../constants");
 const { rc, loadQbitJob } = require("../cache");
 const { resolvePrefs } = require("../configStore");
@@ -266,6 +267,49 @@ router.get("/:userConfig/qbit/:jobToken", async (req, res) => {
   if (!job?.infoHash) return res.status(404).send("Job expirado ou inválido.");
   const qbitCreds = null;
   if (!isQbitEnabledForPrefs(prefs, qbitCreds)) return res.status(404).send("qBittorrent desabilitado para esta configuração.");
+
+  // TorrServer, quando configurado, substitui o fluxo do qBittorrent: ele
+  // prioriza peças dinamicamente com base na posição de leitura do player,
+  // então suporta seek de verdade (o qBittorrent não tem essa capacidade
+  // exposta em sua API). O player é redirecionado direto para o endpoint
+  // de stream do TorrServer, que cuida do Range/seek internamente.
+  if (torrServer.isConfigured()) {
+    try {
+      let torrentBuffer = null;
+      if (job.torrentB64) {
+        try { torrentBuffer = Buffer.from(job.torrentB64, "base64"); } catch {}
+      }
+      if (!torrentBuffer && job.link && !job.link.startsWith("magnet:")) {
+        try {
+          if (!(await torrentDownloadRecentlyFailed(job.link))) {
+            const dl = await axios.get(job.link, {
+              responseType: "arraybuffer", timeout: TORRENT_DOWNLOAD_TIMEOUT_MS, maxRedirects: 5,
+              maxContentLength: 8 * 1024 * 1024, headers: { "User-Agent": "Mozilla/5.0" },
+              validateStatus: s => s < 400,
+              beforeRedirect: (options) => {
+                if (options.href?.startsWith("magnet:")) throw new Error("Redirect para magnet");
+              },
+            });
+            if (dl.data && Buffer.from(dl.data)[0] === 0x64) {
+              const raw = Buffer.from(dl.data);
+              try { torrentBuffer = injectTrackers(raw); } catch { torrentBuffer = raw; }
+            }
+          }
+        } catch (e) {
+          if (!e.message.includes("magnet")) await markTorrentDownloadFailed(job.link);
+        }
+      }
+
+      const streamUrl = await torrServer.ensureStreamUrl({
+        magnet: job.magnet, torrentBuffer, fileIdx: job.fileIdx, fileName: job.fileName,
+      });
+      return res.redirect(302, streamUrl);
+    } catch (err) {
+      console.log(`[TorrServer] Falha ao preparar ${job.infoHash}: ${err.message}`);
+      if (!res.headersSent) return res.status(503).send(`TorrServer: ${err.message}`);
+      return;
+    }
+  }
 
   try {
     // 1. Verifica se já está disponível para reprodução imediata

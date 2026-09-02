@@ -301,14 +301,14 @@ hr{border:none;border-top:1px solid var(--bord);margin:14px 0}
         <div class="card-title">Opções</div>
         <div class="tg-row">
           <button class="tg on" id="skipBadBtn">Skip CAM/TS</button>
-          <button class="tg on" id="onlyLangBtn">Apenas idioma</button>
+          <button class="tg" id="onlyLangBtn">Apenas idioma</button>
           <button class="tg on" id="dedupeBtn">Deduplicar</button>
           <button class="tg on" id="enableCatalogBtn" title="Exibe catálogo RSS no Stremio">Catálogo RSS</button>
         </div>
         <div class="info" style="margin-top:-4px;margin-bottom:12px">Catálogo RSS requer instância persistente (VPS/Docker) ou cron externo alimentando o Redis.</div>
 
         <label style="display:flex;align-items:center;gap:9px;cursor:pointer;margin-bottom:10px">
-          <input type="checkbox" id="enableKeywordsBr" checked style="width:15px;height:15px;accent-color:var(--amber)" onchange="toggleKeywords()"/>
+          <input type="checkbox" id="enableKeywordsBr" style="width:15px;height:15px;accent-color:var(--amber)" onchange="toggleKeywords()"/>
           <span style="font-size:13px;font-weight:600;color:var(--accent)">⭐ Ativar Keywords (Brasil)</span>
         </label>
         <div id="keywordsConfig">

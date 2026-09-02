@@ -2,6 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 const { getPlayableLocalFile } = require("../providers/qbittorrent");
+const torrServer = require("../providers/torrserver");
+const QBIT_TAG = torrServer.isConfigured() ? "[TS]" : "[QB]";
 const { ENV, CACHE_VERSION, STREAM_CACHE_VERSION, BAD_RE, BAD_EXT_RE, QB_EXTRA_SLOTS, MIN_STREAM_SEEDS, STREMTHRU_PROXY_TIMEOUT_MS } = require("../constants");
 const { rc, saveQbitJob } = require("../cache");
 const { resolvePrefs } = require("../configStore");
@@ -432,7 +434,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
                   const { resLabel } = formatStream(r, indexerName, parsed.isAnime, prefs, false, streamMeta);
 
                   return {
-                    name:          `\n${addonName}\n⬇️ ${resLabel || "QB"} [QB]`,
+                    name:          `\n${addonName}\n⬇️ ${resLabel || "QB"} ${QBIT_TAG}`,
                     description:   [String(r.Title || ""), isPrivateTrackerCandidate(r, null) ? "🔒 Tracker Privado" : ""].filter(Boolean).join("\n"),
                     url:           `${getPublicBase(req)}/${req.params.userConfig}/qbit/${jobToken}`,
                     behaviorHints: { notWebReady: false },
@@ -1131,8 +1133,8 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
               torrentB64,
             });
             const qbitName = localPlayable
-              ? `${prefs.addonName || "ProwJack"}\n⚡️ ${resLabel || "Links"} [QB]`
-              : `${prefs.addonName || "ProwJack"}\n⬇️ ${resLabel || "Links"} [QB]`;
+              ? `${prefs.addonName || "ProwJack"}\n⚡️ ${resLabel || "Links"} ${QBIT_TAG}`
+              : `${prefs.addonName || "ProwJack"}\n⬇️ ${resLabel || "Links"} ${QBIT_TAG}`;
             return {
               name: qbitName,
               description: [description, filenameLine, isPrivateTracker ? "🔒 Tracker Privado" : ""].filter(Boolean).join("\n"),

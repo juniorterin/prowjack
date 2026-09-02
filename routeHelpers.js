@@ -3,6 +3,7 @@ const axios = require("axios");
 const { ENV, PUBLIC_TRACKERS } = require("./constants");
 const { stripSourceBadges } = require("./scoring");
 const { isConfigured: isQbitConfigured } = require("./providers/qbittorrent");
+const { isConfigured: isTorrServerConfigured } = require("./providers/torrserver");
 
 const rateLimitStore = new Map();
 const RATE_LIMIT_WINDOW = 60000;
@@ -76,7 +77,10 @@ function buildStremThruProxyManifestUrl(req, prefs, userConfig) {
 function isQbitEnabledForPrefs(prefs, creds = null) {
   if (prefs?.enableP2P === false) return false;
   if (!["always", "private"].includes(String(prefs?.qbitMode || ""))) return false;
-  return isQbitConfigured(creds);
+  // TorrServer substitui o qBittorrent como motor de streaming quando configurado
+  // (TS_URL) — a oferta do stream não deve depender de credenciais do qBittorrent
+  // nesse caso, já que ele nunca chega a ser contatado.
+  return isTorrServerConfigured() || isQbitConfigured(creds);
 }
 
 function shouldOfferQbitForResult(prefs, isPrivateTracker, creds = null) {
