@@ -85,6 +85,30 @@
   .row-actions button.danger:hover { border-color: var(--bad); color: var(--bad); }
   .empty { text-align: center; padding: 30px; color: var(--muted); font-size: 13px; }
 
+  .tabs { display: flex; gap: 4px; margin-bottom: 22px; border-bottom: 1px solid var(--border); }
+  .tab-btn { background: none; border: none; color: var(--ink-2); padding: 9px 4px; margin-right: 18px; font-size: 13.5px; font-weight: 600; border-bottom: 2px solid transparent; }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn.on { color: var(--brand); border-bottom-color: var(--brand); }
+  .tab-pane { display: none; }
+  .tab-pane.on { display: block; }
+
+  .cat-row td { cursor: pointer; }
+  .cat-detail { background: var(--surface-2); border-radius: 10px; padding: 14px 16px; margin: 4px 0 10px; }
+  .cat-detail .items-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+  .item-chip {
+    display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11.5px;
+    background: var(--surface-3); border: 1px solid var(--border-2); border-radius: 16px; padding: 4px 6px 4px 10px;
+  }
+  .item-chip button { background: none; border: none; color: var(--muted); font-size: 13px; line-height: 1; padding: 2px; display: flex; }
+  .item-chip button:hover { color: var(--bad); }
+  .cat-add-row { display: flex; gap: 8px; }
+  .cat-add-row input { flex: 1; background: var(--surface-3); border: 1px solid var(--border-2); border-radius: 8px; padding: 7px 10px; outline: none; font-family: var(--font-mono); font-size: 12.5px; }
+  .cat-add-row input:focus { border-color: var(--brand); }
+  .new-row-3 { display: flex; gap: 10px; margin-bottom: 18px; }
+  .new-row-3 input:first-child { flex: 0 0 160px; font-family: var(--font-mono); }
+  .new-row-3 input { flex: 1; background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 9px; padding: 9px 12px; outline: none; }
+  .new-row-3 input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
+
   .toast {
     position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
     background: var(--surface-3); border: 1px solid var(--border-2); color: var(--ink);
@@ -106,24 +130,54 @@
     <button class="btn-ghost" id="logout-btn">Sair</button>
   </div>
 
-  <div class="card">
-    <div class="card-head">
-      <div>
-        <h2>Chaves de acesso</h2>
-        <p>Cada chave trava automaticamente no primeiro IP que a usar. Sem chave válida, a pessoa só vê o catálogo.</p>
+  <div class="tabs">
+    <button class="tab-btn on" data-tab="keys">Chaves de Acesso</button>
+    <button class="tab-btn" data-tab="catalogs">Catálogos</button>
+  </div>
+
+  <div class="tab-pane on" id="tab-keys">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Chaves de acesso</h2>
+          <p>Cada chave trava automaticamente no primeiro IP que a usar. Sem chave válida, a pessoa só vê o catálogo.</p>
+        </div>
       </div>
+      <div class="new-row">
+        <input type="text" id="new-label" placeholder="Rótulo (ex: nome da pessoa)" maxlength="80">
+        <button class="btn-primary" id="new-btn">+ Nova chave</button>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Rótulo</th><th>Chave</th><th>IP</th><th>Criada em</th><th></th></tr>
+        </thead>
+        <tbody id="keys-body"></tbody>
+      </table>
+      <div class="empty" id="keys-empty" style="display:none">Nenhuma chave criada ainda.</div>
     </div>
-    <div class="new-row">
-      <input type="text" id="new-label" placeholder="Rótulo (ex: nome da pessoa)" maxlength="80">
-      <button class="btn-primary" id="new-btn">+ Nova chave</button>
+  </div>
+
+  <div class="tab-pane" id="tab-catalogs">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Catálogos curados</h2>
+          <p>Aparecem na home do Stremio. Clique num catálogo pra ver/editar os títulos (IMDb ID).</p>
+        </div>
+      </div>
+      <div class="new-row-3">
+        <input type="text" id="new-cat-id" placeholder="id (ex: criterion)" maxlength="40">
+        <input type="text" id="new-cat-name" placeholder="Nome exibido (ex: Criterion Collection)" maxlength="120">
+        <button class="btn-primary" id="new-cat-btn">+ Novo catálogo</button>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Id</th><th>Títulos</th><th></th></tr>
+        </thead>
+        <tbody id="catalogs-body"></tbody>
+      </table>
+      <div class="empty" id="catalogs-empty" style="display:none">Nenhum catálogo criado ainda.</div>
     </div>
-    <table>
-      <thead>
-        <tr><th>Rótulo</th><th>Chave</th><th>IP</th><th>Criada em</th><th></th></tr>
-      </thead>
-      <tbody id="keys-body"></tbody>
-    </table>
-    <div class="empty" id="keys-empty" style="display:none">Nenhuma chave criada ainda.</div>
   </div>
 </div>
 
@@ -217,7 +271,139 @@ document.getElementById("logout-btn").addEventListener("click", async () => {
   location.href = "/admin/login";
 });
 
+// ── Abas ──────────────────────────────────────────────────
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("on", b === btn));
+    document.querySelectorAll(".tab-pane").forEach(p => p.classList.toggle("on", p.id === "tab-" + btn.dataset.tab));
+    if (btn.dataset.tab === "catalogs") loadCatalogs().catch(err => toast(err.message, true));
+  });
+});
+
+// ── Catálogos ─────────────────────────────────────────────
+let openCatalogId = null;
+
+async function loadCatalogs() {
+  const { catalogs } = await api("/admin/api/catalogs");
+  const body = document.getElementById("catalogs-body");
+  document.getElementById("catalogs-empty").style.display = catalogs.length ? "none" : "block";
+  body.innerHTML = "";
+  for (const cat of catalogs) {
+    const tr = document.createElement("tr");
+    tr.className = "cat-row";
+    tr.innerHTML = `
+      <td>${cat.name}</td>
+      <td><code>${cat.id}</code></td>
+      <td>${cat.items.length}</td>
+      <td>
+        <div class="row-actions">
+          <button data-rename="${cat.id}">Renomear</button>
+          <button data-del-cat="${cat.id}" class="danger">Excluir</button>
+        </div>
+      </td>
+    `;
+    tr.querySelector("td").addEventListener("click", () => toggleCatalogDetail(cat.id));
+    body.appendChild(tr);
+
+    if (openCatalogId === cat.id) {
+      const detailTr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = 4;
+      td.appendChild(renderCatalogDetail(cat));
+      detailTr.appendChild(td);
+      body.appendChild(detailTr);
+    }
+  }
+}
+
+function renderCatalogDetail(cat) {
+  const wrap = document.createElement("div");
+  wrap.className = "cat-detail";
+  const itemsRow = document.createElement("div");
+  itemsRow.className = "items-row";
+  if (!cat.items.length) {
+    itemsRow.innerHTML = `<span class="empty" style="padding:4px 0">Nenhum título ainda.</span>`;
+  }
+  for (const it of cat.items) {
+    const chip = document.createElement("span");
+    chip.className = "item-chip";
+    chip.innerHTML = `${it.imdbId} <button data-rm-item="${it.imdbId}" title="Remover">✕</button>`;
+    itemsRow.appendChild(chip);
+  }
+  wrap.appendChild(itemsRow);
+
+  const addRow = document.createElement("div");
+  addRow.className = "cat-add-row";
+  addRow.innerHTML = `<input type="text" placeholder="tt0000000" class="add-item-input"><button class="btn-ghost add-item-btn">Adicionar</button>`;
+  wrap.appendChild(addRow);
+
+  wrap.addEventListener("click", async (e) => {
+    const rmId = e.target.closest("[data-rm-item]")?.dataset.rmItem;
+    if (rmId) {
+      try { await api(`/admin/api/catalogs/${cat.id}/items/${rmId}`, { method: "DELETE" }); await loadCatalogs(); }
+      catch (err) { toast(err.message, true); }
+      return;
+    }
+    if (e.target.closest(".add-item-btn")) {
+      const input = wrap.querySelector(".add-item-input");
+      const imdbId = input.value.trim();
+      if (!imdbId) return;
+      try { await api(`/admin/api/catalogs/${cat.id}/items`, { method: "POST", body: JSON.stringify({ imdbId }) }); await loadCatalogs(); }
+      catch (err) { toast(err.message, true); }
+    }
+  });
+  addRow.querySelector("input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") wrap.querySelector(".add-item-btn").click();
+  });
+
+  return wrap;
+}
+
+function toggleCatalogDetail(id) {
+  openCatalogId = openCatalogId === id ? null : id;
+  loadCatalogs().catch(err => toast(err.message, true));
+}
+
+document.getElementById("new-cat-btn").addEventListener("click", async () => {
+  const idInput = document.getElementById("new-cat-id");
+  const nameInput = document.getElementById("new-cat-name");
+  const id = idInput.value.trim();
+  const name = nameInput.value.trim();
+  if (!id || !name) return toast("Preencha id e nome", true);
+  try {
+    await api("/admin/api/catalogs", { method: "POST", body: JSON.stringify({ id, name, type: "movie" }) });
+    idInput.value = ""; nameInput.value = "";
+    await loadCatalogs();
+    toast("Catálogo criado");
+  } catch (e) {
+    toast(e.message, true);
+  }
+});
+
+document.getElementById("catalogs-body").addEventListener("click", async (e) => {
+  const renameId = e.target.closest("[data-rename]")?.dataset.rename;
+  if (renameId) {
+    const name = prompt("Novo nome do catálogo:");
+    if (!name) return;
+    try { await api(`/admin/api/catalogs/${renameId}`, { method: "PATCH", body: JSON.stringify({ name }) }); await loadCatalogs(); toast("Renomeado"); }
+    catch (err) { toast(err.message, true); }
+    return;
+  }
+  const delId = e.target.closest("[data-del-cat]")?.dataset.delCat;
+  if (delId) {
+    if (!confirm("Excluir esse catálogo? Ele some da home do Stremio pra todo mundo.")) return;
+    try { await api(`/admin/api/catalogs/${delId}`, { method: "DELETE" }); await loadCatalogs(); toast("Catálogo excluído"); }
+    catch (err) { toast(err.message, true); }
+  }
+});
+
 loadKeys().catch(err => toast(err.message, true));
+
+const hashParts = location.hash.replace("#", "").split(":");
+if (hashParts[0] === "catalogs") {
+  if (hashParts[1]) openCatalogId = hashParts[1];
+  document.querySelector('[data-tab="catalogs"]').click();
+}
 </script>
 </body>
 </html>
