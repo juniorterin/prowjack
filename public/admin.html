@@ -10,13 +10,13 @@
 <style>
   :root {
     color-scheme: dark;
-    --page: #0d0c14; --surface: #16141f; --surface-2: #1e1b2c; --surface-3: #262239;
-    --ink: #f4f2fa; --ink-2: #b3aec9; --muted: #756f8f;
-    --border: rgba(244,242,250,0.09); --border-2: rgba(244,242,250,0.16);
-    --accent: #e8a33d; --accent-ink: #1a1206; --accent-soft: rgba(232,163,61,0.14);
-    --brand: #8b7ff0; --brand-soft: rgba(139,127,240,0.16);
-    --good: #4cc38a; --good-soft: rgba(76,195,138,0.14);
-    --bad: #e0607a; --bad-soft: rgba(224,96,122,0.14);
+    --page: #170e0c; --surface: #221512; --surface-2: #2c1a16; --surface-3: #38221c;
+    --ink: #f6ece6; --ink-2: #cbaea5; --muted: #8c6b62;
+    --border: rgba(246,236,230,0.09); --border-2: rgba(246,236,230,0.16);
+    --accent: #dda23f; --accent-ink: #1c1206; --accent-soft: rgba(221,162,63,0.14);
+    --brand: #b7392b; --brand-soft: rgba(183,57,43,0.18);
+    --good: #4c9a63; --good-soft: rgba(76,154,99,0.14);
+    --bad: #e2506b; --bad-soft: rgba(226,80,107,0.14);
     --font-display: 'Sora', system-ui, sans-serif;
     --font-body: 'Manrope', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
@@ -25,13 +25,13 @@
   @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
       color-scheme: light;
-      --page: #f7f6fb; --surface: #ffffff; --surface-2: #f1eef8; --surface-3: #e7e2f5;
-      --ink: #18151f; --ink-2: #524c68; --muted: #8b84a3;
-      --border: rgba(24,21,31,0.09); --border-2: rgba(24,21,31,0.16);
-      --accent: #b9791b; --accent-ink: #ffffff; --accent-soft: rgba(185,121,27,0.12);
-      --brand: #6a5ce0; --brand-soft: rgba(106,92,224,0.12);
-      --good: #1f8a5c; --good-soft: rgba(31,138,92,0.12);
-      --bad: #c23158; --bad-soft: rgba(194,49,88,0.12);
+      --page: #faf3ee; --surface: #ffffff; --surface-2: #f5e7df; --surface-3: #ecd6c9;
+      --ink: #241511; --ink-2: #6b4c42; --muted: #9c7c70;
+      --border: rgba(36,21,17,0.09); --border-2: rgba(36,21,17,0.16);
+      --accent: #a97620; --accent-ink: #ffffff; --accent-soft: rgba(169,118,32,0.12);
+      --brand: #9c2e22; --brand-soft: rgba(156,46,34,0.12);
+      --good: #1f7a4c; --good-soft: rgba(31,122,76,0.12);
+      --bad: #c2355a; --bad-soft: rgba(194,53,90,0.12);
       --shadow: 0 20px 50px -24px rgba(24,21,31,0.25);
     }
   }
@@ -46,12 +46,7 @@
   .shell { max-width: 920px; margin: 0 auto; padding: 32px 24px 80px; }
   .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
   .brand { display: flex; align-items: center; gap: 10px; }
-  .brand-mark {
-    width: 34px; height: 34px; border-radius: 10px; flex: none;
-    background: linear-gradient(155deg, var(--brand), var(--accent));
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-display); font-weight: 800; color: #100c1e; font-size: 15px;
-  }
+  .brand-mark { width: 34px; height: 34px; border-radius: 50%; flex: none; display: block; }
   .brand b { font-family: var(--font-display); font-size: 15px; }
   .brand span { display: block; font-size: 11px; color: var(--muted); }
   .btn-ghost { background: var(--surface-2); border: 1px solid var(--border-2); color: var(--ink-2); border-radius: 9px; padding: 8px 14px; font-size: 12.5px; font-weight: 600; }
@@ -132,7 +127,7 @@
 <div class="shell">
   <div class="topbar">
     <div class="brand">
-      <div class="brand-mark">T</div>
+      <img class="brand-mark" src="/logo.svg" alt="TorrStremio">
       <div><b>TorrStremio Admin</b><span>Chaves de acesso</span></div>
     </div>
     <button class="btn-ghost" id="logout-btn">Sair</button>

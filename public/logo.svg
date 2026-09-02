@@ -1,46 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="256" height="256">
-
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#B56CFF"/>
-      <stop offset="100%" stop-color="#6D28FF"/>
-    </linearGradient>
+    <clipPath id="disc">
+      <circle cx="256" cy="256" r="246"/>
+    </clipPath>
   </defs>
 
-  <!-- círculo base -->
-  <circle cx="256" cy="256" r="220" fill="#111827"/>
+  <!-- medalhão base -->
+  <circle cx="256" cy="256" r="248" fill="#601812"/>
+  <circle cx="256" cy="256" r="246" fill="#7c2018"/>
 
-  <!-- P -->
-  <path fill="url(#grad)"
-        d="
-        M170 110
-        H285
-        C360 110 415 165 415 235
-        C415 305 360 360 285 360
-        H250
-        V300
-        H285
-        C326 300 355 272 355 235
-        C355 198 326 170 285 170
-        H230
-        V390
-        L170 440
-        Z"/>
+  <g clip-path="url(#disc)">
+    <!-- raios do amanhecer, irrompendo do canto inferior-esquerdo -->
+    <path d="M76,460 L-158.9,-262.8 L8.3,-297.0 Z" fill="#e7b04a"/>
+    <path d="M76,460 L178.9,-293.0 L344.2,-251.1 Z" fill="#e7b04a"/>
+    <path d="M76,460 L496.1,-173.3 L626.8,-63.7 Z" fill="#e7b04a"/>
+    <path d="M76,460 L729.7,72.4 L799.7,228.0 Z" fill="#e7b04a"/>
+    <path d="M76,460 L833.2,395.2 L828.6,565.8 Z" fill="#e7b04a"/>
 
-  <!-- Play -->
-  <polygon points="245,195 325,240 245,285"
-           fill="#E9D5FF"/>
+    <!-- estrela, canto superior direito -->
+    <path d="M388.0,80.0 L396.8,105.9 L424.1,106.3 L402.3,122.6 L410.3,148.7 L388.0,133.0 L365.7,148.7 L373.7,122.6 L351.9,106.3 L379.2,105.9 Z" fill="#f3ece2"/>
 
-  <!-- Gancho -->
-  <path fill="#F3F4F6"
-        d="
-        M255 355
-        C300 320 355 325 385 370
-        C415 415 390 465 335 480
-        C305 488 282 470 282 444
-        C282 422 299 407 321 407
-        C349 407 363 382 350 360
-        C337 338 304 337 275 360
-        Z"/>
+    <!-- monograma T — barra e haste inclinadas, ponta em cunha (irrompendo) -->
+    <polygon points="140,165 404,150 404,208 140,224" fill="#f3ece2"/>
+    <polygon points="232,190 322,182 338,370 248,378" fill="#f3ece2"/>
+    <polygon points="248,378 338,370 293,432" fill="#f3ece2"/>
+  </g>
 
+  <!-- aro -->
+  <circle cx="256" cy="256" r="246" fill="none" stroke="#3d0f0a" stroke-width="6"/>
 </svg>
