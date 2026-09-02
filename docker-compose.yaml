@@ -44,6 +44,7 @@ services:
       - TS_PUBLIC_URL=${TS_PUBLIC_URL}
       - TS_USER=
       - TS_PASS=
+      - QB_EXTRA_SLOTS=100
     volumes:
       - prowjack-data:/data
 

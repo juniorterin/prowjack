@@ -458,16 +458,16 @@ hr{border:none;border-top:1px solid var(--bord);margin:14px 0}
         </div>
 
         <label style="display:flex;align-items:center;gap:9px;cursor:pointer;margin-bottom:10px">
-          <input type="checkbox" id="enableP2P" style="width:15px;height:15px;accent-color:var(--amber)" onchange="toggleQbitMode()"/>
-          <span style="font-size:13px;font-weight:500">qBittorrent HTTP</span>
+          <input type="checkbox" id="enableP2P" checked style="width:15px;height:15px;accent-color:var(--amber)" onchange="toggleQbitMode()"/>
+          <span style="font-size:13px;font-weight:500">Torrent HTTP (TorrServer/qBittorrent)</span>
         </label>
-        <div class="info" style="margin-left:24px;margin-bottom:10px">Opcional. Requer <code>QBIT_URL</code>, <code>QBIT_USER</code> e <code>QBIT_PASS</code> no <code>.env</code>.</div>
+        <div class="info" style="margin-left:24px;margin-bottom:10px">Requer <code>TS_URL</code> (TorrServer) ou <code>QBIT_URL</code>/<code>QBIT_USER</code>/<code>QBIT_PASS</code> (qBittorrent) no <code>.env</code> do servidor.</div>
         <div class="debrid-panel qbit-panel" id="qbitModeConfig">
-          <div class="panel-title qbit">qBittorrent</div>
+          <div class="panel-title qbit">Torrent HTTP</div>
           <label class="lbl">Modo</label>
           <select id="qbitMode" class="sel">
-            <option value="private">🔒 Apenas Trackers Privados (Recomendado)</option>
-            <option value="always">🌐 Sempre Disponível</option>
+            <option value="always">🌐 Sempre Disponível (Recomendado)</option>
+            <option value="private">🔒 Apenas Trackers Privados</option>
           </select>
         </div>
       </div>
