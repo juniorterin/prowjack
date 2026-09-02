@@ -41,12 +41,10 @@ services:
       - PORT=7860
       - ADDON_PUBLIC_URL=${ADDON_PUBLIC_URL}
       - ACCESS_TOKEN=${ACCESS_TOKEN}
-      - ENABLE_PURE_P2P=false
       - TS_URL=http://torrserver:8090
       - TS_PUBLIC_URL=${TS_PUBLIC_URL}
       - TS_USER=
       - TS_PASS=
-      - QB_EXTRA_SLOTS=100
     volumes:
       - prowjack-data:/data
 

@@ -1,5 +1,7 @@
 # Credenciais e configurações sensíveis
 .env
+.env.*
+!.env.example
 *.pem
 *.key
 *.crt
