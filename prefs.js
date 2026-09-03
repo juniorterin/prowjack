@@ -131,7 +131,7 @@ function normalizePrefs(u = {}) {
   if (m.priorityLang === undefined) m.priorityLang = "pt-br";
 
   if (m.addonName) m.addonName = m.addonName.replace(/\s*\[(TB\+RD|TB|RD|QB|TS|PRO|ST)\]/gi, "").replace(/\bPRO\b/g, "").trim();
-  if (!m.addonName) m.addonName = "TorrStremio";
+  if (!m.addonName) m.addonName = "TorrESMIN";
 
   return m;
 }

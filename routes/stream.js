@@ -526,7 +526,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
           });
 
           return {
-            name: `${prefs.addonName || "TorrStremio"}\n⬇️ ${resLabel || "Links"} [TS]`,
+            name: `${prefs.addonName || "TorrESMIN"}\n⬇️ ${resLabel || "Links"} [TS]`,
             description: [description, filenameLine, isPrivateTracker ? "🔒 Tracker Privado" : ""].filter(Boolean).join("\n"),
             url:   `${publicBase}/${req.params.userConfig}/play/${jobToken}`,
             indexer: renameIndexer(indexerName),

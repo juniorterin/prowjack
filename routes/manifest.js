@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get("/manifest.json", (req, res) => {
   res.json({
-    id: "org.torrstremio.app", version: "1.0.0", name: "TorrStremio",
+    id: "org.torresmin.app", version: "1.0.0", name: "TorrESMIN",
     logo: `${getPublicBase(req)}/logo.svg`,
     icon: `${getPublicBase(req)}/logo.svg`,
     description: "Prowlarr/Jackett + TorrServer, com filtros por keywords",
@@ -21,7 +21,7 @@ router.get("/:userConfig/manifest.json", async (req, res) => {
   const prefs  = await resolvePrefs(req.params.userConfig);
 
   const types  = [...new Set((prefs.categories || ["movie","series"]).map(c => c==="movies"?"movie":c==="anime"?"series":c))];
-  const name   = prefs.addonName || "TorrStremio";
+  const name   = prefs.addonName || "TorrESMIN";
 
   const enabledCats = Array.isArray(prefs.categories) && prefs.categories.length ? prefs.categories : ["movie", "series"];
   const catalogs = [];
@@ -34,7 +34,7 @@ router.get("/:userConfig/manifest.json", async (req, res) => {
   }
 
   res.json({
-    id: "org.torrstremio.app", version: "1.0.0", name,
+    id: "org.torresmin.app", version: "1.0.0", name,
     logo: `${getPublicBase(req)}/logo.svg`,
     icon: `${getPublicBase(req)}/logo.svg`,
     description: "Prowlarr/Jackett + TorrServer, com filtros por keywords",

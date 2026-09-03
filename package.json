@@ -1,5 +1,5 @@
 {
-  "name": "torrstremio",
+  "name": "torresmin",
   "version": "1.0.0",
   "description": "Stremio addon: Prowlarr/Jackett + TorrServer",
   "main": "addon.js",

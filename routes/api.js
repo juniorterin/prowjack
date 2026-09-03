@@ -52,7 +52,7 @@ router.use("/api/metrics", requireAdminAccess);
 router.post("/api/preview-format", (req, res) => {
   const nameTemplate = cleanTemplate(req.body?.nameTemplate, 300);
   const descriptionTemplate = cleanTemplate(req.body?.descriptionTemplate, 800);
-  const addonName = String(req.body?.addonName || "TorrStremio").slice(0, 80);
+  const addonName = String(req.body?.addonName || "TorrESMIN").slice(0, 80);
 
   const sampleResult = {
     Title: "The.Matrix.1999.2160p.UHD.BluRay.REMUX.HDR.DDP5.1.Atmos.x265-GROUP",
