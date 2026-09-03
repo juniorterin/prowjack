@@ -5,6 +5,7 @@ const { rc } = require("../cache");
 const { normalizeImdbId } = require("../scoring");
 const { enrichMetaPtBr } = require("../metadata");
 const { getCatalog } = require("../catalogs");
+const { isPtBrRequest } = require("../routeHelpers");
 
 const router = express.Router();
 
@@ -23,7 +24,8 @@ router.get("/:userConfig/catalog/:type/:id.json", async (req, res) => {
     const catalog = await getCatalog(slug);
     if (!catalog || catalog.type !== type) return res.json({ metas: [] });
 
-    const cacheKey = `curatedcatalog:${slug}`;
+    const ptBr = isPtBrRequest(req);
+    const cacheKey = `curatedcatalog:${slug}:${ptBr ? "pt" : "en"}`;
     let metas = null;
     const cached = await rc.get(cacheKey).catch(() => null);
     if (cached) {
@@ -36,7 +38,7 @@ router.get("/:userConfig/catalog/:type/:id.json", async (req, res) => {
           const r = await axios.get(`https://v3-cinemeta.strem.io/meta/${type}/${imdbId}.json`, { timeout: 6000 });
           const meta = r.data?.meta;
           if (!meta) return null;
-          const enriched = await enrichMetaPtBr(meta, imdbId, type);
+          const enriched = ptBr ? await enrichMetaPtBr(meta, imdbId, type) : meta;
           return {
             id:          imdbId,
             type,
@@ -67,7 +69,7 @@ router.get("/:userConfig/meta/:type/:id.json", async (req, res) => {
     const cleanId = normalizeImdbId(id) || id;
     const r = await axios.get(`https://v3-cinemeta.strem.io/meta/${targetType}/${cleanId}.json`, { timeout: 5000 });
     const payload = r.data || { meta: null };
-    if (payload.meta) payload.meta = await enrichMetaPtBr(payload.meta, cleanId, targetType);
+    if (payload.meta && isPtBrRequest(req)) payload.meta = await enrichMetaPtBr(payload.meta, cleanId, targetType);
     return res.json(payload);
   } catch {
     // Fallback: tenta buscar nos addons de scrap

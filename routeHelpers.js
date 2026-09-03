@@ -51,6 +51,17 @@ function getRequestAccessToken(req) {
   return String(req.headers["x-access-token"] || req.query.token || "").trim();
 }
 
+// Stremio não expõe pro addon qual idioma o app está configurado pra usar —
+// a melhor aproximação disponível é o header Accept-Language que o próprio
+// cliente (desktop/web/mobile) envia em cada request. Olha só a tag de maior
+// prioridade (a primeira da lista) pra decidir se é português.
+function isPtBrRequest(req) {
+  const header = String(req.headers["accept-language"] || "").trim();
+  if (!header) return false;
+  const firstTag = header.split(",")[0].trim().toLowerCase();
+  return firstTag.startsWith("pt");
+}
+
 function hasAdminAccess(req) {
   return !ENV.accessToken || getRequestAccessToken(req) === ENV.accessToken;
 }
@@ -180,6 +191,7 @@ module.exports = {
   getClientIp,
   getPublicBase,
   getRequestAccessToken,
+  isPtBrRequest,
   hasAdminAccess,
   requireAdminAccess,
   sendConfigurePage,

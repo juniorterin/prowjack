@@ -129,7 +129,8 @@ async function saveCatalog(record) {
 }
 
 function bustCache(id) {
-  rc.del(`curatedcatalog:${id}`).catch(() => {});
+  rc.del(`curatedcatalog:${id}:pt`).catch(() => {});
+  rc.del(`curatedcatalog:${id}:en`).catch(() => {});
 }
 
 async function listCatalogs() {
