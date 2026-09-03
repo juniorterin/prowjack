@@ -54,6 +54,39 @@ const LANG = [
   { re: /(fran[cç]ais|french|\bfre\b)/i,                           code: "fr",    emoji: "🇫🇷", label: "FR"    },
 ];
 
+// Checkboxes de exclusão no estilo Torrentio ("EXCLUDE RESOLUTIONS") — cada
+// entrada testa o título e serve pra FILTRAR releases fora da busca, ao
+// contrário de RESOLUTION/QUALITY/VISUAL acima, que só pontuam/rotulam.
+// "test" é usado só quando um simples regex não basta (combinação de dois
+// sinais, ou negação — daí o aviso "não marque se não tiver certeza" no non3d).
+const EXCLUDE_FILTERS = [
+  { key: "brremux",     label: "BluRay REMUX",                       re: /remux/i },
+  { key: "hdrany",      label: "HDR/HDR10+/Dolby Vision",             re: /\bhdr\b|hdr10\+?|dolby[.\s]?vision|dovi|\bdv\b/i },
+  { key: "dolbyvision", label: "Dolby Vision",                        re: /dolby[.\s]?vision|dovi|\bdv\b/i },
+  { key: "dvhdr",       label: "Dolby Vision + HDR",                  test: t => /dolby[.\s]?vision|dovi|\bdv\b/i.test(t) && /\bhdr\b/i.test(t) },
+  { key: "3d",          label: "3D",                                  re: /\b3d\b/i },
+  { key: "non3d",       label: "Non 3D (não marque se não tiver certeza)", test: t => !/\b3d\b/i.test(t) },
+  { key: "4k",          label: "4k",                                  re: /\b(4k|2160p)\b/i },
+  { key: "1080p",       label: "1080p",                               re: /\b1080p\b/i },
+  { key: "720p",        label: "720p",                                re: /\b720p\b/i },
+  { key: "480p",        label: "480p",                                re: /\b480p\b/i },
+  { key: "other",       label: "Other (DVDRip/HDRip/BDRip…)",         re: /dvdrip|hdrip|b[dr]rip/i },
+  { key: "screener",    label: "Screener",                            re: /\bscr(eener)?\b/i },
+  { key: "cam",         label: "Cam",                                 re: /\bcam(rip)?\b/i },
+  { key: "unknown",     label: "Unknown",                             test: t => !RESOLUTION.some(r => r.re.test(t)) },
+];
+const EXCLUDE_FILTER_KEYS = EXCLUDE_FILTERS.map(f => f.key);
+function matchesExcludeFilter(key, title) {
+  const def = EXCLUDE_FILTERS.find(f => f.key === key);
+  if (!def) return false;
+  const t = title || "";
+  return def.test ? def.test(t) : def.re.test(t);
+}
+function isExcludedByFilters(title, excludeKeys) {
+  if (!Array.isArray(excludeKeys) || !excludeKeys.length) return false;
+  return excludeKeys.some(key => matchesExcludeFilter(key, title));
+}
+
 // ╔════════════════════════════════════════════════════════════════════╗
 // ║ OTIMIZAÇÃO #1: Cache compilado para TITLE_CLEANUP_REGEX           ║
 // ╚════════════════════════════════════════════════════════════════════╝
@@ -604,6 +637,7 @@ function formatStream(r, indexerName, isAnime = false, prefs = {}, showSeeds = t
 
 module.exports = {
   RESOLUTION, QUALITY, CODEC, AUDIO, VISUAL, LANG,
+  EXCLUDE_FILTERS, EXCLUDE_FILTER_KEYS, isExcludedByFilters,
   TITLE_CLEANUP_REGEX, STOPWORDS,
   first, matchAll, uniq, normTitle,
   getLangs, score,

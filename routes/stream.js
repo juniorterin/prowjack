@@ -23,6 +23,7 @@ const {
   renameIndexer,
   visibleSeedCount, matchesKeywordBoost,
   isPriorityIndexerResult,
+  isExcludedByFilters,
   hasDirectInfoHash, formatStream
 } = require("../scoring");
 
@@ -196,7 +197,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
       }
     }
 
-    // Busca scrap sempre, integrando os resultados na pipeline do ProwJack
+    // Busca scrap sempre, integrando os resultados na pipeline do TorrESMIN
     const scrapResults = ENV.scrapManifests.length > 0
       ? await Promise.all(ENV.scrapManifests.map(async (m, idx) => {
           const streams = await fetchScrapStreams(m, type, id, { prefs });
@@ -263,9 +264,19 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
 
     console.log(`Filtros ativos: onlyDubbed=${prefs.onlyDubbed}, priorityLang=${priorityLang}, keywordBoost=${prefs.keywordBoost ? 'SIM' : 'NÃO'}, priorityIndexers=[${(prefs.priorityIndexers||[]).join(",")}], maxPerIndexer=${prefs.maxResultsPerIndexer||0}`);
 
+    // Filtros "duros" de qualidade/tamanho (tela de Filtros) — o usuário
+    // marcou que não quer ver isso de jeito nenhum, então nada fura essa
+    // barreira (nem indexador prioritário, nem resultado de scrap).
+    const passesExcludeAndSize = (r) => {
+      if (prefs.videoSizeLimitBytes > 0 && r.Size > prefs.videoSizeLimitBytes) return false;
+      if (prefs.excludeFilters && prefs.excludeFilters.length && isExcludedByFilters(r.Title || "", prefs.excludeFilters)) return false;
+      return true;
+    };
+
     const candidates = (bypassRssFilters && usedRssFastPath
       ? results
           .filter(r => r?.InfoHash || r?.MagnetUri || r?.Link)
+          .filter(passesExcludeAndSize)
           .filter(r => {
             if (parsed.source === "rssitem") return true;
             if (parsed.isAnime) return animeEpisodeMatches(r.Title || "", episode);
@@ -278,6 +289,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
           })
       : results
           .filter(r => r?.InfoHash || r?.MagnetUri || r?.Link)
+          .filter(passesExcludeAndSize)
           .filter(r => {
             const isPrio = isPriorityIndexerResult(r, prefs);
             if (isPrio) r._priorityIndexer = true;
@@ -479,8 +491,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
             ? extractScrapIndexer(r._scrapStream?._title, r._scrapStream?.title, r.Title)
             : "";
           const fmtIndexer   = scrapIndexer || (r._scrapSource ? "" : indexerName);
-          const { resLabel } = formatStream(r, fmtIndexer, parsed.isAnime, prefs, false, streamMeta);
-          let { description } = formatStream(r, fmtIndexer, parsed.isAnime, prefs, true, streamMeta);
+          let { name, description } = formatStream(r, fmtIndexer, parsed.isAnime, prefs, true, streamMeta);
           if (r._scrapSource) {
             const fonteLine = `📡 ${r._scrapStream?._scrapName || indexerName}`;
             description  = [description, fonteLine].filter(Boolean).join("\n");
@@ -526,7 +537,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
           });
 
           return {
-            name: `${prefs.addonName || "TorrESMIN"}\n⬇️ ${resLabel || "Links"} [TS]`,
+            name,
             description: [description, filenameLine, isPrivateTracker ? "🔒 Tracker Privado" : ""].filter(Boolean).join("\n"),
             url:   `${publicBase}/${req.params.userConfig}/play/${jobToken}`,
             indexer: renameIndexer(indexerName),
@@ -534,7 +545,7 @@ router.get("/:userConfig/stream/:type/:id.json", async (req, res) => {
             behaviorHints: {
               filename:   displayFileName,
               videoSize:  displayFile?.size,
-              bingeGroup: `prowjack|ts|${resolved.infoHash}`,
+              bingeGroup: `torresmin|ts|${resolved.infoHash}`,
               notWebReady: false,
             },
           };

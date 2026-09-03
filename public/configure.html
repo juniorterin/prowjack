@@ -177,6 +177,20 @@
   .add-row { display: flex; gap: 8px; margin-top: 10px; }
   .add-row input { flex: 1; }
 
+  /* Checkboxes de exclusão (estilo Torrentio) */
+  .exclude-grid { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+  .exclude-item {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--surface-2); border: 1px solid var(--border-2); color: var(--ink-2);
+    padding: 8px 12px; border-radius: 9px; font-size: 12.5px; font-weight: 600;
+    cursor: pointer; user-select: none; transition: all .15s;
+  }
+  .exclude-item:hover { border-color: var(--brand); color: var(--ink); }
+  .exclude-item input[type="checkbox"] { width: 15px; height: 15px; accent-color: var(--brand); flex: none; }
+  .exclude-item.on { background: var(--brand-soft); border-color: var(--brand); color: var(--brand); }
+  .info-hint { display: inline-flex; cursor: help; color: var(--muted); font-size: 12px; }
+  .info-hint:hover { color: var(--ink-2); }
+
   /* Indexer grid */
   .ix-toolbar { display: flex; gap: 10px; margin-bottom: 14px; align-items: center; flex-wrap: wrap; }
   .ix-toolbar input[type="text"] { flex: 1; min-width: 160px; }
@@ -213,22 +227,6 @@
   .stream-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
   .stream-card .sc-name { font-family: var(--font-mono); font-weight: 600; font-size: 13px; white-space: pre-line; color: var(--ink); }
   .stream-card .sc-desc { font-family: var(--font-mono); font-size: 11.5px; white-space: pre-line; color: var(--ink-2); margin-top: 8px; line-height: 1.6; }
-
-  /* Sort/group reorder list */
-  .sort-list { display: flex; flex-direction: column; gap: 6px; }
-  .sort-row {
-    display: flex; align-items: center; gap: 10px;
-    background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 10px;
-    padding: 10px 12px;
-  }
-  .sort-row .rank { font-family: var(--font-mono); font-size: 12px; color: var(--muted); width: 18px; flex: none; }
-  .sort-row .nm { flex: 1; font-size: 13px; font-weight: 600; }
-  .sort-row .sub { font-size: 11.5px; color: var(--muted); }
-  .sort-row.off { opacity: 0.45; }
-  .sort-row .mv { background: none; border: 1px solid var(--border-2); color: var(--ink-2); width: 26px; height: 26px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
-  .sort-row .mv:hover:not(:disabled) { border-color: var(--brand); color: var(--brand); }
-  .sort-row .mv:disabled { opacity: 0.3; cursor: default; }
-  .sort-row input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--brand); flex: none; }
 
   /* Sort preview rows (sample results) */
   .preview-list { display: flex; flex-direction: column; gap: 4px; }
@@ -377,15 +375,15 @@
     <section class="slide" id="slide-home">
       <div class="slide-inner">
         <div class="hero-frag">
-          <h1>Torrent, Entertainment,<br>Selection, Movies,<br><em>Intelligence, Navigation.</em></h1>
+          <h1>Torrent: Entertainment<br>Should Make<br><em>Inclusion Natural.</em></h1>
           <p class="lede">TorrESMIN busca em Prowlarr/Jackett e transmite pelo TorrServer, com seek de verdade. Este passo a passo configura tudo — leva menos de 2 minutos.</p>
           <div class="acronym-row">
             <span class="acronym-chip" style="--chip-color: var(--brand); --chip-tilt: -2deg">Torrent</span>
             <span class="acronym-chip" style="--chip-color: var(--accent); --chip-tilt: 1deg">Entertainment</span>
-            <span class="acronym-chip" style="--chip-color: var(--teal); --chip-tilt: -1deg">Selection</span>
-            <span class="acronym-chip" style="--chip-color: var(--plum); --chip-tilt: 2deg">Movies</span>
-            <span class="acronym-chip" style="--chip-color: var(--mustard); --chip-tilt: -1.5deg">Intelligence</span>
-            <span class="acronym-chip" style="--chip-color: var(--brand); --chip-tilt: 1deg">Navigation</span>
+            <span class="acronym-chip" style="--chip-color: var(--teal); --chip-tilt: -1deg">Should</span>
+            <span class="acronym-chip" style="--chip-color: var(--plum); --chip-tilt: 2deg">Make</span>
+            <span class="acronym-chip" style="--chip-color: var(--mustard); --chip-tilt: -1.5deg">Inclusion</span>
+            <span class="acronym-chip" style="--chip-color: var(--brand); --chip-tilt: 1deg">Natural</span>
           </div>
         </div>
 
@@ -484,6 +482,11 @@
           <div class="chip-row" id="priority-ix-chips"><span class="hint">Carregando…</span></div>
         </div>
         <div class="card">
+          <div class="card-head"><h3>Excluir resoluções/qualidades</h3></div>
+          <p class="field-note" style="margin-top:0">Marque o que você nunca quer ver nos resultados. Um release que bater em qualquer item marcado é descartado direto da busca.</p>
+          <div class="exclude-grid" id="exclude-filters-grid"></div>
+        </div>
+        <div class="card">
           <div class="card-head"><h3>Limites</h3></div>
           <div class="row-2">
             <div>
@@ -493,6 +496,12 @@
             <div>
               <label class="lbl">Máximo por indexador <span class="hint">(0 = sem limite)</span></label>
               <input type="number" id="maxResultsPerIndexer" min="0" max="200" value="0">
+            </div>
+          </div>
+          <div class="row-2" style="margin-top:16px">
+            <div>
+              <label class="lbl">Limite de tamanho de vídeo <span class="info-hint" title="Releases maiores que isso são descartados. Aceita GB ou MB — ex: 2GB, 500MB.">ⓘ</span></label>
+              <input type="text" id="videoSizeLimit" placeholder="ex: 2GB, 500MB">
             </div>
           </div>
         </div>
@@ -541,9 +550,26 @@
       <div class="slide-inner">
         <div class="topline"><div><span class="eyebrow">Passo 5</span><h1>Ordenação</h1><p>Defina a ordem de prioridade dos resultados.</p></div></div>
         <div class="card">
-          <div class="card-head"><h3>Prioridade de agrupamento e ordenação</h3></div>
-          <p class="field-note" style="margin-top:0">O primeiro critério da lista domina — na prática funciona como "agrupar por", já que o Stremio mostra tudo numa lista só. Use as setas pra reordenar e o check pra desligar um critério.</p>
-          <div class="sort-list" id="sort-list"></div>
+          <div class="card-head"><h3>Ordenação e agrupamento</h3></div>
+          <p class="field-note" style="margin-top:0">Releases que batem com a palavra-chave de boost (tela de Filtros) sempre aparecem primeiro. Depois disso, os resultados são agrupados pelo critério da esquerda e, dentro de cada grupo, ordenados pelo critério da direita.</p>
+          <div class="row-2">
+            <div>
+              <label class="lbl">Agrupar por</label>
+              <select id="sortGroupBy">
+                <option value="language">Idioma prioritário</option>
+                <option value="resolution">Resolução</option>
+                <option value="quality">Qualidade</option>
+                <option value="indexer">Provider (indexador)</option>
+              </select>
+            </div>
+            <div>
+              <label class="lbl">Ordenar por</label>
+              <select id="sortOrderBy">
+                <option value="seeders">Mais seeds</option>
+                <option value="size">Tamanho</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="card">
           <div class="card-head"><h3>Prévia com resultados de exemplo</h3><span class="hint">10 itens fictícios</span></div>
@@ -669,17 +695,35 @@ const PRESET_KEYWORDS = [
   { label: "REMUX", value: "remux" },
   { label: "HDR", value: "hdr" },
 ];
-const SORT_META = {
-  keyword:    ["Palavra-chave", "Releases que batem com o boost de keywords"],
-  language:   ["Idioma prioritário", "Releases no idioma escolhido em Filtros"],
-  resolution: ["Resolução", "4K > FHD > HD > SD"],
-  quality:    ["Qualidade", "REMUX > BluRay > WEB-DL > WEBRip…"],
-  size:       ["Tamanho", "Maior arquivo primeiro"],
-  seeders:    ["Seeders", "Mais semeadores primeiro"],
-  indexer:    ["Indexador", "Agrupa alfabeticamente por fonte"],
-};
-const DEFAULT_SORT = ["keyword","language","resolution","quality","size","seeders"];
+// Espelha prefs.js (buildSortBy/GROUP_KEYS/ORDER_KEYS) — mantido em sincronia
+// à mão, já que este arquivo estático não importa módulos do backend.
+const SORT_GROUP_KEYS = ["language", "resolution", "quality", "indexer"];
+const SORT_ORDER_KEYS = ["seeders", "size"];
+const SORT_FALLBACK_ORDER = ["language", "resolution", "quality", "size", "seeders", "indexer"];
+function computeSortBy(groupBy, orderBy) {
+  const rest = SORT_FALLBACK_ORDER.filter(k => k !== groupBy && k !== orderBy);
+  return ["keyword", groupBy, orderBy, ...rest];
+}
 const CATALOG_COLORS = ["brand","accent","teal","plum","mustard"];
+
+// Espelha scoring.js EXCLUDE_FILTERS (só key+label — o regex de verdade só
+// roda no servidor, aqui é puro texto pro checkbox).
+const EXCLUDE_FILTER_DEFS = [
+  { key: "brremux",     label: "BluRay REMUX" },
+  { key: "hdrany",      label: "HDR/HDR10+/Dolby Vision" },
+  { key: "dolbyvision", label: "Dolby Vision" },
+  { key: "dvhdr",       label: "Dolby Vision + HDR" },
+  { key: "3d",          label: "3D" },
+  { key: "non3d",       label: "Non 3D (não marque se não tiver certeza)" },
+  { key: "4k",          label: "4k" },
+  { key: "1080p",       label: "1080p" },
+  { key: "720p",        label: "720p" },
+  { key: "480p",        label: "480p" },
+  { key: "other",       label: "Other (DVDRip/HDRip/BDRip…)" },
+  { key: "screener",    label: "Screener" },
+  { key: "cam",         label: "Cam" },
+  { key: "unknown",     label: "Unknown" },
+];
 
 // 10 resultados fictícios pra prévia da Ordenação — mesma escala de score que
 // scoring.js usa de verdade (RESOLUTION/QUALITY), só que fixada aqui em vez
@@ -733,8 +777,11 @@ const state = {
   nameTemplate: "",
   descriptionTemplate: "",
   formatValid: true,
-  sortBy: DEFAULT_SORT.slice(),
-  sortAll: [...DEFAULT_SORT, "indexer"],
+  sortGroupBy: "language",
+  sortOrderBy: "seeders",
+  sortBy: computeSortBy("language", "seeders"),
+  excludeFilters: new Set(),
+  videoSizeLimit: "",
   enableCatalog: true,
   catalogs: [],
   selectedCatalogIds: new Set(),
@@ -862,6 +909,24 @@ document.getElementById("ix-none").addEventListener("click", () => { state.selec
 document.getElementById("maxResults").addEventListener("input", (e) => {
   document.getElementById("maxResults-val").textContent = e.target.value;
 });
+
+// ── Excluir resoluções/qualidades (checkboxes estilo Torrentio) ─
+function renderExcludeFilters() {
+  const grid = document.getElementById("exclude-filters-grid");
+  grid.innerHTML = "";
+  EXCLUDE_FILTER_DEFS.forEach(({ key, label }) => {
+    const on = state.excludeFilters.has(key);
+    const item = document.createElement("label");
+    item.className = "exclude-item" + (on ? " on" : "");
+    item.innerHTML = `<input type="checkbox" ${on ? "checked" : ""}><span>${label}</span>`;
+    item.querySelector("input").addEventListener("change", (e) => {
+      if (e.target.checked) state.excludeFilters.add(key);
+      else state.excludeFilters.delete(key);
+      item.classList.toggle("on", e.target.checked);
+    });
+    grid.appendChild(item);
+  });
+}
 
 // ── Palavras-chave de boost (chips + criação livre) ─────────
 function escapeRegexLite(s) {
@@ -1017,38 +1082,19 @@ document.getElementById("format-reset").addEventListener("click", () => {
 
 // ── Ordenação ─────────────────────────────────────────────
 function renderSortList() {
-  const list = document.getElementById("sort-list");
-  list.innerHTML = "";
-  state.sortAll.forEach((key, idx) => {
-    const enabled = state.sortBy.includes(key);
-    const [name, sub] = SORT_META[key];
-    const row = document.createElement("div");
-    row.className = "sort-row" + (enabled ? "" : " off");
-    row.innerHTML = `
-      <span class="rank">${enabled ? state.sortBy.indexOf(key) + 1 : "–"}</span>
-      <input type="checkbox" ${enabled ? "checked" : ""}>
-      <div style="flex:1"><div class="nm">${name}</div><div class="sub">${sub}</div></div>
-      <button class="mv" data-dir="up" ${idx === 0 ? "disabled" : ""}>↑</button>
-      <button class="mv" data-dir="down" ${idx === state.sortAll.length - 1 ? "disabled" : ""}>↓</button>
-    `;
-    row.querySelector('input[type="checkbox"]').addEventListener("change", (e) => {
-      if (e.target.checked) { if (!state.sortBy.includes(key)) state.sortBy.push(key); }
-      else { state.sortBy = state.sortBy.filter(k => k !== key); }
-      renderSortList();
-    });
-    row.querySelectorAll(".mv").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const dir = btn.dataset.dir === "up" ? -1 : 1;
-        const j = idx + dir;
-        if (j < 0 || j >= state.sortAll.length) return;
-        [state.sortAll[idx], state.sortAll[j]] = [state.sortAll[j], state.sortAll[idx]];
-        renderSortList();
-      });
-    });
-    list.appendChild(row);
-  });
+  document.getElementById("sortGroupBy").value = state.sortGroupBy;
+  document.getElementById("sortOrderBy").value = state.sortOrderBy;
+  state.sortBy = computeSortBy(state.sortGroupBy, state.sortOrderBy);
   renderSortPreview();
 }
+document.getElementById("sortGroupBy").addEventListener("change", (e) => {
+  state.sortGroupBy = e.target.value;
+  renderSortList();
+});
+document.getElementById("sortOrderBy").addEventListener("change", (e) => {
+  state.sortOrderBy = e.target.value;
+  renderSortList();
+});
 function renderSortPreview() {
   const list = document.getElementById("sort-preview-list");
   if (!list) return;
@@ -1165,10 +1211,13 @@ function applyPrefs(p) {
   if (p.maxResultsPerIndexer !== undefined) document.getElementById("maxResultsPerIndexer").value = p.maxResultsPerIndexer;
   if (p.nameTemplate) document.getElementById("nameTemplate").value = p.nameTemplate;
   if (p.descriptionTemplate) document.getElementById("descriptionTemplate").value = p.descriptionTemplate;
-  if (Array.isArray(p.sortBy) && p.sortBy.length) {
-    state.sortBy = p.sortBy.filter(k => SORT_META[k]);
-    state.sortAll = [...state.sortBy, ...Object.keys(SORT_META).filter(k => !state.sortBy.includes(k))];
+  if (SORT_GROUP_KEYS.includes(p.sortGroupBy)) state.sortGroupBy = p.sortGroupBy;
+  if (SORT_ORDER_KEYS.includes(p.sortOrderBy)) state.sortOrderBy = p.sortOrderBy;
+  if (Array.isArray(p.excludeFilters)) {
+    state.excludeFilters = new Set(p.excludeFilters.filter(k => EXCLUDE_FILTER_DEFS.some(d => d.key === k)));
+    renderExcludeFilters();
   }
+  if (p.videoSizeLimit) document.getElementById("videoSizeLimit").value = p.videoSizeLimit;
   if (p.enableCatalog === false) document.getElementById("enableCatalog").checked = false;
   if (Array.isArray(p.catalogIds) && !p.catalogIds.includes("all")) { state.selectedCatalogIds = new Set(p.catalogIds); state._catalogsPreset = true; }
   if (p.addonName) document.getElementById("addonName").value = p.addonName;
@@ -1192,7 +1241,10 @@ function collectPrefs() {
     maxResultsPerIndexer: Number(document.getElementById("maxResultsPerIndexer").value) || 0,
     nameTemplate: document.getElementById("nameTemplate").value,
     descriptionTemplate: document.getElementById("descriptionTemplate").value,
-    sortBy: state.sortBy,
+    sortGroupBy: state.sortGroupBy,
+    sortOrderBy: state.sortOrderBy,
+    excludeFilters: [...state.excludeFilters],
+    videoSizeLimit: document.getElementById("videoSizeLimit").value.trim(),
     enableCatalog: document.getElementById("enableCatalog").checked,
     catalogIds: (state.catalogs.length && state.selectedCatalogIds.size === state.catalogs.length) ? ["all"] : [...state.selectedCatalogIds],
     addonName: document.getElementById("addonName").value,
@@ -1279,6 +1331,7 @@ async function loadEnvStatus() {
   document.getElementById("nameTemplate").value = DEFAULT_NAME_TEMPLATE;
   document.getElementById("descriptionTemplate").value = DEFAULT_DESCRIPTION_TEMPLATE;
   renderKeywordChips();
+  renderExcludeFilters();
   renderSortList();
   await Promise.all([loadIndexers(), loadEnvStatus()]);
   await loadExistingConfig();
