@@ -3,31 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TorrStremio · Configuração</title>
+<title>TorrESMIN · Configuração</title>
 <link rel="icon" href="/logo.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: dark;
-    --page: #170e0c;
-    --surface: #221512;
-    --surface-2: #2c1a16;
-    --surface-3: #38221c;
-    --ink: #f6ece6;
-    --ink-2: #cbaea5;
-    --muted: #8c6b62;
-    --border: rgba(246,236,230,0.09);
-    --border-2: rgba(246,236,230,0.16);
-    --accent: #dda23f;
-    --accent-ink: #1c1206;
-    --accent-soft: rgba(221,162,63,0.14);
-    --brand: #e0432e;
-    --brand-soft: rgba(224,67,46,0.20);
-    --good: #4c9a63;
-    --good-soft: rgba(76,154,99,0.14);
-    --bad: #e2506b;
-    --bad-soft: rgba(226,80,107,0.14);
+    --page: #1a130f;
+    --surface: #251c15;
+    --surface-2: #302419;
+    --surface-3: #3b2c1e;
+    --ink: #ede2d0;
+    --ink-2: #c2ab8e;
+    --muted: #8a7461;
+    --border: rgba(237,226,208,0.10);
+    --border-2: rgba(237,226,208,0.18);
+    --brand: #c1432f;
+    --brand-soft: rgba(193,67,47,0.20);
+    --accent: #cf9c3f;
+    --accent-ink: #201404;
+    --accent-soft: rgba(207,156,63,0.16);
+    --teal: #4a8480;
+    --teal-soft: rgba(74,132,128,0.18);
+    --plum: #935a86;
+    --plum-soft: rgba(147,90,134,0.18);
+    --mustard: #a3963f;
+    --mustard-soft: rgba(163,150,63,0.16);
+    --good: #5f9a6f;
+    --good-soft: rgba(95,154,111,0.14);
+    --bad: #c1432f;
+    --bad-soft: rgba(193,67,47,0.16);
     --font-display: 'Oswald', system-ui, sans-serif;
     --font-body: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
     --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
@@ -36,25 +42,31 @@
   @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
       color-scheme: light;
-      --page: #faf3ee;
-      --surface: #ffffff;
-      --surface-2: #f5e7df;
-      --surface-3: #ecd6c9;
-      --ink: #241511;
-      --ink-2: #6b4c42;
-      --muted: #9c7c70;
-      --border: rgba(36,21,17,0.09);
-      --border-2: rgba(36,21,17,0.16);
+      --page: #f3ece0;
+      --surface: #fffcf6;
+      --surface-2: #ece1cf;
+      --surface-3: #e1d2b8;
+      --ink: #211a12;
+      --ink-2: #5c4a37;
+      --muted: #8a7461;
+      --border: rgba(33,26,18,0.10);
+      --border-2: rgba(33,26,18,0.18);
+      --brand: #a8352a;
+      --brand-soft: rgba(168,53,42,0.14);
       --accent: #a97620;
       --accent-ink: #ffffff;
       --accent-soft: rgba(169,118,32,0.12);
-      --brand: #c23a26;
-      --brand-soft: rgba(194,58,38,0.14);
-      --good: #1f7a4c;
-      --good-soft: rgba(31,122,76,0.12);
-      --bad: #c2355a;
-      --bad-soft: rgba(194,53,90,0.12);
-      --shadow: 0 20px 50px -24px rgba(24,21,31,0.25);
+      --teal: #336966;
+      --teal-soft: rgba(51,105,102,0.14);
+      --plum: #744069;
+      --plum-soft: rgba(116,64,105,0.14);
+      --mustard: #7d7128;
+      --mustard-soft: rgba(125,113,40,0.14);
+      --good: #3d7a4f;
+      --good-soft: rgba(61,122,79,0.12);
+      --bad: #a8352a;
+      --bad-soft: rgba(168,53,42,0.14);
+      --shadow: 0 20px 50px -24px rgba(24,18,12,0.25);
     }
   }
 
@@ -74,89 +86,48 @@
   button { font-family: inherit; cursor: pointer; }
   input, select, textarea { font-family: inherit; font-size: inherit; color: var(--ink); }
 
-  /* ── Shell ─────────────────────────────────────────────── */
-  .shell { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
-  @media (max-width: 880px) { .shell { grid-template-columns: 1fr; } }
-
-  .sidebar {
-    background: var(--surface);
-    border-right: 1px solid var(--border);
-    padding: 22px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
+  /* ── Topo: marca + passo-a-passo ─────────────────────────── */
+  .topbar {
+    position: sticky; top: 0; z-index: 30;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
   }
+  .topbar-row { display: flex; align-items: center; gap: 18px; max-width: 900px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; flex: none; }
+  .brand-mark { width: 32px; height: 32px; border-radius: 6px; flex: none; display: block; }
+  .brand-text b { font-family: var(--font-display); font-size: 14.5px; letter-spacing: 0.01em; display: block; }
+  .brand-text span { font-size: 10.5px; color: var(--muted); }
 
-  /* ── Menu mobile (hambúrguer) ────────────────────────────── */
-  .mobile-topbar { display: none; }
-  .sidebar-backdrop { display: none; }
-  @media (max-width: 880px) {
-    .mobile-topbar {
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      position: sticky; top: 0; z-index: 40;
-      background: var(--surface); border-bottom: 1px solid var(--border);
-      padding: 12px 16px;
-    }
-    .hamburger-btn {
-      background: var(--surface-2); border: 1px solid var(--border-2); color: var(--ink);
-      width: 38px; height: 38px; border-radius: 9px; flex: none;
-      display: flex; align-items: center; justify-content: center; font-size: 18px;
-    }
-    .mobile-topbar .brand { padding: 0; }
-    .sidebar {
-      position: fixed; inset: 0 auto 0 0; width: 260px; height: 100vh; z-index: 50;
-      transform: translateX(-100%); transition: transform .25s ease;
-    }
-    .sidebar.open { transform: translateX(0); }
-    .sidebar-backdrop {
-      display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.55);
-      z-index: 45; opacity: 0; pointer-events: none; transition: opacity .25s ease;
-    }
-    .sidebar-backdrop.open { opacity: 1; pointer-events: auto; }
+  .stepper { display: flex; align-items: center; gap: 4px; flex: 1; overflow-x: auto; padding: 2px; }
+  .step-btn {
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    background: none; border: none; padding: 4px 8px; flex: none;
   }
-
-  .brand { display: flex; align-items: center; gap: 10px; padding: 0 8px; }
-  .brand-mark { width: 34px; height: 34px; border-radius: 50%; flex: none; display: block; }
-  .brand-text { display: flex; flex-direction: column; }
-  .brand-text b { font-family: var(--font-display); font-size: 15px; letter-spacing: -0.01em; }
-  .brand-text span { font-size: 11px; color: var(--muted); }
-
-  nav { display: flex; flex-direction: column; gap: 2px; }
-  .nav-btn {
-    display: flex; align-items: center; gap: 10px;
-    background: none; border: none; color: var(--ink-2);
-    padding: 10px 12px; border-radius: 9px; text-align: left;
-    font-size: 13.5px; font-weight: 600; transition: background .15s, color .15s;
+  .step-diamond {
+    width: 15px; height: 15px; border-radius: 3px; border: 2px solid var(--border-2);
+    background: var(--surface-2); transform: rotate(45deg); transition: all .2s;
   }
-  .nav-btn .ic { font-size: 15px; width: 18px; text-align: center; flex: none; }
-  .nav-btn:hover { background: var(--surface-2); color: var(--ink); }
-  .nav-btn.on { background: var(--brand-soft); color: var(--brand); }
+  .step-btn.done .step-diamond { background: var(--step-color, var(--brand)); border-color: var(--step-color, var(--brand)); }
+  .step-btn.on .step-diamond { background: var(--step-color, var(--brand)); border-color: var(--step-color, var(--brand)); box-shadow: 0 0 0 4px var(--step-glow, var(--brand-soft)); }
+  .step-label { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); white-space: nowrap; }
+  .step-btn.on .step-label, .step-btn.done .step-label { color: var(--ink-2); }
+  @media (max-width: 720px) { .step-label { display: none; } }
 
-  .sidebar-foot { margin-top: auto; display: flex; flex-direction: column; gap: 8px; padding: 0 8px; }
-  .status-line { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); }
-  .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); flex: none; }
-  .status-dot.ok { background: var(--good); }
-  .status-dot.bad { background: var(--bad); }
+  /* ── Trilha de slides ─────────────────────────────────────── */
+  .slides-viewport { overflow-x: hidden; }
+  .slides-track { display: flex; transition: transform .45s cubic-bezier(.22,.8,.24,1); }
+  .slide { flex: 0 0 100%; width: 100%; padding: 32px 24px 130px; }
+  .slide-inner { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
 
-  .main { padding: 28px 32px 120px; max-width: 860px; margin: 0 auto; width: 100%; }
-  @media (max-width: 640px) { .main { padding: 20px 16px 120px; } }
-
-  .topline { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 26px; flex-wrap: wrap; }
-  .topline h1 { font-size: 24px; }
+  .topline { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 4px; flex-wrap: wrap; }
+  .topline h1 { font-size: 23px; }
   .topline p { margin: 4px 0 0; color: var(--ink-2); font-size: 13.5px; }
-
-  section.pane { display: none; flex-direction: column; gap: 18px; animation: fade .25s ease; }
-  section.pane.on { display: flex; }
-  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  .eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 3px; }
 
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 14px;
     padding: 20px 22px;
   }
   .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
@@ -169,7 +140,7 @@
   .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 560px) { .row-2 { grid-template-columns: 1fr; } }
 
-  input[type="text"], input[type="number"], input[type="password"], select, textarea {
+  input[type="text"], input[type="number"], input[type="password"], input[type="date"], select, textarea {
     width: 100%; background: var(--surface-2); border: 1px solid var(--border-2);
     border-radius: 9px; padding: 9px 11px; outline: none; transition: border-color .15s, box-shadow .15s;
   }
@@ -281,15 +252,31 @@
   input[type="range"] { flex: 1; accent-color: var(--brand); }
   .range-val { font-family: var(--font-mono); font-weight: 700; font-size: 14px; min-width: 34px; text-align: right; }
 
+  /* Catálogos — cards selecionáveis */
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+  .cat-card {
+    display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px;
+    background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 11px;
+    cursor: pointer; transition: all .15s;
+  }
+  .cat-card:hover { border-color: var(--border-2); background: var(--surface-3); }
+  .cat-card.on { border-color: var(--cat-color, var(--brand)); background: var(--cat-soft, var(--brand-soft)); }
+  .cat-card .cat-diamond { width: 11px; height: 11px; border-radius: 2px; background: var(--cat-color, var(--brand)); transform: rotate(45deg); flex: none; margin-top: 4px; }
+  .cat-card .cat-name { font-size: 13px; font-weight: 700; }
+  .cat-card .cat-count { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .cat-empty { padding: 20px; text-align: center; color: var(--muted); font-size: 13px; }
+
   /* Action bar */
   .actionbar {
-    position: fixed; left: 248px; right: 0; bottom: 0;
+    position: fixed; left: 0; right: 0; bottom: 0;
     background: var(--surface); border-top: 1px solid var(--border);
-    padding: 14px 32px; display: flex; align-items: center; justify-content: flex-end; gap: 12px;
+    padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
     box-shadow: var(--shadow);
     z-index: 20;
   }
-  @media (max-width: 880px) { .actionbar { left: 0; padding: 12px 16px; } }
+  .actionbar-inner { max-width: 860px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .actionbar-nav { display: flex; gap: 8px; }
+  .actionbar-final { display: flex; gap: 8px; }
   .btn-primary {
     background: var(--accent); color: var(--accent-ink); border: none; border-radius: 10px;
     padding: 11px 22px; font-weight: 700; font-size: 13.5px; display: flex; align-items: center; gap: 8px;
@@ -299,9 +286,40 @@
   .btn-primary:active { transform: scale(0.98); }
   .btn-primary:disabled { opacity: 0.6; cursor: wait; }
 
+  /* Home / tutorial */
+  .hero-frag {
+    background: var(--surface); border: 2px solid var(--ink); border-radius: 4px;
+    padding: 26px 26px 24px; transform: rotate(-0.6deg);
+    box-shadow: var(--shadow);
+    position: relative; overflow: hidden;
+  }
+  .hero-frag::before {
+    content: ""; position: absolute; top: -40px; right: -40px; width: 160px; height: 160px;
+    background: var(--accent); opacity: .16; transform: rotate(45deg);
+  }
+  .hero-frag h1 { font-size: 30px; line-height: 1.15; position: relative; }
+  .hero-frag h1 em { font-style: normal; color: var(--brand); }
+  .hero-frag p.lede { font-size: 14px; color: var(--ink-2); margin: 10px 0 0; max-width: 56ch; position: relative; }
+  .acronym-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; position: relative; }
+  .acronym-chip {
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+    padding: 5px 10px; border-radius: 3px; color: var(--accent-ink);
+    background: var(--chip-color, var(--brand)); transform: rotate(var(--chip-tilt, 0deg));
+  }
+
+  .tutorial-list { display: flex; flex-direction: column; gap: 10px; }
+  .tutorial-step { display: flex; gap: 12px; align-items: flex-start; }
+  .tutorial-num {
+    width: 26px; height: 26px; border-radius: 3px; flex: none; transform: rotate(45deg);
+    background: var(--num-color, var(--teal)); display: flex; align-items: center; justify-content: center;
+  }
+  .tutorial-num span { transform: rotate(-45deg); font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--accent-ink); }
+  .tutorial-text b { display: block; font-size: 13.5px; }
+  .tutorial-text span { font-size: 12px; color: var(--ink-2); }
+
   /* Result overlay */
   .overlay {
-    position: fixed; inset: 0; background: rgba(6,5,10,0.6); backdrop-filter: blur(3px);
+    position: fixed; inset: 0; background: rgba(10,7,4,0.6); backdrop-filter: blur(3px);
     display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 50;
     opacity: 0; pointer-events: none; transition: opacity .2s;
   }
@@ -342,212 +360,256 @@
 </head>
 <body>
 
-<div class="mobile-topbar">
-  <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu">☰</button>
-  <div class="brand">
-    <img class="brand-mark" src="/logo.svg" alt="TorrStremio" style="width:28px;height:28px">
-    <div class="brand-text"><b style="font-size:13px">TorrStremio</b></div>
-  </div>
-  <span style="width:38px"></span>
-</div>
-<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
-
-<div class="shell">
-  <aside class="sidebar" id="sidebar">
+<header class="topbar">
+  <div class="topbar-row">
     <div class="brand">
-      <img class="brand-mark" src="/logo.svg" alt="TorrStremio">
-      <div class="brand-text"><b>TorrStremio</b><span>Prowlarr + TorrServer</span></div>
+      <img class="brand-mark" src="/logo.svg" alt="TorrESMIN">
+      <div class="brand-text"><b>TorrESMIN</b><span>passo <span id="step-current">1</span>/<span id="step-total">7</span></span></div>
     </div>
-    <nav id="nav">
-      <button class="nav-btn on" data-pane="indexers"><span class="ic">📡</span> Indexadores</button>
-      <button class="nav-btn" data-pane="filters"><span class="ic">🎚️</span> Filtros</button>
-      <button class="nav-btn" data-pane="format"><span class="ic">🏷️</span> Formatação</button>
-      <button class="nav-btn" data-pane="sort"><span class="ic">↕️</span> Ordenação</button>
-      <button class="nav-btn" data-pane="catalog"><span class="ic">🗂️</span> Catálogo</button>
-      <button class="nav-btn" data-pane="install"><span class="ic">⚙️</span> Instalação</button>
-    </nav>
-    <div class="sidebar-foot">
-      <div class="status-line"><span class="status-dot" id="dot-jackett"></span><span id="txt-jackett">Prowlarr/Jackett</span></div>
-      <div class="status-line"><span class="status-dot" id="dot-torrserver"></span><span id="txt-torrserver">TorrServer</span></div>
-    </div>
-  </aside>
+    <div class="stepper" id="stepper"></div>
+  </div>
+</header>
 
-  <main class="main">
+<div class="slides-viewport">
+  <div class="slides-track" id="slides-track">
 
-    <div class="topline">
-      <div>
-        <h1 id="pane-title">Indexadores</h1>
-        <p id="pane-sub">Escolha de onde o TorrStremio busca torrents.</p>
+    <!-- ── Início / Tutorial ──────────────────────────────── -->
+    <section class="slide" id="slide-home">
+      <div class="slide-inner">
+        <div class="hero-frag">
+          <h1>Torrent, Entertainment,<br>Selection, Movies,<br><em>Intelligence, Navigation.</em></h1>
+          <p class="lede">TorrESMIN busca em Prowlarr/Jackett e transmite pelo TorrServer, com seek de verdade. Este passo a passo configura tudo — leva menos de 2 minutos.</p>
+          <div class="acronym-row">
+            <span class="acronym-chip" style="--chip-color: var(--brand); --chip-tilt: -2deg">Torrent</span>
+            <span class="acronym-chip" style="--chip-color: var(--accent); --chip-tilt: 1deg">Entertainment</span>
+            <span class="acronym-chip" style="--chip-color: var(--teal); --chip-tilt: -1deg">Selection</span>
+            <span class="acronym-chip" style="--chip-color: var(--plum); --chip-tilt: 2deg">Movies</span>
+            <span class="acronym-chip" style="--chip-color: var(--mustard); --chip-tilt: -1.5deg">Intelligence</span>
+            <span class="acronym-chip" style="--chip-color: var(--brand); --chip-tilt: 1deg">Navigation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>Como funciona</h3></div>
+          <div class="tutorial-list">
+            <div class="tutorial-step">
+              <div class="tutorial-num" style="--num-color: var(--brand)"><span>1</span></div>
+              <div class="tutorial-text"><b>Cole sua chave de acesso</b><span>Sem ela, você só vê o catálogo — busca e reprodução não funcionam.</span></div>
+            </div>
+            <div class="tutorial-step">
+              <div class="tutorial-num" style="--num-color: var(--accent)"><span>2</span></div>
+              <div class="tutorial-text"><b>Escolha indexadores e filtros</b><span>De onde buscar, em que idioma, com que prioridade.</span></div>
+            </div>
+            <div class="tutorial-step">
+              <div class="tutorial-num" style="--num-color: var(--teal)"><span>3</span></div>
+              <div class="tutorial-text"><b>Personalize formatação, ordem e catálogos</b><span>Como cada stream aparece, em que ordem, e quais catálogos curados mostrar na home.</span></div>
+            </div>
+            <div class="tutorial-step">
+              <div class="tutorial-num" style="--num-color: var(--plum)"><span>4</span></div>
+              <div class="tutorial-text"><b>Gere o link e instale no Stremio</b><span>Um clique e o addon já aparece configurado no seu Stremio.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>Chave de acesso</h3></div>
+          <p class="field-note" style="margin-top:0">Peça essa chave a quem administra o servidor. Ela trava automaticamente no seu IP no primeiro uso.</p>
+          <input type="text" id="accessKey" placeholder="key_xxxxxxxxxxxxxxxxxxxx">
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- ── Indexadores ────────────────────────────────────── -->
-    <section class="pane on" id="pane-indexers">
-      <div class="card">
-        <div class="card-head"><h3>Categorias</h3></div>
-        <div class="chip-row" id="cat-chips">
-          <button class="chip on" data-cat="movie">🎬 Filmes</button>
-          <button class="chip on" data-cat="series">📺 Séries</button>
-          <button class="chip" data-cat="anime">🎌 Anime</button>
+    <section class="slide" id="slide-indexers">
+      <div class="slide-inner">
+        <div class="topline"><div><span class="eyebrow">Passo 2</span><h1>Indexadores</h1><p>Escolha de onde o TorrESMIN busca torrents.</p></div></div>
+        <div class="card">
+          <div class="card-head"><h3>Categorias</h3></div>
+          <div class="chip-row" id="cat-chips">
+            <button class="chip on" data-cat="movie">🎬 Filmes</button>
+            <button class="chip on" data-cat="series">📺 Séries</button>
+            <button class="chip" data-cat="anime">🎌 Anime</button>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-head">
-          <h3>Indexadores ativos</h3>
-          <span class="hint" id="ix-count">—</span>
+        <div class="card">
+          <div class="card-head">
+            <h3>Indexadores ativos</h3>
+            <span class="hint" id="ix-count">—</span>
+          </div>
+          <div class="ix-toolbar">
+            <input type="text" id="ix-search" placeholder="Filtrar por nome…">
+            <button class="btn-ghost" id="ix-all">Selecionar todos</button>
+            <button class="btn-ghost" id="ix-none">Limpar</button>
+          </div>
+          <div class="ix-grid scrollbar-thin" id="ix-grid"><div class="ix-empty">Carregando indexadores…</div></div>
         </div>
-        <div class="ix-toolbar">
-          <input type="text" id="ix-search" placeholder="Filtrar por nome…">
-          <button class="btn-ghost" id="ix-all">Selecionar todos</button>
-          <button class="btn-ghost" id="ix-none">Limpar</button>
-        </div>
-        <div class="ix-grid scrollbar-thin" id="ix-grid"><div class="ix-empty">Carregando indexadores…</div></div>
       </div>
     </section>
 
     <!-- ── Filtros ────────────────────────────────────────── -->
-    <section class="pane" id="pane-filters">
-      <div class="card">
-        <div class="card-head"><h3>Idioma</h3></div>
-        <div class="row-2">
-          <div>
-            <label class="lbl">Idioma prioritário</label>
-            <select id="priorityLang">
-              <option value="">Sem preferência</option>
-              <option value="pt-br" selected>Português (BR)</option>
-              <option value="en">Inglês</option>
-              <option value="es">Espanhol</option>
-              <option value="fr">Francês</option>
-            </select>
-          </div>
-          <div class="toggle-row" style="align-self:end">
-            <div><div class="t-label">Apenas esse idioma</div><div class="t-desc">Esconde tudo que não bater</div></div>
-            <label class="switch"><input type="checkbox" id="onlyDubbed"><span class="track"></span><span class="knob"></span></label>
+    <section class="slide" id="slide-filters">
+      <div class="slide-inner">
+        <div class="topline"><div><span class="eyebrow">Passo 3</span><h1>Filtros</h1><p>Idioma, palavras-chave e limites de resultado.</p></div></div>
+        <div class="card">
+          <div class="card-head"><h3>Idioma</h3></div>
+          <div class="row-2">
+            <div>
+              <label class="lbl">Idioma prioritário</label>
+              <select id="priorityLang">
+                <option value="">Sem preferência</option>
+                <option value="pt-br" selected>Português (BR)</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+                <option value="fr">Francês</option>
+              </select>
+            </div>
+            <div class="toggle-row" style="align-self:end">
+              <div><div class="t-label">Apenas esse idioma</div><div class="t-desc">Esconde tudo que não bater</div></div>
+              <label class="switch"><input type="checkbox" id="onlyDubbed"><span class="track"></span><span class="knob"></span></label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Palavras-chave de boost</h3></div>
-        <p class="field-note" style="margin-top:0">Releases que baterem em alguma dessas palavras furam a fila, mesmo com filtro de idioma ligado. Clique pra ligar/desligar, ou crie as suas.</p>
-        <div class="chip-row" id="keyword-chips"></div>
-        <div class="add-row">
-          <input type="text" id="keyword-custom-input" placeholder="Criar palavra-chave própria… (ex: WEB-DL)">
-          <button class="btn-ghost" id="keyword-custom-add">Adicionar</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Indexadores prioritários</h3><span class="hint">opcional</span></div>
-        <p class="field-note" style="margin-top:0">Resultados vindos desses indexadores furam a fila, mesmo sem bater keyword ou idioma.</p>
-        <div class="chip-row" id="priority-ix-chips"><span class="hint">Carregando…</span></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Limites</h3></div>
-        <div class="row-2">
-          <div>
-            <label class="lbl">Máximo de streams</label>
-            <div class="range-row"><input type="range" id="maxResults" min="1" max="100" value="20"><span class="range-val" id="maxResults-val">20</span></div>
+        <div class="card">
+          <div class="card-head"><h3>Palavras-chave de boost</h3></div>
+          <p class="field-note" style="margin-top:0">Releases que baterem em alguma dessas palavras furam a fila, mesmo com filtro de idioma ligado. Clique pra ligar/desligar, ou crie as suas.</p>
+          <div class="chip-row" id="keyword-chips"></div>
+          <div class="add-row">
+            <input type="text" id="keyword-custom-input" placeholder="Criar palavra-chave própria… (ex: WEB-DL)">
+            <button class="btn-ghost" id="keyword-custom-add">Adicionar</button>
           </div>
-          <div>
-            <label class="lbl">Máximo por indexador <span class="hint">(0 = sem limite)</span></label>
-            <input type="number" id="maxResultsPerIndexer" min="0" max="200" value="0">
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Indexadores prioritários</h3><span class="hint">opcional</span></div>
+          <p class="field-note" style="margin-top:0">Resultados vindos desses indexadores furam a fila, mesmo sem bater keyword ou idioma.</p>
+          <div class="chip-row" id="priority-ix-chips"><span class="hint">Carregando…</span></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Limites</h3></div>
+          <div class="row-2">
+            <div>
+              <label class="lbl">Máximo de streams</label>
+              <div class="range-row"><input type="range" id="maxResults" min="1" max="100" value="20"><span class="range-val" id="maxResults-val">20</span></div>
+            </div>
+            <div>
+              <label class="lbl">Máximo por indexador <span class="hint">(0 = sem limite)</span></label>
+              <input type="number" id="maxResultsPerIndexer" min="0" max="200" value="0">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ── Formatação ─────────────────────────────────────── -->
-    <section class="pane" id="pane-format">
-      <div class="card">
-        <div class="card-head">
-          <h3>Como os streams aparecem no Stremio</h3>
-          <button class="btn-text" id="format-reset">↺ Restaurar padrão</button>
-        </div>
-        <p class="field-note" style="margin-top:0">Monte o texto com os tokens abaixo — clique num token pra inserir. Já vem preenchido com o formato padrão; edite à vontade. Uma linha some sozinha quando o dado dela não existe (ex: sem tamanho detectado, a linha de tamanho não aparece).</p>
-        <div class="chip-row" id="token-palette" style="margin:14px 0 18px"></div>
-        <div class="fmt-grid">
-          <div class="row">
-            <div>
-              <label class="lbl">Nome (título do stream)</label>
-              <textarea class="tpl" id="nameTemplate" data-target="nameTemplate" style="min-height:56px"></textarea>
-              <div class="tpl-error" id="nameTemplate-error"></div>
-            </div>
-            <div>
-              <label class="lbl">Descrição</label>
-              <textarea class="tpl" id="descriptionTemplate" data-target="descriptionTemplate" style="min-height:150px"></textarea>
-              <div class="tpl-error" id="descriptionTemplate-error"></div>
-            </div>
+    <section class="slide" id="slide-format">
+      <div class="slide-inner">
+        <div class="topline"><div><span class="eyebrow">Passo 4</span><h1>Formatação</h1><p>Personalize como cada stream aparece no Stremio.</p></div></div>
+        <div class="card">
+          <div class="card-head">
+            <h3>Como os streams aparecem no Stremio</h3>
+            <button class="btn-text" id="format-reset">↺ Restaurar padrão</button>
           </div>
-          <div class="stream-preview">
-            <span class="sp-label">Prévia ao vivo</span>
-            <div class="stream-card">
-              <div class="sc-name" id="preview-name">TorrStremio\n🔵 FHD</div>
-              <div class="sc-desc" id="preview-desc">Carregando…</div>
+          <p class="field-note" style="margin-top:0">Monte o texto com os tokens abaixo — clique num token pra inserir. Já vem preenchido com o formato padrão; edite à vontade. Uma linha some sozinha quando o dado dela não existe.</p>
+          <div class="chip-row" id="token-palette" style="margin:14px 0 18px"></div>
+          <div class="fmt-grid">
+            <div class="row">
+              <div>
+                <label class="lbl">Nome (título do stream)</label>
+                <textarea class="tpl" id="nameTemplate" data-target="nameTemplate" style="min-height:56px"></textarea>
+                <div class="tpl-error" id="nameTemplate-error"></div>
+              </div>
+              <div>
+                <label class="lbl">Descrição</label>
+                <textarea class="tpl" id="descriptionTemplate" data-target="descriptionTemplate" style="min-height:150px"></textarea>
+                <div class="tpl-error" id="descriptionTemplate-error"></div>
+              </div>
             </div>
-            <p class="field-note" style="margin:0">Renderizado com um resultado de exemplo (The Matrix, 4K REMUX, 214 seeds) usando a mesma função que monta os streams de verdade.</p>
+            <div class="stream-preview">
+              <span class="sp-label">Prévia ao vivo</span>
+              <div class="stream-card">
+                <div class="sc-name" id="preview-name">TorrESMIN\n🔵 FHD</div>
+                <div class="sc-desc" id="preview-desc">Carregando…</div>
+              </div>
+              <p class="field-note" style="margin:0">Renderizado com um resultado de exemplo (The Matrix, 4K REMUX, 214 seeds) usando a mesma função que monta os streams de verdade.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ── Ordenação ──────────────────────────────────────── -->
-    <section class="pane" id="pane-sort">
-      <div class="card">
-        <div class="card-head"><h3>Prioridade de agrupamento e ordenação</h3></div>
-        <p class="field-note" style="margin-top:0">O primeiro critério da lista domina — na prática funciona como "agrupar por", já que o Stremio mostra tudo numa lista só. Use as setas pra reordenar e o check pra desligar um critério.</p>
-        <div class="sort-list" id="sort-list"></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Prévia com resultados de exemplo</h3><span class="hint">10 itens fictícios</span></div>
-        <p class="field-note" style="margin-top:0">Mostra a ordem final que 10 resultados variados assumiriam com os critérios acima. 🔑 = bate palavra-chave de boost · 🗣️ = no idioma prioritário.</p>
-        <div class="preview-list" id="sort-preview-list"></div>
+    <section class="slide" id="slide-sort">
+      <div class="slide-inner">
+        <div class="topline"><div><span class="eyebrow">Passo 5</span><h1>Ordenação</h1><p>Defina a ordem de prioridade dos resultados.</p></div></div>
+        <div class="card">
+          <div class="card-head"><h3>Prioridade de agrupamento e ordenação</h3></div>
+          <p class="field-note" style="margin-top:0">O primeiro critério da lista domina — na prática funciona como "agrupar por", já que o Stremio mostra tudo numa lista só. Use as setas pra reordenar e o check pra desligar um critério.</p>
+          <div class="sort-list" id="sort-list"></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Prévia com resultados de exemplo</h3><span class="hint">10 itens fictícios</span></div>
+          <p class="field-note" style="margin-top:0">Mostra a ordem final que 10 resultados variados assumiriam com os critérios acima. 🔑 = bate palavra-chave de boost · 🗣️ = no idioma prioritário.</p>
+          <div class="preview-list" id="sort-preview-list"></div>
+        </div>
       </div>
     </section>
 
-    <!-- ── Catálogo ───────────────────────────────────────── -->
-    <section class="pane" id="pane-catalog">
-      <div class="card">
-        <div class="toggle-row">
-          <div><div class="t-label">Catálogo de lançamentos recentes</div><div class="t-desc">Mostra os últimos releases dos indexadores direto na home do Stremio (precisa de <code>RSS_CATALOG_INDEXERS</code> no servidor)</div></div>
-          <label class="switch"><input type="checkbox" id="enableCatalog" checked><span class="track"></span><span class="knob"></span></label>
+    <!-- ── Catálogos ──────────────────────────────────────── -->
+    <section class="slide" id="slide-catalogs">
+      <div class="slide-inner">
+        <div class="topline"><div><span class="eyebrow">Passo 6</span><h1>Catálogos</h1><p>Escolha quais catálogos curados aparecem na home do Stremio.</p></div></div>
+        <div class="card">
+          <div class="toggle-row">
+            <div><div class="t-label">Mostrar catálogos na home</div><div class="t-desc">Desligado, nenhum catálogo aparece — só busca funciona</div></div>
+            <label class="switch"><input type="checkbox" id="enableCatalog" checked><span class="track"></span><span class="knob"></span></label>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Catálogos disponíveis</h3><span class="hint" id="cat-list-count">—</span></div>
+          <div class="cat-grid" id="cat-list-grid"><div class="cat-empty">Carregando catálogos…</div></div>
         </div>
       </div>
     </section>
 
     <!-- ── Instalação ─────────────────────────────────────── -->
-    <section class="pane" id="pane-install">
-      <div class="card">
-        <div class="card-head"><h3>Chave de acesso</h3></div>
-        <p class="field-note" style="margin-top:0">Peça essa chave a quem administra o servidor. Sem ela, você só vê o catálogo — busca e reprodução não funcionam. A chave trava automaticamente no seu IP no primeiro uso.</p>
-        <input type="text" id="accessKey" placeholder="key_xxxxxxxxxxxxxxxxxxxx">
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Identidade do addon</h3></div>
-        <div class="row-2">
-          <div>
-            <label class="lbl">Nome exibido no Stremio</label>
-            <input type="text" id="addonName" placeholder="TorrStremio">
-          </div>
-          <div>
-            <label class="lbl">Token de acesso <span class="hint">(opcional)</span></label>
-            <input type="password" id="accessToken" placeholder="Deixe em branco pra não travar o acesso">
+    <section class="slide" id="slide-install">
+      <div class="slide-inner">
+        <div class="topline"><div><span class="eyebrow">Passo 7</span><h1>Instalação</h1><p>Finalize e gere o link do addon.</p></div></div>
+        <div class="card">
+          <div class="card-head"><h3>Identidade do addon</h3></div>
+          <label class="lbl">Nome exibido no Stremio</label>
+          <input type="text" id="addonName" placeholder="TorrESMIN">
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Deduplicar resultados</h3></div>
+          <div class="toggle-row">
+            <div><div class="t-label">Remover torrents duplicados</div><div class="t-desc">Mantém só a melhor cópia de cada release</div></div>
+            <label class="switch"><input type="checkbox" id="dedupe" checked><span class="track"></span><span class="knob"></span></label>
           </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Deduplicar resultados</h3></div>
-        <div class="toggle-row">
-          <div><div class="t-label">Remover torrents duplicados</div><div class="t-desc">Mantém só a melhor cópia de cada release</div></div>
-          <label class="switch"><input type="checkbox" id="dedupe" checked><span class="track"></span><span class="knob"></span></label>
+        <div class="card">
+          <div class="card-head"><h3>Status dos serviços</h3></div>
+          <div style="display:flex; flex-direction:column; gap:8px">
+            <div class="status-line" style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-2)"><span class="status-dot" id="dot-jackett" style="width:7px;height:7px;border-radius:50%;background:var(--muted);flex:none"></span><span id="txt-jackett">Prowlarr/Jackett</span></div>
+            <div class="status-line" style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-2)"><span class="status-dot" id="dot-torrserver" style="width:7px;height:7px;border-radius:50%;background:var(--muted);flex:none"></span><span id="txt-torrserver">TorrServer</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-  </main>
+  </div>
 </div>
 
 <div class="actionbar">
-  <button class="btn-ghost" id="install-direct-btn">📲 Instalar no Stremio</button>
-  <button class="btn-primary" id="generate-btn">⚡ Gerar URL do Addon</button>
+  <div class="actionbar-inner">
+    <div class="actionbar-nav">
+      <button class="btn-ghost" id="prev-btn">← Voltar</button>
+      <button class="btn-ghost" id="next-btn">Próximo →</button>
+    </div>
+    <div class="actionbar-final">
+      <button class="btn-ghost" id="install-direct-btn">📲 Instalar no Stremio</button>
+      <button class="btn-primary" id="generate-btn">⚡ Gerar URL do Addon</button>
+    </div>
+  </div>
 </div>
 
 <div class="overlay" id="overlay">
@@ -569,15 +631,17 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const PANES = ["indexers","filters","format","sort","catalog","install"];
+const PANES = ["home","indexers","filters","format","sort","catalogs","install"];
 const PANE_META = {
-  indexers: ["Indexadores", "Escolha de onde o TorrStremio busca torrents."],
+  home:     ["Início", "Bem-vindo ao TorrESMIN."],
+  indexers: ["Indexadores", "Escolha de onde o TorrESMIN busca torrents."],
   filters:  ["Filtros", "Idioma, palavras-chave e limites de resultado."],
   format:   ["Formatação", "Personalize como cada stream aparece no Stremio."],
   sort:     ["Ordenação", "Defina a ordem de prioridade dos resultados."],
-  catalog:  ["Catálogo", "Lançamentos recentes na home do Stremio."],
+  catalogs: ["Catálogos", "Escolha quais catálogos curados aparecem na home."],
   install:  ["Instalação", "Finalize e gere o link do addon."],
 };
+const STEP_COLORS = ["brand","accent","teal","plum","mustard","brand","accent"];
 const TOKENS = [
   ["addon","Nome do addon"], ["title","Título"], ["year","Ano"], ["season","Temporada/Episódio"],
   ["resolution","Resolução"], ["quality","Qualidade"], ["codec","Codec"], ["size","Tamanho"],
@@ -615,6 +679,7 @@ const SORT_META = {
   indexer:    ["Indexador", "Agrupa alfabeticamente por fonte"],
 };
 const DEFAULT_SORT = ["keyword","language","resolution","quality","size","seeders"];
+const CATALOG_COLORS = ["brand","accent","teal","plum","mustard"];
 
 // 10 resultados fictícios pra prévia da Ordenação — mesma escala de score que
 // scoring.js usa de verdade (RESOLUTION/QUALITY), só que fixada aqui em vez
@@ -671,9 +736,11 @@ const state = {
   sortBy: DEFAULT_SORT.slice(),
   sortAll: [...DEFAULT_SORT, "indexer"],
   enableCatalog: true,
+  catalogs: [],
+  selectedCatalogIds: new Set(),
   addonName: "",
-  accessToken: "",
   dedupe: true,
+  step: 0,
 };
 
 function userConfigFromPath() {
@@ -682,31 +749,44 @@ function userConfigFromPath() {
   return null;
 }
 
-// ── Navegação ─────────────────────────────────────────────
-document.getElementById("nav").addEventListener("click", (e) => {
-  const btn = e.target.closest(".nav-btn");
-  if (!btn) return;
-  showPane(btn.dataset.pane);
+// ── Navegação em slides ─────────────────────────────────────
+function buildStepper() {
+  const box = document.getElementById("stepper");
+  box.innerHTML = "";
+  document.getElementById("step-total").textContent = PANES.length;
+  PANES.forEach((id, i) => {
+    const btn = document.createElement("button");
+    btn.className = "step-btn";
+    btn.dataset.pane = id;
+    btn.style.setProperty("--step-color", `var(--${STEP_COLORS[i % STEP_COLORS.length]})`);
+    btn.style.setProperty("--step-glow", `var(--${STEP_COLORS[i % STEP_COLORS.length]}-soft)`);
+    btn.innerHTML = `<span class="step-diamond"></span><span class="step-label">${PANE_META[id][0]}</span>`;
+    btn.addEventListener("click", () => goToSlide(i));
+    box.appendChild(btn);
+  });
+}
+function goToSlide(index) {
+  index = Math.max(0, Math.min(PANES.length - 1, index));
+  state.step = index;
+  const id = PANES[index];
+  document.getElementById("slides-track").style.transform = `translateX(-${index * 100}%)`;
+  document.querySelectorAll(".step-btn").forEach((b, i) => {
+    b.classList.toggle("on", i === index);
+    b.classList.toggle("done", i < index);
+  });
+  document.getElementById("step-current").textContent = index + 1;
+  document.getElementById("prev-btn").style.visibility = index === 0 ? "hidden" : "visible";
+  document.getElementById("next-btn").style.visibility = index === PANES.length - 1 ? "hidden" : "visible";
   closeMobileMenu();
-});
+  if (id === "catalogs") loadCatalogList();
+}
 function showPane(id) {
-  document.querySelectorAll(".nav-btn").forEach(b => b.classList.toggle("on", b.dataset.pane === id));
-  document.querySelectorAll("section.pane").forEach(s => s.classList.toggle("on", s.id === "pane-" + id));
-  document.getElementById("pane-title").textContent = PANE_META[id][0];
-  document.getElementById("pane-sub").textContent = PANE_META[id][1];
+  const idx = PANES.indexOf(id);
+  if (idx >= 0) goToSlide(idx);
 }
-
-// ── Menu mobile ───────────────────────────────────────────
-function openMobileMenu() {
-  document.getElementById("sidebar").classList.add("open");
-  document.getElementById("sidebar-backdrop").classList.add("open");
-}
-function closeMobileMenu() {
-  document.getElementById("sidebar").classList.remove("open");
-  document.getElementById("sidebar-backdrop").classList.remove("open");
-}
-document.getElementById("hamburger-btn").addEventListener("click", openMobileMenu);
-document.getElementById("sidebar-backdrop").addEventListener("click", closeMobileMenu);
+document.getElementById("prev-btn").addEventListener("click", () => goToSlide(state.step - 1));
+document.getElementById("next-btn").addEventListener("click", () => goToSlide(state.step + 1));
+function closeMobileMenu() {}
 
 // ── Categorias ────────────────────────────────────────────
 document.getElementById("cat-chips").addEventListener("click", (e) => {
@@ -885,7 +965,7 @@ function schedulePreview() {
 async function renderPreview() {
   const nameTemplate = document.getElementById("nameTemplate").value;
   const descriptionTemplate = document.getElementById("descriptionTemplate").value;
-  const addonName = document.getElementById("addonName").value || "TorrStremio";
+  const addonName = document.getElementById("addonName").value || "TorrESMIN";
   try {
     const res = await fetch("/api/preview-format", {
       method: "POST", headers: { "Content-Type": "application/json" },
@@ -1011,6 +1091,44 @@ function renderSortPreview() {
   });
 }
 
+// ── Catálogos ─────────────────────────────────────────────
+let catalogsLoaded = false;
+async function loadCatalogList() {
+  if (catalogsLoaded) return;
+  const grid = document.getElementById("cat-list-grid");
+  try {
+    const res = await fetch("/api/catalogs").then(r => r.json());
+    if (!res.ok) throw new Error(res.error || "Falha ao carregar catálogos");
+    state.catalogs = res.catalogs;
+    if (!state._catalogsPreset) state.selectedCatalogIds = new Set(state.catalogs.map(c => c.id));
+    catalogsLoaded = true;
+    renderCatalogList();
+  } catch (err) {
+    grid.innerHTML = `<div class="cat-empty">Não foi possível carregar catálogos.<br><span class="hint">${err.message}</span></div>`;
+  }
+}
+function renderCatalogList() {
+  const grid = document.getElementById("cat-list-grid");
+  document.getElementById("cat-list-count").textContent = `${state.selectedCatalogIds.size}/${state.catalogs.length} selecionados`;
+  if (!state.catalogs.length) { grid.innerHTML = `<div class="cat-empty">Nenhum catálogo cadastrado ainda.</div>`; return; }
+  grid.innerHTML = "";
+  state.catalogs.forEach((cat, i) => {
+    const color = CATALOG_COLORS[i % CATALOG_COLORS.length];
+    const on = state.selectedCatalogIds.has(cat.id);
+    const el = document.createElement("div");
+    el.className = "cat-card" + (on ? " on" : "");
+    el.style.setProperty("--cat-color", `var(--${color})`);
+    el.style.setProperty("--cat-soft", `var(--${color}-soft)`);
+    el.innerHTML = `<span class="cat-diamond"></span><div><div class="cat-name">${cat.name}</div><div class="cat-count">${cat.count} títulos</div></div>`;
+    el.addEventListener("click", () => {
+      if (state.selectedCatalogIds.has(cat.id)) state.selectedCatalogIds.delete(cat.id);
+      else state.selectedCatalogIds.add(cat.id);
+      renderCatalogList();
+    });
+    grid.appendChild(el);
+  });
+}
+
 // ── Toast ─────────────────────────────────────────────────
 function toast(msg, isErr) {
   const el = document.getElementById("toast");
@@ -1023,6 +1141,7 @@ function toast(msg, isErr) {
 function setDot(name, ok) {
   document.getElementById(`dot-${name}`).classList.toggle("ok", ok === true);
   document.getElementById(`dot-${name}`).classList.toggle("bad", ok === false);
+  document.getElementById(`dot-${name}`).style.background = ok === true ? "var(--good)" : ok === false ? "var(--bad)" : "var(--muted)";
 }
 
 // ── Carregar config existente ─────────────────────────────
@@ -1051,6 +1170,7 @@ function applyPrefs(p) {
     state.sortAll = [...state.sortBy, ...Object.keys(SORT_META).filter(k => !state.sortBy.includes(k))];
   }
   if (p.enableCatalog === false) document.getElementById("enableCatalog").checked = false;
+  if (Array.isArray(p.catalogIds) && !p.catalogIds.includes("all")) { state.selectedCatalogIds = new Set(p.catalogIds); state._catalogsPreset = true; }
   if (p.addonName) document.getElementById("addonName").value = p.addonName;
   if (p.accessKey) document.getElementById("accessKey").value = p.accessKey;
   if (p.dedupe === false) document.getElementById("dedupe").checked = false;
@@ -1074,8 +1194,8 @@ function collectPrefs() {
     descriptionTemplate: document.getElementById("descriptionTemplate").value,
     sortBy: state.sortBy,
     enableCatalog: document.getElementById("enableCatalog").checked,
+    catalogIds: (state.catalogs.length && state.selectedCatalogIds.size === state.catalogs.length) ? ["all"] : [...state.selectedCatalogIds],
     addonName: document.getElementById("addonName").value,
-    token: document.getElementById("accessToken").value,
     accessKey: document.getElementById("accessKey").value.trim(),
     dedupe: document.getElementById("dedupe").checked,
   };
@@ -1155,6 +1275,7 @@ async function loadEnvStatus() {
 
 // ── Init ──────────────────────────────────────────────────
 (async function init() {
+  buildStepper();
   document.getElementById("nameTemplate").value = DEFAULT_NAME_TEMPLATE;
   document.getElementById("descriptionTemplate").value = DEFAULT_DESCRIPTION_TEMPLATE;
   renderKeywordChips();
@@ -1163,6 +1284,7 @@ async function loadEnvStatus() {
   await loadExistingConfig();
   validateFormatting();
   renderPreview();
+  goToSlide(0);
   const hashPane = location.hash.replace("#", "");
   if (PANES.includes(hashPane)) showPane(hashPane);
 })();
