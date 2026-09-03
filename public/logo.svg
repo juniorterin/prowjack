@@ -1,31 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="256" height="256">
   <defs>
-    <clipPath id="disc">
-      <circle cx="256" cy="256" r="246"/>
-    </clipPath>
+    <clipPath id="sq"><rect x="46" y="46" width="420" height="420" rx="10"/></clipPath>
   </defs>
 
-  <!-- medalhão base -->
-  <circle cx="256" cy="256" r="248" fill="#601812"/>
-  <circle cx="256" cy="256" r="246" fill="#7c2018"/>
+  <!-- ── fragmento de cartaz — quadrado levemente girado, como um recorte colado -->
+  <g transform="rotate(-4 256 256)">
+    <rect x="42" y="42" width="428" height="428" rx="10" fill="#241c14"/>
+    <rect x="46" y="46" width="420" height="420" rx="10" fill="#e9dfc7"/>
 
-  <g clip-path="url(#disc)">
-    <!-- raios do amanhecer, irrompendo do canto inferior-esquerdo -->
-    <path d="M76,460 L-158.9,-262.8 L8.3,-297.0 Z" fill="#e7b04a"/>
-    <path d="M76,460 L178.9,-293.0 L344.2,-251.1 Z" fill="#e7b04a"/>
-    <path d="M76,460 L496.1,-173.3 L626.8,-63.7 Z" fill="#e7b04a"/>
-    <path d="M76,460 L729.7,72.4 L799.7,228.0 Z" fill="#e7b04a"/>
-    <path d="M76,460 L833.2,395.2 L828.6,565.8 Z" fill="#e7b04a"/>
+    <g clip-path="url(#sq)">
+      <!-- raios, irrompendo do canto inferior-esquerdo -->
+      <path d="M72,452 L-49.6,-237.4 L85.6,-247.9 Z" fill="#c9973f"/>
+      <path d="M72,452 L220.2,-232.1 L349.3,-190.8 Z" fill="#c9973f"/>
+      <path d="M72,452 L467.9,-125.3 L571.8,-38.2 Z" fill="#c9973f"/>
+      <path d="M72,452 L656.8,67.3 L720.0,187.3 Z" fill="#c9973f"/>
+      <path d="M72,452 L758.9,317.1 L772.0,452.0 Z" fill="#c9973f"/>
 
-    <!-- estrela, canto superior direito -->
-    <path d="M388.0,80.0 L396.8,105.9 L424.1,106.3 L402.3,122.6 L410.3,148.7 L388.0,133.0 L365.7,148.7 L373.7,122.6 L351.9,106.3 L379.2,105.9 Z" fill="#f3ece2"/>
+      <!-- bobina/olho — anel em petróleo desbotado, girado, como uma lente de cinema -->
+      <g transform="rotate(3 256 246)">
+        <circle cx="256" cy="246" r="146" fill="none" stroke="#3c6e6a" stroke-width="34"/>
+        <circle cx="256" cy="246" r="60" fill="#e9dfc7" stroke="#241c14" stroke-width="5"/>
+        <circle cx="256" cy="246" r="22" fill="#241c14"/>
+      </g>
 
-    <!-- monograma T — barra e haste inclinadas, ponta em cunha (irrompendo) -->
-    <polygon points="140,165 404,150 404,208 140,224" fill="#f3ece2"/>
-    <polygon points="232,190 322,182 338,370 248,378" fill="#f3ece2"/>
-    <polygon points="248,378 338,370 293,432" fill="#f3ece2"/>
+      <!-- cunha vermelha atravessando — referência direta à "Beat the Whites with the Red Wedge" -->
+      <polygon points="-20,300 300,-20 400,60 60,400" fill="#a8352a"/>
+
+      <!-- sombra de dobra, canto inferior direito -->
+      <polygon points="466,466 466,392 392,466" fill="#241c14" opacity="0.14"/>
+    </g>
+
+    <rect x="46" y="46" width="420" height="420" rx="10" fill="none" stroke="#241c14" stroke-width="7"/>
   </g>
 
-  <!-- aro -->
-  <circle cx="256" cy="256" r="246" fill="none" stroke="#3d0f0a" stroke-width="6"/>
+  <!-- ── selo colado — tira de estêncil com o T, num ângulo próprio -->
+  <g transform="rotate(-9 372 378)">
+    <rect x="300" y="340" width="150" height="76" fill="#241c14"/>
+    <rect x="300" y="340" width="150" height="76" fill="none" stroke="#e9dfc7" stroke-width="3"/>
+    <text x="375" y="394" font-family="Oswald, Arial, sans-serif" font-weight="700" font-size="52" fill="#e9dfc7" text-anchor="middle">T</text>
+  </g>
 </svg>
