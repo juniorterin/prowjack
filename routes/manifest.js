@@ -27,8 +27,10 @@ router.get("/:userConfig/manifest.json", async (req, res) => {
   const catalogs = [];
   if (prefs.enableCatalog) {
     const curated = await listCatalogs();
+    const wantsAll = !Array.isArray(prefs.catalogIds) || prefs.catalogIds.includes("all");
     for (const cat of curated) {
       if (!enabledCats.includes(cat.type)) continue;
+      if (!wantsAll && !prefs.catalogIds.includes(cat.id)) continue;
       catalogs.push({ type: cat.type, id: `curated_${cat.id}`, name: cat.name, extra: [{ name: "skip", isRequired: false }] });
     }
   }

@@ -7,6 +7,7 @@ const { normalizePrefs, sanitizeUserPrefs, validateServiceUrl, cleanTemplate } =
 const { getPublicBase, getRequestAccessToken, requireAdminAccess } = require("../routeHelpers");
 const { jackettFetchIndexers, fetchIndexerPrivacyMap, isProwlarrServer } = require("../jackettSearch");
 const { formatStream } = require("../scoring");
+const { listCatalogs } = require("../catalogs");
 
 const router = express.Router();
 
@@ -66,6 +67,17 @@ router.post("/api/preview-format", (req, res) => {
     res.json({ ok: true, name: preview.name, description: preview.description, tokens: preview.tokens });
   } catch (err) {
     res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+// Pública (diferente de /admin/api/catalogs) — só id/name/type/quantidade
+// de títulos, pra tela de /configure montar o seletor de catálogos.
+router.get("/api/catalogs", async (_, res) => {
+  try {
+    const catalogs = await listCatalogs();
+    res.json({ ok: true, catalogs: catalogs.map(c => ({ id: c.id, name: c.name, type: c.type, count: c.items.length })) });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message, catalogs: [] });
   }
 });
 

@@ -65,6 +65,7 @@ function defaultPrefs() {
     priorityIndexers:       [],
     maxResultsPerIndexer:   0,
     enableCatalog:   true,
+    catalogIds:      ["all"],
     rssIndexers:     [],
     token:           "",
     accessKey:       "",
@@ -109,6 +110,11 @@ function sanitizeUserPrefs(input = {}) {
   out.priorityIndexers = cleanStringArray(rawPriorityIndexers, 100, 120);
   out.maxResultsPerIndexer = clampNumber(src.maxResultsPerIndexer, 0, 0, 200);
   out.enableCatalog = src.enableCatalog !== false;
+  const rawCatalogIds = Array.isArray(src.catalogIds)
+    ? src.catalogIds
+    : String(src.catalogIds || "").split(",").map(s => s.trim()).filter(Boolean);
+  const catalogIds = cleanStringArray(rawCatalogIds, 100, 60);
+  out.catalogIds = catalogIds.length ? catalogIds : ["all"];
   out.rssIndexers = cleanStringArray(src.rssIndexers, 100, 120);
   out.token = cleanString(src.token, 200);
   out.accessKey = cleanString(src.accessKey, 100);

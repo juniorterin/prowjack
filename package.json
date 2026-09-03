@@ -5,7 +5,10 @@
   "main": "addon.js",
   "scripts": {
     "start": "node addon.js",
-    "dev": "nodemon addon.js"
+    "dev": "nodemon addon.js",
+    "test": "node --test test/",
+    "test:watch": "node --test --watch test/",
+    "test:coverage": "node --test --experimental-test-coverage test/"
   },
   "dependencies": {
     "axios": "^1.7.0",
