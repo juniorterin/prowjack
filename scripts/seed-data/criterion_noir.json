@@ -1,1 +1,22 @@
-[{"title":"The Third Man","year":1949,"imdbId":"tt0041959"},{"title":"Notorious","year":1946,"imdbId":"tt0038787"},{"title":"Bob le Flambeur","year":1956,"imdbId":"tt0047892"},{"title":"Le Samouraï","year":1967,"imdbId":"tt0062229"},{"title":"The Killing","year":1956,"imdbId":"tt0049406"},{"title":"In a Lonely Place","year":1950,"imdbId":"tt0042593"},{"title":"Double Indemnity","year":1944,"imdbId":"tt0036775"},{"title":"Blue Velvet","year":1986,"imdbId":"tt0090756"}]
+[
+  {"spine": 1126,"title": "Double Indemnity", "year": 1944, "imdbId": "tt0036775"},
+  {"spine": 64,  "title": "The Third Man", "year": 1949, "imdbId": "tt0041959"},
+  {"spine": 575, "title": "The Killing", "year": 1956, "imdbId": "tt0049406"},
+  {"spine": 150, "title": "Bob le Flambeur", "year": 1956, "imdbId": "tt0047892"},
+  {"spine": 306, "title": "Le Samouraï", "year": 1967, "imdbId": "tt0062229"},
+  {"spine": 314, "title": "Pickpocket", "year": 1959, "imdbId": "tt0053168"},
+  {"spine": 810, "title": "In a Lonely Place", "year": 1950, "imdbId": "tt0042593"},
+  {"spine": 30,  "title": "M", "year": 1931, "imdbId": "tt0022100"},
+  {"spine": 683, "title": "Nashville", "year": 1975, "imdbId": "tt0073440"},
+  {"spine": 651, "title": "Badlands", "year": 1973, "imdbId": "tt0069762"},
+  {"spine": 650, "title": "A Man Escaped", "year": 1956, "imdbId": "tt0049902"},
+  {"spine": 409, "title": "Days of Heaven", "year": 1978, "imdbId": "tt0077405"},
+  {"spine": 421, "title": "Pierrot le Fou", "year": 1965, "imdbId": "tt0059592"},
+  {"spine": 381, "title": "La Haine", "year": 1995, "imdbId": "tt0113247"},
+  {"spine": 297, "title": "Au Hasard Balthazar", "year": 1966, "imdbId": "tt0060138"},
+  {"spine": 332, "title": "Viridiana", "year": 1961, "imdbId": "tt0055601"},
+  {"spine": 278, "title": "L'Eclisse", "year": 1962, "imdbId": "tt0056736"},
+  {"spine": 174, "title": "Band of Outsiders", "year": 1964, "imdbId": "tt0057869"},
+  {"spine": 408, "title": "Breathless", "year": 1960, "imdbId": "tt0053472"},
+  {"spine": 1198,"title": "Mean Streets", "year": 1973, "imdbId": "tt0070379"}
+]

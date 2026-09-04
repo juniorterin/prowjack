@@ -1,1 +1,22 @@
-[{"title":"Peeping Tom","year":1960,"imdbId":"tt0054167"},{"title":"Eyes Without a Face","year":1960,"imdbId":"tt0053459"},{"title":"Repulsion","year":1965,"imdbId":"tt0059646"},{"title":"Rosemary's Baby","year":1968,"imdbId":"tt0063522"},{"title":"Eraserhead","year":1977,"imdbId":"tt0074486"},{"title":"Night of the Living Dead","year":1968,"imdbId":"tt0063350"},{"title":"The Silence of the Lambs","year":1991,"imdbId":"tt0102926"}]
+[
+  {"spine": 630, "title": "Rosemary's Baby", "year": 1968, "imdbId": "tt0063522"},
+  {"spine": 909, "title": "Night of the Living Dead", "year": 1968, "imdbId": "tt0063350"},
+  {"spine": 58,  "title": "Peeping Tom", "year": 1960, "imdbId": "tt0054167"},
+  {"spine": 260, "title": "Eyes Without a Face", "year": 1960, "imdbId": "tt0053459"},
+  {"spine": 483, "title": "Repulsion", "year": 1965, "imdbId": "tt0059646"},
+  {"spine": 680, "title": "M", "year": 1931, "imdbId": "tt0022100"},
+  {"spine": 725, "title": "Eraserhead", "year": 1977, "imdbId": "tt0074486"},
+  {"spine": 977, "title": "Blue Velvet", "year": 1986, "imdbId": "tt0090756"},
+  {"spine": 351, "title": "The Spirit of the Beehive", "year": 1973, "imdbId": "tt0070040"},
+  {"spine": 888, "title": "Stalker", "year": 1979, "imdbId": "tt0079944"},
+  {"spine": 538, "title": "Paths of Glory", "year": 1957, "imdbId": "tt0050825"},
+  {"spine": 541, "title": "The Night of the Hunter", "year": 1955, "imdbId": "tt0048424"},
+  {"spine": 701, "title": "Persona", "year": 1966, "imdbId": "tt0060827"},
+  {"spine": 484, "title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles", "year": 1975, "imdbId": "tt0073198"},
+  {"spine": 837, "title": "Dekalog", "year": 1988, "imdbId": "tt0092337"},
+  {"spine": 593, "title": "Belle de Jour", "year": 1967, "imdbId": "tt0061395"},
+  {"spine": 164, "title": "Solaris", "year": 1972, "imdbId": "tt0069293"},
+  {"spine": 198, "title": "Ali: Fear Eats the Soul", "year": 1974, "imdbId": "tt0071141"},
+  {"spine": 400, "title": "Stranger Than Paradise", "year": 1984, "imdbId": "tt0088184"},
+  {"spine": 865, "title": "Blow-Up", "year": 1966, "imdbId": "tt0060176"}
+]

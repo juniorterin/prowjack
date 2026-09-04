@@ -1,1 +1,22 @@
-[{"title":"Seven Samurai","year":1954,"imdbId":"tt0047478"},{"title":"High and Low","year":1963,"imdbId":"tt0057565"},{"title":"Yojimbo","year":1961,"imdbId":"tt0055630"},{"title":"Rashomon","year":1950,"imdbId":"tt0042876"},{"title":"Throne of Blood","year":1957,"imdbId":"tt0050613"},{"title":"Tokyo Story","year":1953,"imdbId":"tt0046438"},{"title":"Ikiru","year":1952,"imdbId":"tt0044741"},{"title":"Ugetsu","year":1953,"imdbId":"tt0046478"},{"title":"Ran","year":1985,"imdbId":"tt0089881"},{"title":"An Autumn Afternoon","year":1962,"imdbId":"tt0056444"},{"title":"Godzilla","year":1954,"imdbId":"tt0047034"},{"title":"Drive My Car","year":2021,"imdbId":"tt14039582"}]
+[
+  {"spine": 2,   "title": "Seven Samurai", "year": 1954, "imdbId": "tt0047478"},
+  {"spine": 24,  "title": "High and Low", "year": 1963, "imdbId": "tt0057565"},
+  {"spine": 52,  "title": "Yojimbo", "year": 1961, "imdbId": "tt0055630"},
+  {"spine": 138, "title": "Rashomon", "year": 1950, "imdbId": "tt0042876"},
+  {"spine": 190, "title": "Throne of Blood", "year": 1957, "imdbId": "tt0050613"},
+  {"spine": 221, "title": "Ikiru", "year": 1952, "imdbId": "tt0044741"},
+  {"spine": 309, "title": "Ugetsu", "year": 1953, "imdbId": "tt0046478"},
+  {"spine": 316, "title": "Ran", "year": 1985, "imdbId": "tt0089881"},
+  {"spine": 446, "title": "An Autumn Afternoon", "year": 1962, "imdbId": "tt0056444"},
+  {"spine": 453, "title": "Chungking Express", "year": 1994, "imdbId": "tt0109424"},
+  {"spine": 594, "title": "Godzilla", "year": 1954, "imdbId": "tt0047034"},
+  {"spine": 723, "title": "Y tu mamá también", "year": 2001, "imdbId": "tt0245574"},
+  {"spine": 1073,"title": "Memories of Murder", "year": 2003, "imdbId": "tt0353969"},
+  {"spine": 1054,"title": "Parasite", "year": 2019, "imdbId": "tt6751668"},
+  {"spine": 1136,"title": "Drive My Car", "year": 2021, "imdbId": "tt14039582"},
+  {"spine": 217, "title": "Tokyo Story", "year": 1953, "imdbId": "tt0046438"},
+  {"spine": 139, "title": "Wild Strawberries", "year": 1957, "imdbId": "tt0050986"},
+  {"spine": 140, "title": "8½", "year": 1963, "imdbId": "tt0056801"},
+  {"spine": 219, "title": "La Strada", "year": 1954, "imdbId": "tt0047528"},
+  {"spine": 235, "title": "The Leopard", "year": 1963, "imdbId": "tt0057091"}
+]
