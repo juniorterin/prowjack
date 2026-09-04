@@ -6,15 +6,18 @@
  * com base na posição de leitura de cada player conectado — suporta seek
  * de verdade em qualquer ponto do arquivo, mesmo ainda baixando.
  *
- * O ProwJack só precisa adicionar o torrent e redirecionar o player para
- * o endpoint de stream do próprio TorrServer — ele cuida do resto.
+ * O TorrServer nunca fica exposto na internet nem fala diretamente com o
+ * player: todo pedido de vídeo passa por proxyStream() aqui embaixo, que
+ * reencaminha os bytes através deste app. Isso é o que garante que só quem
+ * tem uma chave de acesso válida (accessKeys.js, checada em routes/play.js
+ * antes de chamar qualquer coisa neste módulo) consegue de fato assistir —
+ * sem essa camada, qualquer pessoa que descobrisse o endereço do TorrServer
+ * poderia adicionar magnets e assistir livremente, sem passar pelo addon.
  */
 
+const { Readable } = require("stream");
+
 const TS_URL  = (process.env.TS_URL  || "").replace(/\/+$/, "");
-// URL alcançável pelo player (Stremio) para a URL de play redirecionada.
-// Em setups Docker, TS_URL costuma ser um alias interno da rede (ex.:
-// http://torrserver:8090), inacessível de fora — TS_PUBLIC_URL cobre isso.
-const TS_PUBLIC_URL = (process.env.TS_PUBLIC_URL || process.env.TS_URL || "").replace(/\/+$/, "");
 const TS_USER = process.env.TS_USER || "";
 const TS_PASS = process.env.TS_PASS || "";
 
@@ -98,19 +101,12 @@ function pickTargetFile(fileStats, fileIdx, fileName) {
   return pool.reduce((best, current) => ((current.length || 0) > (best.length || 0) ? current : best));
 }
 
-function buildPlayUrl(hash, fileId) {
-  const base = TS_USER || TS_PASS
-    ? TS_PUBLIC_URL.replace(/^(https?:\/\/)/, `$1${encodeURIComponent(TS_USER)}:${encodeURIComponent(TS_PASS)}@`)
-    : TS_PUBLIC_URL;
-  return `${base}/play/${hash}/${fileId}`;
-}
-
 /**
- * Garante que o torrent está adicionado ao TorrServer e retorna a URL de
- * play direta (o player/Stremio conecta nela e faz seek livremente — o
- * TorrServer cuida da priorização de peças).
+ * Garante que o torrent está adicionado ao TorrServer e resolve qual arquivo
+ * (hash + fileId) o player deve receber. Não retorna uma URL — o chamador
+ * usa proxyStream() para efetivamente servir o vídeo.
  */
-async function ensureStreamUrl({ magnet, torrentBuffer, fileIdx = null, fileName = null }) {
+async function resolvePlayTarget({ magnet, torrentBuffer, fileIdx = null, fileName = null }) {
   let entry;
   if (torrentBuffer) {
     entry = await addByTorrentBuffer(torrentBuffer);
@@ -129,11 +125,53 @@ async function ensureStreamUrl({ magnet, torrentBuffer, fileIdx = null, fileName
   const target = pickTargetFile(info.file_stats, fileIdx, fileName);
   if (!target) throw new Error("Nenhum arquivo de vídeo encontrado no torrent");
 
-  return buildPlayUrl(hash, target.id);
+  return { hash, fileId: target.id };
+}
+
+const FORWARD_REQUEST_HEADERS = ["range", "if-range"];
+const FORWARD_RESPONSE_HEADERS = [
+  "content-type", "content-length", "content-range", "accept-ranges", "etag", "last-modified", "cache-control",
+];
+
+/**
+ * Reencaminha o pedido do player pro endpoint /play/:hash/:fileId do
+ * TorrServer e devolve a resposta (status, headers relevantes e corpo) sem
+ * nunca redirecionar o player pro endereço real do TorrServer.
+ */
+async function proxyStream(req, res, hash, fileId) {
+  const headers = { ...authHeader() };
+  for (const h of FORWARD_REQUEST_HEADERS) {
+    if (req.headers[h]) headers[h] = req.headers[h];
+  }
+
+  const controller = new AbortController();
+  req.on("close", () => controller.abort());
+
+  let upstream;
+  try {
+    upstream = await fetch(`${TS_URL}/play/${hash}/${fileId}`, {
+      method: req.method === "HEAD" ? "HEAD" : "GET",
+      headers,
+      signal: controller.signal,
+    });
+  } catch (err) {
+    if (controller.signal.aborted) return;
+    throw err;
+  }
+
+  res.status(upstream.status);
+  for (const h of FORWARD_RESPONSE_HEADERS) {
+    const value = upstream.headers.get(h);
+    if (value) res.setHeader(h, value);
+  }
+
+  if (req.method === "HEAD" || !upstream.body) return res.end();
+  Readable.fromWeb(upstream.body).pipe(res);
 }
 
 module.exports = {
   isConfigured,
-  ensureStreamUrl,
+  resolvePlayTarget,
+  proxyStream,
   getTorrentInfo,
 };

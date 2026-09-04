@@ -10,10 +10,12 @@ const { injectTrackers } = require("../torrentEnrich");
 
 const router = express.Router();
 
-// Prepara o torrent no TorrServer e redireciona o player pro endpoint de
-// stream dele — ele prioriza peças dinamicamente com base na posição de
-// leitura do player, então suporta seek de verdade em qualquer ponto do
-// arquivo, mesmo ainda baixando.
+// Prepara o torrent no TorrServer e faz o proxy do stream de volta pro
+// player — nunca redireciona pro endereço do TorrServer diretamente, senão
+// a chave de acesso checada acima deixaria de valer pra qualquer requisição
+// depois da primeira. O TorrServer prioriza peças dinamicamente com base na
+// posição de leitura do player, então suporta seek de verdade em qualquer
+// ponto do arquivo, mesmo ainda baixando.
 router.get("/:userConfig/play/:jobToken", async (req, res) => {
   const prefs = await resolvePrefs(req.params.userConfig);
   if (!(await checkAccessKey(prefs, req))) return res.status(403).send("Acesso negado.");
@@ -47,10 +49,10 @@ router.get("/:userConfig/play/:jobToken", async (req, res) => {
       }
     }
 
-    const streamUrl = await torrServer.ensureStreamUrl({
+    const { hash, fileId } = await torrServer.resolvePlayTarget({
       magnet: job.magnet, torrentBuffer, fileIdx: job.fileIdx, fileName: job.fileName,
     });
-    return res.redirect(302, streamUrl);
+    return torrServer.proxyStream(req, res, hash, fileId);
   } catch (err) {
     console.log(`[TorrServer] Falha ao preparar ${job.infoHash}: ${err.message}`);
     if (!res.headersSent) return res.status(503).send(`TorrServer: ${err.message}`);
