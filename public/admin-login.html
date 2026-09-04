@@ -5,63 +5,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TorrESMIN · Admin</title>
 <link rel="icon" href="/logo.svg">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    color-scheme: dark;
-    --page: #1a130f; --surface: #251c15; --surface-2: #302419;
-    --ink: #ede2d0; --ink-2: #c2ab8e; --muted: #8a7461;
-    --border: rgba(237,226,208,0.10); --border-2: rgba(237,226,208,0.18);
-    --accent: #cf9c3f; --accent-ink: #201404;
-    --brand: #c1432f; --brand-soft: rgba(193,67,47,0.20);
-    --bad: #c1432f; --bad-soft: rgba(193,67,47,0.16);
-    --font-display: 'Oswald', system-ui, sans-serif;
-    --font-body: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
-    --shadow: 0 20px 50px -20px rgba(0,0,0,0.6);
-  }
-  @media (prefers-color-scheme: light) {
-    :root:not([data-theme="dark"]) {
-      color-scheme: light;
-      --page: #f3ece0; --surface: #fffcf6; --surface-2: #ece1cf;
-      --ink: #211a12; --ink-2: #5c4a37; --muted: #8a7461;
-      --border: rgba(33,26,18,0.10); --border-2: rgba(33,26,18,0.18);
-      --accent: #a97620; --accent-ink: #ffffff;
-      --brand: #a8352a; --brand-soft: rgba(168,53,42,0.14);
-      --bad: #a8352a; --bad-soft: rgba(168,53,42,0.14);
-      --shadow: 0 20px 50px -24px rgba(24,21,31,0.25);
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; height: 100%; }
-  body {
-    background: var(--page); color: var(--ink); font-family: var(--font-body);
-    min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;
-  }
-  .card {
-    background: var(--surface); border: 1px solid var(--border-2); border-radius: 18px;
-    padding: 32px; width: 100%; max-width: 340px; box-shadow: var(--shadow);
-  }
-  .brand-mark { width: 40px; height: 40px; border-radius: 7px; display: block; margin-bottom: 16px; }
-  h1 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; font-size: 19px; margin: 0 0 4px; }
-  p.sub { color: var(--ink-2); font-size: 13px; margin: 0 0 22px; }
-  label { display: block; font-size: 12px; font-weight: 600; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 7px; }
-  input {
-    width: 100%; background: var(--surface-2); border: 1px solid var(--border-2); color: var(--ink);
-    border-radius: 9px; padding: 10px 12px; font-size: 14px; outline: none; font-family: inherit;
-  }
-  input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
-  button {
-    width: 100%; margin-top: 18px; background: var(--accent); color: var(--accent-ink); border: none;
-    border-radius: 10px; padding: 11px; font-weight: 700; font-size: 13.5px; cursor: pointer; font-family: inherit;
-  }
-  button:hover { filter: brightness(1.08); }
-  button:disabled { opacity: .6; cursor: wait; }
-  .error { color: var(--bad); background: var(--bad-soft); border-radius: 8px; padding: 9px 11px; font-size: 12.5px; margin-top: 14px; display: none; }
-  .error.show { display: block; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background-color: #000000;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 30px 30px;
+  color: #ffff00;
+  font-family: 'Comic Sans MS', 'Comic Sans', Verdana, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1, h2, h3 { font-family: 'Comic Sans MS', Verdana; color: #00ffff; text-shadow: 2px 2px #000080; margin: 0 0 8px; }
+a { color: #ff00ff; }
+p { color: #ffff00; margin: 0; }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.blink { animation: blink 1s step-start infinite; }
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 30px 20px;
+}
+.card {
+  border: 3px ridge #c0c0c0;
+  background: #000033;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+.brand-mark { display: none; }
+.sub {
+  color: #c0c0c0;
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffff00;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: .04em;
+}
+input[type="password"] {
+  width: 100%;
+  display: block;
+  background: #000080;
+  color: #ffffff;
+  border: 2px inset #808080;
+  font-family: 'Comic Sans MS', Verdana;
+  padding: 6px 8px;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  background: #c0c0c0;
+  color: #000000;
+  font-family: 'Comic Sans MS', Verdana;
+  font-weight: bold;
+  border: 2px outset #ffffff;
+  cursor: pointer;
+}
+button[type="submit"]:active { border: 2px inset #808080; }
+.error {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 10px;
+  display: none;
+  font-weight: bold;
+  text-shadow: 1px 1px #000;
+}
+.error.show { display: block; }
+.footer-bar {
+  text-align: center;
+  padding: 14px;
+  color: #808080;
+  font-family: 'Comic Sans MS', Verdana;
+  font-size: 12px;
+  border-top: 2px ridge #c0c0c0;
+  margin-top: auto;
+}
 </style>
 </head>
 <body>
+
+<marquee behavior="scroll" direction="left" scrollamount="5" style="background:#000080;color:#ffff00;font-family:'Comic Sans MS',Verdana;font-weight:bold;font-size:15px;padding:5px 0;border-top:3px ridge #c0c0c0;border-bottom:3px ridge #c0c0c0;">&#9733; BEM-VINDO AO TORRESMIN &#9733; O MELHOR CATÁLOGO DE TORRENTS &#9733; STREAMING DE QUALIDADE DESDE 1997 &#9733; ÁREA RESTRITA &#9733;</marquee>
+
+<div class="login-wrapper">
+  <div style="text-align:center;margin-bottom:16px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" style="display:block;margin:0 auto 8px">
+      <defs>
+        <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="30%" stop-color="#c0c0c0"/>
+          <stop offset="50%" stop-color="#808080"/>
+          <stop offset="70%" stop-color="#c0c0c0"/>
+          <stop offset="100%" stop-color="#404040"/>
+        </linearGradient>
+        <filter id="shadow"><feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000080" flood-opacity="0.8"/></filter>
+      </defs>
+      <text x="150" y="48" text-anchor="middle" font-family="Times New Roman, serif" font-size="52" font-weight="bold" fill="url(#chrome)" filter="url(#shadow)" letter-spacing="2">TorrESMIN</text>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="30" style="display:block;margin:0 auto">
+      <circle cx="20" cy="15" r="3" fill="#ffff00"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></circle>
+      <circle cx="60" cy="15" r="2" fill="#00ffff"><animate attributeName="opacity" values="0;1;0" dur="0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="100" cy="15" r="3" fill="#ff00ff"><animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="15" r="2" fill="#00ff00"><animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/></circle>
+      <circle cx="180" cy="15" r="3" fill="#ff0000"><animate attributeName="opacity" values="1;0;1" dur="0.7s" repeatCount="indefinite"/></circle>
+    </svg>
+  </div>
+
   <form class="card" id="login-form">
     <img class="brand-mark" src="/logo.svg" alt="TorrESMIN">
     <h1>Admin</h1>
@@ -71,6 +139,15 @@
     <button type="submit" id="submit-btn">Entrar</button>
     <div class="error" id="error"></div>
   </form>
+</div>
+
+<div class="footer-bar">
+  <div style="color:#ffff00;">&#9733; TorrESMIN &#9733;</div>
+  <div>Melhor visto em <span style="color:#00ffff;">Netscape Navigator 4.0</span> · Resolução <span style="color:#00ff00;">800x600</span></div>
+  <div style="margin-top:6px;">Visitantes: <span style="color:#ff0000;font-weight:bold;" class="blink">001337</span></div>
+  <div style="margin-top:4px;color:#c0c0c0;">© 1997–2025 TorrESMIN</div>
+</div>
+
 <script>
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
