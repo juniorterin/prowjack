@@ -17,18 +17,28 @@ const { createCatalog, addCatalogItem, listCatalogs } = require("../catalogs");
 const SEED_DIR = path.join(__dirname, "seed-data");
 
 const CATALOGS = [
-  { slug: "criterion",        name: "Criterion Collection",              type: "movie" },
-  { slug: "sightsound",       name: "Sight & Sound — Top 100",           type: "movie" },
-  { slug: "imdbtop250",       name: "IMDb Top 250",                      type: "movie" },
-  { slug: "imdbtop100",       name: "IMDb Top 100",                      type: "movie" },
-  { slug: "imdbtop50",        name: "IMDb Top 50",                       type: "movie" },
-  { slug: "tspdt100",         name: "TSPDT — 100 Maiores Filmes",        type: "movie" },
-  { slug: "mindbending",      name: "Mind-Bending Cinema",               type: "movie" },
-  { slug: "afi_thrills",      name: "AFI — 100 Anos...100 Suspenses",    type: "movie" },
-  { slug: "criterion_horror", name: "Criterion — Horror",                type: "movie" },
-  { slug: "criterion_japan",  name: "Criterion — Japão",                 type: "movie" },
-  { slug: "criterion_noir",   name: "Criterion — Noir",                  type: "movie" },
-  { slug: "nfr_highlights",   name: "National Film Registry — Destaques", type: "movie" },
+  // ── Canonical rankings ──────────────────────────────────────────────────────
+  { slug: "sightsound",          name: "Sight & Sound — Top 100",             type: "movie" },
+  { slug: "sightsound_directors",name: "Sight & Sound — Directors' Poll",     type: "movie" },
+  { slug: "imdbtop250",          name: "IMDb Top 250",                        type: "movie" },
+  { slug: "imdbtop100",          name: "IMDb Top 100",                        type: "movie" },
+  { slug: "imdbtop50",           name: "IMDb Top 50",                         type: "movie" },
+  { slug: "tspdt100",            name: "TSPDT — 100 Maiores Filmes",          type: "movie" },
+  // ── Curated collections ──────────────────────────────────────────────────────
+  { slug: "criterion",           name: "Criterion Collection",                type: "movie" },
+  { slug: "criterion_horror",    name: "Criterion — Horror",                  type: "movie" },
+  { slug: "criterion_japan",     name: "Criterion — Japão",                   type: "movie" },
+  { slug: "criterion_noir",      name: "Criterion — Noir",                    type: "movie" },
+  { slug: "nfr_highlights",      name: "National Film Registry — Destaques",  type: "movie" },
+  // ── AFI ──────────────────────────────────────────────────────────────────────
+  { slug: "afi_movies",          name: "AFI — 100 Greatest American Films",   type: "movie" },
+  { slug: "afi_thrills",         name: "AFI — 100 Anos...100 Suspenses",      type: "movie" },
+  { slug: "afi_laughs",          name: "AFI — 100 Anos...100 Risadas",        type: "movie" },
+  { slug: "afi_passions",        name: "AFI — 100 Anos...100 Paixões",        type: "movie" },
+  // ── Festivals ─────────────────────────────────────────────────────────────────
+  { slug: "cannes_palme",        name: "Cannes — Palme d'Or",                 type: "movie" },
+  // ── Conceptual ───────────────────────────────────────────────────────────────
+  { slug: "mindbending",         name: "Mind-Bending Cinema",                 type: "movie" },
 ];
 
 async function seedCatalog({ slug, name, type }) {
