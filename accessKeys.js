@@ -15,7 +15,7 @@ function getKeysDbUrl() {
   return process.env.ACCESS_KEYS_DATABASE_URL || process.env.CONFIG_DATABASE_URL || process.env.POSTGRES_URL || process.env.DATABASE_URL || "";
 }
 function getKeysDbTable() {
-  const table = process.env.ACCESS_KEYS_DATABASE_TABLE || "prowjack_access_keys";
+  const table = process.env.ACCESS_KEYS_DATABASE_TABLE || "torresmin_access_keys";
   if (!/^[A-Za-z_][A-Za-z0-9_]{0,62}$/.test(table)) throw new Error("ACCESS_KEYS_DATABASE_TABLE inválida");
   return table;
 }
@@ -91,7 +91,7 @@ async function dbDelete(id) {
 const KEYS_FILE = (() => {
   let dir = process.env.CONFIG_DATA_DIR || "";
   if (!dir || /^[a-z][a-z0-9+.-]*:\/\//i.test(dir)) dir = "/data";
-  return path.join(dir, "prowjack_access_keys.json");
+  return path.join(dir, "torresmin_access_keys.json");
 })();
 
 function fileLoad() {

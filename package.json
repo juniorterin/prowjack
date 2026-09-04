@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node addon.js",
     "dev": "nodemon addon.js",
-    "test": "node --test test/",
-    "test:watch": "node --test --watch test/",
-    "test:coverage": "node --test --experimental-test-coverage test/"
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "test:coverage": "node --test --experimental-test-coverage"
   },
   "dependencies": {
     "axios": "^1.7.0",

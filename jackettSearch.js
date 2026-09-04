@@ -840,7 +840,7 @@ function parseStreamId(type, id) {
   if (id.startsWith("rssmovie:")) {
     return { source: "rssmovie", isAnime: false, metaId: id.slice("rssmovie:".length), season: null, episode: null, type };
   }
-  if (id.startsWith("rssmeta:") || id.startsWith("prowjack:")) {
+  if (id.startsWith("rssmeta:")) {
     const parts = id.split(":");
     const metaId = parts.slice(2).join(":");
     return { source: "rssmovie", isAnime: false, metaId, season: null, episode: null, type };

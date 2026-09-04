@@ -1,16 +1,16 @@
 services:
   redis:
     image: redis:7-alpine
-    container_name: prowjack-redis
+    container_name: torresmin-redis
     restart: unless-stopped
     volumes:
       - redis-data:/data
     networks:
-      - prowjack-net
+      - torresmin-net
 
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
-    container_name: prowjack-prowlarr
+    container_name: torresmin-prowlarr
     restart: unless-stopped
     environment:
       - PUID=1000
@@ -21,22 +21,24 @@ services:
     ports:
       - "9696:9696"
     networks:
-      - prowjack-net
+      - torresmin-net
 
   torrserver:
     image: ghcr.io/yourok/torrserver:latest
-    container_name: prowjack-torrserver
+    container_name: torresmin-torrserver
     restart: unless-stopped
     volumes:
       - torrserver-data:/opt/ts
     ports:
       - "8092:8090"
     networks:
-      - prowjack-net
+      - torresmin-net
 
-  prowjack:
-    build: .
-    container_name: prowjack-app
+  torresmin:
+    build:
+      context: .
+      target: dev
+    container_name: torresmin-app
     restart: unless-stopped
     depends_on:
       - redis
@@ -45,18 +47,21 @@ services:
     env_file:
       - .env.local-stack
     volumes:
-      - prowjack-data:/data
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+      - torresmin-data:/data
     ports:
       - "7015:7860"
     networks:
-      - prowjack-net
+      - torresmin-net
 
 networks:
-  prowjack-net:
+  torresmin-net:
     driver: bridge
 
 volumes:
   redis-data:
   prowlarr-config:
-  prowjack-data:
+  torresmin-data:
   torrserver-data:
+  node_modules:

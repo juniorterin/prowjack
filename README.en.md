@@ -1,4 +1,6 @@
-# 🎬 TorrStremio
+# 🎬 TorrESMIN
+
+*Torrent: Entertainment Should Make Inclusion Natural*
 
 **[🇧🇷 Português](README.md) · [🇺🇸 English](#)**
 
@@ -24,16 +26,16 @@ There's no Real-Debrid, TorBox, StremThru or raw P2P magnet support — the addo
 The recommended way is Docker Compose. The repository ships a ready-to-use [`docker-compose.yaml`](docker-compose.yaml) with Redis, Prowlarr and TorrServer:
 
 ```bash
-git clone https://github.com/juniorterin/prowjack.git torrstremio
-cd torrstremio
+git clone https://github.com/juniorterin/torresmin.git
+cd torresmin
 
-# Fill in JACKETT_API_KEY, ADDON_PUBLIC_URL, ACCESS_TOKEN and TS_PUBLIC_URL
+# Fill in JACKETT_API_KEY, ADDON_PUBLIC_URL and ACCESS_TOKEN
 cp .env.example .env
 
 docker compose up -d
 ```
 
-The addon listens on port `7860`. Put a reverse proxy in front (Coolify, Traefik, Nginx...) if exposing it to the internet, and point `ADDON_PUBLIC_URL`/`TS_PUBLIC_URL` at the matching public addresses.
+The addon listens on port `7860`. Put a reverse proxy in front (Coolify, Traefik, Nginx...) if exposing it to the internet, and point `ADDON_PUBLIC_URL` at the matching public address. **TorrServer doesn't need to (and shouldn't) be exposed to the internet** — the addon is the only thing that talks to it directly (see "Privacy and security" below).
 
 ### Environment variables
 
@@ -41,8 +43,7 @@ The addon listens on port `7860`. Put a reverse proxy in front (Coolify, Traefik
 |---|---|---|
 | `JACKETT_URL` | yes | Prowlarr or Jackett URL |
 | `JACKETT_API_KEY` | yes | Prowlarr/Jackett API key |
-| `TS_URL` | yes | Internal TorrServer URL |
-| `TS_PUBLIC_URL` | recommended | URL the Stremio **player** will actually hit, if different from `TS_URL` (e.g. behind a reverse proxy) |
+| `TS_URL` | yes | Internal TorrServer URL (only needs to be reachable by the addon, never from the internet) |
 | `TS_USER` / `TS_PASS` | no | TorrServer basic auth, if protected |
 | `REDIS_URL` | recommended | Search cache — without it, falls back to an in-memory cache lost on every restart |
 | `ADDON_PUBLIC_URL` | recommended | Public addon URL, behind a proxy/hosting provider |
@@ -81,6 +82,7 @@ Each template line is independent: if every token it references comes back empty
 
 - **Self-hosted** — your API keys and configuration never pass through third-party servers.
 - **`ACCESS_TOKEN`** locks the addon against unauthorized access.
+- **Per-viewer access keys** (created in `/admin`) gate who can search/watch — TorrServer is never exposed directly: every stream request is proxied through the addon, which requires a valid key before forwarding anything to it.
 - Guards against path traversal, ReDoS, and restricted CORS.
 
 ---

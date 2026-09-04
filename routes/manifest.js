@@ -42,10 +42,10 @@ router.get("/:userConfig/manifest.json", async (req, res) => {
     description: "Prowlarr/Jackett + TorrServer, com filtros por keywords",
     resources: [
       "catalog",
-      { name: "meta",   types, idPrefixes: ["rssmovie:", "rssmeta:", "prowjack:", "rssitem:"] },
+      { name: "meta",   types, idPrefixes: ["rssmovie:", "rssmeta:", "rssitem:"] },
       { name: "stream", types },
     ],
-    types, idPrefixes: ["tt", "kitsu:", "rssmovie:", "rssmeta:", "prowjack:", "rssitem:"], catalogs,
+    types, idPrefixes: ["tt", "kitsu:", "rssmovie:", "rssmeta:", "rssitem:"], catalogs,
     behaviorHints: { configurable: true, configurationRequired: false, p2p: true },
   });
 });

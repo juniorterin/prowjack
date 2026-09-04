@@ -12,7 +12,7 @@ function getConfigDbUrl(value) {
 }
 
 function getConfigDbTable(value) {
-  const table = value || process.env.CONFIG_DATABASE_TABLE || "prowjack_configs";
+  const table = value || process.env.CONFIG_DATABASE_TABLE || "torresmin_configs";
   if (!/^[A-Za-z_][A-Za-z0-9_]{0,62}$/.test(table)) {
     throw new Error("CONFIG_DATABASE_TABLE inválida");
   }
@@ -114,7 +114,7 @@ const CONFIG_FILE = (() => {
   // Se CONFIG_DATA_DIR for uma URL (ex.: alguém colou a string do Postgres por
   // engano), não a use como diretório — cairia em mkdir de um caminho inválido.
   if (!dir || /^[a-z][a-z0-9+.-]*:\/\//i.test(dir)) dir = "/data";
-  return path.join(dir, "prowjack_configs.json");
+  return path.join(dir, "torresmin_configs.json");
 })();
 
 function cfgFileLoad() {

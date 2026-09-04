@@ -1,0 +1,19 @@
+# Persistence: Postgres-or-file, everywhere
+
+**Question:** where does saved state (user configs, access keys, curated catalogs) actually live?
+
+**Answer:** the same dual-backend pattern, implemented near-identically three times — `configStore.js` (user prefs), `accessKeys.js` (per-viewer access keys), `catalogs.js` (curated catalogs). If a database URL env var is set (each module checks its own specific var first, then falls back through shared ones — e.g. `catalogs.js` checks `CATALOGS_DATABASE_URL` → `CONFIG_DATABASE_URL` → `POSTGRES_URL` → `DATABASE_URL`), it uses Postgres. Otherwise it falls back to a single JSON file per module under `CONFIG_DATA_DIR` (default `/data`).
+
+## Why two backends instead of just picking one
+
+The two deploy targets this app supports need different things: a self-hosted VPS/Docker setup (the primary target — see the README's "auto-hospedado" framing) has a persistent filesystem and no reason to stand up Postgres just for a few KB of JSON; a serverless deploy (Vercel is called out explicitly in `.env.example`) has no persistent filesystem at all between invocations, so the file fallback would silently lose everything on the next cold start — Postgres is the only option there. Rather than force one deploy shape to carry the other's constraint, both are supported and the choice is just "did you set a database URL."
+
+## Why this is one pattern, not three
+
+`configStore.js`, `accessKeys.js`, and `catalogs.js` each independently implement: a `get*DbUrl()`/`get*DbTable()` pair reading their own env vars, a lazily-created Postgres pool via `dbPool.js`'s shared cache (keyed by connection string, so three modules pointed at the same database share one `pg.Pool`, not three), an `ensure*Db()` that creates the table on first use, `CREATE TABLE IF NOT EXISTS` with an `id TEXT PRIMARY KEY` / `payload JSONB` shape, and a file-store fallback (`fs.readFileSync`/`writeFileSync` on a single JSON blob keyed by id) guarded by a lazily-loaded module-level cache variable. **If you add new admin-editable persisted state, copy this shape rather than inventing a new one** — it's already the established convention, and a fourth slightly-different variant would just be more surface area to keep consistent.
+
+`dbPool.js` is the one genuinely shared piece: `buildPgSslOptions()` parses the connection string, strips `sslmode`/`uselibpqcompat` query params that `node-postgres` doesn't understand, and — this is the non-obvious part — auto-detects a Supabase pooler hostname and forces `rejectUnauthorized: false` unconditionally for it, ignoring `DB_SSL_REJECT_UNAUTHORIZED`. That's because a serverless runtime's CA bundle usually can't validate Supabase's pooler certificate, and strict validation there just breaks the connection with "self-signed certificate" rather than actually protecting anything.
+
+## Config identity: why `cfg_<hash>` instead of a session or cookie
+
+A user's settings are never stored server-side against a login — they're addressed by a `userConfig` URL segment that shows up in almost every route (`/:userConfig/manifest.json`, `/:userConfig/stream/...`, `/:userConfig/play/...`), because that's the only way a Stremio addon URL can carry per-installer state at all (Stremio has no concept of accounts or cookies for addons). `configStore.saveStoredConfig(prefs)` hashes the prefs (`sha256(JSON.stringify(prefs))`, truncated) into the id, so saving the same settings twice — e.g. reinstalling, or two users independently picking identical settings — returns the same `cfg_...` id instead of creating a duplicate row. `resolvePrefs(userConfig)` accepts either that stored id, or a raw base64url-encoded JSON blob decoded on the fly and never persisted (used when a config is passed directly rather than saved through `/api/config`). Either way it's passed through `prefs.normalizePrefs()` to fill in defaults, so callers never have to think about which path it came from.

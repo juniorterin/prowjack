@@ -12,7 +12,7 @@ function getCatalogsDbUrl() {
   return process.env.CATALOGS_DATABASE_URL || process.env.CONFIG_DATABASE_URL || process.env.POSTGRES_URL || process.env.DATABASE_URL || "";
 }
 function getCatalogsDbTable() {
-  const table = process.env.CATALOGS_DATABASE_TABLE || "prowjack_catalogs";
+  const table = process.env.CATALOGS_DATABASE_TABLE || "torresmin_catalogs";
   if (!/^[A-Za-z_][A-Za-z0-9_]{0,62}$/.test(table)) throw new Error("CATALOGS_DATABASE_TABLE inválida");
   return table;
 }
@@ -88,7 +88,7 @@ async function dbDelete(id) {
 const CATALOGS_FILE = (() => {
   let dir = process.env.CONFIG_DATA_DIR || "";
   if (!dir || /^[a-z][a-z0-9+.-]*:\/\//i.test(dir)) dir = "/data";
-  return path.join(dir, "prowjack_catalogs.json");
+  return path.join(dir, "torresmin_catalogs.json");
 })();
 
 function fileLoad() {

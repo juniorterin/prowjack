@@ -26,7 +26,7 @@ services:
       - "6881:6881"
       - "6881:6881/udp"
 
-  prowjack:
+  torresmin:
     build: .
     restart: unless-stopped
     depends_on:
@@ -42,14 +42,13 @@ services:
       - ADDON_PUBLIC_URL=${ADDON_PUBLIC_URL}
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - TS_URL=http://torrserver:8090
-      - TS_PUBLIC_URL=${TS_PUBLIC_URL}
       - TS_USER=
       - TS_PASS=
     volumes:
-      - prowjack-data:/data
+      - torresmin-data:/data
 
 volumes:
   redis-data:
   prowlarr-config:
   torrserver-data:
-  prowjack-data:
+  torresmin-data:

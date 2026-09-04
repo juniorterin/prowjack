@@ -57,7 +57,9 @@ function cleanExpiredMemory() {
   }
 }
 
-setInterval(cleanExpiredMemory, 60000);
+// unref: não impede o processo de sair quando nada mais o mantém vivo (ex.:
+// scripts/testes que exigem este módulo sem subir um servidor).
+setInterval(cleanExpiredMemory, 60000).unref();
 
 // rc: interface unificada Redis + memória
 const rc = {

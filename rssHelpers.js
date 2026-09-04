@@ -45,7 +45,7 @@ function getRssItemToken(item) {
 
 function parseRssMetaId(id) {
   const s = String(id || "");
-  if (!s.startsWith("rssmeta:") && !s.startsWith("prowjack:")) return null;
+  if (!s.startsWith("rssmeta:")) return null;
   const parts = s.split(":");
   if (parts.length < 3) return null;
   const rawId = parts.slice(2).join(":");

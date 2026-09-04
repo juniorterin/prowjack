@@ -1,5 +1,5 @@
 ---
-title: TorrStremio
+title: TorrESMIN
 emoji: 🎬
 colorFrom: indigo
 colorTo: purple
@@ -7,7 +7,9 @@ sdk: docker
 app_port: 7860
 ---
 
-# 🎬 TorrStremio
+# 🎬 TorrESMIN
+
+*Torrent: Entertainment Should Make Inclusion Natural*
 
 **[🇧🇷 Português](#) · [🇺🇸 English](README.en.md)**
 
@@ -33,16 +35,16 @@ Não há suporte a Real-Debrid, TorBox, StremThru ou magnet puro P2P — o addon
 A forma recomendada é com Docker Compose. O repositório já traz um [`docker-compose.yaml`](docker-compose.yaml) pronto com Redis, Prowlarr e TorrServer:
 
 ```bash
-git clone https://github.com/juniorterin/prowjack.git torrstremio
-cd torrstremio
+git clone https://github.com/juniorterin/torresmin.git
+cd torresmin
 
-# Preencha JACKETT_API_KEY, ADDON_PUBLIC_URL, ACCESS_TOKEN e TS_PUBLIC_URL
+# Preencha JACKETT_API_KEY, ADDON_PUBLIC_URL e ACCESS_TOKEN
 cp .env.example .env
 
 docker compose up -d
 ```
 
-O addon sobe na porta `7860`. Coloque um proxy reverso (Coolify, Traefik, Nginx...) na frente se for expor pra internet, e aponte `ADDON_PUBLIC_URL`/`TS_PUBLIC_URL` pros endereços públicos correspondentes.
+O addon sobe na porta `7860`. Coloque um proxy reverso (Coolify, Traefik, Nginx...) na frente se for expor pra internet, e aponte `ADDON_PUBLIC_URL` pro endereço público correspondente. **O TorrServer não precisa (e não deve) ser exposto pra internet** — o addon é o único ponto de contato com ele (ver "Privacidade e segurança" abaixo).
 
 ### Variáveis de ambiente
 
@@ -50,8 +52,7 @@ O addon sobe na porta `7860`. Coloque um proxy reverso (Coolify, Traefik, Nginx.
 |---|---|---|
 | `JACKETT_URL` | sim | URL do Prowlarr ou Jackett |
 | `JACKETT_API_KEY` | sim | API key do Prowlarr/Jackett |
-| `TS_URL` | sim | URL interna do TorrServer |
-| `TS_PUBLIC_URL` | recomendada | URL que o **player** do Stremio vai acessar, se for diferente de `TS_URL` (ex: atrás de proxy reverso) |
+| `TS_URL` | sim | URL interna do TorrServer (só precisa ser alcançável pelo addon, nunca pela internet) |
 | `TS_USER` / `TS_PASS` | não | Basic auth do TorrServer, se protegido |
 | `REDIS_URL` | recomendada | Cache de buscas — sem isso, cai para cache em memória (perdido a cada reinício) |
 | `ADDON_PUBLIC_URL` | recomendada | URL pública do addon, atrás de proxy/hosting |
@@ -90,6 +91,7 @@ Cada linha do template é independente: se todos os tokens dela vierem vazios pr
 
 - **Auto-hospedado** — suas chaves de API e configurações não passam por servidores de terceiros.
 - **`ACCESS_TOKEN`** trava o addon contra acesso não autorizado.
+- **Chaves de acesso por pessoa** (criadas em `/admin`) travam quem pode buscar/assistir — o TorrServer nunca é exposto diretamente: todo pedido de stream é reencaminhado pelo addon, que exige uma chave válida antes de repassar qualquer coisa pra ele.
 - Validações contra *path traversal*, *ReDoS* e CORS restrito.
 
 ---
