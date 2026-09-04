@@ -1,14 +1,62 @@
 [
-  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
-  {"title": "Jules and Jim", "year": 1962, "imdbId": "tt0055032"},
-  {"title": "Shoot the Piano Player", "year": 1960, "imdbId": "tt0054280"},
-  {"title": "Stolen Kisses", "year": 1968, "imdbId": "tt0063681"},
-  {"title": "Day for Night", "year": 1973, "imdbId": "tt0070460"},
-  {"title": "The Wild Child", "year": 1970, "imdbId": "tt0066024"},
-  {"title": "Small Change", "year": 1976, "imdbId": "tt0074924"},
-  {"title": "The Story of Adèle H.", "year": 1975, "imdbId": "tt0073764"},
-  {"title": "Two English Girls", "year": 1971, "imdbId": "tt0067700"},
-  {"title": "Love on the Run", "year": 1979, "imdbId": "tt0079463"},
-  {"title": "The Man Who Loved Women", "year": 1977, "imdbId": "tt0075948"},
-  {"title": "The Last Metro", "year": 1980, "imdbId": "tt0080942"}
+  {
+    "title": "The 400 Blows",
+    "year": 1959,
+    "imdbId": "tt0053198"
+  },
+  {
+    "title": "Jules and Jim",
+    "year": 1962,
+    "imdbId": "tt0055032"
+  },
+  {
+    "title": "Shoot the Piano Player",
+    "year": 1960,
+    "imdbId": "tt0054280"
+  },
+  {
+    "title": "Stolen Kisses",
+    "year": 1968,
+    "imdbId": "tt0062695"
+  },
+  {
+    "title": "Day for Night",
+    "year": 1973,
+    "imdbId": "tt0070460"
+  },
+  {
+    "title": "The Wild Child",
+    "year": 1970,
+    "imdbId": "tt0066024"
+  },
+  {
+    "title": "Small Change",
+    "year": 1976,
+    "imdbId": "tt0074924"
+  },
+  {
+    "title": "The Story of Adèle H.",
+    "year": 1975,
+    "imdbId": "tt0073764"
+  },
+  {
+    "title": "Two English Girls",
+    "year": 1971,
+    "imdbId": "tt0067700"
+  },
+  {
+    "title": "Love on the Run",
+    "year": 1979,
+    "imdbId": "tt0079463"
+  },
+  {
+    "title": "The Man Who Loved Women",
+    "year": 1977,
+    "imdbId": "tt0075948"
+  },
+  {
+    "title": "The Last Metro",
+    "year": 1980,
+    "imdbId": "tt0080942"
+  }
 ]

@@ -1,22 +1,102 @@
 [
-  {"title": "Memories of Murder", "year": 2003, "imdbId": "tt0353969"},
-  {"title": "Parasite", "year": 2019, "imdbId": "tt6751668"},
-  {"title": "Oldboy", "year": 2003, "imdbId": "tt0364569"},
-  {"title": "The Handmaiden", "year": 2016, "imdbId": "tt4016934"},
-  {"title": "Burning", "year": 2018, "imdbId": "tt7282468"},
-  {"title": "A Tale of Two Sisters", "year": 2003, "imdbId": "tt0365376"},
-  {"title": "Poetry", "year": 2010, "imdbId": "tt1567621"},
-  {"title": "Oasis", "year": 2002, "imdbId": "tt0334074"},
-  {"title": "The Wailing", "year": 2016, "imdbId": "tt5215952"},
-  {"title": "The Host", "year": 2006, "imdbId": "tt0468492"},
-  {"title": "Peppermint Candy", "year": 1999, "imdbId": "tt0247613"},
-  {"title": "Mother", "year": 2009, "imdbId": "tt1216496"},
-  {"title": "A Bittersweet Life", "year": 2005, "imdbId": "tt0420581"},
-  {"title": "I Saw the Devil", "year": 2010, "imdbId": "tt1588170"},
-  {"title": "Spring, Summer, Fall, Winter... and Spring", "year": 2003, "imdbId": "tt0374546"},
-  {"title": "The Man from Nowhere", "year": 2010, "imdbId": "tt1568921"},
-  {"title": "Joint Security Area", "year": 2000, "imdbId": "tt0260411"},
-  {"title": "Sympathy for Mr. Vengeance", "year": 2002, "imdbId": "tt0310775"},
-  {"title": "Right Now, Wrong Then", "year": 2015, "imdbId": "tt4276958"},
-  {"title": "The Housemaid", "year": 1960, "imdbId": "tt0053940"}
+  {
+    "title": "Memories of Murder",
+    "year": 2003,
+    "imdbId": "tt0353969"
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "imdbId": "tt6751668"
+  },
+  {
+    "title": "Oldboy",
+    "year": 2003,
+    "imdbId": "tt0364569"
+  },
+  {
+    "title": "The Handmaiden",
+    "year": 2016,
+    "imdbId": "tt4016934"
+  },
+  {
+    "title": "Burning",
+    "year": 2018,
+    "imdbId": "tt7282468"
+  },
+  {
+    "title": "A Tale of Two Sisters",
+    "year": 2003,
+    "imdbId": "tt0365376"
+  },
+  {
+    "title": "Poetry",
+    "year": 2010,
+    "imdbId": "tt1287878"
+  },
+  {
+    "title": "Oasis",
+    "year": 2002,
+    "imdbId": "tt0334074"
+  },
+  {
+    "title": "The Wailing",
+    "year": 2016,
+    "imdbId": "tt5215952"
+  },
+  {
+    "title": "The Host",
+    "year": 2006,
+    "imdbId": "tt0468492"
+  },
+  {
+    "title": "Peppermint Candy",
+    "year": 1999,
+    "imdbId": "tt0247613"
+  },
+  {
+    "title": "Mother",
+    "year": 2009,
+    "imdbId": "tt1216496"
+  },
+  {
+    "title": "A Bittersweet Life",
+    "year": 2005,
+    "imdbId": "tt0456912"
+  },
+  {
+    "title": "I Saw the Devil",
+    "year": 2010,
+    "imdbId": "tt1588170"
+  },
+  {
+    "title": "Spring, Summer, Fall, Winter... and Spring",
+    "year": 2003,
+    "imdbId": "tt0374546"
+  },
+  {
+    "title": "The Man from Nowhere",
+    "year": 2010,
+    "imdbId": "tt1568921"
+  },
+  {
+    "title": "Joint Security Area",
+    "year": 2000,
+    "imdbId": "tt0260991"
+  },
+  {
+    "title": "Sympathy for Mr. Vengeance",
+    "year": 2002,
+    "imdbId": "tt0310775"
+  },
+  {
+    "title": "Right Now, Wrong Then",
+    "year": 2015,
+    "imdbId": "tt4768776"
+  },
+  {
+    "title": "The Housemaid",
+    "year": 1960,
+    "imdbId": "tt0053940"
+  }
 ]

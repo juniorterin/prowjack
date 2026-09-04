@@ -1,24 +1,112 @@
 [
-  {"title": "Rashomon", "year": 1950, "imdbId": "tt0042876"},
-  {"title": "The Red Desert", "year": 1964, "imdbId": "tt0058095"},
-  {"title": "Battle of Algiers", "year": 1966, "imdbId": "tt0058946"},
-  {"title": "Three Colors: Red", "year": 1994, "imdbId": "tt0111495"},
-  {"title": "Brokeback Mountain", "year": 2005, "imdbId": "tt0388795"},
-  {"title": "Caché", "year": 2005, "imdbId": "tt0387898"},
-  {"title": "Still Life", "year": 2006, "imdbId": "tt0799773"},
-  {"title": "The Wrestler", "year": 2008, "imdbId": "tt1125849"},
-  {"title": "A Prophet", "year": 2009, "imdbId": "tt1235166"},
-  {"title": "Uncle Boonmee Who Can Recall His Past Lives", "year": 2010, "imdbId": "tt1598642"},
-  {"title": "The Tree of Life", "year": 2011, "imdbId": "tt0478304"},
-  {"title": "Amour", "year": 2012, "imdbId": "tt1602620"},
-  {"title": "Blue Is the Warmest Color", "year": 2013, "imdbId": "tt2278871"},
-  {"title": "Winter Sleep", "year": 2014, "imdbId": "tt2758880"},
-  {"title": "Dheepan", "year": 2015, "imdbId": "tt3574246"},
-  {"title": "I, Daniel Blake", "year": 2016, "imdbId": "tt5168542"},
-  {"title": "The Square", "year": 2017, "imdbId": "tt4995790"},
-  {"title": "Shopkeeper", "year": 2018, "imdbId": "tt8368368"},
-  {"title": "Parasite", "year": 2019, "imdbId": "tt6751668"},
-  {"title": "Titane", "year": 2021, "imdbId": "tt10944760"},
-  {"title": "Triangle of Sadness", "year": 2022, "imdbId": "tt7322224"},
-  {"title": "Anatomy of a Fall", "year": 2023, "imdbId": "tt17009710"}
+  {
+    "title": "Rashomon",
+    "year": 1950,
+    "imdbId": "tt0042876"
+  },
+  {
+    "title": "The Red Desert",
+    "year": 1964,
+    "imdbId": "tt0058095"
+  },
+  {
+    "title": "Battle of Algiers",
+    "year": 1966,
+    "imdbId": "tt0058946"
+  },
+  {
+    "title": "Three Colors: Red",
+    "year": 1994,
+    "imdbId": "tt0111495"
+  },
+  {
+    "title": "Brokeback Mountain",
+    "year": 2005,
+    "imdbId": "tt0388795"
+  },
+  {
+    "title": "Caché",
+    "year": 2005,
+    "imdbId": "tt0387898"
+  },
+  {
+    "title": "Still Life",
+    "year": 2006,
+    "imdbId": "tt39240417"
+  },
+  {
+    "title": "The Wrestler",
+    "year": 2008,
+    "imdbId": "tt1125849"
+  },
+  {
+    "title": "A Prophet",
+    "year": 2009,
+    "imdbId": "tt1235166"
+  },
+  {
+    "title": "Uncle Boonmee Who Can Recall His Past Lives",
+    "year": 2010,
+    "imdbId": "tt1588895"
+  },
+  {
+    "title": "The Tree of Life",
+    "year": 2011,
+    "imdbId": "tt0478304"
+  },
+  {
+    "title": "Amour",
+    "year": 2012,
+    "imdbId": "tt1602620"
+  },
+  {
+    "title": "Blue Is the Warmest Color",
+    "year": 2013,
+    "imdbId": "tt2278871"
+  },
+  {
+    "title": "Winter Sleep",
+    "year": 2014,
+    "imdbId": "tt2758880"
+  },
+  {
+    "title": "Dheepan",
+    "year": 2015,
+    "imdbId": "tt4082068"
+  },
+  {
+    "title": "I, Daniel Blake",
+    "year": 2016,
+    "imdbId": "tt5168192"
+  },
+  {
+    "title": "The Square",
+    "year": 2017,
+    "imdbId": "tt4995790"
+  },
+  {
+    "title": "Shopkeeper",
+    "year": 2018,
+    "imdbId": "tt8368368"
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "imdbId": "tt6751668"
+  },
+  {
+    "title": "Titane",
+    "year": 2021,
+    "imdbId": "tt10944760"
+  },
+  {
+    "title": "Triangle of Sadness",
+    "year": 2022,
+    "imdbId": "tt7322224"
+  },
+  {
+    "title": "Anatomy of a Fall",
+    "year": 2023,
+    "imdbId": "tt17009710"
+  }
 ]

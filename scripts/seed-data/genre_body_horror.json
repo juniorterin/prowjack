@@ -1,17 +1,77 @@
 [
-  {"title": "The Fly", "year": 1986, "imdbId": "tt0091064"},
-  {"title": "Videodrome", "year": 1983, "imdbId": "tt0086541"},
-  {"title": "Naked Lunch", "year": 1991, "imdbId": "tt0102511"},
-  {"title": "Annihilation", "year": 2018, "imdbId": "tt2798920"},
-  {"title": "Tusk", "year": 2014, "imdbId": "tt2872282"},
-  {"title": "The Thing", "year": 1982, "imdbId": "tt0084787"},
-  {"title": "Eraserhead", "year": 1977, "imdbId": "tt0074486"},
-  {"title": "Crimes of the Future", "year": 2022, "imdbId": "tt14549466"},
-  {"title": "eXistenZ", "year": 1999, "imdbId": "tt0120907"},
-  {"title": "Rabid", "year": 1977, "imdbId": "tt0076578"},
-  {"title": "Titane", "year": 2021, "imdbId": "tt10944760"},
-  {"title": "Raw", "year": 2016, "imdbId": "tt4954522"},
-  {"title": "Martyrs", "year": 2008, "imdbId": "tt1029234"},
-  {"title": "Society", "year": 1989, "imdbId": "tt0098354"},
-  {"title": "Shivers", "year": 1975, "imdbId": "tt0073868"}
+  {
+    "title": "The Fly",
+    "year": 1986,
+    "imdbId": "tt0091064"
+  },
+  {
+    "title": "Videodrome",
+    "year": 1983,
+    "imdbId": "tt0086541"
+  },
+  {
+    "title": "Naked Lunch",
+    "year": 1991,
+    "imdbId": "tt0102511"
+  },
+  {
+    "title": "Annihilation",
+    "year": 2018,
+    "imdbId": "tt2798920"
+  },
+  {
+    "title": "Tusk",
+    "year": 2014,
+    "imdbId": "tt3099498"
+  },
+  {
+    "title": "The Thing",
+    "year": 1982,
+    "imdbId": "tt0084787"
+  },
+  {
+    "title": "Eraserhead",
+    "year": 1977,
+    "imdbId": "tt0074486"
+  },
+  {
+    "title": "Crimes of the Future",
+    "year": 2022,
+    "imdbId": "tt14549466"
+  },
+  {
+    "title": "eXistenZ",
+    "year": 1999,
+    "imdbId": "tt0120907"
+  },
+  {
+    "title": "Rabid",
+    "year": 1977,
+    "imdbId": "tt0076578"
+  },
+  {
+    "title": "Titane",
+    "year": 2021,
+    "imdbId": "tt10944760"
+  },
+  {
+    "title": "Raw",
+    "year": 2016,
+    "imdbId": "tt4954522"
+  },
+  {
+    "title": "Martyrs",
+    "year": 2008,
+    "imdbId": "tt1029234"
+  },
+  {
+    "title": "Society",
+    "year": 1989,
+    "imdbId": "tt0098354"
+  },
+  {
+    "title": "Shivers",
+    "year": 1975,
+    "imdbId": "tt0073705"
+  }
 ]

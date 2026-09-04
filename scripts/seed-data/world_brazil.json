@@ -1,22 +1,102 @@
 [
-  {"title": "City of God", "year": 2002, "imdbId": "tt0317248"},
-  {"title": "Central Station", "year": 1998, "imdbId": "tt0140888"},
-  {"title": "Aquarius", "year": 2016, "imdbId": "tt4795908"},
-  {"title": "The Second Mother", "year": 2015, "imdbId": "tt3901826"},
-  {"title": "Neighboring Sounds", "year": 2012, "imdbId": "tt2070070"},
-  {"title": "Elite Squad", "year": 2007, "imdbId": "tt0861739"},
-  {"title": "The Year My Parents Went on Vacation", "year": 2006, "imdbId": "tt0481400"},
-  {"title": "Behind the Sun", "year": 2001, "imdbId": "tt0271536"},
-  {"title": "Pixote", "year": 1980, "imdbId": "tt0081259"},
-  {"title": "Bye Bye Brazil", "year": 1979, "imdbId": "tt0078849"},
-  {"title": "Land in Anguish", "year": 1967, "imdbId": "tt0062374"},
-  {"title": "Black Orpheus", "year": 1959, "imdbId": "tt0052640"},
-  {"title": "Macunaíma", "year": 1969, "imdbId": "tt0064649"},
-  {"title": "O Pagador de Promessas", "year": 1962, "imdbId": "tt0056252"},
-  {"title": "Vidas Secas", "year": 1963, "imdbId": "tt0057697"},
-  {"title": "Foreign Land", "year": 1995, "imdbId": "tt0113197"},
-  {"title": "The Trespasser", "year": 2001, "imdbId": "tt0281132"},
-  {"title": "Madame Satã", "year": 2002, "imdbId": "tt0314466"},
-  {"title": "I Don't Want to Talk About It", "year": 1993, "imdbId": "tt0107034"},
-  {"title": "Chronicle of a Summer", "year": 1961, "imdbId": "tt0054830"}
+  {
+    "title": "City of God",
+    "year": 2002,
+    "imdbId": "tt0317248"
+  },
+  {
+    "title": "Central Station",
+    "year": 1998,
+    "imdbId": "tt0140888"
+  },
+  {
+    "title": "Aquarius",
+    "year": 2016,
+    "imdbId": "tt5221584"
+  },
+  {
+    "title": "The Second Mother",
+    "year": 2015,
+    "imdbId": "tt28313381"
+  },
+  {
+    "title": "Neighboring Sounds",
+    "year": 2012,
+    "imdbId": "tt2190367"
+  },
+  {
+    "title": "Elite Squad",
+    "year": 2007,
+    "imdbId": "tt0861739"
+  },
+  {
+    "title": "The Year My Parents Went on Vacation",
+    "year": 2006,
+    "imdbId": "tt0481400"
+  },
+  {
+    "title": "Behind the Sun",
+    "year": 2001,
+    "imdbId": "tt0271536"
+  },
+  {
+    "title": "Pixote",
+    "year": 1980,
+    "imdbId": "tt0081259"
+  },
+  {
+    "title": "Bye Bye Brazil",
+    "year": 1979,
+    "imdbId": "tt0078849"
+  },
+  {
+    "title": "Land in Anguish",
+    "year": 1967,
+    "imdbId": "tt0062374"
+  },
+  {
+    "title": "Black Orpheus",
+    "year": 1959,
+    "imdbId": "tt0052640"
+  },
+  {
+    "title": "Macunaíma",
+    "year": 1969,
+    "imdbId": "tt0064649"
+  },
+  {
+    "title": "O Pagador de Promessas",
+    "year": 1962,
+    "imdbId": "tt0056252"
+  },
+  {
+    "title": "Vidas Secas",
+    "year": 1963,
+    "imdbId": "tt0057697"
+  },
+  {
+    "title": "Foreign Land",
+    "year": 1995,
+    "imdbId": "tt0113197"
+  },
+  {
+    "title": "The Trespasser",
+    "year": 2001,
+    "imdbId": "tt0281132"
+  },
+  {
+    "title": "Madame Satã",
+    "year": 2002,
+    "imdbId": "tt0317887"
+  },
+  {
+    "title": "I Don't Want to Talk About It",
+    "year": 1993,
+    "imdbId": "tt0107034"
+  },
+  {
+    "title": "Chronicle of a Summer",
+    "year": 1961,
+    "imdbId": "tt0054830"
+  }
 ]

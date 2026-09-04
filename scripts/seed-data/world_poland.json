@@ -1,17 +1,77 @@
 [
-  {"title": "Knife in the Water", "year": 1962, "imdbId": "tt0056174"},
-  {"title": "Ashes and Diamonds", "year": 1958, "imdbId": "tt0051431"},
-  {"title": "The Double Life of Véronique", "year": 1991, "imdbId": "tt0101765"},
-  {"title": "Three Colors: Blue", "year": 1993, "imdbId": "tt0108394"},
-  {"title": "Three Colors: White", "year": 1994, "imdbId": "tt0111507"},
-  {"title": "Three Colors: Red", "year": 1994, "imdbId": "tt0111495"},
-  {"title": "Dekalog", "year": 1988, "imdbId": "tt0092337"},
-  {"title": "Ida", "year": 2013, "imdbId": "tt2718492"},
-  {"title": "Cold War", "year": 2018, "imdbId": "tt6543652"},
-  {"title": "Camouflage", "year": 1977, "imdbId": "tt0075787"},
-  {"title": "The Promised Land", "year": 1975, "imdbId": "tt0073714"},
-  {"title": "The Saragossa Manuscript", "year": 1965, "imdbId": "tt0058882"},
-  {"title": "Andrzej Wajda's Kanal", "year": 1957, "imdbId": "tt0050550"},
-  {"title": "Walesa: Man of Hope", "year": 2013, "imdbId": "tt2217086"},
-  {"title": "Man of Iron", "year": 1981, "imdbId": "tt0082852"}
+  {
+    "title": "Knife in the Water",
+    "year": 1962,
+    "imdbId": "tt0056174"
+  },
+  {
+    "title": "Ashes and Diamonds",
+    "year": 1958,
+    "imdbId": "tt0051431"
+  },
+  {
+    "title": "The Double Life of Véronique",
+    "year": 1991,
+    "imdbId": "tt0101765"
+  },
+  {
+    "title": "Three Colors: Blue",
+    "year": 1993,
+    "imdbId": "tt0108394"
+  },
+  {
+    "title": "Three Colors: White",
+    "year": 1994,
+    "imdbId": "tt0111507"
+  },
+  {
+    "title": "Three Colors: Red",
+    "year": 1994,
+    "imdbId": "tt0111495"
+  },
+  {
+    "title": "Dekalog",
+    "year": 1988,
+    "imdbId": "tt0092337"
+  },
+  {
+    "title": "Ida",
+    "year": 2013,
+    "imdbId": "tt2718492"
+  },
+  {
+    "title": "Cold War",
+    "year": 2018,
+    "imdbId": "tt6543652"
+  },
+  {
+    "title": "Camouflage",
+    "year": 1977,
+    "imdbId": "tt0075787"
+  },
+  {
+    "title": "The Promised Land",
+    "year": 1975,
+    "imdbId": "tt0073714"
+  },
+  {
+    "title": "The Saragossa Manuscript",
+    "year": 1965,
+    "imdbId": "tt0058882"
+  },
+  {
+    "title": "Andrzej Wajda's Kanal",
+    "year": 1957,
+    "imdbId": "tt0050550"
+  },
+  {
+    "title": "Walesa: Man of Hope",
+    "year": 2013,
+    "imdbId": "tt2113820"
+  },
+  {
+    "title": "Man of Iron",
+    "year": 1981,
+    "imdbId": "tt0082852"
+  }
 ]

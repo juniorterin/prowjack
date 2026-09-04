@@ -1,27 +1,127 @@
 [
-  {"title": "Breathless", "year": 1960, "imdbId": "tt0053472"},
-  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
-  {"title": "Jules and Jim", "year": 1962, "imdbId": "tt0055032"},
-  {"title": "Hiroshima Mon Amour", "year": 1959, "imdbId": "tt0052893"},
-  {"title": "Cléo from 5 to 7", "year": 1962, "imdbId": "tt0055852"},
-  {"title": "Contempt", "year": 1963, "imdbId": "tt0057345"},
-  {"title": "Band of Outsiders", "year": 1964, "imdbId": "tt0057869"},
-  {"title": "Pierrot le Fou", "year": 1965, "imdbId": "tt0059592"},
-  {"title": "Masculine Feminine", "year": 1966, "imdbId": "tt0060490"},
-  {"title": "2 or 3 Things I Know About Her", "year": 1967, "imdbId": "tt0061597"},
-  {"title": "Last Year at Marienbad", "year": 1961, "imdbId": "tt0054632"},
-  {"title": "L'Avventura", "year": 1960, "imdbId": "tt0053619"},
-  {"title": "La Notte", "year": 1961, "imdbId": "tt0055198"},
-  {"title": "Shoot the Piano Player", "year": 1960, "imdbId": "tt0054280"},
-  {"title": "My Life to Live", "year": 1962, "imdbId": "tt0056432"},
-  {"title": "Weekend", "year": 1967, "imdbId": "tt0062485"},
-  {"title": "La Collectionneuse", "year": 1967, "imdbId": "tt0061813"},
-  {"title": "Le Beau Serge", "year": 1958, "imdbId": "tt0051488"},
-  {"title": "The Cousins", "year": 1959, "imdbId": "tt0052698"},
-  {"title": "Paris Belongs to Us", "year": 1961, "imdbId": "tt0053963"},
-  {"title": "Daisies", "year": 1966, "imdbId": "tt0060959"},
-  {"title": "The Soft Skin", "year": 1964, "imdbId": "tt0058418"},
-  {"title": "Stolen Kisses", "year": 1968, "imdbId": "tt0063681"},
-  {"title": "Le Signe du Lion", "year": 1962, "imdbId": "tt0054383"},
-  {"title": "La Chinoise", "year": 1967, "imdbId": "tt0061604"}
+  {
+    "title": "Breathless",
+    "year": 1960,
+    "imdbId": "tt0053472"
+  },
+  {
+    "title": "The 400 Blows",
+    "year": 1959,
+    "imdbId": "tt0053198"
+  },
+  {
+    "title": "Jules and Jim",
+    "year": 1962,
+    "imdbId": "tt0055032"
+  },
+  {
+    "title": "Hiroshima Mon Amour",
+    "year": 1959,
+    "imdbId": "tt0052893"
+  },
+  {
+    "title": "Cléo from 5 to 7",
+    "year": 1962,
+    "imdbId": "tt0055852"
+  },
+  {
+    "title": "Contempt",
+    "year": 1963,
+    "imdbId": "tt0057345"
+  },
+  {
+    "title": "Band of Outsiders",
+    "year": 1964,
+    "imdbId": "tt0057869"
+  },
+  {
+    "title": "Pierrot le Fou",
+    "year": 1965,
+    "imdbId": "tt0059592"
+  },
+  {
+    "title": "Masculine Feminine",
+    "year": 1966,
+    "imdbId": "tt0060490"
+  },
+  {
+    "title": "2 or 3 Things I Know About Her",
+    "year": 1967,
+    "imdbId": "tt0061597"
+  },
+  {
+    "title": "Last Year at Marienbad",
+    "year": 1961,
+    "imdbId": "tt0054632"
+  },
+  {
+    "title": "L'Avventura",
+    "year": 1960,
+    "imdbId": "tt0053619"
+  },
+  {
+    "title": "La Notte",
+    "year": 1961,
+    "imdbId": "tt0055198"
+  },
+  {
+    "title": "Shoot the Piano Player",
+    "year": 1960,
+    "imdbId": "tt0054280"
+  },
+  {
+    "title": "My Life to Live",
+    "year": 1962,
+    "imdbId": "tt0056432"
+  },
+  {
+    "title": "Weekend",
+    "year": 1967,
+    "imdbId": "tt0062485"
+  },
+  {
+    "title": "La Collectionneuse",
+    "year": 1967,
+    "imdbId": "tt0061495"
+  },
+  {
+    "title": "Le Beau Serge",
+    "year": 1958,
+    "imdbId": "tt0051488"
+  },
+  {
+    "title": "The Cousins",
+    "year": 1959,
+    "imdbId": "tt0052698"
+  },
+  {
+    "title": "Paris Belongs to Us",
+    "year": 1961,
+    "imdbId": "tt0053963"
+  },
+  {
+    "title": "Daisies",
+    "year": 1966,
+    "imdbId": "tt0060959"
+  },
+  {
+    "title": "The Soft Skin",
+    "year": 1964,
+    "imdbId": "tt0058458"
+  },
+  {
+    "title": "Stolen Kisses",
+    "year": 1968,
+    "imdbId": "tt0063681"
+  },
+  {
+    "title": "Le Signe du Lion",
+    "year": 1962,
+    "imdbId": "tt0053279"
+  },
+  {
+    "title": "La Chinoise",
+    "year": 1967,
+    "imdbId": "tt0061604"
+  }
 ]

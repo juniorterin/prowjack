@@ -1,24 +1,112 @@
 [
-  {"title": "David", "year": 1979, "imdbId": "tt0078867"},
-  {"title": "Heartland", "year": 1979, "imdbId": "tt0079382"},
-  {"title": "Ascent", "year": 1977, "imdbId": "tt0075402"},
-  {"title": "Las truchas", "year": 1978, "imdbId": "tt0078348"},
-  {"title": "Palermo or Wolfsburg", "year": 1980, "imdbId": "tt0080878"},
-  {"title": "Mephisto", "year": 1981, "imdbId": "tt0082766"},
-  {"title": "Veronika Voss", "year": 1982, "imdbId": "tt0084917"},
-  {"title": "Ascendancy", "year": 1983, "imdbId": "tt0085214"},
-  {"title": "Love Is the Devil", "year": 1998, "imdbId": "tt0133986"},
-  {"title": "Polanski", "year": 2002, "imdbId": "tt0282972"},
-  {"title": "Caché", "year": 2005, "imdbId": "tt0387898"},
-  {"title": "The Reader", "year": 2008, "imdbId": "tt0976051"},
-  {"title": "Honey", "year": 2010, "imdbId": "tt1597404"},
-  {"title": "Caesarion", "year": 2013, "imdbId": "tt2245308"},
-  {"title": "Black Coal, Thin Ice", "year": 2014, "imdbId": "tt3812228"},
-  {"title": "Taxi", "year": 2015, "imdbId": "tt4253026"},
-  {"title": "Fire at Sea", "year": 2016, "imdbId": "tt5512016"},
-  {"title": "On Body and Soul", "year": 2017, "imdbId": "tt5690360"},
-  {"title": "Touch Me Not", "year": 2018, "imdbId": "tt5846456"},
-  {"title": "There Is No Evil", "year": 2020, "imdbId": "tt9744640"},
-  {"title": "Bad Luck Banging or Loony Porn", "year": 2021, "imdbId": "tt13624500"},
-  {"title": "Corsage", "year": 2022, "imdbId": "tt14679472"}
+  {
+    "title": "David",
+    "year": 1979,
+    "imdbId": "tt0078867"
+  },
+  {
+    "title": "Heartland",
+    "year": 1979,
+    "imdbId": "tt0079382"
+  },
+  {
+    "title": "Ascent",
+    "year": 1977,
+    "imdbId": "tt0075404"
+  },
+  {
+    "title": "Las truchas",
+    "year": 1978,
+    "imdbId": "tt0078348"
+  },
+  {
+    "title": "Palermo or Wolfsburg",
+    "year": 1980,
+    "imdbId": "tt0081299"
+  },
+  {
+    "title": "Mephisto",
+    "year": 1981,
+    "imdbId": "tt0082766"
+  },
+  {
+    "title": "Veronika Voss",
+    "year": 1982,
+    "imdbId": "tt0084917"
+  },
+  {
+    "title": "Ascendancy",
+    "year": 1983,
+    "imdbId": "tt0083582"
+  },
+  {
+    "title": "Love Is the Devil",
+    "year": 1998,
+    "imdbId": "tt0119577"
+  },
+  {
+    "title": "Polanski",
+    "year": 2002,
+    "imdbId": "tt0282972"
+  },
+  {
+    "title": "Caché",
+    "year": 2005,
+    "imdbId": "tt0387898"
+  },
+  {
+    "title": "The Reader",
+    "year": 2008,
+    "imdbId": "tt0976051"
+  },
+  {
+    "title": "Honey",
+    "year": 2010,
+    "imdbId": "tt1597404"
+  },
+  {
+    "title": "Caesarion",
+    "year": 2013,
+    "imdbId": "tt2245308"
+  },
+  {
+    "title": "Black Coal, Thin Ice",
+    "year": 2014,
+    "imdbId": "tt3469910"
+  },
+  {
+    "title": "Taxi",
+    "year": 2015,
+    "imdbId": "tt4253026"
+  },
+  {
+    "title": "Fire at Sea",
+    "year": 2016,
+    "imdbId": "tt3652526"
+  },
+  {
+    "title": "On Body and Soul",
+    "year": 2017,
+    "imdbId": "tt5690360"
+  },
+  {
+    "title": "Touch Me Not",
+    "year": 2018,
+    "imdbId": "tt4949112"
+  },
+  {
+    "title": "There Is No Evil",
+    "year": 2020,
+    "imdbId": "tt11697844"
+  },
+  {
+    "title": "Bad Luck Banging or Loony Porn",
+    "year": 2021,
+    "imdbId": "tt14033502"
+  },
+  {
+    "title": "Corsage",
+    "year": 2022,
+    "imdbId": "tt11992694"
+  }
 ]

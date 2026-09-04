@@ -1,17 +1,77 @@
 [
-  {"title": "Black God, White Devil", "year": 1964, "imdbId": "tt0057582"},
-  {"title": "Terra em Transe", "year": 1967, "imdbId": "tt0062374"},
-  {"title": "Deus e o Diabo na Terra do Sol", "year": 1964, "imdbId": "tt0057582"},
-  {"title": "O Pagador de Promessas", "year": 1962, "imdbId": "tt0056252"},
-  {"title": "Vidas Secas", "year": 1963, "imdbId": "tt0057697"},
-  {"title": "Macunaíma", "year": 1969, "imdbId": "tt0064649"},
-  {"title": "O Dragão da Maldade contra o Santo Guerreiro", "year": 1969, "imdbId": "tt0064282"},
-  {"title": "Os Fuzis", "year": 1964, "imdbId": "tt0058220"},
-  {"title": "Porto das Caixas", "year": 1962, "imdbId": "tt0056283"},
-  {"title": "Barravento", "year": 1962, "imdbId": "tt0055767"},
-  {"title": "Ganga Zumba", "year": 1963, "imdbId": "tt0057075"},
-  {"title": "O Desafio", "year": 1965, "imdbId": "tt0059019"},
-  {"title": "Garrincha, Alegria do Povo", "year": 1963, "imdbId": "tt0057079"},
-  {"title": "A Grande Cidade", "year": 1966, "imdbId": "tt0060394"},
-  {"title": "O Bandido da Luz Vermelha", "year": 1968, "imdbId": "tt0062810"}
+  {
+    "title": "Black God, White Devil",
+    "year": 1964,
+    "imdbId": "tt0057582"
+  },
+  {
+    "title": "Terra em Transe",
+    "year": 1967,
+    "imdbId": "tt0062374"
+  },
+  {
+    "title": "Deus e o Diabo na Terra do Sol",
+    "year": 1964,
+    "imdbId": "tt0057582"
+  },
+  {
+    "title": "O Pagador de Promessas",
+    "year": 1962,
+    "imdbId": "tt0056252"
+  },
+  {
+    "title": "Vidas Secas",
+    "year": 1963,
+    "imdbId": "tt0057697"
+  },
+  {
+    "title": "Macunaíma",
+    "year": 1969,
+    "imdbId": "tt0064649"
+  },
+  {
+    "title": "O Dragão da Maldade contra o Santo Guerreiro",
+    "year": 1969,
+    "imdbId": "tt0064282"
+  },
+  {
+    "title": "Os Fuzis",
+    "year": 1964,
+    "imdbId": "tt0058122"
+  },
+  {
+    "title": "Porto das Caixas",
+    "year": 1962,
+    "imdbId": "tt0056283"
+  },
+  {
+    "title": "Barravento",
+    "year": 1962,
+    "imdbId": "tt0055767"
+  },
+  {
+    "title": "Ganga Zumba",
+    "year": 1963,
+    "imdbId": "tt0057088"
+  },
+  {
+    "title": "O Desafio",
+    "year": 1965,
+    "imdbId": "tt0059019"
+  },
+  {
+    "title": "Garrincha, Alegria do Povo",
+    "year": 1963,
+    "imdbId": "tt0057079"
+  },
+  {
+    "title": "A Grande Cidade",
+    "year": 1966,
+    "imdbId": "tt0060473"
+  },
+  {
+    "title": "O Bandido da Luz Vermelha",
+    "year": 1968,
+    "imdbId": "tt0062810"
+  }
 ]

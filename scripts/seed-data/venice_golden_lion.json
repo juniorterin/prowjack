@@ -1,24 +1,112 @@
 [
-  {"title": "Rashomon", "year": 1950, "imdbId": "tt0042876"},
-  {"title": "Sansho the Bailiff", "year": 1954, "imdbId": "tt0047445"},
-  {"title": "The Battle of Algiers", "year": 1966, "imdbId": "tt0058946"},
-  {"title": "Au Hasard Balthazar", "year": 1966, "imdbId": "tt0060138"},
-  {"title": "Belle de Jour", "year": 1967, "imdbId": "tt0061395"},
-  {"title": "The Conformist", "year": 1970, "imdbId": "tt0065571"},
-  {"title": "Before the Revolution", "year": 1964, "imdbId": "tt0057849"},
-  {"title": "The Passenger", "year": 1975, "imdbId": "tt0073580"},
-  {"title": "Three Brothers", "year": 1981, "imdbId": "tt0083426"},
-  {"title": "Come and See", "year": 1985, "imdbId": "tt0091251"},
-  {"title": "The Sacrifice", "year": 1986, "imdbId": "tt0091670"},
-  {"title": "Hamlet", "year": 1964, "imdbId": "tt0058130"},
-  {"title": "Brokeback Mountain", "year": 2005, "imdbId": "tt0388795"},
-  {"title": "Still Life", "year": 2006, "imdbId": "tt0799773"},
-  {"title": "The Wrestler", "year": 2008, "imdbId": "tt1125849"},
-  {"title": "Somewhere", "year": 2010, "imdbId": "tt1500704"},
-  {"title": "Gravity", "year": 2013, "imdbId": "tt1454468"},
-  {"title": "Roma", "year": 2018, "imdbId": "tt6155172"},
-  {"title": "Joker", "year": 2019, "imdbId": "tt7286456"},
-  {"title": "Nomadland", "year": 2020, "imdbId": "tt9770150"},
-  {"title": "The Power of the Dog", "year": 2021, "imdbId": "tt10293406"},
-  {"title": "All Quiet on the Western Front", "year": 2022, "imdbId": "tt1016150"}
+  {
+    "title": "Rashomon",
+    "year": 1950,
+    "imdbId": "tt0042876"
+  },
+  {
+    "title": "Sansho the Bailiff",
+    "year": 1954,
+    "imdbId": "tt0047445"
+  },
+  {
+    "title": "The Battle of Algiers",
+    "year": 1966,
+    "imdbId": "tt0058946"
+  },
+  {
+    "title": "Au Hasard Balthazar",
+    "year": 1966,
+    "imdbId": "tt0060138"
+  },
+  {
+    "title": "Belle de Jour",
+    "year": 1967,
+    "imdbId": "tt0061395"
+  },
+  {
+    "title": "The Conformist",
+    "year": 1970,
+    "imdbId": "tt0065571"
+  },
+  {
+    "title": "Before the Revolution",
+    "year": 1964,
+    "imdbId": "tt0056371"
+  },
+  {
+    "title": "The Passenger",
+    "year": 1975,
+    "imdbId": "tt0073580"
+  },
+  {
+    "title": "Three Brothers",
+    "year": 1981,
+    "imdbId": "tt0083426"
+  },
+  {
+    "title": "Come and See",
+    "year": 1985,
+    "imdbId": "tt0091251"
+  },
+  {
+    "title": "The Sacrifice",
+    "year": 1986,
+    "imdbId": "tt0091670"
+  },
+  {
+    "title": "Hamlet",
+    "year": 1964,
+    "imdbId": "tt0058130"
+  },
+  {
+    "title": "Brokeback Mountain",
+    "year": 2005,
+    "imdbId": "tt0388795"
+  },
+  {
+    "title": "Still Life",
+    "year": 2006,
+    "imdbId": "tt0799773"
+  },
+  {
+    "title": "The Wrestler",
+    "year": 2008,
+    "imdbId": "tt1125849"
+  },
+  {
+    "title": "Somewhere",
+    "year": 2010,
+    "imdbId": "tt1421051"
+  },
+  {
+    "title": "Gravity",
+    "year": 2013,
+    "imdbId": "tt1454468"
+  },
+  {
+    "title": "Roma",
+    "year": 2018,
+    "imdbId": "tt6155172"
+  },
+  {
+    "title": "Joker",
+    "year": 2019,
+    "imdbId": "tt7286456"
+  },
+  {
+    "title": "Nomadland",
+    "year": 2020,
+    "imdbId": "tt9770150"
+  },
+  {
+    "title": "The Power of the Dog",
+    "year": 2021,
+    "imdbId": "tt10293406"
+  },
+  {
+    "title": "All Quiet on the Western Front",
+    "year": 2022,
+    "imdbId": "tt1016150"
+  }
 ]

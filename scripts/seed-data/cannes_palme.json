@@ -1,76 +1,372 @@
 [
-  {"year": 2024, "title": "Anora",                                           "imdbId": "tt28607951"},
-  {"year": 2023, "title": "Anatomy of a Fall",                               "imdbId": "tt23752852"},
-  {"year": 2022, "title": "Triangle of Sadness",                             "imdbId": "tt7322224"},
-  {"year": 2021, "title": "Titane",                                          "imdbId": "tt10944760"},
-  {"year": 2019, "title": "Parasite",                                        "imdbId": "tt6751668"},
-  {"year": 2018, "title": "Shoplifters",                                     "imdbId": "tt8075192"},
-  {"year": 2017, "title": "The Square",                                      "imdbId": "tt4995790"},
-  {"year": 2016, "title": "I, Daniel Blake",                                 "imdbId": "tt5168910"},
-  {"year": 2015, "title": "Dheepan",                                         "imdbId": "tt3767938"},
-  {"year": 2014, "title": "Winter Sleep",                                    "imdbId": "tt2758880"},
-  {"year": 2013, "title": "Blue Is the Warmest Colour",                      "imdbId": "tt2278871"},
-  {"year": 2012, "title": "Amour",                                           "imdbId": "tt1602620"},
-  {"year": 2011, "title": "The Tree of Life",                                "imdbId": "tt0478304"},
-  {"year": 2010, "title": "Uncle Boonmee Who Can Recall His Past Lives",     "imdbId": "tt1588911"},
-  {"year": 2009, "title": "The White Ribbon",                                "imdbId": "tt1149362"},
-  {"year": 2008, "title": "The Class",                                       "imdbId": "tt1068108"},
-  {"year": 2007, "title": "4 Months, 3 Weeks and 2 Days",                   "imdbId": "tt1032341"},
-  {"year": 2006, "title": "The Wind That Shakes the Barley",                 "imdbId": "tt0460989"},
-  {"year": 2005, "title": "L'Enfant",                                        "imdbId": "tt0432291"},
-  {"year": 2004, "title": "Fahrenheit 9/11",                                 "imdbId": "tt0361596"},
-  {"year": 2003, "title": "Elephant",                                        "imdbId": "tt0363978"},
-  {"year": 2002, "title": "The Pianist",                                     "imdbId": "tt0253474"},
-  {"year": 2001, "title": "The Son's Room",                                  "imdbId": "tt0268378"},
-  {"year": 2000, "title": "Dancer in the Dark",                              "imdbId": "tt0168629"},
-  {"year": 1999, "title": "Rosetta",                                         "imdbId": "tt0200071"},
-  {"year": 1998, "title": "Eternity and a Day",                              "imdbId": "tt0118741"},
-  {"year": 1997, "title": "Taste of Cherry",                                 "imdbId": "tt0120948"},
-  {"year": 1997, "title": "The Eel",                                         "imdbId": "tt0119116"},
-  {"year": 1996, "title": "Secrets & Lies",                                  "imdbId": "tt0117589"},
-  {"year": 1995, "title": "Underground",                                     "imdbId": "tt0111507"},
-  {"year": 1994, "title": "Pulp Fiction",                                    "imdbId": "tt0110912"},
-  {"year": 1993, "title": "Farewell My Concubine",                           "imdbId": "tt0099763"},
-  {"year": 1993, "title": "The Piano",                                       "imdbId": "tt0107822"},
-  {"year": 1992, "title": "The Best Intentions",                             "imdbId": "tt0101765"},
-  {"year": 1991, "title": "Barton Fink",                                     "imdbId": "tt0101410"},
-  {"year": 1990, "title": "Wild at Heart",                                   "imdbId": "tt0100935"},
-  {"year": 1989, "title": "Sex, Lies, and Videotape",                        "imdbId": "tt0098724"},
-  {"year": 1988, "title": "Pelle the Conqueror",                             "imdbId": "tt0095765"},
-  {"year": 1987, "title": "Under the Sun of Satan",                          "imdbId": "tt0093861"},
-  {"year": 1986, "title": "The Mission",                                     "imdbId": "tt0091530"},
-  {"year": 1985, "title": "When Father Was Away on Business",                "imdbId": "tt0087329"},
-  {"year": 1984, "title": "Paris, Texas",                                    "imdbId": "tt0087884"},
-  {"year": 1983, "title": "The Ballad of Narayama",                          "imdbId": "tt0085858"},
-  {"year": 1982, "title": "Missing",                                         "imdbId": "tt0084183"},
-  {"year": 1982, "title": "Yol",                                             "imdbId": "tt0082979"},
-  {"year": 1981, "title": "Man of Iron",                                     "imdbId": "tt0082543"},
-  {"year": 1980, "title": "Kagemusha",                                       "imdbId": "tt0080979"},
-  {"year": 1980, "title": "All That Jazz",                                   "imdbId": "tt0078754"},
-  {"year": 1979, "title": "Apocalypse Now",                                  "imdbId": "tt0078788"},
-  {"year": 1978, "title": "The Tree of Wooden Clogs",                        "imdbId": "tt0077700"},
-  {"year": 1977, "title": "Padre Padrone",                                   "imdbId": "tt0076316"},
-  {"year": 1976, "title": "Taxi Driver",                                     "imdbId": "tt0075314"},
-  {"year": 1975, "title": "Chronicle of the Burning Years",                  "imdbId": "tt0072823"},
-  {"year": 1974, "title": "The Conversation",                                "imdbId": "tt0071360"},
-  {"year": 1973, "title": "Scarecrow",                                       "imdbId": "tt0070707"},
-  {"year": 1973, "title": "The Hireling",                                    "imdbId": "tt0070172"},
-  {"year": 1972, "title": "Slaughterhouse-Five",                             "imdbId": "tt0069280"},
-  {"year": 1971, "title": "The Go-Between",                                  "imdbId": "tt0067140"},
-  {"year": 1970, "title": "M*A*S*H",                                         "imdbId": "tt0066026"},
-  {"year": 1966, "title": "A Man and a Woman",                               "imdbId": "tt0060815"},
-  {"year": 1966, "title": "Blow-Up",                                         "imdbId": "tt0060176"},
-  {"year": 1965, "title": "The Knack ...and How to Get It",                  "imdbId": "tt0059249"},
-  {"year": 1964, "title": "The Umbrellas of Cherbourg",                      "imdbId": "tt0058450"},
-  {"year": 1963, "title": "The Leopard",                                     "imdbId": "tt0057091"},
-  {"year": 1962, "title": "O Pagador de Promessas",                          "imdbId": "tt0056395"},
-  {"year": 1961, "title": "Viridiana",                                       "imdbId": "tt0055601"},
-  {"year": 1961, "title": "Une aussi longue absence",                        "imdbId": "tt0055465"},
-  {"year": 1960, "title": "La Dolce Vita",                                   "imdbId": "tt0053779"},
-  {"year": 1959, "title": "Black Orpheus",                                   "imdbId": "tt0052357"},
-  {"year": 1958, "title": "The Cranes Are Flying",                           "imdbId": "tt0051554"},
-  {"year": 1957, "title": "Friendly Persuasion",                             "imdbId": "tt0049233"},
-  {"year": 1957, "title": "Kanal",                                           "imdbId": "tt0050511"},
-  {"year": 1956, "title": "Le Monde du Silence",                             "imdbId": "tt0049463"},
-  {"year": 1955, "title": "Marty",                                           "imdbId": "tt0048356"}
+  {
+    "year": 2024,
+    "title": "Anora",
+    "imdbId": "tt28607951"
+  },
+  {
+    "year": 2023,
+    "title": "Anatomy of a Fall",
+    "imdbId": "tt17009710"
+  },
+  {
+    "year": 2022,
+    "title": "Triangle of Sadness",
+    "imdbId": "tt7322224"
+  },
+  {
+    "year": 2021,
+    "title": "Titane",
+    "imdbId": "tt10944760"
+  },
+  {
+    "year": 2019,
+    "title": "Parasite",
+    "imdbId": "tt6751668"
+  },
+  {
+    "year": 2018,
+    "title": "Shoplifters",
+    "imdbId": "tt8075192"
+  },
+  {
+    "year": 2017,
+    "title": "The Square",
+    "imdbId": "tt4995790"
+  },
+  {
+    "year": 2016,
+    "title": "I, Daniel Blake",
+    "imdbId": "tt5168192"
+  },
+  {
+    "year": 2015,
+    "title": "Dheepan",
+    "imdbId": "tt4082068"
+  },
+  {
+    "year": 2014,
+    "title": "Winter Sleep",
+    "imdbId": "tt2758880"
+  },
+  {
+    "year": 2013,
+    "title": "Blue Is the Warmest Colour",
+    "imdbId": "tt2278871"
+  },
+  {
+    "year": 2012,
+    "title": "Amour",
+    "imdbId": "tt1602620"
+  },
+  {
+    "year": 2011,
+    "title": "The Tree of Life",
+    "imdbId": "tt0478304"
+  },
+  {
+    "year": 2010,
+    "title": "Uncle Boonmee Who Can Recall His Past Lives",
+    "imdbId": "tt1588895"
+  },
+  {
+    "year": 2009,
+    "title": "The White Ribbon",
+    "imdbId": "tt1149362"
+  },
+  {
+    "year": 2008,
+    "title": "The Class",
+    "imdbId": "tt1068108"
+  },
+  {
+    "year": 2007,
+    "title": "4 Months, 3 Weeks and 2 Days",
+    "imdbId": "tt1032846"
+  },
+  {
+    "year": 2006,
+    "title": "The Wind That Shakes the Barley",
+    "imdbId": "tt0460989"
+  },
+  {
+    "year": 2005,
+    "title": "L'Enfant",
+    "imdbId": "tt0432291"
+  },
+  {
+    "year": 2004,
+    "title": "Fahrenheit 9/11",
+    "imdbId": "tt0361596"
+  },
+  {
+    "year": 2003,
+    "title": "Elephant",
+    "imdbId": "tt0363978"
+  },
+  {
+    "year": 2002,
+    "title": "The Pianist",
+    "imdbId": "tt0253474"
+  },
+  {
+    "year": 2001,
+    "title": "The Son's Room",
+    "imdbId": "tt0268378"
+  },
+  {
+    "year": 2000,
+    "title": "Dancer in the Dark",
+    "imdbId": "tt0168629"
+  },
+  {
+    "year": 1999,
+    "title": "Rosetta",
+    "imdbId": "tt0200071"
+  },
+  {
+    "year": 1998,
+    "title": "Eternity and a Day",
+    "imdbId": "tt0156794"
+  },
+  {
+    "year": 1997,
+    "title": "Taste of Cherry",
+    "imdbId": "tt0120265"
+  },
+  {
+    "year": 1997,
+    "title": "The Eel",
+    "imdbId": "tt0119116"
+  },
+  {
+    "year": 1996,
+    "title": "Secrets & Lies",
+    "imdbId": "tt0117589"
+  },
+  {
+    "year": 1995,
+    "title": "Underground",
+    "imdbId": "tt0111507"
+  },
+  {
+    "year": 1994,
+    "title": "Pulp Fiction",
+    "imdbId": "tt0110912"
+  },
+  {
+    "year": 1993,
+    "title": "Farewell My Concubine",
+    "imdbId": "tt0106332"
+  },
+  {
+    "year": 1993,
+    "title": "The Piano",
+    "imdbId": "tt0107822"
+  },
+  {
+    "year": 1992,
+    "title": "The Best Intentions",
+    "imdbId": "tt0101765"
+  },
+  {
+    "year": 1991,
+    "title": "Barton Fink",
+    "imdbId": "tt0101410"
+  },
+  {
+    "year": 1990,
+    "title": "Wild at Heart",
+    "imdbId": "tt0100935"
+  },
+  {
+    "year": 1989,
+    "title": "Sex, Lies, and Videotape",
+    "imdbId": "tt0098724"
+  },
+  {
+    "year": 1988,
+    "title": "Pelle the Conqueror",
+    "imdbId": "tt0095765"
+  },
+  {
+    "year": 1987,
+    "title": "Under the Sun of Satan",
+    "imdbId": "tt0093861"
+  },
+  {
+    "year": 1986,
+    "title": "The Mission",
+    "imdbId": "tt0091530"
+  },
+  {
+    "year": 1985,
+    "title": "When Father Was Away on Business",
+    "imdbId": "tt0087329"
+  },
+  {
+    "year": 1984,
+    "title": "Paris, Texas",
+    "imdbId": "tt0087884"
+  },
+  {
+    "year": 1983,
+    "title": "The Ballad of Narayama",
+    "imdbId": "tt0085858"
+  },
+  {
+    "year": 1982,
+    "title": "Missing",
+    "imdbId": "tt0084183"
+  },
+  {
+    "year": 1982,
+    "title": "Yol",
+    "imdbId": "tt0082979"
+  },
+  {
+    "year": 1981,
+    "title": "Man of Iron",
+    "imdbId": "tt0082543"
+  },
+  {
+    "year": 1980,
+    "title": "Kagemusha",
+    "imdbId": "tt0080979"
+  },
+  {
+    "year": 1980,
+    "title": "All That Jazz",
+    "imdbId": "tt0078754"
+  },
+  {
+    "year": 1979,
+    "title": "Apocalypse Now",
+    "imdbId": "tt0078788"
+  },
+  {
+    "year": 1978,
+    "title": "The Tree of Wooden Clogs",
+    "imdbId": "tt0077700"
+  },
+  {
+    "year": 1977,
+    "title": "Padre Padrone",
+    "imdbId": "tt0076316"
+  },
+  {
+    "year": 1976,
+    "title": "Taxi Driver",
+    "imdbId": "tt0075314"
+  },
+  {
+    "year": 1975,
+    "title": "Chronicle of the Burning Years",
+    "imdbId": "tt0072823"
+  },
+  {
+    "year": 1974,
+    "title": "The Conversation",
+    "imdbId": "tt0071360"
+  },
+  {
+    "year": 1973,
+    "title": "Scarecrow",
+    "imdbId": "tt0070707"
+  },
+  {
+    "year": 1973,
+    "title": "The Hireling",
+    "imdbId": "tt0070172"
+  },
+  {
+    "year": 1972,
+    "title": "Slaughterhouse-Five",
+    "imdbId": "tt0069280"
+  },
+  {
+    "year": 1971,
+    "title": "The Go-Between",
+    "imdbId": "tt0067140"
+  },
+  {
+    "year": 1970,
+    "title": "M*A*S*H",
+    "imdbId": "tt0066026"
+  },
+  {
+    "year": 1966,
+    "title": "A Man and a Woman",
+    "imdbId": "tt0061138"
+  },
+  {
+    "year": 1966,
+    "title": "Blow-Up",
+    "imdbId": "tt0060176"
+  },
+  {
+    "year": 1965,
+    "title": "The Knack ...and How to Get It",
+    "imdbId": "tt0059362"
+  },
+  {
+    "year": 1964,
+    "title": "The Umbrellas of Cherbourg",
+    "imdbId": "tt0058450"
+  },
+  {
+    "year": 1963,
+    "title": "The Leopard",
+    "imdbId": "tt0057091"
+  },
+  {
+    "year": 1962,
+    "title": "O Pagador de Promessas",
+    "imdbId": "tt0056395"
+  },
+  {
+    "year": 1961,
+    "title": "Viridiana",
+    "imdbId": "tt0055601"
+  },
+  {
+    "year": 1961,
+    "title": "Une aussi longue absence",
+    "imdbId": "tt0055465"
+  },
+  {
+    "year": 1960,
+    "title": "La Dolce Vita",
+    "imdbId": "tt0053779"
+  },
+  {
+    "year": 1959,
+    "title": "Black Orpheus",
+    "imdbId": "tt0052357"
+  },
+  {
+    "year": 1958,
+    "title": "The Cranes Are Flying",
+    "imdbId": "tt0051554"
+  },
+  {
+    "year": 1957,
+    "title": "Friendly Persuasion",
+    "imdbId": "tt0049233"
+  },
+  {
+    "year": 1957,
+    "title": "Kanal",
+    "imdbId": "tt0050585"
+  },
+  {
+    "year": 1956,
+    "title": "Le Monde du Silence",
+    "imdbId": "tt0049463"
+  },
+  {
+    "year": 1955,
+    "title": "Marty",
+    "imdbId": "tt0048356"
+  }
 ]
