@@ -443,5 +443,25 @@
     "title": "The Thing",
     "year": 1982,
     "imdbId": "tt0084787"
+  },
+  {
+    "title": "Await Further Instructions",
+    "year": 2018,
+    "imdbId": "tt6277924"
+  },
+  {
+    "title": "Sputnik",
+    "year": 2020,
+    "imdbId": "tt11042808"
+  },
+  {
+    "title": "Synchronic",
+    "year": 2019,
+    "imdbId": "tt8880186"
+  },
+  {
+    "title": "Hereditary",
+    "year": 2018,
+    "imdbId": "tt7784604"
   }
 ]

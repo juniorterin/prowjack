@@ -483,5 +483,11 @@
     "title": "Zozo",
     "year": 2005,
     "imdbId": "tt0417568"
-  }
+  },
+  {"title": "The Emigrants", "year": 1971, "imdbId": "tt0067023"},
+  {"title": "The New Land", "year": 1972, "imdbId": "tt0068769"},
+  {"title": "Ronja Rövardotter", "year": 1984, "imdbId": "tt0088105"},
+  {"title": "I Am Curious (Yellow)", "year": 1967, "imdbId": "tt0062188"},
+  {"title": "The Ox", "year": 1991, "imdbId": "tt0102752"},
+  {"title": "Jerusalem", "year": 1996, "imdbId": "tt0116776"}
 ]
