@@ -6,66 +6,72 @@
 <title>TorrESMIN · Admin</title>
 <link rel="icon" href="/logo.svg">
 <style>
+/* ═══════════════════════════════════════════════
+   WINDOWS 95 AUTHENTIC THEME — admin-login
+   ═══════════════════════════════════════════════ */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
 body {
-  background-color: #c0c0c0;
-  background-image:
-    repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 5px),
-    repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(180,180,180,0.3) 4px, rgba(180,180,180,0.3) 5px);
-  color: #000080;
-  font-family: 'Comic Sans MS', 'Comic Sans', Verdana, sans-serif;
-  font-size: 16px;
+  background: #008080; /* Win95 teal desktop */
+  color: #000000;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  font-size: 11px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-h1, h2, h3 { font-family: 'Comic Sans MS', Verdana; color: #000080; text-shadow: 2px 2px #ffffff; margin: 0 0 8px; }
-a { color: #800080; }
-p { color: #000080; margin: 0; }
+h1 {
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  color: #000000; margin: 0 0 6px; font-size: 13px; font-weight: bold;
+}
+a { color: #000080; }
+p { color: #000000; margin: 0; font-size: 11px; }
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 .blink { animation: blink 1s step-start infinite; }
+
 .login-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 30px 20px;
+  padding: 20px;
 }
 .gifs-row {
   display: flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
+
+/* Janela Win95 */
 .card {
-  border: 3px ridge #ffffff;
-  border-right-color: #808080;
-  border-bottom-color: #808080;
-  background: #d4d0c8;
-  padding: 28px 32px;
+  background: #c0c0c0;
+  border: 2px solid #000000;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #808080,
+    3px 3px 0 #000000;
+  padding: 2px;
   width: 100%;
-  max-width: 380px;
-  text-align: center;
-  box-shadow: 4px 4px 0 #808080;
-}
-.card-titlebar {
-  background: linear-gradient(90deg, #000080, #1084d0);
-  color: #ffffff;
-  font-family: 'Comic Sans MS', Verdana;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 4px 8px;
-  margin: -28px -32px 20px;
+  max-width: 340px;
   text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+}
+
+/* Title bar */
+.card-titlebar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px; font-weight: bold;
+  padding: 3px 6px;
+  display: flex; align-items: center; gap: 4px;
+  margin-bottom: 0;
+  user-select: none;
 }
 .card-titlebar .win-btns {
   margin-left: auto;
@@ -75,72 +81,121 @@ p { color: #000080; margin: 0; }
 .card-titlebar .win-btn {
   width: 16px; height: 14px;
   background: #c0c0c0;
-  border: 1px outset #ffffff;
-  font-size: 10px;
-  line-height: 12px;
-  text-align: center;
-  color: #000;
-  cursor: default;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #404040;
+  border-right: 1px solid #404040;
+  box-shadow: inset 1px 1px 0 #dfdfdf;
+  font-size: 9px; line-height: 13px; text-align: center;
+  color: #000000; cursor: default;
+  font-family: "MS Sans Serif", Arial;
 }
+.card-titlebar .win-btn:active {
+  border-top: 1px solid #404040; border-left: 1px solid #404040;
+  border-bottom: 1px solid #ffffff; border-right: 1px solid #ffffff;
+  box-shadow: none;
+}
+
+/* Card body (client area) */
+.card-body-inner {
+  padding: 16px 20px 20px;
+  background: #c0c0c0;
+  text-align: center;
+}
+
 .brand-mark { display: none; }
 .sub {
-  color: #444444;
-  font-size: 13px;
-  margin: 0 0 18px;
+  color: #404040;
+  font-size: 11px;
+  margin: 0 0 14px;
+  font-family: "MS Sans Serif", Arial;
 }
 label {
   display: block;
   text-align: left;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
-  color: #000080;
-  margin-bottom: 6px;
+  color: #000000;
+  margin-bottom: 4px;
+  font-family: "MS Sans Serif", Arial;
 }
 input[type="password"] {
   width: 100%;
   display: block;
   background: #ffffff;
   color: #000000;
-  border: 2px inset #808080;
-  font-family: 'Comic Sans MS', Verdana;
-  padding: 7px 10px;
-  font-size: 15px;
-  margin-bottom: 16px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #dfdfdf;
+  border-right: 2px solid #dfdfdf;
+  box-shadow: inset 1px 1px 0 #404040;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  padding: 4px 6px;
+  font-size: 11px;
+  margin-bottom: 14px;
+  outline: none;
 }
+input[type="password"]:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -2px;
+}
+
+/* Submit button — default button with thick border */
 button[type="submit"] {
   width: 100%;
-  padding: 9px;
-  font-size: 15px;
-  background: #d4d0c8;
+  padding: 4px 12px;
+  font-size: 11px; font-weight: bold;
+  background: #c0c0c0;
   color: #000000;
-  font-family: 'Comic Sans MS', Verdana;
-  font-weight: bold;
-  border: 2px outset #ffffff;
-  border-right-color: #808080;
-  border-bottom-color: #808080;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  border: 2px solid #000000;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #808080,
+    1px 1px 0 #404040;
   cursor: pointer;
+  min-height: 23px;
+  outline: none;
 }
-button[type="submit"]:hover { background: #e0e0f8; }
+button[type="submit"]:hover { background: #d4d0c8; }
+button[type="submit"]:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -5px;
+}
 button[type="submit"]:active {
-  border: 2px inset #808080;
-  padding-top: 10px;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #dfdfdf,
+    1px 1px 0 #404040;
+  padding-top: 5px;
+  padding-left: 13px;
 }
+button[type="submit"]:disabled {
+  color: #808080;
+  cursor: default;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080, 1px 1px 0 #404040;
+}
+
 .error {
-  color: #cc0000;
-  font-size: 14px;
-  margin-top: 10px;
+  color: #800000;
+  font-size: 11px;
+  margin-top: 8px;
   display: none;
   font-weight: bold;
+  font-family: "MS Sans Serif", Arial;
 }
 .error.show { display: block; }
+
+/* Status bar / footer */
 .footer-bar {
   text-align: center;
-  padding: 14px;
-  color: #444444;
-  font-family: 'Comic Sans MS', Verdana;
-  font-size: 13px;
-  border-top: 2px ridge #808080;
-  background: #b8b4ac;
+  padding: 4px 12px;
+  color: #000000;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  border-top: 2px solid #808080;
+  border-bottom: 1px solid #ffffff;
+  background: #c0c0c0;
   margin-top: auto;
 }
 </style>
@@ -181,13 +236,15 @@ button[type="submit"]:active {
         <div class="win-btn">✕</div>
       </div>
     </div>
-    <img class="brand-mark" src="/logo.svg" alt="TorrESMIN">
-    <h1 style="font-size:22px;">Admin</h1>
-    <p class="sub">TorrESMIN — área restrita</p>
-    <label for="password">🔑 Senha</label>
-    <input type="password" id="password" autofocus autocomplete="current-password">
-    <button type="submit" id="submit-btn">Entrar ▶</button>
-    <div class="error" id="error"></div>
+    <div class="card-body-inner">
+      <img class="brand-mark" src="/logo.svg" alt="TorrESMIN">
+      <h1 style="font-size:13px;text-align:center;margin-bottom:4px;">Admin</h1>
+      <p class="sub">TorrESMIN — área restrita</p>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" autofocus autocomplete="current-password">
+      <button type="submit" id="submit-btn">Entrar</button>
+      <div class="error" id="error"></div>
+    </div>
   </form>
 
   <div style="text-align:center;margin-top:14px;">
