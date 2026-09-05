@@ -90,11 +90,6 @@
     "imdbId": "tt0317887"
   },
   {
-    "title": "Chronicle of a Summer",
-    "year": 1961,
-    "imdbId": "tt0054830"
-  },
-  {
     "title": "O Bandido da Luz Vermelha",
     "year": 1968,
     "imdbId": "tt0063060"
@@ -223,11 +218,6 @@
     "title": "Divino Amor",
     "year": 2019,
     "imdbId": "tt9361050"
-  },
-  {
-    "title": "Swallow",
-    "year": 2019,
-    "imdbId": "tt9198112"
   },
   {
     "title": "Tremor Iê",
@@ -465,11 +455,6 @@
     "imdbId": "tt0088204"
   },
   {
-    "title": "Linhas de Wellington",
-    "year": 2012,
-    "imdbId": "tt2404505"
-  },
-  {
     "title": "Ventos de Agosto",
     "year": 2014,
     "imdbId": "tt3666316"
@@ -489,7 +474,19 @@
     "year": 2022,
     "imdbId": "tt16260356"
   },
-  {"title": "A Febre", "year": 2019, "imdbId": "tt8425370"},
-  {"title": "Temporada", "year": 2018, "imdbId": "tt8012780"},
-  {"title": "Socrates", "year": 2018, "imdbId": "tt7984190"}
+  {
+    "title": "A Febre",
+    "year": 2019,
+    "imdbId": "tt8425370"
+  },
+  {
+    "title": "Temporada",
+    "year": 2018,
+    "imdbId": "tt8012780"
+  },
+  {
+    "title": "Socrates",
+    "year": 2018,
+    "imdbId": "tt7984190"
+  }
 ]

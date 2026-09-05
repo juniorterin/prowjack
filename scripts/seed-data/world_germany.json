@@ -1,105 +1,442 @@
 [
-  {"title": "Wings of Desire", "year": 1987, "imdbId": "tt0093191"},
-  {"title": "Paris, Texas", "year": 1984, "imdbId": "tt0087884"},
-  {"title": "Das Boot", "year": 1981, "imdbId": "tt0082096"},
-  {"title": "The Lives of Others", "year": 2006, "imdbId": "tt0405094"},
-  {"title": "M", "year": 1931, "imdbId": "tt0022100"},
-  {"title": "Metropolis", "year": 1927, "imdbId": "tt0017136"},
-  {"title": "Nosferatu", "year": 1922, "imdbId": "tt0013442"},
-  {"title": "The Cabinet of Dr. Caligari", "year": 1920, "imdbId": "tt0010323"},
-  {"title": "Fitzcarraldo", "year": 1982, "imdbId": "tt0083946"},
-  {"title": "Aguirre, the Wrath of God", "year": 1972, "imdbId": "tt0068182"},
-  {"title": "The Tin Drum", "year": 1979, "imdbId": "tt0079817"},
-  {"title": "Stroszek", "year": 1977, "imdbId": "tt0076362"},
-  {"title": "Woyzeck", "year": 1979, "imdbId": "tt0080213"},
-  {"title": "Ali: Fear Eats the Soul", "year": 1974, "imdbId": "tt0071141"},
-  {"title": "The White Ribbon", "year": 2009, "imdbId": "tt1130884"},
-  {"title": "Run Lola Run", "year": 1998, "imdbId": "tt0130827"},
-  {"title": "Goodbye, Lenin!", "year": 2003, "imdbId": "tt0301357"},
-  {"title": "The Blue Angel", "year": 1930, "imdbId": "tt0020697"},
-  {"title": "Pandora's Box", "year": 1929, "imdbId": "tt0020138"},
-  {"title": "Germany Year Zero", "year": 1948, "imdbId": "tt0040393"},
-  {"title": "The Bitter Tears of Petra von Kant", "year": 1972, "imdbId": "tt0068278"},
-  {"title": "Fox and His Friends", "year": 1975, "imdbId": "tt0073122"},
-  {"title": "The Marriage of Maria Braun", "year": 1979, "imdbId": "tt0079163"},
-  {"title": "Lola", "year": 1981, "imdbId": "tt0082617"},
-  {"title": "Veronika Voss", "year": 1982, "imdbId": "tt0084895"},
-  {"title": "In a Year with 13 Moons", "year": 1978, "imdbId": "tt0077609"},
-  {"title": "Chinese Roulette", "year": 1976, "imdbId": "tt0074232"},
-  {"title": "The Merchant of Four Seasons", "year": 1972, "imdbId": "tt0068560"},
-  {"title": "Effi Briest", "year": 1974, "imdbId": "tt0071412"},
-  {"title": "Katzelmacher", "year": 1969, "imdbId": "tt0064600"},
-  {"title": "Love Is Colder Than Death", "year": 1969, "imdbId": "tt0064685"},
-  {"title": "Beware of a Holy Whore", "year": 1971, "imdbId": "tt0066650"},
-  {"title": "Querelle", "year": 1982, "imdbId": "tt0084516"},
-  {"title": "Berlin Alexanderplatz", "year": 1980, "imdbId": "tt0080453"},
-  {"title": "Mephisto", "year": 1981, "imdbId": "tt0082785"},
-  {"title": "Colonel Redl", "year": 1985, "imdbId": "tt0089005"},
-  {"title": "The Mystery of Kaspar Hauser", "year": 1974, "imdbId": "tt0071691"},
-  {"title": "Heart of Glass", "year": 1976, "imdbId": "tt0074487"},
-  {"title": "Nosferatu the Vampyre", "year": 1979, "imdbId": "tt0079641"},
-  {"title": "Cobra Verde", "year": 1987, "imdbId": "tt0092616"},
-  {"title": "Knife in the Head", "year": 1978, "imdbId": "tt0078097"},
-  {"title": "The Lost Honor of Katharina Blum", "year": 1975, "imdbId": "tt0073437"},
-  {"title": "Marianne and Juliane", "year": 1981, "imdbId": "tt0082855"},
-  {"title": "The Element of Crime", "year": 1984, "imdbId": "tt0087280"},
-  {"title": "Downfall", "year": 2004, "imdbId": "tt0363163"},
-  {"title": "Sophie Scholl: The Final Days", "year": 2005, "imdbId": "tt0426578"},
-  {"title": "The Baader Meinhof Complex", "year": 2008, "imdbId": "tt0765432"},
-  {"title": "Toni Erdmann", "year": 2016, "imdbId": "tt4048272"},
-  {"title": "In the Fade", "year": 2017, "imdbId": "tt6847228"},
-  {"title": "System Crasher", "year": 2019, "imdbId": "tt9484998"},
-  {"title": "Never Look Away", "year": 2018, "imdbId": "tt6743048"},
-  {"title": "Transit", "year": 2018, "imdbId": "tt7836466"},
-  {"title": "Phoenix", "year": 2014, "imdbId": "tt3518820"},
-  {"title": "Barbara", "year": 2012, "imdbId": "tt1893352"},
-  {"title": "Jerichow", "year": 2008, "imdbId": "tt1164089"},
-  {"title": "Yella", "year": 2007, "imdbId": "tt0887221"},
-  {"title": "The Princess and the Warrior", "year": 2000, "imdbId": "tt0230547"},
-  {"title": "Funny Games", "year": 1997, "imdbId": "tt0119167"},
-  {"title": "The Nasty Girl", "year": 1990, "imdbId": "tt0098997"},
-  {"title": "Heimat", "year": 1984, "imdbId": "tt0087376"},
-  {"title": "The Captain of Köpenick", "year": 1956, "imdbId": "tt0049118"},
-  {"title": "The Bridge", "year": 1959, "imdbId": "tt0052579"},
-  {"title": "Stalingrad", "year": 1993, "imdbId": "tt0108188"},
-  {"title": "Cross of Iron", "year": 1977, "imdbId": "tt0075702"},
-  {"title": "Kings of the Road", "year": 1976, "imdbId": "tt0074823"},
-  {"title": "Alice in the Cities", "year": 1974, "imdbId": "tt0071196"},
-  {"title": "The Wrong Move", "year": 1975, "imdbId": "tt0073960"},
-  {"title": "The American Friend", "year": 1977, "imdbId": "tt0075675"},
-  {"title": "Until the End of the World", "year": 1991, "imdbId": "tt0101450"},
-  {"title": "Europa", "year": 1991, "imdbId": "tt0101925"},
-  {"title": "Breaking the Waves", "year": 1996, "imdbId": "tt0115751"},
-  {"title": "Dogville", "year": 2003, "imdbId": "tt0276919"},
-  {"title": "Grizzly Man", "year": 2005, "imdbId": "tt0440223"},
-  {"title": "Cave of Forgotten Dreams", "year": 2010, "imdbId": "tt1664894"},
-  {"title": "Lessons of Darkness", "year": 1992, "imdbId": "tt0104628"},
-  {"title": "Where the Green Ants Dream", "year": 1984, "imdbId": "tt0088369"},
-  {"title": "The Boat Is Full", "year": 1981, "imdbId": "tt0082367"},
-  {"title": "Jonah Who Will Be 25 in the Year 2000", "year": 1976, "imdbId": "tt0074788"},
-  {"title": "Summer in Berlin", "year": 2005, "imdbId": "tt0439884"},
-  {"title": "Halbe Treppe", "year": 2002, "imdbId": "tt0310455"},
-  {"title": "Before the Rain", "year": 1994, "imdbId": "tt0110881"},
-  {"title": "Underground", "year": 1995, "imdbId": "tt0114369"},
-  {"title": "Die Mörder sind unter uns", "year": 1946, "imdbId": "tt0039046"},
-  {"title": "Irgendwo in Berlin", "year": 1946, "imdbId": "tt0038598"},
-  {"title": "Der Hauptmann von Köpenick", "year": 1931, "imdbId": "tt0021966"},
-  {"title": "Das Wachsfigurenkabinett", "year": 1924, "imdbId": "tt0015356"},
-  {"title": "Der Golem", "year": 1920, "imdbId": "tt0011289"},
-  {"title": "Faust", "year": 1926, "imdbId": "tt0016847"},
-  {"title": "Sunrise: A Song of Two Humans", "year": 1927, "imdbId": "tt0018455"},
-  {"title": "Tabu", "year": 1931, "imdbId": "tt0022298"},
-  {"title": "The Last Laugh", "year": 1924, "imdbId": "tt0015006"},
-  {"title": "Spies", "year": 1928, "imdbId": "tt0019388"},
-  {"title": "The Spy Who Came in from the Cold", "year": 1965, "imdbId": "tt0059749"},
-  {"title": "The Reader", "year": 2008, "imdbId": "tt0976051"},
-  {"title": "Good Bye Lenin!", "year": 2003, "imdbId": "tt0301357"},
-  {"title": "A Most Wanted Man", "year": 2014, "imdbId": "tt1676935"},
-  {"title": "Victoria", "year": 2015, "imdbId": "tt4226388"},
-  {"title": "Werk ohne Autor", "year": 2018, "imdbId": "tt6743048"},
-  {"title": "Das weiße Band", "year": 2009, "imdbId": "tt1130884"},
-  {"title": "Oh Boy", "year": 2012, "imdbId": "tt2382169"},
-  {"title": "Wetlands", "year": 2013, "imdbId": "tt2534874"},
-  {"title": "Feuerwerk", "year": 1954, "imdbId": "tt0047025"},
-  {"title": "Lore", "year": 2012, "imdbId": "tt1987180"}
+  {
+    "title": "Wings of Desire",
+    "year": 1987,
+    "imdbId": "tt0093191"
+  },
+  {
+    "title": "Paris, Texas",
+    "year": 1984,
+    "imdbId": "tt0087884"
+  },
+  {
+    "title": "Das Boot",
+    "year": 1981,
+    "imdbId": "tt0082096"
+  },
+  {
+    "title": "The Lives of Others",
+    "year": 2006,
+    "imdbId": "tt0405094"
+  },
+  {
+    "title": "M",
+    "year": 1931,
+    "imdbId": "tt0022100"
+  },
+  {
+    "title": "Metropolis",
+    "year": 1927,
+    "imdbId": "tt0017136"
+  },
+  {
+    "title": "Nosferatu",
+    "year": 1922,
+    "imdbId": "tt0013442"
+  },
+  {
+    "title": "The Cabinet of Dr. Caligari",
+    "year": 1920,
+    "imdbId": "tt0010323"
+  },
+  {
+    "title": "Fitzcarraldo",
+    "year": 1982,
+    "imdbId": "tt0083946"
+  },
+  {
+    "title": "Aguirre, the Wrath of God",
+    "year": 1972,
+    "imdbId": "tt0068182"
+  },
+  {
+    "title": "The Tin Drum",
+    "year": 1979,
+    "imdbId": "tt0079817"
+  },
+  {
+    "title": "Stroszek",
+    "year": 1977,
+    "imdbId": "tt0076362"
+  },
+  {
+    "title": "Woyzeck",
+    "year": 1979,
+    "imdbId": "tt0080213"
+  },
+  {
+    "title": "Ali: Fear Eats the Soul",
+    "year": 1974,
+    "imdbId": "tt0071141"
+  },
+  {
+    "title": "The White Ribbon",
+    "year": 2009,
+    "imdbId": "tt1130884"
+  },
+  {
+    "title": "Run Lola Run",
+    "year": 1998,
+    "imdbId": "tt0130827"
+  },
+  {
+    "title": "Goodbye, Lenin!",
+    "year": 2003,
+    "imdbId": "tt0301357"
+  },
+  {
+    "title": "The Blue Angel",
+    "year": 1930,
+    "imdbId": "tt0020697"
+  },
+  {
+    "title": "Pandora's Box",
+    "year": 1929,
+    "imdbId": "tt0020138"
+  },
+  {
+    "title": "The Bitter Tears of Petra von Kant",
+    "year": 1972,
+    "imdbId": "tt0068278"
+  },
+  {
+    "title": "Fox and His Friends",
+    "year": 1975,
+    "imdbId": "tt0073122"
+  },
+  {
+    "title": "The Marriage of Maria Braun",
+    "year": 1979,
+    "imdbId": "tt0079163"
+  },
+  {
+    "title": "Lola",
+    "year": 1981,
+    "imdbId": "tt0082617"
+  },
+  {
+    "title": "Veronika Voss",
+    "year": 1982,
+    "imdbId": "tt0084895"
+  },
+  {
+    "title": "In a Year with 13 Moons",
+    "year": 1978,
+    "imdbId": "tt0077609"
+  },
+  {
+    "title": "Chinese Roulette",
+    "year": 1976,
+    "imdbId": "tt0074232"
+  },
+  {
+    "title": "The Merchant of Four Seasons",
+    "year": 1972,
+    "imdbId": "tt0068560"
+  },
+  {
+    "title": "Effi Briest",
+    "year": 1974,
+    "imdbId": "tt0071412"
+  },
+  {
+    "title": "Katzelmacher",
+    "year": 1969,
+    "imdbId": "tt0064600"
+  },
+  {
+    "title": "Love Is Colder Than Death",
+    "year": 1969,
+    "imdbId": "tt0064685"
+  },
+  {
+    "title": "Beware of a Holy Whore",
+    "year": 1971,
+    "imdbId": "tt0066650"
+  },
+  {
+    "title": "Querelle",
+    "year": 1982,
+    "imdbId": "tt0084516"
+  },
+  {
+    "title": "Berlin Alexanderplatz",
+    "year": 1980,
+    "imdbId": "tt0080453"
+  },
+  {
+    "title": "Mephisto",
+    "year": 1981,
+    "imdbId": "tt0082785"
+  },
+  {
+    "title": "The Mystery of Kaspar Hauser",
+    "year": 1974,
+    "imdbId": "tt0071691"
+  },
+  {
+    "title": "Heart of Glass",
+    "year": 1976,
+    "imdbId": "tt0074487"
+  },
+  {
+    "title": "Nosferatu the Vampyre",
+    "year": 1979,
+    "imdbId": "tt0079641"
+  },
+  {
+    "title": "Cobra Verde",
+    "year": 1987,
+    "imdbId": "tt0092616"
+  },
+  {
+    "title": "Knife in the Head",
+    "year": 1978,
+    "imdbId": "tt0078097"
+  },
+  {
+    "title": "The Lost Honor of Katharina Blum",
+    "year": 1975,
+    "imdbId": "tt0073437"
+  },
+  {
+    "title": "Marianne and Juliane",
+    "year": 1981,
+    "imdbId": "tt0082855"
+  },
+  {
+    "title": "Downfall",
+    "year": 2004,
+    "imdbId": "tt0363163"
+  },
+  {
+    "title": "Sophie Scholl: The Final Days",
+    "year": 2005,
+    "imdbId": "tt0426578"
+  },
+  {
+    "title": "The Baader Meinhof Complex",
+    "year": 2008,
+    "imdbId": "tt0765432"
+  },
+  {
+    "title": "Toni Erdmann",
+    "year": 2016,
+    "imdbId": "tt4048272"
+  },
+  {
+    "title": "In the Fade",
+    "year": 2017,
+    "imdbId": "tt6847228"
+  },
+  {
+    "title": "System Crasher",
+    "year": 2019,
+    "imdbId": "tt9484998"
+  },
+  {
+    "title": "Never Look Away",
+    "year": 2018,
+    "imdbId": "tt6743048"
+  },
+  {
+    "title": "Transit",
+    "year": 2018,
+    "imdbId": "tt7836466"
+  },
+  {
+    "title": "Phoenix",
+    "year": 2014,
+    "imdbId": "tt3518820"
+  },
+  {
+    "title": "Barbara",
+    "year": 2012,
+    "imdbId": "tt1893352"
+  },
+  {
+    "title": "Jerichow",
+    "year": 2008,
+    "imdbId": "tt1164089"
+  },
+  {
+    "title": "Yella",
+    "year": 2007,
+    "imdbId": "tt0887221"
+  },
+  {
+    "title": "The Princess and the Warrior",
+    "year": 2000,
+    "imdbId": "tt0230547"
+  },
+  {
+    "title": "Funny Games",
+    "year": 1997,
+    "imdbId": "tt0119167"
+  },
+  {
+    "title": "The Nasty Girl",
+    "year": 1990,
+    "imdbId": "tt0098997"
+  },
+  {
+    "title": "Heimat",
+    "year": 1984,
+    "imdbId": "tt0087376"
+  },
+  {
+    "title": "The Captain of Köpenick",
+    "year": 1956,
+    "imdbId": "tt0049118"
+  },
+  {
+    "title": "The Bridge",
+    "year": 1959,
+    "imdbId": "tt0052579"
+  },
+  {
+    "title": "Stalingrad",
+    "year": 1993,
+    "imdbId": "tt0108188"
+  },
+  {
+    "title": "Cross of Iron",
+    "year": 1977,
+    "imdbId": "tt0075702"
+  },
+  {
+    "title": "Kings of the Road",
+    "year": 1976,
+    "imdbId": "tt0074823"
+  },
+  {
+    "title": "Alice in the Cities",
+    "year": 1974,
+    "imdbId": "tt0071196"
+  },
+  {
+    "title": "The Wrong Move",
+    "year": 1975,
+    "imdbId": "tt0073960"
+  },
+  {
+    "title": "The American Friend",
+    "year": 1977,
+    "imdbId": "tt0075675"
+  },
+  {
+    "title": "Until the End of the World",
+    "year": 1991,
+    "imdbId": "tt0101450"
+  },
+  {
+    "title": "Grizzly Man",
+    "year": 2005,
+    "imdbId": "tt0440223"
+  },
+  {
+    "title": "Cave of Forgotten Dreams",
+    "year": 2010,
+    "imdbId": "tt1664894"
+  },
+  {
+    "title": "Lessons of Darkness",
+    "year": 1992,
+    "imdbId": "tt0104628"
+  },
+  {
+    "title": "Where the Green Ants Dream",
+    "year": 1984,
+    "imdbId": "tt0088369"
+  },
+  {
+    "title": "Summer in Berlin",
+    "year": 2005,
+    "imdbId": "tt0439884"
+  },
+  {
+    "title": "Halbe Treppe",
+    "year": 2002,
+    "imdbId": "tt0310455"
+  },
+  {
+    "title": "Die Mörder sind unter uns",
+    "year": 1946,
+    "imdbId": "tt0039046"
+  },
+  {
+    "title": "Irgendwo in Berlin",
+    "year": 1946,
+    "imdbId": "tt0038598"
+  },
+  {
+    "title": "Der Hauptmann von Köpenick",
+    "year": 1931,
+    "imdbId": "tt0021966"
+  },
+  {
+    "title": "Das Wachsfigurenkabinett",
+    "year": 1924,
+    "imdbId": "tt0015356"
+  },
+  {
+    "title": "Der Golem",
+    "year": 1920,
+    "imdbId": "tt0011289"
+  },
+  {
+    "title": "Faust",
+    "year": 1926,
+    "imdbId": "tt0016847"
+  },
+  {
+    "title": "Sunrise: A Song of Two Humans",
+    "year": 1927,
+    "imdbId": "tt0018455"
+  },
+  {
+    "title": "Tabu",
+    "year": 1931,
+    "imdbId": "tt0022298"
+  },
+  {
+    "title": "The Last Laugh",
+    "year": 1924,
+    "imdbId": "tt0015006"
+  },
+  {
+    "title": "Spies",
+    "year": 1928,
+    "imdbId": "tt0019388"
+  },
+  {
+    "title": "The Reader",
+    "year": 2008,
+    "imdbId": "tt0976051"
+  },
+  {
+    "title": "Victoria",
+    "year": 2015,
+    "imdbId": "tt4226388"
+  },
+  {
+    "title": "Oh Boy",
+    "year": 2012,
+    "imdbId": "tt2382169"
+  },
+  {
+    "title": "Wetlands",
+    "year": 2013,
+    "imdbId": "tt2534874"
+  },
+  {
+    "title": "Feuerwerk",
+    "year": 1954,
+    "imdbId": "tt0047025"
+  },
+  {
+    "title": "Lore",
+    "year": 2012,
+    "imdbId": "tt1987180"
+  }
 ]

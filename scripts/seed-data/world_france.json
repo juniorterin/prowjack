@@ -120,11 +120,6 @@
     "imdbId": "tt0111495"
   },
   {
-    "title": "The Son's Room",
-    "year": 2001,
-    "imdbId": "tt0264472"
-  },
-  {
     "title": "Portrait of a Lady on Fire",
     "year": 2019,
     "imdbId": "tt8613070"
@@ -240,19 +235,9 @@
     "imdbId": "tt0048434"
   },
   {
-    "title": "The Round-Up",
-    "year": 1969,
-    "imdbId": "tt0064705"
-  },
-  {
     "title": "Z",
     "year": 1969,
     "imdbId": "tt0065566"
-  },
-  {
-    "title": "The Battle of Algiers",
-    "year": 1966,
-    "imdbId": "tt0058946"
   },
   {
     "title": "The Return of Martin Guerre",
@@ -330,11 +315,6 @@
     "imdbId": "tt0018192"
   },
   {
-    "title": "Voyage to Italy",
-    "year": 1954,
-    "imdbId": "tt0047896"
-  },
-  {
     "title": "Vivre Sa Vie",
     "year": 1962,
     "imdbId": "tt0056663"
@@ -365,19 +345,9 @@
     "imdbId": "tt0116841"
   },
   {
-    "title": "Wild at Heart",
-    "year": 1984,
-    "imdbId": "tt0088414"
-  },
-  {
     "title": "L'Humanité",
     "year": 1999,
     "imdbId": "tt0199694"
-  },
-  {
-    "title": "Rosetta",
-    "year": 1999,
-    "imdbId": "tt0200071"
   },
   {
     "title": "Cache",
@@ -498,10 +468,5 @@
     "title": "My Dinner with André",
     "year": 1981,
     "imdbId": "tt0082783"
-  },
-  {
-    "title": "Scenes from a Marriage",
-    "year": 1973,
-    "imdbId": "tt0068759"
   }
 ]
