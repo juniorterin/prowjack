@@ -171,11 +171,12 @@
   .ix-item {
     background: #ffffff; border: 2px outset #ffffff;
     border-right-color: #808080; border-bottom-color: #808080;
-    padding: 8px 10px; cursor: pointer; display: flex; align-items: center; gap: 8px;
+    padding: 7px 10px; cursor: pointer; display: flex; align-items: center; gap: 8px;
     font-size: 14px; color: #000080;
   }
-  .ix-item.sel { background: #000080; color: #ffff00; border-style: inset; }
-  .ix-item.sel::before { content: "✓ "; }
+  .ix-item:hover { background: #e0e0ff; }
+  .ix-item input[type="checkbox"] { accent-color: #000080; width: 15px; height: 15px; flex: none; cursor: pointer; }
+  .ix-item.sel { background: #dde8ff; }
   .ix-empty { color: #444; font-style: italic; font-size: 14px; padding: 16px; text-align: center; }
 
   /* ── Range ───────────────────────────────── */
@@ -866,7 +867,7 @@ const state = {
   sortGroupBy: "language",
   sortOrderBy: "seeders",
   sortBy: computeSortBy("language", "seeders"),
-  excludeFilters: new Set(),
+  excludeFilters: new Set(["brremux"]),
   videoSizeLimit: "",
   enableCatalog: true,
   catalogs: [],
@@ -984,16 +985,23 @@ function renderIndexers() {
   grid.innerHTML = "";
   for (const ix of items) {
     const on = state.selectedIndexers.has(ix.id);
-    const el = document.createElement("div");
-    el.className = "ix-item" + (on ? " on" : "") + (ix.private ? " priv" : "");
-    el.innerHTML = `<span class="dot"></span><span class="nm">${ix.name}</span>`;
-    el.addEventListener("click", () => {
-      if (state.selectedIndexers.has(ix.id)) state.selectedIndexers.delete(ix.id);
-      else state.selectedIndexers.add(ix.id);
-      el.classList.toggle("on");
+    const label = document.createElement("label");
+    label.className = "ix-item" + (on ? " sel" : "") + (ix.private ? " priv" : "");
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = on;
+    cb.addEventListener("change", () => {
+      if (cb.checked) state.selectedIndexers.add(ix.id);
+      else state.selectedIndexers.delete(ix.id);
+      label.classList.toggle("sel", cb.checked);
       updateIxCount();
     });
-    grid.appendChild(el);
+    const nm = document.createElement("span");
+    nm.className = "nm";
+    nm.textContent = ix.name;
+    label.appendChild(cb);
+    label.appendChild(nm);
+    grid.appendChild(label);
   }
   updateIxCount();
 }
