@@ -51,7 +51,7 @@ router.get("/:userConfig/catalog/:type/:id.json", async (req, res) => {
             genres:      enriched.genres,
           };
         } catch { return null; }
-      }))).filter(m => m && m.poster);
+      }))).filter(m => m && m.name);
       rc.set(cacheKey, JSON.stringify(metas), CATALOG_CACHE_TTL).catch(() => {});
     }
 
