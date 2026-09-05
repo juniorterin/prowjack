@@ -15,12 +15,17 @@ describe("checkRateLimit", () => {
 });
 
 describe("getClientIp", () => {
-  test("prefers the first X-Forwarded-For entry", () => {
+  test("prefers CF-Connecting-IP over X-Forwarded-For (Cloudflare Tunnel)", () => {
+    const req = { headers: { "cf-connecting-ip": "5.5.5.5", "x-forwarded-for": "9.9.9.9, 1.1.1.1" }, socket: { remoteAddress: "10.0.0.1" } };
+    assert.equal(routeHelpers.getClientIp(req), "5.5.5.5");
+  });
+
+  test("falls back to the first X-Forwarded-For entry when CF header is absent", () => {
     const req = { headers: { "x-forwarded-for": "9.9.9.9, 1.1.1.1" }, socket: { remoteAddress: "10.0.0.1" } };
     assert.equal(routeHelpers.getClientIp(req), "9.9.9.9");
   });
 
-  test("falls back to the socket address without the header", () => {
+  test("falls back to the socket address without any proxy header", () => {
     const req = { headers: {}, socket: { remoteAddress: "10.0.0.1" } };
     assert.equal(routeHelpers.getClientIp(req), "10.0.0.1");
   });

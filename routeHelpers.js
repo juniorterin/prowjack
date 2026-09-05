@@ -33,11 +33,17 @@ function checkRateLimit(ip) {
   return true;
 }
 
-// IP real do cliente atrás do proxy reverso (Coolify etc.) — mesmo padrão já
-// usado pelo rate limiter em addon.js, promovido aqui pra ser reaproveitado
-// pelo gate de chave de acesso (accessKeys.js).
+// IP real do cliente atrás do proxy reverso (Coolify + Cloudflare Tunnel).
+// Prioridade:
+//   1. CF-Connecting-IP — injetado pela borda do Cloudflare, nunca forjável pelo cliente.
+//   2. X-Forwarded-For  — primeiro da lista (IP de quem iniciou a conexão com o proxy).
+//   3. remoteAddress    — fallback direto (dev local, acesso sem proxy).
 function getClientIp(req) {
-  return req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.socket.remoteAddress;
+  return (
+    req.headers["cf-connecting-ip"]?.trim() ||
+    req.headers["x-forwarded-for"]?.split(",")[0]?.trim() ||
+    req.socket.remoteAddress
+  );
 }
 
 function getPublicBase(req) {
