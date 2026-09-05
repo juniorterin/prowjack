@@ -145,11 +145,6 @@
     "imdbId": "tt0072318"
   },
   {
-    "title": "Bay of Blood",
-    "year": 1971,
-    "imdbId": "tt0067119"
-  },
-  {
     "title": "The Perfume of the Lady in Black",
     "year": 1974,
     "imdbId": "tt0071911"
@@ -158,11 +153,6 @@
     "title": "Strip Nude for Your Killer",
     "year": 1975,
     "imdbId": "tt0074010"
-  },
-  {
-    "title": "What Have You Done to Solange?",
-    "year": 1972,
-    "imdbId": "tt5752306"
   },
   {
     "title": "Who Saw Her Die?",
@@ -270,11 +260,6 @@
     "imdbId": "tt0053649"
   },
   {
-    "title": "Bay of Blood",
-    "year": 1971,
-    "imdbId": "tt0067119"
-  },
-  {
     "title": "The Body",
     "year": 1974,
     "imdbId": "tt0070855"
@@ -350,11 +335,6 @@
     "imdbId": "tt1219289"
   },
   {
-    "title": "Tenebrae",
-    "year": 1982,
-    "imdbId": "tt0084777"
-  },
-  {
     "title": "Solamente Nero",
     "year": 1978,
     "imdbId": "tt0078337"
@@ -380,11 +360,6 @@
     "imdbId": "tt0082511"
   },
   {
-    "title": "The Beyond",
-    "year": 1981,
-    "imdbId": "tt0082307"
-  },
-  {
     "title": "Darkness",
     "year": 1993,
     "imdbId": "tt0106744"
@@ -395,19 +370,9 @@
     "imdbId": "tt0082236"
   },
   {
-    "title": "Paura nella città dei morti viventi",
-    "year": 1980,
-    "imdbId": "tt0080491"
-  },
-  {
     "title": "The Sect",
     "year": 1991,
     "imdbId": "tt0103101"
-  },
-  {
-    "title": "La Terza Madre",
-    "year": 2007,
-    "imdbId": "tt0808209"
   },
   {
     "title": "Absurd",
@@ -450,19 +415,9 @@
     "imdbId": "tt0074867"
   },
   {
-    "title": "Eyeball",
-    "year": 1975,
-    "imdbId": "tt0073083"
-  },
-  {
     "title": "The Living Dead at Manchester Morgue",
     "year": 1974,
     "imdbId": "tt0072220"
-  },
-  {
-    "title": "Twitch of the Death Nerve",
-    "year": 1971,
-    "imdbId": "tt0067119"
   },
   {
     "title": "Suspiria",
@@ -538,5 +493,10 @@
     "title": "Death on the Four-Poster",
     "year": 1964,
     "imdbId": "tt0058067"
+  },
+  {
+    "title": "Death Steps in the Dark",
+    "year": 1977,
+    "imdbId": "tt0076073"
   }
 ]
