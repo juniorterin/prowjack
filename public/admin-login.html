@@ -9,19 +9,20 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
 body {
-  background-color: #000000;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 30px 30px;
-  color: #ffff00;
+  background-color: #c0c0c0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 5px),
+    repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(180,180,180,0.3) 4px, rgba(180,180,180,0.3) 5px);
+  color: #000080;
   font-family: 'Comic Sans MS', 'Comic Sans', Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-h1, h2, h3 { font-family: 'Comic Sans MS', Verdana; color: #00ffff; text-shadow: 2px 2px #000080; margin: 0 0 8px; }
-a { color: #ff00ff; }
-p { color: #ffff00; margin: 0; }
+h1, h2, h3 { font-family: 'Comic Sans MS', Verdana; color: #000080; text-shadow: 2px 2px #ffffff; margin: 0 0 8px; }
+a { color: #800080; }
+p { color: #000080; margin: 0; }
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -35,117 +36,185 @@ p { color: #ffff00; margin: 0; }
   flex: 1;
   padding: 30px 20px;
 }
+.gifs-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
 .card {
-  border: 3px ridge #c0c0c0;
-  background: #000033;
+  border: 3px ridge #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  background: #d4d0c8;
   padding: 28px 32px;
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
   text-align: center;
+  box-shadow: 4px 4px 0 #808080;
+}
+.card-titlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  font-family: 'Comic Sans MS', Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin: -28px -32px 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.card-titlebar .win-btns {
+  margin-left: auto;
+  display: flex;
+  gap: 2px;
+}
+.card-titlebar .win-btn {
+  width: 16px; height: 14px;
+  background: #c0c0c0;
+  border: 1px outset #ffffff;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #000;
+  cursor: default;
 }
 .brand-mark { display: none; }
 .sub {
-  color: #c0c0c0;
-  font-size: 12px;
+  color: #444444;
+  font-size: 13px;
   margin: 0 0 18px;
 }
 label {
   display: block;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  color: #ffff00;
-  text-transform: uppercase;
+  color: #000080;
   margin-bottom: 6px;
-  letter-spacing: .04em;
 }
 input[type="password"] {
   width: 100%;
   display: block;
-  background: #000080;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   border: 2px inset #808080;
   font-family: 'Comic Sans MS', Verdana;
-  padding: 6px 8px;
-  font-size: 14px;
-  margin-bottom: 14px;
+  padding: 7px 10px;
+  font-size: 15px;
+  margin-bottom: 16px;
 }
 button[type="submit"] {
   width: 100%;
-  padding: 8px;
-  font-size: 14px;
-  background: #c0c0c0;
+  padding: 9px;
+  font-size: 15px;
+  background: #d4d0c8;
   color: #000000;
   font-family: 'Comic Sans MS', Verdana;
   font-weight: bold;
   border: 2px outset #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
   cursor: pointer;
 }
-button[type="submit"]:active { border: 2px inset #808080; }
+button[type="submit"]:hover { background: #e0e0f8; }
+button[type="submit"]:active {
+  border: 2px inset #808080;
+  padding-top: 10px;
+}
 .error {
-  color: #ff0000;
-  font-size: 12px;
+  color: #cc0000;
+  font-size: 14px;
   margin-top: 10px;
   display: none;
   font-weight: bold;
-  text-shadow: 1px 1px #000;
 }
 .error.show { display: block; }
 .footer-bar {
   text-align: center;
   padding: 14px;
-  color: #808080;
+  color: #444444;
   font-family: 'Comic Sans MS', Verdana;
-  font-size: 12px;
-  border-top: 2px ridge #c0c0c0;
+  font-size: 13px;
+  border-top: 2px ridge #808080;
+  background: #b8b4ac;
   margin-top: auto;
 }
 </style>
 </head>
 <body>
 
-<marquee behavior="scroll" direction="left" scrollamount="5" style="background:#000080;color:#ffff00;font-family:'Comic Sans MS',Verdana;font-weight:bold;font-size:15px;padding:5px 0;border-top:3px ridge #c0c0c0;border-bottom:3px ridge #c0c0c0;">&#9733; BEM-VINDO AO TORRESMIN &#9733; O MELHOR CATÁLOGO DE TORRENTS &#9733; STREAMING DE QUALIDADE DESDE 1997 &#9733; ÁREA RESTRITA &#9733;</marquee>
+<marquee behavior="scroll" direction="left" scrollamount="5" style="background:#000080;color:#ffff00;font-family:'Comic Sans MS',Verdana;font-weight:bold;font-size:16px;padding:6px 0;border-top:3px ridge #ffffff;border-bottom:3px ridge #808080;">&#9733; BEM-VINDO AO TORRESMIN &#9733; O MELHOR CATÁLOGO DE TORRENTS &#9733; STREAMING DE QUALIDADE DESDE 1997 &#9733; ÁREA RESTRITA &#9733;</marquee>
 
 <div class="login-wrapper">
-  <div style="text-align:center;margin-bottom:16px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" style="display:block;margin:0 auto 8px">
+
+  <div class="gifs-row">
+    <!-- GIFs estilo GeoCities via Web Archive / arquivos públicos -->
+    <img src="https://web.archive.org/web/20090830050558/http://www.geocities.com/Heartland/Estates/1328/images/film.gif" alt="" width="40" height="40" onerror="this.style.display='none'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="280" height="64" style="display:block;">
       <defs>
-        <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id="chrome2" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#ffffff"/>
-          <stop offset="30%" stop-color="#c0c0c0"/>
-          <stop offset="50%" stop-color="#808080"/>
-          <stop offset="70%" stop-color="#c0c0c0"/>
+          <stop offset="25%" stop-color="#c0c0c0"/>
+          <stop offset="50%" stop-color="#606060"/>
+          <stop offset="75%" stop-color="#c0c0c0"/>
           <stop offset="100%" stop-color="#404040"/>
         </linearGradient>
-        <filter id="shadow"><feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000080" flood-opacity="0.8"/></filter>
+        <filter id="sh2"><feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="#000080" flood-opacity="0.6"/></filter>
       </defs>
-      <text x="150" y="48" text-anchor="middle" font-family="Times New Roman, serif" font-size="52" font-weight="bold" fill="url(#chrome)" filter="url(#shadow)" letter-spacing="2">TorrESMIN</text>
+      <text x="140" y="52" text-anchor="middle" font-family="Times New Roman, serif" font-size="54" font-weight="bold" fill="url(#chrome2)" filter="url(#sh2)" letter-spacing="1">TorrESMIN</text>
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="30" style="display:block;margin:0 auto">
-      <circle cx="20" cy="15" r="3" fill="#ffff00"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></circle>
-      <circle cx="60" cy="15" r="2" fill="#00ffff"><animate attributeName="opacity" values="0;1;0" dur="0.8s" repeatCount="indefinite"/></circle>
-      <circle cx="100" cy="15" r="3" fill="#ff00ff"><animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/></circle>
-      <circle cx="140" cy="15" r="2" fill="#00ff00"><animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/></circle>
-      <circle cx="180" cy="15" r="3" fill="#ff0000"><animate attributeName="opacity" values="1;0;1" dur="0.7s" repeatCount="indefinite"/></circle>
+    <img src="https://web.archive.org/web/20090830050558/http://www.geocities.com/Heartland/Estates/1328/images/film.gif" alt="" width="40" height="40" onerror="this.style.display='none'">
+  </div>
+
+  <!-- Animação de bolinhas coloridas -->
+  <div style="text-align:center;margin-bottom:14px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="24">
+      <circle cx="20" cy="12" r="5" fill="#ff0000"><animate attributeName="opacity" values="1;0;1" dur="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="50" cy="12" r="5" fill="#ff8800"><animate attributeName="opacity" values="0;1;0" dur="0.6s" begin="0.1s" repeatCount="indefinite"/></circle>
+      <circle cx="80" cy="12" r="5" fill="#ffff00"><animate attributeName="opacity" values="1;0;1" dur="0.6s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="110" cy="12" r="5" fill="#00cc00"><animate attributeName="opacity" values="0;1;0" dur="0.6s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="12" r="5" fill="#0000ff"><animate attributeName="opacity" values="1;0;1" dur="0.6s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="170" cy="12" r="5" fill="#cc00cc"><animate attributeName="opacity" values="0;1;0" dur="0.6s" begin="0.5s" repeatCount="indefinite"/></circle>
     </svg>
   </div>
 
   <form class="card" id="login-form">
+    <div class="card-titlebar">
+      🔐 TorrESMIN Admin
+      <div class="win-btns">
+        <div class="win-btn">_</div>
+        <div class="win-btn">□</div>
+        <div class="win-btn">✕</div>
+      </div>
+    </div>
     <img class="brand-mark" src="/logo.svg" alt="TorrESMIN">
-    <h1>Admin</h1>
+    <h1 style="font-size:22px;">Admin</h1>
     <p class="sub">TorrESMIN — área restrita</p>
-    <label for="password">Senha</label>
+    <label for="password">🔑 Senha</label>
     <input type="password" id="password" autofocus autocomplete="current-password">
-    <button type="submit" id="submit-btn">Entrar</button>
+    <button type="submit" id="submit-btn">Entrar ▶</button>
     <div class="error" id="error"></div>
   </form>
+
+  <div style="text-align:center;margin-top:14px;">
+    <img src="https://web.archive.org/web/20091021165527/http://geocities.com/Area51/Labyrinth/7730/line.gif" alt="" width="300" height="10" onerror="this.style.display='none'">
+  </div>
+
 </div>
 
 <div class="footer-bar">
-  <div style="color:#ffff00;">&#9733; TorrESMIN &#9733;</div>
-  <div>Melhor visto em <span style="color:#00ffff;">Netscape Navigator 4.0</span> · Resolução <span style="color:#00ff00;">800x600</span></div>
-  <div style="margin-top:6px;">Visitantes: <span style="color:#ff0000;font-weight:bold;" class="blink">001337</span></div>
-  <div style="margin-top:4px;color:#c0c0c0;">© 1997–2025 TorrESMIN</div>
+  <div>
+    <img src="https://web.archive.org/web/20091021165527/http://geocities.com/Area51/Labyrinth/7730/star.gif" alt="★" width="16" height="16" onerror="this.replaceWith('★')">
+    TorrESMIN
+    <img src="https://web.archive.org/web/20091021165527/http://geocities.com/Area51/Labyrinth/7730/star.gif" alt="★" width="16" height="16" onerror="this.replaceWith('★')">
+  </div>
+  <div>Melhor visto em <b>Netscape Navigator 4.0</b> · Resolução <b>800x600</b></div>
+  <div style="margin-top:6px;">Visitantes: <span style="color:#cc0000;font-weight:bold;font-size:16px;" class="blink">001337</span></div>
+  <div style="margin-top:4px;color:#666;">© 1997–2025 TorrESMIN</div>
 </div>
 
 <script>
@@ -167,7 +236,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     err.textContent = e.message;
     err.classList.add("show");
     btn.disabled = false;
-    btn.textContent = "Entrar";
+    btn.textContent = "Entrar ▶";
   }
 });
 </script>
