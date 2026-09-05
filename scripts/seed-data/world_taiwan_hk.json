@@ -185,11 +185,6 @@
     "imdbId": "tt0216204"
   },
   {
-    "title": "The Eye",
-    "year": 2002,
-    "imdbId": "tt0325433"
-  },
-  {
     "title": "Infernal Affairs",
     "year": 2002,
     "imdbId": "tt0338564"
@@ -215,34 +210,9 @@
     "imdbId": "tt0286112"
   },
   {
-    "title": "Journey to the West",
-    "year": 2013,
-    "imdbId": "tt2318530"
-  },
-  {
-    "title": "The Mermaid",
-    "year": 2016,
-    "imdbId": "tt4701660"
-  },
-  {
     "title": "Ip Man",
     "year": 2008,
     "imdbId": "tt1220719"
-  },
-  {
-    "title": "The Warlords",
-    "year": 2007,
-    "imdbId": "tt0968350"
-  },
-  {
-    "title": "The Monkey King",
-    "year": 2014,
-    "imdbId": "tt1954452"
-  },
-  {
-    "title": "My Beloved Bodyguard",
-    "year": 2016,
-    "imdbId": "tt5065684"
   },
   {
     "title": "Project A",
@@ -258,16 +228,6 @@
     "title": "Drunken Master II",
     "year": 1994,
     "imdbId": "tt0110020"
-  },
-  {
-    "title": "Rumble in the Bronx",
-    "year": 1995,
-    "imdbId": "tt0113326"
-  },
-  {
-    "title": "Rebel Without a Cause",
-    "year": 2014,
-    "imdbId": "tt2637276"
   },
   {
     "title": "Cape No. 7",
@@ -295,19 +255,9 @@
     "imdbId": "tt4919310"
   },
   {
-    "title": "Zone Pro Site",
-    "year": 2013,
-    "imdbId": "tt2789442"
-  },
-  {
     "title": "The Tag-Along",
     "year": 2015,
     "imdbId": "tt4703538"
-  },
-  {
-    "title": "The Bride's Diaries",
-    "year": 2018,
-    "imdbId": "tt8134958"
   },
   {
     "title": "Your Name Engraved Herein",
@@ -315,9 +265,9 @@
     "imdbId": "tt11428330"
   },
   {
-    "title": "My Missing Valentine",
-    "year": 2020,
-    "imdbId": "tt12697244"
+    "title": "A Sun",
+    "year": 2019,
+    "imdbId": "tt11128632"
   },
   {
     "title": "Detention",
@@ -325,9 +275,14 @@
     "imdbId": "tt9196832"
   },
   {
-    "title": "A Sun",
-    "year": 2019,
-    "imdbId": "tt11128632"
+    "title": "Trivisa",
+    "year": 2016,
+    "imdbId": "tt5743278"
+  },
+  {
+    "title": "Overheard",
+    "year": 2009,
+    "imdbId": "tt1375685"
   },
   {
     "title": "Cold War",
@@ -340,13 +295,63 @@
     "imdbId": "tt2835324"
   },
   {
-    "title": "Trivisa",
-    "year": 2016,
-    "imdbId": "tt5743278"
+    "title": "Patrick Tam's Love Massacre",
+    "year": 1981,
+    "imdbId": "tt0082742"
   },
   {
-    "title": "Overheard",
-    "year": 2009,
-    "imdbId": "tt1375685"
+    "title": "Boat People",
+    "year": 1982,
+    "imdbId": "tt0083641"
+  },
+  {
+    "title": "Rouge",
+    "year": 1987,
+    "imdbId": "tt0093946"
+  },
+  {
+    "title": "Song of the Exile",
+    "year": 1990,
+    "imdbId": "tt0100389"
+  },
+  {
+    "title": "Summer Snow",
+    "year": 1995,
+    "imdbId": "tt0114606"
+  },
+  {
+    "title": "Comrades: Almost a Love Story",
+    "year": 1996,
+    "imdbId": "tt0115946"
+  },
+  {
+    "title": "July Rhapsody",
+    "year": 2002,
+    "imdbId": "tt0318678"
+  },
+  {
+    "title": "Echoes of the Rainbow",
+    "year": 2010,
+    "imdbId": "tt1462634"
+  },
+  {
+    "title": "The Eye",
+    "year": 2002,
+    "imdbId": "tt0325433"
+  },
+  {
+    "title": "The Warlords",
+    "year": 2007,
+    "imdbId": "tt0968350"
+  },
+  {
+    "title": "The Lovers on the Bridge",
+    "year": 1991,
+    "imdbId": "tt0099871"
+  },
+  {
+    "title": "The Hole",
+    "year": 1998,
+    "imdbId": "tt0145660"
   }
 ]

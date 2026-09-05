@@ -255,11 +255,6 @@
     "imdbId": "tt0065789"
   },
   {
-    "title": "Miss Smilla's Feeling for Snow",
-    "year": 1997,
-    "imdbId": "tt0117509"
-  },
-  {
     "title": "The Girl with the Dragon Tattoo",
     "year": 2009,
     "imdbId": "tt1132620"
@@ -295,29 +290,9 @@
     "imdbId": "tt0382330"
   },
   {
-    "title": "Kopps",
-    "year": 2003,
-    "imdbId": "tt0363082"
-  },
-  {
     "title": "The Man on the Roof",
     "year": 1976,
     "imdbId": "tt0074919"
-  },
-  {
-    "title": "The Terrorists",
-    "year": 1975,
-    "imdbId": "tt0073798"
-  },
-  {
-    "title": "Roseanna",
-    "year": 1967,
-    "imdbId": "tt0061890"
-  },
-  {
-    "title": "The Abominable Snowman",
-    "year": 1951,
-    "imdbId": "tt0042832"
   },
   {
     "title": "The Emigrants",
@@ -378,5 +353,130 @@
     "title": "Zozo",
     "year": 2005,
     "imdbId": "tt0417568"
+  },
+  {
+    "title": "Miss Smilla's Feeling for Snow",
+    "year": 1997,
+    "imdbId": "tt0117509"
+  },
+  {
+    "title": "The Terrorists",
+    "year": 1975,
+    "imdbId": "tt0073798"
+  },
+  {
+    "title": "Roseanna",
+    "year": 1967,
+    "imdbId": "tt0061890"
+  },
+  {
+    "title": "Triangle of Sadness",
+    "year": 2022,
+    "imdbId": "tt7322224"
+  },
+  {
+    "title": "The Swimmers",
+    "year": 2022,
+    "imdbId": "tt14900590"
+  },
+  {
+    "title": "Beartown",
+    "year": 2020,
+    "imdbId": "tt8812298"
+  },
+  {
+    "title": "Quicksand",
+    "year": 2019,
+    "imdbId": "tt7768772"
+  },
+  {
+    "title": "Border",
+    "year": 2018,
+    "imdbId": "tt5814060"
+  },
+  {
+    "title": "A Serious Game",
+    "year": 2016,
+    "imdbId": "tt4196374"
+  },
+  {
+    "title": "The Here After",
+    "year": 2015,
+    "imdbId": "tt3758460"
+  },
+  {
+    "title": "We Are the Best!",
+    "year": 2013,
+    "imdbId": "tt2759758"
+  },
+  {
+    "title": "Call Girl",
+    "year": 2012,
+    "imdbId": "tt2282568"
+  },
+  {
+    "title": "Easy Money",
+    "year": 2010,
+    "imdbId": "tt1594667"
+  },
+  {
+    "title": "Play",
+    "year": 2011,
+    "imdbId": "tt1568978"
+  },
+  {
+    "title": "Involuntary",
+    "year": 2008,
+    "imdbId": "tt1103832"
+  },
+  {
+    "title": "Kopps",
+    "year": 2003,
+    "imdbId": "tt0363082"
+  },
+  {
+    "title": "The Last Contract",
+    "year": 1998,
+    "imdbId": "tt0156069"
+  },
+  {
+    "title": "Hamilton",
+    "year": 1998,
+    "imdbId": "tt0127839"
+  },
+  {
+    "title": "Under the Sun",
+    "year": 1998,
+    "imdbId": "tt0152532"
+  },
+  {
+    "title": "The Abominable Snowman",
+    "year": 1951,
+    "imdbId": "tt0042832"
+  },
+  {
+    "title": "Faithless",
+    "year": 2000,
+    "imdbId": "tt0214369"
+  },
+  {
+    "title": "Kitchen Stories",
+    "year": 2003,
+    "imdbId": "tt0330545"
+  },
+  {
+    "title": "Arn: The Knight Templar",
+    "year": 2007,
+    "imdbId": "tt0441773"
+  },
+  {
+    "title": "The Girl in the Spider Web",
+    "year": 2018,
+    "imdbId": "tt5177088"
+  },
+  {
+    "title": "The Outpost",
+    "year": 2019,
+    "imdbId": "tt1526221"
   }
 ]

@@ -285,11 +285,6 @@
     "imdbId": "tt0070195"
   },
   {
-    "title": "Kung-fu",
-    "year": 1979,
-    "imdbId": "tt0079646"
-  },
-  {
     "title": "The Trap",
     "year": 1997,
     "imdbId": "tt0120197"
@@ -390,11 +385,6 @@
     "imdbId": "tt0142688"
   },
   {
-    "title": "Oliver Twist",
-    "year": 2005,
-    "imdbId": "tt0380510"
-  },
-  {
     "title": "Essential Killing",
     "year": 2010,
     "imdbId": "tt1555273"
@@ -478,5 +468,25 @@
     "title": "Broad Peak",
     "year": 2022,
     "imdbId": "tt13055404"
+  },
+  {
+    "title": "Wojaczek",
+    "year": 1971,
+    "imdbId": "tt0067839"
+  },
+  {
+    "title": "Wesele",
+    "year": 2004,
+    "imdbId": "tt0393049"
+  },
+  {
+    "title": "Persona Non Grata",
+    "year": 2005,
+    "imdbId": "tt0419939"
+  },
+  {
+    "title": "Kung-fu",
+    "year": 1979,
+    "imdbId": "tt0079646"
   }
 ]
