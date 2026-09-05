@@ -463,5 +463,40 @@
     "title": "Hereditary",
     "year": 2018,
     "imdbId": "tt7784604"
+  },
+  {
+    "title": "The Blob",
+    "year": 1988,
+    "imdbId": "tt0094978"
+  },
+  {
+    "title": "Starship Troopers",
+    "year": 1997,
+    "imdbId": "tt0120201"
+  },
+  {
+    "title": "Scanners",
+    "year": 1981,
+    "imdbId": "tt0081455"
+  },
+  {
+    "title": "Hellraiser",
+    "year": 1987,
+    "imdbId": "tt0093177"
+  },
+  {
+    "title": "Hellbound Hellraiser II",
+    "year": 1988,
+    "imdbId": "tt0095294"
+  },
+  {
+    "title": "The Stuff",
+    "year": 1985,
+    "imdbId": "tt0090142"
+  },
+  {
+    "title": "Slither",
+    "year": 2006,
+    "imdbId": "tt0439815"
   }
 ]

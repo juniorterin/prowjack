@@ -458,5 +458,13 @@
     "title": "The Asphalt Jungle",
     "year": 1950,
     "imdbId": "tt0042182"
-  }
+  },
+  {"title": "The Big Heat", "year": 1953, "imdbId": "tt0045455"},
+  {"title": "Detour", "year": 1945, "imdbId": "tt0037638"},
+  {"title": "Scarlet Street", "year": 1945, "imdbId": "tt0038028"},
+  {"title": "Murder My Sweet", "year": 1944, "imdbId": "tt0037077"},
+  {"title": "Body and Soul", "year": 1947, "imdbId": "tt0039219"},
+  {"title": "Brute Force", "year": 1947, "imdbId": "tt0039249"},
+  {"title": "Force of Evil", "year": 1948, "imdbId": "tt0040366"},
+  {"title": "The Big Sleep", "year": 1946, "imdbId": "tt0038355"}
 ]

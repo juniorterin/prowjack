@@ -438,5 +438,17 @@
     "title": "Two Days One Night",
     "year": 2014,
     "imdbId": "tt3046780"
-  }
+  },
+  {"title": "Stranger Than Paradise", "year": 1984, "imdbId": "tt0088184"},
+  {"title": "Night on Earth", "year": 1991, "imdbId": "tt0102536"},
+  {"title": "Taste of Cherry", "year": 1997, "imdbId": "tt0118947"},
+  {"title": "Close-Up", "year": 1990, "imdbId": "tt0100234"},
+  {"title": "Where Is the Friend's Home?", "year": 1987, "imdbId": "tt0094381"},
+  {"title": "The Wind Will Carry Us", "year": 1999, "imdbId": "tt0191856"},
+  {"title": "Ten", "year": 2002, "imdbId": "tt0299260"},
+  {"title": "The Report", "year": 1977, "imdbId": "tt0076521"},
+  {"title": "Viaggio in Italia", "year": 1954, "imdbId": "tt0047435"},
+  {"title": "Europa 51", "year": 1952, "imdbId": "tt0044601"},
+  {"title": "Stromboli", "year": 1950, "imdbId": "tt0042021"},
+  {"title": "Germany Year Zero", "year": 1948, "imdbId": "tt0040378"}
 ]
