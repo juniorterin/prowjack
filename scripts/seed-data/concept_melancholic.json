@@ -1,84 +1,457 @@
 [
-  {"title": "Lost in Translation", "year": 2003, "imdbId": "tt0335266"},
-  {"title": "In the Mood for Love", "year": 2000, "imdbId": "tt0118694"},
-  {"title": "The Virgin Suicides", "year": 1999, "imdbId": "tt0159097"},
-  {"title": "The Remains of the Day", "year": 1993, "imdbId": "tt0107943"},
-  {"title": "Brief Encounter", "year": 1945, "imdbId": "tt0037558"},
-  {"title": "Yi Yi", "year": 2000, "imdbId": "tt0244316"},
-  {"title": "Last Year at Marienbad", "year": 1961, "imdbId": "tt0054632"},
-  {"title": "Beau Travail", "year": 1999, "imdbId": "tt0209933"},
-  {"title": "Nostalghia", "year": 1983, "imdbId": "tt0086022"},
-  {"title": "Wings of Desire", "year": 1987, "imdbId": "tt0093191"},
-  {"title": "Melancholia", "year": 2011, "imdbId": "tt1527186"},
-  {"title": "Songs from the Second Floor", "year": 2000, "imdbId": "tt0228358"},
-  {"title": "Certified Copy", "year": 2010, "imdbId": "tt1020773"},
-  {"title": "Ida", "year": 2013, "imdbId": "tt2718492"},
-  {"title": "Cold War", "year": 2018, "imdbId": "tt6543652"},
-  {"title": "The Great Beauty", "year": 2013, "imdbId": "tt2358891"},
-  {"title": "Amarcord", "year": 1973, "imdbId": "tt0071129"},
-  {"title": "Autumn Sonata", "year": 1978, "imdbId": "tt0077711"},
-  {"title": "The Sweet Hereafter", "year": 1997, "imdbId": "tt0120725"},
-  {"title": "Mouchette", "year": 1967, "imdbId": "tt0062057"},
-  {"title": "Aftersun", "year": 2022, "imdbId": "tt19764935"},
-  {"title": "Cleo from 5 to 7", "year": 1962, "imdbId": "tt0055852"},
-  {"title": "Portrait of a Lady on Fire", "year": 2019, "imdbId": "tt8613070"},
-  {"title": "Brokeback Mountain", "year": 2005, "imdbId": "tt0388795"},
-  {"title": "Marriage Story", "year": 2019, "imdbId": "tt7653254"},
-  {"title": "Blue Valentine", "year": 2010, "imdbId": "tt1120985"},
-  {"title": "Eternal Sunshine of the Spotless Mind", "year": 2004, "imdbId": "tt0338013"},
-  {"title": "Her", "year": 2013, "imdbId": "tt1798709"},
-  {"title": "Hiroshima Mon Amour", "year": 1959, "imdbId": "tt0052893"},
-  {"title": "Scenes from a Marriage", "year": 1973, "imdbId": "tt0070644"},
-  {"title": "Cries and Whispers", "year": 1972, "imdbId": "tt0069467"},
-  {"title": "The Ice Storm", "year": 1997, "imdbId": "tt0119349"},
-  {"title": "Ordinary People", "year": 1980, "imdbId": "tt0081283"},
-  {"title": "The Squid and the Whale", "year": 2005, "imdbId": "tt0367089"},
-  {"title": "Manchester by the Sea", "year": 2016, "imdbId": "tt4034228"},
-  {"title": "The Rider", "year": 2017, "imdbId": "tt6217608"},
-  {"title": "Nomadland", "year": 2020, "imdbId": "tt9770150"},
-  {"title": "The Straight Story", "year": 1999, "imdbId": "tt0166896"},
-  {"title": "Nebraska", "year": 2013, "imdbId": "tt1821549"},
-  {"title": "Alexander Nevsky", "year": 1938, "imdbId": "tt0029850"},
-  {"title": "The Mirror", "year": 1975, "imdbId": "tt0072443"},
-  {"title": "Stalker", "year": 1979, "imdbId": "tt0079944"},
-  {"title": "The Seventh Seal", "year": 1957, "imdbId": "tt0050976"},
-  {"title": "Wild Strawberries", "year": 1957, "imdbId": "tt0050986"},
-  {"title": "Hour of the Wolf", "year": 1968, "imdbId": "tt0062420"},
-  {"title": "Shame", "year": 1968, "imdbId": "tt0063598"},
-  {"title": "The Silence", "year": 1963, "imdbId": "tt0057611"},
-  {"title": "Saraband", "year": 2003, "imdbId": "tt0361416"},
-  {"title": "Persona", "year": 1966, "imdbId": "tt0060827"},
-  {"title": "The Passion of Anna", "year": 1969, "imdbId": "tt0064750"},
-  {"title": "Merry Christmas Mr. Lawrence", "year": 1983, "imdbId": "tt0085933"},
-  {"title": "Ran", "year": 1985, "imdbId": "tt0089881"},
-  {"title": "Departures", "year": 2008, "imdbId": "tt1069238"},
-  {"title": "Still Walking", "year": 2008, "imdbId": "tt1170358"},
-  {"title": "After Life", "year": 1998, "imdbId": "tt0165078"},
-  {"title": "Shoplifters", "year": 2018, "imdbId": "tt8075192"},
-  {"title": "Our Little Sister", "year": 2015, "imdbId": "tt3979244"},
-  {"title": "Like Father, Like Son", "year": 2013, "imdbId": "tt2929392"},
-  {"title": "Nobody Knows", "year": 2004, "imdbId": "tt0362524"},
-  {"title": "Distance", "year": 2001, "imdbId": "tt0274259"},
-  {"title": "Maborosi", "year": 1995, "imdbId": "tt0113742"},
-  {"title": "Hana-bi", "year": 1997, "imdbId": "tt0119820"},
-  {"title": "Sonatine", "year": 1993, "imdbId": "tt0108188"},
-  {"title": "Dekalog", "year": 1988, "imdbId": "tt0092337"},
-  {"title": "The Double Life of Véronique", "year": 1991, "imdbId": "tt0101765"},
-  {"title": "Blue", "year": 1993, "imdbId": "tt0106848"},
-  {"title": "White", "year": 1994, "imdbId": "tt0111507"},
-  {"title": "Red", "year": 1994, "imdbId": "tt0111495"},
-  {"title": "Three Colors: Blue", "year": 1993, "imdbId": "tt0106848"},
-  {"title": "Three Colors: White", "year": 1994, "imdbId": "tt0111507"},
-  {"title": "Three Colors: Red", "year": 1994, "imdbId": "tt0111495"},
-  {"title": "The Sorrow and the Pity", "year": 1969, "imdbId": "tt0065946"},
-  {"title": "Summer Hours", "year": 2008, "imdbId": "tt1107658"},
-  {"title": "Time of the Wolf", "year": 2003, "imdbId": "tt0307479"},
-  {"title": "Morvern Callar", "year": 2002, "imdbId": "tt0302356"},
-  {"title": "45 Years", "year": 2015, "imdbId": "tt3713180"},
-  {"title": "God's Own Country", "year": 2017, "imdbId": "tt6137526"},
-  {"title": "Weekend", "year": 2011, "imdbId": "tt1714210"},
-  {"title": "Leave No Trace", "year": 2018, "imdbId": "tt3892172"},
-  {"title": "First Reformed", "year": 2017, "imdbId": "tt5649108"},
-  {"title": "Paterson", "year": 2016, "imdbId": "tt5247022"},
-  {"title": "Wendy and Lucy", "year": 2008, "imdbId": "tt1152850"}
+  {
+    "title": "Lost in Translation",
+    "year": 2003,
+    "imdbId": "tt0335266"
+  },
+  {
+    "title": "In the Mood for Love",
+    "year": 2000,
+    "imdbId": "tt0118694"
+  },
+  {
+    "title": "The Virgin Suicides",
+    "year": 1999,
+    "imdbId": "tt0159097"
+  },
+  {
+    "title": "The Remains of the Day",
+    "year": 1993,
+    "imdbId": "tt0107943"
+  },
+  {
+    "title": "Brief Encounter",
+    "year": 1945,
+    "imdbId": "tt0037558"
+  },
+  {
+    "title": "Yi Yi",
+    "year": 2000,
+    "imdbId": "tt0244316"
+  },
+  {
+    "title": "Last Year at Marienbad",
+    "year": 1961,
+    "imdbId": "tt0054632"
+  },
+  {
+    "title": "Beau Travail",
+    "year": 1999,
+    "imdbId": "tt0209933"
+  },
+  {
+    "title": "Nostalghia",
+    "year": 1983,
+    "imdbId": "tt0086022"
+  },
+  {
+    "title": "Wings of Desire",
+    "year": 1987,
+    "imdbId": "tt0093191"
+  },
+  {
+    "title": "Melancholia",
+    "year": 2011,
+    "imdbId": "tt1527186"
+  },
+  {
+    "title": "Songs from the Second Floor",
+    "year": 2000,
+    "imdbId": "tt0228358"
+  },
+  {
+    "title": "Certified Copy",
+    "year": 2010,
+    "imdbId": "tt1020773"
+  },
+  {
+    "title": "Ida",
+    "year": 2013,
+    "imdbId": "tt2718492"
+  },
+  {
+    "title": "Cold War",
+    "year": 2018,
+    "imdbId": "tt6543652"
+  },
+  {
+    "title": "The Great Beauty",
+    "year": 2013,
+    "imdbId": "tt2358891"
+  },
+  {
+    "title": "Amarcord",
+    "year": 1973,
+    "imdbId": "tt0071129"
+  },
+  {
+    "title": "Autumn Sonata",
+    "year": 1978,
+    "imdbId": "tt0077711"
+  },
+  {
+    "title": "The Sweet Hereafter",
+    "year": 1997,
+    "imdbId": "tt0120725"
+  },
+  {
+    "title": "Mouchette",
+    "year": 1967,
+    "imdbId": "tt0062057"
+  },
+  {
+    "title": "Aftersun",
+    "year": 2022,
+    "imdbId": "tt19764935"
+  },
+  {
+    "title": "Cleo from 5 to 7",
+    "year": 1962,
+    "imdbId": "tt0055852"
+  },
+  {
+    "title": "Portrait of a Lady on Fire",
+    "year": 2019,
+    "imdbId": "tt8613070"
+  },
+  {
+    "title": "Brokeback Mountain",
+    "year": 2005,
+    "imdbId": "tt0388795"
+  },
+  {
+    "title": "Marriage Story",
+    "year": 2019,
+    "imdbId": "tt7653254"
+  },
+  {
+    "title": "Blue Valentine",
+    "year": 2010,
+    "imdbId": "tt1120985"
+  },
+  {
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "year": 2004,
+    "imdbId": "tt0338013"
+  },
+  {
+    "title": "Her",
+    "year": 2013,
+    "imdbId": "tt1798709"
+  },
+  {
+    "title": "Hiroshima Mon Amour",
+    "year": 1959,
+    "imdbId": "tt0052893"
+  },
+  {
+    "title": "Scenes from a Marriage",
+    "year": 1973,
+    "imdbId": "tt0070644"
+  },
+  {
+    "title": "Cries and Whispers",
+    "year": 1972,
+    "imdbId": "tt0069467"
+  },
+  {
+    "title": "The Ice Storm",
+    "year": 1997,
+    "imdbId": "tt0119349"
+  },
+  {
+    "title": "Ordinary People",
+    "year": 1980,
+    "imdbId": "tt0081283"
+  },
+  {
+    "title": "The Squid and the Whale",
+    "year": 2005,
+    "imdbId": "tt0367089"
+  },
+  {
+    "title": "Manchester by the Sea",
+    "year": 2016,
+    "imdbId": "tt4034228"
+  },
+  {
+    "title": "The Rider",
+    "year": 2017,
+    "imdbId": "tt6217608"
+  },
+  {
+    "title": "Nomadland",
+    "year": 2020,
+    "imdbId": "tt9770150"
+  },
+  {
+    "title": "The Straight Story",
+    "year": 1999,
+    "imdbId": "tt0166896"
+  },
+  {
+    "title": "Nebraska",
+    "year": 2013,
+    "imdbId": "tt1821549"
+  },
+  {
+    "title": "Alexander Nevsky",
+    "year": 1938,
+    "imdbId": "tt0029850"
+  },
+  {
+    "title": "The Mirror",
+    "year": 1975,
+    "imdbId": "tt0072443"
+  },
+  {
+    "title": "Stalker",
+    "year": 1979,
+    "imdbId": "tt0079944"
+  },
+  {
+    "title": "The Seventh Seal",
+    "year": 1957,
+    "imdbId": "tt0050976"
+  },
+  {
+    "title": "Wild Strawberries",
+    "year": 1957,
+    "imdbId": "tt0050986"
+  },
+  {
+    "title": "Hour of the Wolf",
+    "year": 1968,
+    "imdbId": "tt0062420"
+  },
+  {
+    "title": "Shame",
+    "year": 1968,
+    "imdbId": "tt0063598"
+  },
+  {
+    "title": "The Silence",
+    "year": 1963,
+    "imdbId": "tt0057611"
+  },
+  {
+    "title": "Saraband",
+    "year": 2003,
+    "imdbId": "tt0361416"
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "imdbId": "tt0060827"
+  },
+  {
+    "title": "The Passion of Anna",
+    "year": 1969,
+    "imdbId": "tt0064750"
+  },
+  {
+    "title": "Merry Christmas Mr. Lawrence",
+    "year": 1983,
+    "imdbId": "tt0085933"
+  },
+  {
+    "title": "Ran",
+    "year": 1985,
+    "imdbId": "tt0089881"
+  },
+  {
+    "title": "Departures",
+    "year": 2008,
+    "imdbId": "tt1069238"
+  },
+  {
+    "title": "Still Walking",
+    "year": 2008,
+    "imdbId": "tt1170358"
+  },
+  {
+    "title": "After Life",
+    "year": 1998,
+    "imdbId": "tt0165078"
+  },
+  {
+    "title": "Shoplifters",
+    "year": 2018,
+    "imdbId": "tt8075192"
+  },
+  {
+    "title": "Our Little Sister",
+    "year": 2015,
+    "imdbId": "tt3979244"
+  },
+  {
+    "title": "Like Father, Like Son",
+    "year": 2013,
+    "imdbId": "tt2929392"
+  },
+  {
+    "title": "Nobody Knows",
+    "year": 2004,
+    "imdbId": "tt0362524"
+  },
+  {
+    "title": "Distance",
+    "year": 2001,
+    "imdbId": "tt0274259"
+  },
+  {
+    "title": "Maborosi",
+    "year": 1995,
+    "imdbId": "tt0113742"
+  },
+  {
+    "title": "Hana-bi",
+    "year": 1997,
+    "imdbId": "tt0119820"
+  },
+  {
+    "title": "Sonatine",
+    "year": 1993,
+    "imdbId": "tt0108188"
+  },
+  {
+    "title": "Dekalog",
+    "year": 1988,
+    "imdbId": "tt0092337"
+  },
+  {
+    "title": "The Double Life of Véronique",
+    "year": 1991,
+    "imdbId": "tt0101765"
+  },
+  {
+    "title": "Blue",
+    "year": 1993,
+    "imdbId": "tt0106848"
+  },
+  {
+    "title": "White",
+    "year": 1994,
+    "imdbId": "tt0111507"
+  },
+  {
+    "title": "Red",
+    "year": 1994,
+    "imdbId": "tt0111495"
+  },
+  {
+    "title": "Three Colors: Blue",
+    "year": 1993,
+    "imdbId": "tt0106848"
+  },
+  {
+    "title": "Three Colors: White",
+    "year": 1994,
+    "imdbId": "tt0111507"
+  },
+  {
+    "title": "Three Colors: Red",
+    "year": 1994,
+    "imdbId": "tt0111495"
+  },
+  {
+    "title": "The Sorrow and the Pity",
+    "year": 1969,
+    "imdbId": "tt0065946"
+  },
+  {
+    "title": "Summer Hours",
+    "year": 2008,
+    "imdbId": "tt1107658"
+  },
+  {
+    "title": "Time of the Wolf",
+    "year": 2003,
+    "imdbId": "tt0307479"
+  },
+  {
+    "title": "Morvern Callar",
+    "year": 2002,
+    "imdbId": "tt0302356"
+  },
+  {
+    "title": "45 Years",
+    "year": 2015,
+    "imdbId": "tt3713180"
+  },
+  {
+    "title": "God's Own Country",
+    "year": 2017,
+    "imdbId": "tt6137526"
+  },
+  {
+    "title": "Weekend",
+    "year": 2011,
+    "imdbId": "tt1714210"
+  },
+  {
+    "title": "Leave No Trace",
+    "year": 2018,
+    "imdbId": "tt3892172"
+  },
+  {
+    "title": "First Reformed",
+    "year": 2017,
+    "imdbId": "tt5649108"
+  },
+  {
+    "title": "Paterson",
+    "year": 2016,
+    "imdbId": "tt5247022"
+  },
+  {
+    "title": "Wendy and Lucy",
+    "year": 2008,
+    "imdbId": "tt1152850"
+  },
+  {
+    "title": "To the Wonder",
+    "year": 2012,
+    "imdbId": "tt1595656"
+  },
+  {
+    "title": "The New World",
+    "year": 2005,
+    "imdbId": "tt0402399"
+  },
+  {
+    "title": "Badlands",
+    "year": 1973,
+    "imdbId": "tt0069762"
+  },
+  {
+    "title": "Days of Heaven",
+    "year": 1978,
+    "imdbId": "tt0077405"
+  },
+  {
+    "title": "Knight of Cups",
+    "year": 2015,
+    "imdbId": "tt2101383"
+  },
+  {
+    "title": "Song to Song",
+    "year": 2017,
+    "imdbId": "tt3616916"
+  },
+  {
+    "title": "Oslo 31. August",
+    "year": 2011,
+    "imdbId": "tt1742656"
+  },
+  {
+    "title": "Past Lives",
+    "year": 2023,
+    "imdbId": "tt21082364"
+  },
+  {
+    "title": "The Souvenir",
+    "year": 2019,
+    "imdbId": "tt6741278"
+  }
 ]

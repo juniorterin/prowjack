@@ -1,84 +1,502 @@
 [
-  {"title": "Seven Samurai", "year": 1954, "imdbId": "tt0047478"},
-  {"title": "High and Low", "year": 1963, "imdbId": "tt0057565"},
-  {"title": "Yojimbo", "year": 1961, "imdbId": "tt0055630"},
-  {"title": "Rashomon", "year": 1950, "imdbId": "tt0042876"},
-  {"title": "Throne of Blood", "year": 1957, "imdbId": "tt0050613"},
-  {"title": "Ikiru", "year": 1952, "imdbId": "tt0044741"},
-  {"title": "Ugetsu", "year": 1953, "imdbId": "tt0046478"},
-  {"title": "Ran", "year": 1985, "imdbId": "tt0089881"},
-  {"title": "An Autumn Afternoon", "year": 1962, "imdbId": "tt0056444"},
-  {"title": "Chungking Express", "year": 1994, "imdbId": "tt0109424"},
-  {"title": "Godzilla", "year": 1954, "imdbId": "tt0047034"},
-  {"title": "Y tu mamá también", "year": 2001, "imdbId": "tt0245574"},
-  {"title": "Memories of Murder", "year": 2003, "imdbId": "tt0353969"},
-  {"title": "Parasite", "year": 2019, "imdbId": "tt6751668"},
-  {"title": "Drive My Car", "year": 2021, "imdbId": "tt14039582"},
-  {"title": "Tokyo Story", "year": 1953, "imdbId": "tt0046438"},
-  {"title": "Wild Strawberries", "year": 1957, "imdbId": "tt0050986"},
-  {"title": "8½", "year": 1963, "imdbId": "tt0056801"},
-  {"title": "La Strada", "year": 1954, "imdbId": "tt0047528"},
-  {"title": "The Leopard", "year": 1963, "imdbId": "tt0057091"},
-  {"title": "Sansho the Bailiff", "year": 1954, "imdbId": "tt0047396"},
-  {"title": "The Life of Oharu", "year": 1952, "imdbId": "tt0044710"},
-  {"title": "Sisters of the Gion", "year": 1936, "imdbId": "tt0028093"},
-  {"title": "The Story of the Last Chrysanthemum", "year": 1939, "imdbId": "tt0031832"},
-  {"title": "Harakiri", "year": 1962, "imdbId": "tt0056058"},
-  {"title": "Onibaba", "year": 1964, "imdbId": "tt0058404"},
-  {"title": "Kwaidan", "year": 1964, "imdbId": "tt0058279"},
-  {"title": "Woman in the Dunes", "year": 1964, "imdbId": "tt0058811"},
-  {"title": "The Face of Another", "year": 1966, "imdbId": "tt0060412"},
-  {"title": "Funeral Parade of Roses", "year": 1969, "imdbId": "tt0064813"},
-  {"title": "Late Spring", "year": 1949, "imdbId": "tt0041487"},
-  {"title": "Early Summer", "year": 1951, "imdbId": "tt0043531"},
-  {"title": "Late Autumn", "year": 1960, "imdbId": "tt0054065"},
-  {"title": "Floating Weeds", "year": 1959, "imdbId": "tt0052847"},
-  {"title": "The Flavour of Green Tea over Rice", "year": 1952, "imdbId": "tt0044810"},
-  {"title": "Good Morning", "year": 1959, "imdbId": "tt0052886"},
-  {"title": "The Human Condition I", "year": 1959, "imdbId": "tt0052787"},
-  {"title": "Fires on the Plain", "year": 1959, "imdbId": "tt0051872"},
-  {"title": "The Naked Island", "year": 1960, "imdbId": "tt0054069"},
-  {"title": "Gate of Hell", "year": 1953, "imdbId": "tt0045818"},
-  {"title": "Hana-bi", "year": 1997, "imdbId": "tt0119820"},
-  {"title": "Sonatine", "year": 1993, "imdbId": "tt0108188"},
-  {"title": "Maborosi", "year": 1995, "imdbId": "tt0113742"},
-  {"title": "After Life", "year": 1998, "imdbId": "tt0165078"},
-  {"title": "Distance", "year": 2001, "imdbId": "tt0274259"},
-  {"title": "Nobody Knows", "year": 2004, "imdbId": "tt0362524"},
-  {"title": "Still Walking", "year": 2008, "imdbId": "tt1170358"},
-  {"title": "Our Little Sister", "year": 2015, "imdbId": "tt3979244"},
-  {"title": "Like Father, Like Son", "year": 2013, "imdbId": "tt2929392"},
-  {"title": "Shoplifters", "year": 2018, "imdbId": "tt8075192"},
-  {"title": "Departures", "year": 2008, "imdbId": "tt1069238"},
-  {"title": "The Assassin", "year": 2015, "imdbId": "tt2258858"},
-  {"title": "Yi Yi", "year": 2000, "imdbId": "tt0244316"},
-  {"title": "A Brighter Summer Day", "year": 1991, "imdbId": "tt0101985"},
-  {"title": "Tropical Malady", "year": 2004, "imdbId": "tt0381668"},
-  {"title": "Uncle Boonmee Who Can Recall His Past Lives", "year": 2010, "imdbId": "tt1598642"},
-  {"title": "Goodbye, Dragon Inn", "year": 2003, "imdbId": "tt0377556"},
-  {"title": "The Hole", "year": 1998, "imdbId": "tt0153765"},
-  {"title": "What Time Is It There?", "year": 2001, "imdbId": "tt0282850"},
-  {"title": "The River", "year": 1997, "imdbId": "tt0120101"},
-  {"title": "Vive L'Amour", "year": 1994, "imdbId": "tt0111783"},
-  {"title": "Rebels of the Neon God", "year": 1992, "imdbId": "tt0105665"},
-  {"title": "In the Mood for Love", "year": 2000, "imdbId": "tt0118694"},
-  {"title": "2046", "year": 2004, "imdbId": "tt0212712"},
-  {"title": "Days of Being Wild", "year": 1990, "imdbId": "tt0101039"},
-  {"title": "Fallen Angels", "year": 1995, "imdbId": "tt0113627"},
-  {"title": "Happy Together", "year": 1997, "imdbId": "tt0119299"},
-  {"title": "The Grandmaster", "year": 2013, "imdbId": "tt1462999"},
-  {"title": "Burning", "year": 2018, "imdbId": "tt7282468"},
-  {"title": "Poetry", "year": 2010, "imdbId": "tt1557490"},
-  {"title": "The Handmaiden", "year": 2016, "imdbId": "tt4016934"},
-  {"title": "Decision to Leave", "year": 2022, "imdbId": "tt12477480"},
-  {"title": "Oldboy", "year": 2003, "imdbId": "tt0364569"},
-  {"title": "Sympathy for Mr. Vengeance", "year": 2002, "imdbId": "tt0310775"},
-  {"title": "Lady Vengeance", "year": 2005, "imdbId": "tt0451094"},
-  {"title": "I Saw the Devil", "year": 2010, "imdbId": "tt1588170"},
-  {"title": "The Wailing", "year": 2016, "imdbId": "tt5215952"},
-  {"title": "A Tale of Two Sisters", "year": 2003, "imdbId": "tt0365376"},
-  {"title": "Pieta", "year": 2012, "imdbId": "tt2467372"},
-  {"title": "Snowpiercer", "year": 2013, "imdbId": "tt1706620"},
-  {"title": "The Host", "year": 2006, "imdbId": "tt0468492"},
-  {"title": "Memories of Murder", "year": 2003, "imdbId": "tt0353969"}
+  {
+    "title": "Seven Samurai",
+    "year": 1954,
+    "imdbId": "tt0047478"
+  },
+  {
+    "title": "High and Low",
+    "year": 1963,
+    "imdbId": "tt0057565"
+  },
+  {
+    "title": "Yojimbo",
+    "year": 1961,
+    "imdbId": "tt0055630"
+  },
+  {
+    "title": "Rashomon",
+    "year": 1950,
+    "imdbId": "tt0042876"
+  },
+  {
+    "title": "Throne of Blood",
+    "year": 1957,
+    "imdbId": "tt0050613"
+  },
+  {
+    "title": "Ikiru",
+    "year": 1952,
+    "imdbId": "tt0044741"
+  },
+  {
+    "title": "Ugetsu",
+    "year": 1953,
+    "imdbId": "tt0046478"
+  },
+  {
+    "title": "Ran",
+    "year": 1985,
+    "imdbId": "tt0089881"
+  },
+  {
+    "title": "An Autumn Afternoon",
+    "year": 1962,
+    "imdbId": "tt0056444"
+  },
+  {
+    "title": "Chungking Express",
+    "year": 1994,
+    "imdbId": "tt0109424"
+  },
+  {
+    "title": "Godzilla",
+    "year": 1954,
+    "imdbId": "tt0047034"
+  },
+  {
+    "title": "Y tu mamá también",
+    "year": 2001,
+    "imdbId": "tt0245574"
+  },
+  {
+    "title": "Memories of Murder",
+    "year": 2003,
+    "imdbId": "tt0353969"
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "imdbId": "tt6751668"
+  },
+  {
+    "title": "Drive My Car",
+    "year": 2021,
+    "imdbId": "tt14039582"
+  },
+  {
+    "title": "Tokyo Story",
+    "year": 1953,
+    "imdbId": "tt0046438"
+  },
+  {
+    "title": "Wild Strawberries",
+    "year": 1957,
+    "imdbId": "tt0050986"
+  },
+  {
+    "title": "8½",
+    "year": 1963,
+    "imdbId": "tt0056801"
+  },
+  {
+    "title": "La Strada",
+    "year": 1954,
+    "imdbId": "tt0047528"
+  },
+  {
+    "title": "The Leopard",
+    "year": 1963,
+    "imdbId": "tt0057091"
+  },
+  {
+    "title": "Sansho the Bailiff",
+    "year": 1954,
+    "imdbId": "tt0047396"
+  },
+  {
+    "title": "The Life of Oharu",
+    "year": 1952,
+    "imdbId": "tt0044710"
+  },
+  {
+    "title": "Sisters of the Gion",
+    "year": 1936,
+    "imdbId": "tt0028093"
+  },
+  {
+    "title": "The Story of the Last Chrysanthemum",
+    "year": 1939,
+    "imdbId": "tt0031832"
+  },
+  {
+    "title": "Harakiri",
+    "year": 1962,
+    "imdbId": "tt0056058"
+  },
+  {
+    "title": "Onibaba",
+    "year": 1964,
+    "imdbId": "tt0058404"
+  },
+  {
+    "title": "Kwaidan",
+    "year": 1964,
+    "imdbId": "tt0058279"
+  },
+  {
+    "title": "Woman in the Dunes",
+    "year": 1964,
+    "imdbId": "tt0058811"
+  },
+  {
+    "title": "The Face of Another",
+    "year": 1966,
+    "imdbId": "tt0060412"
+  },
+  {
+    "title": "Funeral Parade of Roses",
+    "year": 1969,
+    "imdbId": "tt0064813"
+  },
+  {
+    "title": "Late Spring",
+    "year": 1949,
+    "imdbId": "tt0041487"
+  },
+  {
+    "title": "Early Summer",
+    "year": 1951,
+    "imdbId": "tt0043531"
+  },
+  {
+    "title": "Late Autumn",
+    "year": 1960,
+    "imdbId": "tt0054065"
+  },
+  {
+    "title": "Floating Weeds",
+    "year": 1959,
+    "imdbId": "tt0052847"
+  },
+  {
+    "title": "The Flavour of Green Tea over Rice",
+    "year": 1952,
+    "imdbId": "tt0044810"
+  },
+  {
+    "title": "Good Morning",
+    "year": 1959,
+    "imdbId": "tt0052886"
+  },
+  {
+    "title": "The Human Condition I",
+    "year": 1959,
+    "imdbId": "tt0052787"
+  },
+  {
+    "title": "Fires on the Plain",
+    "year": 1959,
+    "imdbId": "tt0051872"
+  },
+  {
+    "title": "The Naked Island",
+    "year": 1960,
+    "imdbId": "tt0054069"
+  },
+  {
+    "title": "Gate of Hell",
+    "year": 1953,
+    "imdbId": "tt0045818"
+  },
+  {
+    "title": "Hana-bi",
+    "year": 1997,
+    "imdbId": "tt0119820"
+  },
+  {
+    "title": "Sonatine",
+    "year": 1993,
+    "imdbId": "tt0108188"
+  },
+  {
+    "title": "Maborosi",
+    "year": 1995,
+    "imdbId": "tt0113742"
+  },
+  {
+    "title": "After Life",
+    "year": 1998,
+    "imdbId": "tt0165078"
+  },
+  {
+    "title": "Distance",
+    "year": 2001,
+    "imdbId": "tt0274259"
+  },
+  {
+    "title": "Nobody Knows",
+    "year": 2004,
+    "imdbId": "tt0362524"
+  },
+  {
+    "title": "Still Walking",
+    "year": 2008,
+    "imdbId": "tt1170358"
+  },
+  {
+    "title": "Our Little Sister",
+    "year": 2015,
+    "imdbId": "tt3979244"
+  },
+  {
+    "title": "Like Father, Like Son",
+    "year": 2013,
+    "imdbId": "tt2929392"
+  },
+  {
+    "title": "Shoplifters",
+    "year": 2018,
+    "imdbId": "tt8075192"
+  },
+  {
+    "title": "Departures",
+    "year": 2008,
+    "imdbId": "tt1069238"
+  },
+  {
+    "title": "The Assassin",
+    "year": 2015,
+    "imdbId": "tt2258858"
+  },
+  {
+    "title": "Yi Yi",
+    "year": 2000,
+    "imdbId": "tt0244316"
+  },
+  {
+    "title": "A Brighter Summer Day",
+    "year": 1991,
+    "imdbId": "tt0101985"
+  },
+  {
+    "title": "Tropical Malady",
+    "year": 2004,
+    "imdbId": "tt0381668"
+  },
+  {
+    "title": "Uncle Boonmee Who Can Recall His Past Lives",
+    "year": 2010,
+    "imdbId": "tt1598642"
+  },
+  {
+    "title": "Goodbye, Dragon Inn",
+    "year": 2003,
+    "imdbId": "tt0377556"
+  },
+  {
+    "title": "The Hole",
+    "year": 1998,
+    "imdbId": "tt0153765"
+  },
+  {
+    "title": "What Time Is It There?",
+    "year": 2001,
+    "imdbId": "tt0282850"
+  },
+  {
+    "title": "The River",
+    "year": 1997,
+    "imdbId": "tt0120101"
+  },
+  {
+    "title": "Vive L'Amour",
+    "year": 1994,
+    "imdbId": "tt0111783"
+  },
+  {
+    "title": "Rebels of the Neon God",
+    "year": 1992,
+    "imdbId": "tt0105665"
+  },
+  {
+    "title": "In the Mood for Love",
+    "year": 2000,
+    "imdbId": "tt0118694"
+  },
+  {
+    "title": "2046",
+    "year": 2004,
+    "imdbId": "tt0212712"
+  },
+  {
+    "title": "Days of Being Wild",
+    "year": 1990,
+    "imdbId": "tt0101039"
+  },
+  {
+    "title": "Fallen Angels",
+    "year": 1995,
+    "imdbId": "tt0113627"
+  },
+  {
+    "title": "Happy Together",
+    "year": 1997,
+    "imdbId": "tt0119299"
+  },
+  {
+    "title": "The Grandmaster",
+    "year": 2013,
+    "imdbId": "tt1462999"
+  },
+  {
+    "title": "Burning",
+    "year": 2018,
+    "imdbId": "tt7282468"
+  },
+  {
+    "title": "Poetry",
+    "year": 2010,
+    "imdbId": "tt1557490"
+  },
+  {
+    "title": "The Handmaiden",
+    "year": 2016,
+    "imdbId": "tt4016934"
+  },
+  {
+    "title": "Decision to Leave",
+    "year": 2022,
+    "imdbId": "tt12477480"
+  },
+  {
+    "title": "Oldboy",
+    "year": 2003,
+    "imdbId": "tt0364569"
+  },
+  {
+    "title": "Sympathy for Mr. Vengeance",
+    "year": 2002,
+    "imdbId": "tt0310775"
+  },
+  {
+    "title": "Lady Vengeance",
+    "year": 2005,
+    "imdbId": "tt0451094"
+  },
+  {
+    "title": "I Saw the Devil",
+    "year": 2010,
+    "imdbId": "tt1588170"
+  },
+  {
+    "title": "The Wailing",
+    "year": 2016,
+    "imdbId": "tt5215952"
+  },
+  {
+    "title": "A Tale of Two Sisters",
+    "year": 2003,
+    "imdbId": "tt0365376"
+  },
+  {
+    "title": "Pieta",
+    "year": 2012,
+    "imdbId": "tt2467372"
+  },
+  {
+    "title": "Snowpiercer",
+    "year": 2013,
+    "imdbId": "tt1706620"
+  },
+  {
+    "title": "The Host",
+    "year": 2006,
+    "imdbId": "tt0468492"
+  },
+  {
+    "title": "Memories of Murder",
+    "year": 2003,
+    "imdbId": "tt0353969"
+  },
+  {
+    "title": "Hidden Fortress",
+    "year": 1958,
+    "imdbId": "tt0051808"
+  },
+  {
+    "title": "Stray Dog",
+    "year": 1949,
+    "imdbId": "tt0041699"
+  },
+  {
+    "title": "Drunken Angel",
+    "year": 1948,
+    "imdbId": "tt0040379"
+  },
+  {
+    "title": "Scandal",
+    "year": 1950,
+    "imdbId": "tt0042825"
+  },
+  {
+    "title": "Dreams",
+    "year": 1990,
+    "imdbId": "tt0099775"
+  },
+  {
+    "title": "Narayama Bushiko",
+    "year": 1983,
+    "imdbId": "tt0085992"
+  },
+  {
+    "title": "In the Realm of the Senses",
+    "year": 1976,
+    "imdbId": "tt0074102"
+  },
+  {
+    "title": "Empire of Passion",
+    "year": 1978,
+    "imdbId": "tt0077213"
+  },
+  {
+    "title": "Vengeance Is Mine",
+    "year": 1979,
+    "imdbId": "tt0080261"
+  },
+  {
+    "title": "Eureka",
+    "year": 2000,
+    "imdbId": "tt0247634"
+  },
+  {
+    "title": "The Pornographers",
+    "year": 1966,
+    "imdbId": "tt0060679"
+  },
+  {
+    "title": "Pigs and Battleships",
+    "year": 1961,
+    "imdbId": "tt0055405"
+  },
+  {
+    "title": "Kagemusha",
+    "year": 1980,
+    "imdbId": "tt0080979"
+  },
+  {
+    "title": "Madadayo",
+    "year": 1993,
+    "imdbId": "tt0107494"
+  },
+  {
+    "title": "Rhapsody in August",
+    "year": 1991,
+    "imdbId": "tt0102873"
+  },
+  {
+    "title": "The Idiot",
+    "year": 1951,
+    "imdbId": "tt0043651"
+  },
+  {
+    "title": "One Wonderful Sunday",
+    "year": 1947,
+    "imdbId": "tt0039707"
+  },
+  {
+    "title": "No Regrets for Our Youth",
+    "year": 1946,
+    "imdbId": "tt0038879"
+  }
 ]

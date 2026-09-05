@@ -1,83 +1,482 @@
 [
-  {"title": "The Seventh Seal", "year": 1957, "imdbId": "tt0050976"},
-  {"title": "Wild Strawberries", "year": 1957, "imdbId": "tt0050986"},
-  {"title": "Ikiru", "year": 1952, "imdbId": "tt0044741"},
-  {"title": "The Tree of Life", "year": 2011, "imdbId": "tt0478304"},
-  {"title": "Taste of Cherry", "year": 1997, "imdbId": "tt0118947"},
-  {"title": "A Separation", "year": 2011, "imdbId": "tt1832382"},
-  {"title": "Winter Light", "year": 1963, "imdbId": "tt0057732"},
-  {"title": "Cries and Whispers", "year": 1972, "imdbId": "tt0069467"},
-  {"title": "Melancholia", "year": 2011, "imdbId": "tt1527186"},
-  {"title": "L'Avventura", "year": 1960, "imdbId": "tt0053619"},
-  {"title": "The Sacrifice", "year": 1986, "imdbId": "tt0091670"},
-  {"title": "Songs from the Second Floor", "year": 2000, "imdbId": "tt0120263"},
-  {"title": "Through a Glass Darkly", "year": 1961, "imdbId": "tt0055499"},
-  {"title": "Persona", "year": 1966, "imdbId": "tt0060827"},
-  {"title": "The Discreet Charm of the Bourgeoisie", "year": 1972, "imdbId": "tt0068361"},
-  {"title": "Andrei Rublev", "year": 1966, "imdbId": "tt0060107"},
-  {"title": "4 Months, 3 Weeks and 2 Days", "year": 2007, "imdbId": "tt1032536"},
-  {"title": "Shoah", "year": 1985, "imdbId": "tt0090015"},
-  {"title": "Au Revoir les Enfants", "year": 1987, "imdbId": "tt0092593"},
-  {"title": "A Man Escaped", "year": 1956, "imdbId": "tt0049902"},
-  {"title": "L'Eclisse", "year": 1962, "imdbId": "tt0056736"},
-  {"title": "La Notte", "year": 1961, "imdbId": "tt0055198"},
-  {"title": "The Passenger", "year": 1975, "imdbId": "tt0073580"},
-  {"title": "Zabriskie Point", "year": 1970, "imdbId": "tt0066429"},
-  {"title": "Au Hasard Balthazar", "year": 1966, "imdbId": "tt0060138"},
-  {"title": "Mouchette", "year": 1967, "imdbId": "tt0062057"},
-  {"title": "A Gentle Woman", "year": 1969, "imdbId": "tt0064069"},
-  {"title": "Pickpocket", "year": 1959, "imdbId": "tt0053168"},
-  {"title": "The Turin Horse", "year": 2011, "imdbId": "tt1316540"},
-  {"title": "Sátántangó", "year": 1994, "imdbId": "tt0111341"},
-  {"title": "Werckmeister Harmonies", "year": 2000, "imdbId": "tt0249241"},
-  {"title": "The Man from London", "year": 2007, "imdbId": "tt0371250"},
-  {"title": "Diary of a Country Priest", "year": 1951, "imdbId": "tt0043283"},
-  {"title": "The Trial of Joan of Arc", "year": 1962, "imdbId": "tt0056670"},
-  {"title": "Lancelot du Lac", "year": 1974, "imdbId": "tt0071783"},
-  {"title": "The Devil, Probably", "year": 1977, "imdbId": "tt0075689"},
-  {"title": "Ordet", "year": 1955, "imdbId": "tt0048374"},
-  {"title": "Gertrud", "year": 1964, "imdbId": "tt0058119"},
-  {"title": "Day of Wrath", "year": 1943, "imdbId": "tt0035854"},
-  {"title": "Viaggio in Italia", "year": 1954, "imdbId": "tt0047435"},
-  {"title": "Europe '51", "year": 1952, "imdbId": "tt0044601"},
-  {"title": "Stromboli", "year": 1950, "imdbId": "tt0042021"},
-  {"title": "Journey to Italy", "year": 1954, "imdbId": "tt0047435"},
-  {"title": "L'Humanité", "year": 1999, "imdbId": "tt0207990"},
-  {"title": "The Son", "year": 2002, "imdbId": "tt0307217"},
-  {"title": "The Child", "year": 2005, "imdbId": "tt0432291"},
-  {"title": "Rosetta", "year": 1999, "imdbId": "tt0200072"},
-  {"title": "Two Days, One Night", "year": 2014, "imdbId": "tt3046780"},
-  {"title": "L'Enfant Sauvage", "year": 1970, "imdbId": "tt0065525"},
-  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
-  {"title": "Zero de Conduite", "year": 1933, "imdbId": "tt0024884"},
-  {"title": "Merry Christmas, Mr. Lawrence", "year": 1983, "imdbId": "tt0085933"},
-  {"title": "Ran", "year": 1985, "imdbId": "tt0089881"},
-  {"title": "Kagemusha", "year": 1980, "imdbId": "tt0080979"},
-  {"title": "Harakiri", "year": 1962, "imdbId": "tt0056058"},
-  {"title": "The Human Condition", "year": 1959, "imdbId": "tt0052787"},
-  {"title": "Sorrow and the Pity", "year": 1969, "imdbId": "tt0065946"},
-  {"title": "Chronicle of a Summer", "year": 1961, "imdbId": "tt0054791"},
-  {"title": "Grey Gardens", "year": 1975, "imdbId": "tt0073076"},
-  {"title": "Gimme Shelter", "year": 1970, "imdbId": "tt0065780"},
-  {"title": "Don't Look Back", "year": 1967, "imdbId": "tt0061330"},
-  {"title": "The Act of Killing", "year": 2012, "imdbId": "tt2375605"},
-  {"title": "The Look of Silence", "year": 2014, "imdbId": "tt3521134"},
-  {"title": "S-21: The Khmer Rouge Killing Machine", "year": 2003, "imdbId": "tt0389185"},
-  {"title": "The Thin Blue Line", "year": 1988, "imdbId": "tt0096257"},
-  {"title": "Roger and Me", "year": 1989, "imdbId": "tt0098213"},
-  {"title": "Bowling for Columbine", "year": 2002, "imdbId": "tt0310793"},
-  {"title": "I Am Cuba", "year": 1964, "imdbId": "tt0058085"},
-  {"title": "Apocalypse Now", "year": 1979, "imdbId": "tt0078788"},
-  {"title": "Come and See", "year": 1985, "imdbId": "tt0091251"},
-  {"title": "The Bridge on the Drina", "year": 1974, "imdbId": "tt0071357"},
-  {"title": "The Ascent", "year": 1977, "imdbId": "tt0075319"},
-  {"title": "The Cranes Are Flying", "year": 1957, "imdbId": "tt0050299"},
-  {"title": "Ballad of a Soldier", "year": 1959, "imdbId": "tt0052404"},
-  {"title": "Ivan's Childhood", "year": 1962, "imdbId": "tt0056329"},
-  {"title": "Kes", "year": 1969, "imdbId": "tt0064541"},
-  {"title": "Cathy Come Home", "year": 1966, "imdbId": "tt0060287"},
-  {"title": "In the Name of the Father", "year": 1993, "imdbId": "tt0107207"},
-  {"title": "The Battle of Algiers", "year": 1966, "imdbId": "tt0058946"},
-  {"title": "Z", "year": 1969, "imdbId": "tt0065214"},
-  {"title": "Missing", "year": 1982, "imdbId": "tt0084335"}
+  {
+    "title": "The Seventh Seal",
+    "year": 1957,
+    "imdbId": "tt0050976"
+  },
+  {
+    "title": "Wild Strawberries",
+    "year": 1957,
+    "imdbId": "tt0050986"
+  },
+  {
+    "title": "Ikiru",
+    "year": 1952,
+    "imdbId": "tt0044741"
+  },
+  {
+    "title": "The Tree of Life",
+    "year": 2011,
+    "imdbId": "tt0478304"
+  },
+  {
+    "title": "Taste of Cherry",
+    "year": 1997,
+    "imdbId": "tt0118947"
+  },
+  {
+    "title": "A Separation",
+    "year": 2011,
+    "imdbId": "tt1832382"
+  },
+  {
+    "title": "Winter Light",
+    "year": 1963,
+    "imdbId": "tt0057732"
+  },
+  {
+    "title": "Cries and Whispers",
+    "year": 1972,
+    "imdbId": "tt0069467"
+  },
+  {
+    "title": "Melancholia",
+    "year": 2011,
+    "imdbId": "tt1527186"
+  },
+  {
+    "title": "L'Avventura",
+    "year": 1960,
+    "imdbId": "tt0053619"
+  },
+  {
+    "title": "The Sacrifice",
+    "year": 1986,
+    "imdbId": "tt0091670"
+  },
+  {
+    "title": "Songs from the Second Floor",
+    "year": 2000,
+    "imdbId": "tt0120263"
+  },
+  {
+    "title": "Through a Glass Darkly",
+    "year": 1961,
+    "imdbId": "tt0055499"
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "imdbId": "tt0060827"
+  },
+  {
+    "title": "The Discreet Charm of the Bourgeoisie",
+    "year": 1972,
+    "imdbId": "tt0068361"
+  },
+  {
+    "title": "Andrei Rublev",
+    "year": 1966,
+    "imdbId": "tt0060107"
+  },
+  {
+    "title": "4 Months, 3 Weeks and 2 Days",
+    "year": 2007,
+    "imdbId": "tt1032536"
+  },
+  {
+    "title": "Shoah",
+    "year": 1985,
+    "imdbId": "tt0090015"
+  },
+  {
+    "title": "Au Revoir les Enfants",
+    "year": 1987,
+    "imdbId": "tt0092593"
+  },
+  {
+    "title": "A Man Escaped",
+    "year": 1956,
+    "imdbId": "tt0049902"
+  },
+  {
+    "title": "L'Eclisse",
+    "year": 1962,
+    "imdbId": "tt0056736"
+  },
+  {
+    "title": "La Notte",
+    "year": 1961,
+    "imdbId": "tt0055198"
+  },
+  {
+    "title": "The Passenger",
+    "year": 1975,
+    "imdbId": "tt0073580"
+  },
+  {
+    "title": "Zabriskie Point",
+    "year": 1970,
+    "imdbId": "tt0066429"
+  },
+  {
+    "title": "Au Hasard Balthazar",
+    "year": 1966,
+    "imdbId": "tt0060138"
+  },
+  {
+    "title": "Mouchette",
+    "year": 1967,
+    "imdbId": "tt0062057"
+  },
+  {
+    "title": "A Gentle Woman",
+    "year": 1969,
+    "imdbId": "tt0064069"
+  },
+  {
+    "title": "Pickpocket",
+    "year": 1959,
+    "imdbId": "tt0053168"
+  },
+  {
+    "title": "The Turin Horse",
+    "year": 2011,
+    "imdbId": "tt1316540"
+  },
+  {
+    "title": "Sátántangó",
+    "year": 1994,
+    "imdbId": "tt0111341"
+  },
+  {
+    "title": "Werckmeister Harmonies",
+    "year": 2000,
+    "imdbId": "tt0249241"
+  },
+  {
+    "title": "The Man from London",
+    "year": 2007,
+    "imdbId": "tt0371250"
+  },
+  {
+    "title": "Diary of a Country Priest",
+    "year": 1951,
+    "imdbId": "tt0043283"
+  },
+  {
+    "title": "The Trial of Joan of Arc",
+    "year": 1962,
+    "imdbId": "tt0056670"
+  },
+  {
+    "title": "Lancelot du Lac",
+    "year": 1974,
+    "imdbId": "tt0071783"
+  },
+  {
+    "title": "The Devil, Probably",
+    "year": 1977,
+    "imdbId": "tt0075689"
+  },
+  {
+    "title": "Ordet",
+    "year": 1955,
+    "imdbId": "tt0048374"
+  },
+  {
+    "title": "Gertrud",
+    "year": 1964,
+    "imdbId": "tt0058119"
+  },
+  {
+    "title": "Day of Wrath",
+    "year": 1943,
+    "imdbId": "tt0035854"
+  },
+  {
+    "title": "Viaggio in Italia",
+    "year": 1954,
+    "imdbId": "tt0047435"
+  },
+  {
+    "title": "Europe '51",
+    "year": 1952,
+    "imdbId": "tt0044601"
+  },
+  {
+    "title": "Stromboli",
+    "year": 1950,
+    "imdbId": "tt0042021"
+  },
+  {
+    "title": "Journey to Italy",
+    "year": 1954,
+    "imdbId": "tt0047435"
+  },
+  {
+    "title": "L'Humanité",
+    "year": 1999,
+    "imdbId": "tt0207990"
+  },
+  {
+    "title": "The Son",
+    "year": 2002,
+    "imdbId": "tt0307217"
+  },
+  {
+    "title": "The Child",
+    "year": 2005,
+    "imdbId": "tt0432291"
+  },
+  {
+    "title": "Rosetta",
+    "year": 1999,
+    "imdbId": "tt0200072"
+  },
+  {
+    "title": "Two Days, One Night",
+    "year": 2014,
+    "imdbId": "tt3046780"
+  },
+  {
+    "title": "L'Enfant Sauvage",
+    "year": 1970,
+    "imdbId": "tt0065525"
+  },
+  {
+    "title": "The 400 Blows",
+    "year": 1959,
+    "imdbId": "tt0053198"
+  },
+  {
+    "title": "Zero de Conduite",
+    "year": 1933,
+    "imdbId": "tt0024884"
+  },
+  {
+    "title": "Merry Christmas, Mr. Lawrence",
+    "year": 1983,
+    "imdbId": "tt0085933"
+  },
+  {
+    "title": "Ran",
+    "year": 1985,
+    "imdbId": "tt0089881"
+  },
+  {
+    "title": "Kagemusha",
+    "year": 1980,
+    "imdbId": "tt0080979"
+  },
+  {
+    "title": "Harakiri",
+    "year": 1962,
+    "imdbId": "tt0056058"
+  },
+  {
+    "title": "The Human Condition",
+    "year": 1959,
+    "imdbId": "tt0052787"
+  },
+  {
+    "title": "Sorrow and the Pity",
+    "year": 1969,
+    "imdbId": "tt0065946"
+  },
+  {
+    "title": "Chronicle of a Summer",
+    "year": 1961,
+    "imdbId": "tt0054791"
+  },
+  {
+    "title": "Grey Gardens",
+    "year": 1975,
+    "imdbId": "tt0073076"
+  },
+  {
+    "title": "Gimme Shelter",
+    "year": 1970,
+    "imdbId": "tt0065780"
+  },
+  {
+    "title": "Don't Look Back",
+    "year": 1967,
+    "imdbId": "tt0061330"
+  },
+  {
+    "title": "The Act of Killing",
+    "year": 2012,
+    "imdbId": "tt2375605"
+  },
+  {
+    "title": "The Look of Silence",
+    "year": 2014,
+    "imdbId": "tt3521134"
+  },
+  {
+    "title": "S-21: The Khmer Rouge Killing Machine",
+    "year": 2003,
+    "imdbId": "tt0389185"
+  },
+  {
+    "title": "The Thin Blue Line",
+    "year": 1988,
+    "imdbId": "tt0096257"
+  },
+  {
+    "title": "Roger and Me",
+    "year": 1989,
+    "imdbId": "tt0098213"
+  },
+  {
+    "title": "Bowling for Columbine",
+    "year": 2002,
+    "imdbId": "tt0310793"
+  },
+  {
+    "title": "I Am Cuba",
+    "year": 1964,
+    "imdbId": "tt0058085"
+  },
+  {
+    "title": "Apocalypse Now",
+    "year": 1979,
+    "imdbId": "tt0078788"
+  },
+  {
+    "title": "Come and See",
+    "year": 1985,
+    "imdbId": "tt0091251"
+  },
+  {
+    "title": "The Bridge on the Drina",
+    "year": 1974,
+    "imdbId": "tt0071357"
+  },
+  {
+    "title": "The Ascent",
+    "year": 1977,
+    "imdbId": "tt0075319"
+  },
+  {
+    "title": "The Cranes Are Flying",
+    "year": 1957,
+    "imdbId": "tt0050299"
+  },
+  {
+    "title": "Ballad of a Soldier",
+    "year": 1959,
+    "imdbId": "tt0052404"
+  },
+  {
+    "title": "Ivan's Childhood",
+    "year": 1962,
+    "imdbId": "tt0056329"
+  },
+  {
+    "title": "Kes",
+    "year": 1969,
+    "imdbId": "tt0064541"
+  },
+  {
+    "title": "Cathy Come Home",
+    "year": 1966,
+    "imdbId": "tt0060287"
+  },
+  {
+    "title": "In the Name of the Father",
+    "year": 1993,
+    "imdbId": "tt0107207"
+  },
+  {
+    "title": "The Battle of Algiers",
+    "year": 1966,
+    "imdbId": "tt0058946"
+  },
+  {
+    "title": "Z",
+    "year": 1969,
+    "imdbId": "tt0065214"
+  },
+  {
+    "title": "Missing",
+    "year": 1982,
+    "imdbId": "tt0084335"
+  },
+  {
+    "title": "Scenes from a Marriage",
+    "year": 1973,
+    "imdbId": "tt0070644"
+  },
+  {
+    "title": "The Silence",
+    "year": 1963,
+    "imdbId": "tt0057611"
+  },
+  {
+    "title": "Shame",
+    "year": 1968,
+    "imdbId": "tt0063598"
+  },
+  {
+    "title": "Face to Face",
+    "year": 1976,
+    "imdbId": "tt0074367"
+  },
+  {
+    "title": "The Passion of Anna",
+    "year": 1969,
+    "imdbId": "tt0064750"
+  },
+  {
+    "title": "The Magician",
+    "year": 1958,
+    "imdbId": "tt0051817"
+  },
+  {
+    "title": "Smiles of a Summer Night",
+    "year": 1955,
+    "imdbId": "tt0048624"
+  },
+  {
+    "title": "Summer with Monika",
+    "year": 1953,
+    "imdbId": "tt0046162"
+  },
+  {
+    "title": "Summer Interlude",
+    "year": 1951,
+    "imdbId": "tt0044097"
+  },
+  {
+    "title": "Sawdust and Tinsel",
+    "year": 1953,
+    "imdbId": "tt0046297"
+  },
+  {
+    "title": "To the Wonder",
+    "year": 2012,
+    "imdbId": "tt1595656"
+  },
+  {
+    "title": "The New World",
+    "year": 2005,
+    "imdbId": "tt0402399"
+  },
+  {
+    "title": "Knight of Cups",
+    "year": 2015,
+    "imdbId": "tt2101383"
+  },
+  {
+    "title": "Song to Song",
+    "year": 2017,
+    "imdbId": "tt3616916"
+  },
+  {
+    "title": "Days of Heaven",
+    "year": 1978,
+    "imdbId": "tt0077405"
+  }
 ]

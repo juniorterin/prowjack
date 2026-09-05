@@ -1,83 +1,467 @@
 [
-  {"title": "Mulholland Dr.", "year": 2001, "imdbId": "tt0166924"},
-  {"title": "Last Year at Marienbad", "year": 1961, "imdbId": "tt0054632"},
-  {"title": "Mirror", "year": 1975, "imdbId": "tt0072443"},
-  {"title": "Eraserhead", "year": 1977, "imdbId": "tt0074486"},
-  {"title": "Un Chien Andalou", "year": 1929, "imdbId": "tt0020530"},
-  {"title": "The Discreet Charm of the Bourgeoisie", "year": 1972, "imdbId": "tt0068361"},
-  {"title": "Synecdoche, New York", "year": 2008, "imdbId": "tt0383028"},
-  {"title": "Wild Strawberries", "year": 1957, "imdbId": "tt0050986"},
-  {"title": "The Exterminating Angel", "year": 1962, "imdbId": "tt0055844"},
-  {"title": "Hour of the Wolf", "year": 1968, "imdbId": "tt0062420"},
-  {"title": "Belle de Jour", "year": 1967, "imdbId": "tt0061395"},
-  {"title": "Uncle Boonmee Who Can Recall His Past Lives", "year": 2010, "imdbId": "tt1598642"},
-  {"title": "Eyes Wide Shut", "year": 1999, "imdbId": "tt0120663"},
-  {"title": "Perfect Blue", "year": 1997, "imdbId": "tt0156887"},
-  {"title": "Paprika", "year": 2006, "imdbId": "tt0851578"},
-  {"title": "8½", "year": 1963, "imdbId": "tt0056801"},
-  {"title": "Lost Highway", "year": 1997, "imdbId": "tt0116922"},
-  {"title": "The Science of Sleep", "year": 2006, "imdbId": "tt0354899"},
-  {"title": "Inland Empire", "year": 2006, "imdbId": "tt0460829"},
-  {"title": "L'Age d'Or", "year": 1930, "imdbId": "tt0020619"},
-  {"title": "The Holy Mountain", "year": 1973, "imdbId": "tt0071615"},
-  {"title": "El Topo", "year": 1970, "imdbId": "tt0066031"},
-  {"title": "Santa Sangre", "year": 1989, "imdbId": "tt0098253"},
-  {"title": "Possession", "year": 1981, "imdbId": "tt0082933"},
-  {"title": "Stalker", "year": 1979, "imdbId": "tt0079944"},
-  {"title": "Persona", "year": 1966, "imdbId": "tt0060827"},
-  {"title": "Vertigo", "year": 1958, "imdbId": "tt0052357"},
-  {"title": "Seconds", "year": 1966, "imdbId": "tt0060955"},
-  {"title": "The Lobster", "year": 2015, "imdbId": "tt3464902"},
-  {"title": "The Double", "year": 2013, "imdbId": "tt2402101"},
-  {"title": "Pi", "year": 1998, "imdbId": "tt0138704"},
-  {"title": "Requiem for a Dream", "year": 2000, "imdbId": "tt0180093"},
-  {"title": "Black Swan", "year": 2010, "imdbId": "tt0947798"},
-  {"title": "Birdy", "year": 1984, "imdbId": "tt0086969"},
-  {"title": "Being John Malkovich", "year": 1999, "imdbId": "tt0120601"},
-  {"title": "Adaptation.", "year": 2002, "imdbId": "tt0268126"},
-  {"title": "I'm Thinking of Ending Things", "year": 2020, "imdbId": "tt7939766"},
-  {"title": "Under the Silver Lake", "year": 2018, "imdbId": "tt5810620"},
-  {"title": "The Neon Demon", "year": 2016, "imdbId": "tt1974419"},
-  {"title": "Enter the Void", "year": 2009, "imdbId": "tt1191111"},
-  {"title": "Climax", "year": 2018, "imdbId": "tt7513246"},
-  {"title": "Irréversible", "year": 2002, "imdbId": "tt0290673"},
-  {"title": "Satantango", "year": 1994, "imdbId": "tt0111341"},
-  {"title": "The Turin Horse", "year": 2011, "imdbId": "tt1316540"},
-  {"title": "Nostalghia", "year": 1983, "imdbId": "tt0086022"},
-  {"title": "The Sacrifice", "year": 1986, "imdbId": "tt0091670"},
-  {"title": "Hiroshima Mon Amour", "year": 1959, "imdbId": "tt0052893"},
-  {"title": "Je Tu Il Elle", "year": 1974, "imdbId": "tt0071706"},
-  {"title": "Meshes of the Afternoon", "year": 1943, "imdbId": "tt0036164"},
-  {"title": "Aloha, Bobby and Rose", "year": 1975, "imdbId": "tt0072623"},
-  {"title": "In the Cut", "year": 2003, "imdbId": "tt0364151"},
-  {"title": "Waking Life", "year": 2001, "imdbId": "tt0243017"},
-  {"title": "Fear and Loathing in Las Vegas", "year": 1998, "imdbId": "tt0120669"},
-  {"title": "Brazil", "year": 1985, "imdbId": "tt0088846"},
-  {"title": "Naked Lunch", "year": 1991, "imdbId": "tt0102511"},
-  {"title": "Barton Fink", "year": 1991, "imdbId": "tt0101410"},
-  {"title": "Twin Peaks: Fire Walk with Me", "year": 1992, "imdbId": "tt0105665"},
-  {"title": "Blue Velvet", "year": 1986, "imdbId": "tt0090756"},
-  {"title": "Wild at Heart", "year": 1990, "imdbId": "tt0100935"},
-  {"title": "The Elephant Man", "year": 1980, "imdbId": "tt0080678"},
-  {"title": "The Shout", "year": 1978, "imdbId": "tt0078273"},
-  {"title": "Hausu", "year": 1977, "imdbId": "tt0076162"},
-  {"title": "The Face of Another", "year": 1966, "imdbId": "tt0060412"},
-  {"title": "Funeral Parade of Roses", "year": 1969, "imdbId": "tt0064813"},
-  {"title": "Woman in the Dunes", "year": 1964, "imdbId": "tt0058811"},
-  {"title": "Pulse", "year": 2001, "imdbId": "tt0286751"},
-  {"title": "Videodrome", "year": 1983, "imdbId": "tt0086541"},
-  {"title": "Strange Days", "year": 1995, "imdbId": "tt0114558"},
-  {"title": "eXistenZ", "year": 1999, "imdbId": "tt0120907"},
-  {"title": "Cube", "year": 1997, "imdbId": "tt0123755"},
-  {"title": "Timecrimes", "year": 2007, "imdbId": "tt0480669"},
-  {"title": "A Zed and Two Noughts", "year": 1985, "imdbId": "tt0090475"},
-  {"title": "Drowning by Numbers", "year": 1988, "imdbId": "tt0094948"},
-  {"title": "The Cook, the Thief, His Wife and Her Lover", "year": 1989, "imdbId": "tt0097108"},
-  {"title": "The Falls", "year": 1980, "imdbId": "tt0080657"},
-  {"title": "Prospero's Books", "year": 1991, "imdbId": "tt0102891"},
-  {"title": "Celine and Julie Go Boating", "year": 1974, "imdbId": "tt0071393"},
-  {"title": "Daisies", "year": 1966, "imdbId": "tt0060174"},
-  {"title": "Valerie and Her Week of Wonders", "year": 1970, "imdbId": "tt0066459"},
-  {"title": "Alice", "year": 1988, "imdbId": "tt0094732"},
-  {"title": "Fando and Lis", "year": 1968, "imdbId": "tt0062824"}
+  {
+    "title": "Mulholland Dr.",
+    "year": 2001,
+    "imdbId": "tt0166924"
+  },
+  {
+    "title": "Last Year at Marienbad",
+    "year": 1961,
+    "imdbId": "tt0054632"
+  },
+  {
+    "title": "Mirror",
+    "year": 1975,
+    "imdbId": "tt0072443"
+  },
+  {
+    "title": "Eraserhead",
+    "year": 1977,
+    "imdbId": "tt0074486"
+  },
+  {
+    "title": "Un Chien Andalou",
+    "year": 1929,
+    "imdbId": "tt0020530"
+  },
+  {
+    "title": "The Discreet Charm of the Bourgeoisie",
+    "year": 1972,
+    "imdbId": "tt0068361"
+  },
+  {
+    "title": "Synecdoche, New York",
+    "year": 2008,
+    "imdbId": "tt0383028"
+  },
+  {
+    "title": "Wild Strawberries",
+    "year": 1957,
+    "imdbId": "tt0050986"
+  },
+  {
+    "title": "The Exterminating Angel",
+    "year": 1962,
+    "imdbId": "tt0055844"
+  },
+  {
+    "title": "Hour of the Wolf",
+    "year": 1968,
+    "imdbId": "tt0062420"
+  },
+  {
+    "title": "Belle de Jour",
+    "year": 1967,
+    "imdbId": "tt0061395"
+  },
+  {
+    "title": "Uncle Boonmee Who Can Recall His Past Lives",
+    "year": 2010,
+    "imdbId": "tt1598642"
+  },
+  {
+    "title": "Eyes Wide Shut",
+    "year": 1999,
+    "imdbId": "tt0120663"
+  },
+  {
+    "title": "Perfect Blue",
+    "year": 1997,
+    "imdbId": "tt0156887"
+  },
+  {
+    "title": "Paprika",
+    "year": 2006,
+    "imdbId": "tt0851578"
+  },
+  {
+    "title": "8½",
+    "year": 1963,
+    "imdbId": "tt0056801"
+  },
+  {
+    "title": "Lost Highway",
+    "year": 1997,
+    "imdbId": "tt0116922"
+  },
+  {
+    "title": "The Science of Sleep",
+    "year": 2006,
+    "imdbId": "tt0354899"
+  },
+  {
+    "title": "Inland Empire",
+    "year": 2006,
+    "imdbId": "tt0460829"
+  },
+  {
+    "title": "L'Age d'Or",
+    "year": 1930,
+    "imdbId": "tt0020619"
+  },
+  {
+    "title": "The Holy Mountain",
+    "year": 1973,
+    "imdbId": "tt0071615"
+  },
+  {
+    "title": "El Topo",
+    "year": 1970,
+    "imdbId": "tt0066031"
+  },
+  {
+    "title": "Santa Sangre",
+    "year": 1989,
+    "imdbId": "tt0098253"
+  },
+  {
+    "title": "Possession",
+    "year": 1981,
+    "imdbId": "tt0082933"
+  },
+  {
+    "title": "Stalker",
+    "year": 1979,
+    "imdbId": "tt0079944"
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "imdbId": "tt0060827"
+  },
+  {
+    "title": "Vertigo",
+    "year": 1958,
+    "imdbId": "tt0052357"
+  },
+  {
+    "title": "Seconds",
+    "year": 1966,
+    "imdbId": "tt0060955"
+  },
+  {
+    "title": "The Lobster",
+    "year": 2015,
+    "imdbId": "tt3464902"
+  },
+  {
+    "title": "The Double",
+    "year": 2013,
+    "imdbId": "tt2402101"
+  },
+  {
+    "title": "Pi",
+    "year": 1998,
+    "imdbId": "tt0138704"
+  },
+  {
+    "title": "Requiem for a Dream",
+    "year": 2000,
+    "imdbId": "tt0180093"
+  },
+  {
+    "title": "Black Swan",
+    "year": 2010,
+    "imdbId": "tt0947798"
+  },
+  {
+    "title": "Birdy",
+    "year": 1984,
+    "imdbId": "tt0086969"
+  },
+  {
+    "title": "Being John Malkovich",
+    "year": 1999,
+    "imdbId": "tt0120601"
+  },
+  {
+    "title": "Adaptation.",
+    "year": 2002,
+    "imdbId": "tt0268126"
+  },
+  {
+    "title": "I'm Thinking of Ending Things",
+    "year": 2020,
+    "imdbId": "tt7939766"
+  },
+  {
+    "title": "Under the Silver Lake",
+    "year": 2018,
+    "imdbId": "tt5810620"
+  },
+  {
+    "title": "The Neon Demon",
+    "year": 2016,
+    "imdbId": "tt1974419"
+  },
+  {
+    "title": "Enter the Void",
+    "year": 2009,
+    "imdbId": "tt1191111"
+  },
+  {
+    "title": "Climax",
+    "year": 2018,
+    "imdbId": "tt7513246"
+  },
+  {
+    "title": "Irréversible",
+    "year": 2002,
+    "imdbId": "tt0290673"
+  },
+  {
+    "title": "Satantango",
+    "year": 1994,
+    "imdbId": "tt0111341"
+  },
+  {
+    "title": "The Turin Horse",
+    "year": 2011,
+    "imdbId": "tt1316540"
+  },
+  {
+    "title": "Nostalghia",
+    "year": 1983,
+    "imdbId": "tt0086022"
+  },
+  {
+    "title": "The Sacrifice",
+    "year": 1986,
+    "imdbId": "tt0091670"
+  },
+  {
+    "title": "Hiroshima Mon Amour",
+    "year": 1959,
+    "imdbId": "tt0052893"
+  },
+  {
+    "title": "Je Tu Il Elle",
+    "year": 1974,
+    "imdbId": "tt0071706"
+  },
+  {
+    "title": "Meshes of the Afternoon",
+    "year": 1943,
+    "imdbId": "tt0036164"
+  },
+  {
+    "title": "Aloha, Bobby and Rose",
+    "year": 1975,
+    "imdbId": "tt0072623"
+  },
+  {
+    "title": "In the Cut",
+    "year": 2003,
+    "imdbId": "tt0364151"
+  },
+  {
+    "title": "Waking Life",
+    "year": 2001,
+    "imdbId": "tt0243017"
+  },
+  {
+    "title": "Fear and Loathing in Las Vegas",
+    "year": 1998,
+    "imdbId": "tt0120669"
+  },
+  {
+    "title": "Brazil",
+    "year": 1985,
+    "imdbId": "tt0088846"
+  },
+  {
+    "title": "Naked Lunch",
+    "year": 1991,
+    "imdbId": "tt0102511"
+  },
+  {
+    "title": "Barton Fink",
+    "year": 1991,
+    "imdbId": "tt0101410"
+  },
+  {
+    "title": "Twin Peaks: Fire Walk with Me",
+    "year": 1992,
+    "imdbId": "tt0105665"
+  },
+  {
+    "title": "Blue Velvet",
+    "year": 1986,
+    "imdbId": "tt0090756"
+  },
+  {
+    "title": "Wild at Heart",
+    "year": 1990,
+    "imdbId": "tt0100935"
+  },
+  {
+    "title": "The Elephant Man",
+    "year": 1980,
+    "imdbId": "tt0080678"
+  },
+  {
+    "title": "The Shout",
+    "year": 1978,
+    "imdbId": "tt0078273"
+  },
+  {
+    "title": "Hausu",
+    "year": 1977,
+    "imdbId": "tt0076162"
+  },
+  {
+    "title": "The Face of Another",
+    "year": 1966,
+    "imdbId": "tt0060412"
+  },
+  {
+    "title": "Funeral Parade of Roses",
+    "year": 1969,
+    "imdbId": "tt0064813"
+  },
+  {
+    "title": "Woman in the Dunes",
+    "year": 1964,
+    "imdbId": "tt0058811"
+  },
+  {
+    "title": "Pulse",
+    "year": 2001,
+    "imdbId": "tt0286751"
+  },
+  {
+    "title": "Videodrome",
+    "year": 1983,
+    "imdbId": "tt0086541"
+  },
+  {
+    "title": "Strange Days",
+    "year": 1995,
+    "imdbId": "tt0114558"
+  },
+  {
+    "title": "eXistenZ",
+    "year": 1999,
+    "imdbId": "tt0120907"
+  },
+  {
+    "title": "Cube",
+    "year": 1997,
+    "imdbId": "tt0123755"
+  },
+  {
+    "title": "Timecrimes",
+    "year": 2007,
+    "imdbId": "tt0480669"
+  },
+  {
+    "title": "A Zed and Two Noughts",
+    "year": 1985,
+    "imdbId": "tt0090475"
+  },
+  {
+    "title": "Drowning by Numbers",
+    "year": 1988,
+    "imdbId": "tt0094948"
+  },
+  {
+    "title": "The Cook, the Thief, His Wife and Her Lover",
+    "year": 1989,
+    "imdbId": "tt0097108"
+  },
+  {
+    "title": "The Falls",
+    "year": 1980,
+    "imdbId": "tt0080657"
+  },
+  {
+    "title": "Prospero's Books",
+    "year": 1991,
+    "imdbId": "tt0102891"
+  },
+  {
+    "title": "Celine and Julie Go Boating",
+    "year": 1974,
+    "imdbId": "tt0071393"
+  },
+  {
+    "title": "Daisies",
+    "year": 1966,
+    "imdbId": "tt0060174"
+  },
+  {
+    "title": "Valerie and Her Week of Wonders",
+    "year": 1970,
+    "imdbId": "tt0066459"
+  },
+  {
+    "title": "Alice",
+    "year": 1988,
+    "imdbId": "tt0094732"
+  },
+  {
+    "title": "Fando and Lis",
+    "year": 1968,
+    "imdbId": "tt0062824"
+  },
+  {
+    "title": "Simon of the Desert",
+    "year": 1965,
+    "imdbId": "tt0059587"
+  },
+  {
+    "title": "The Phantom of Liberty",
+    "year": 1974,
+    "imdbId": "tt0071968"
+  },
+  {
+    "title": "That Obscure Object of Desire",
+    "year": 1977,
+    "imdbId": "tt0076413"
+  },
+  {
+    "title": "Cemetery of Splendour",
+    "year": 2015,
+    "imdbId": "tt4699710"
+  },
+  {
+    "title": "Memoria",
+    "year": 2021,
+    "imdbId": "tt13729356"
+  },
+  {
+    "title": "The Green Ray",
+    "year": 1986,
+    "imdbId": "tt0091219"
+  },
+  {
+    "title": "Southland Tales",
+    "year": 2006,
+    "imdbId": "tt0405336"
+  },
+  {
+    "title": "Spring",
+    "year": 2014,
+    "imdbId": "tt3374948"
+  },
+  {
+    "title": "Holy Motors",
+    "year": 2012,
+    "imdbId": "tt2076220"
+  },
+  {
+    "title": "Annette",
+    "year": 2021,
+    "imdbId": "tt6217018"
+  },
+  {
+    "title": "The Forbidden Zone",
+    "year": 1980,
+    "imdbId": "tt0080693"
+  },
+  {
+    "title": "The Milky Way",
+    "year": 1969,
+    "imdbId": "tt0064532"
+  }
 ]

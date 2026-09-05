@@ -1,84 +1,482 @@
 [
-  {"title": "Rosemary's Baby", "year": 1968, "imdbId": "tt0063522"},
-  {"title": "Night of the Living Dead", "year": 1968, "imdbId": "tt0063350"},
-  {"title": "Peeping Tom", "year": 1960, "imdbId": "tt0054167"},
-  {"title": "Eyes Without a Face", "year": 1960, "imdbId": "tt0053459"},
-  {"title": "Repulsion", "year": 1965, "imdbId": "tt0059646"},
-  {"title": "M", "year": 1931, "imdbId": "tt0022100"},
-  {"title": "Eraserhead", "year": 1977, "imdbId": "tt0074486"},
-  {"title": "Blue Velvet", "year": 1986, "imdbId": "tt0090756"},
-  {"title": "The Spirit of the Beehive", "year": 1973, "imdbId": "tt0070040"},
-  {"title": "Stalker", "year": 1979, "imdbId": "tt0079944"},
-  {"title": "Paths of Glory", "year": 1957, "imdbId": "tt0050825"},
-  {"title": "The Night of the Hunter", "year": 1955, "imdbId": "tt0048424"},
-  {"title": "Persona", "year": 1966, "imdbId": "tt0060827"},
-  {"title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles", "year": 1975, "imdbId": "tt0073198"},
-  {"title": "Dekalog", "year": 1988, "imdbId": "tt0092337"},
-  {"title": "Belle de Jour", "year": 1967, "imdbId": "tt0061395"},
-  {"title": "Solaris", "year": 1972, "imdbId": "tt0069293"},
-  {"title": "Ali: Fear Eats the Soul", "year": 1974, "imdbId": "tt0071141"},
-  {"title": "Stranger Than Paradise", "year": 1984, "imdbId": "tt0088184"},
-  {"title": "Blow-Up", "year": 1966, "imdbId": "tt0060176"},
-  {"title": "The Wicker Man", "year": 1973, "imdbId": "tt0070917"},
-  {"title": "Don't Look Now", "year": 1973, "imdbId": "tt0069947"},
-  {"title": "Hour of the Wolf", "year": 1968, "imdbId": "tt0062420"},
-  {"title": "Onibaba", "year": 1964, "imdbId": "tt0058404"},
-  {"title": "Kwaidan", "year": 1964, "imdbId": "tt0058279"},
-  {"title": "Audition", "year": 1999, "imdbId": "tt0235198"},
-  {"title": "Ringu", "year": 1998, "imdbId": "tt0178868"},
-  {"title": "Pulse", "year": 2001, "imdbId": "tt0286751"},
-  {"title": "The Shining", "year": 1980, "imdbId": "tt0081505"},
-  {"title": "The Innocents", "year": 1961, "imdbId": "tt0055018"},
-  {"title": "The Haunting", "year": 1963, "imdbId": "tt0057129"},
-  {"title": "The Tenant", "year": 1976, "imdbId": "tt0074811"},
-  {"title": "Possession", "year": 1981, "imdbId": "tt0082933"},
-  {"title": "Suspiria", "year": 1977, "imdbId": "tt0076786"},
-  {"title": "Inferno", "year": 1980, "imdbId": "tt0081503"},
-  {"title": "The Beyond", "year": 1981, "imdbId": "tt0082307"},
-  {"title": "Hausu", "year": 1977, "imdbId": "tt0076162"},
-  {"title": "The Brood", "year": 1979, "imdbId": "tt0078908"},
-  {"title": "Videodrome", "year": 1983, "imdbId": "tt0086541"},
-  {"title": "Dead Ringers", "year": 1988, "imdbId": "tt0094964"},
-  {"title": "The Fly", "year": 1986, "imdbId": "tt0091064"},
-  {"title": "Re-Animator", "year": 1985, "imdbId": "tt0089885"},
-  {"title": "From Beyond", "year": 1986, "imdbId": "tt0091083"},
-  {"title": "The Thing", "year": 1982, "imdbId": "tt0084787"},
-  {"title": "In the Mouth of Madness", "year": 1994, "imdbId": "tt0110005"},
-  {"title": "Prince of Darkness", "year": 1987, "imdbId": "tt0093790"},
-  {"title": "The Mist", "year": 2007, "imdbId": "tt0884328"},
-  {"title": "Annihilation", "year": 2018, "imdbId": "tt2798920"},
-  {"title": "Hereditary", "year": 2018, "imdbId": "tt7784604"},
-  {"title": "Midsommar", "year": 2019, "imdbId": "tt8772262"},
-  {"title": "The Witch", "year": 2015, "imdbId": "tt4263482"},
-  {"title": "The Babadook", "year": 2014, "imdbId": "tt2321549"},
-  {"title": "It Follows", "year": 2014, "imdbId": "tt3235888"},
-  {"title": "Under the Shadow", "year": 2016, "imdbId": "tt4273292"},
-  {"title": "A Tale of Two Sisters", "year": 2003, "imdbId": "tt0365376"},
-  {"title": "The Wailing", "year": 2016, "imdbId": "tt5215952"},
-  {"title": "His House", "year": 2020, "imdbId": "tt8109848"},
-  {"title": "Saint Maud", "year": 2019, "imdbId": "tt7557108"},
-  {"title": "The Night House", "year": 2020, "imdbId": "tt9304822"},
-  {"title": "Titane", "year": 2021, "imdbId": "tt10944760"},
-  {"title": "Lamb", "year": 2021, "imdbId": "tt12299608"},
-  {"title": "Men", "year": 2022, "imdbId": "tt11280112"},
-  {"title": "The Substance", "year": 2024, "imdbId": "tt17526714"},
-  {"title": "I Saw the TV Glow", "year": 2024, "imdbId": "tt21056886"},
-  {"title": "Barbarian", "year": 2022, "imdbId": "tt15791034"},
-  {"title": "X", "year": 2022, "imdbId": "tt13560574"},
-  {"title": "Pearl", "year": 2022, "imdbId": "tt18925334"},
-  {"title": "Skinamarink", "year": 2022, "imdbId": "tt21382234"},
-  {"title": "Nope", "year": 2022, "imdbId": "tt10954984"},
-  {"title": "Crimes of the Future", "year": 2022, "imdbId": "tt14549466"},
-  {"title": "The Northman", "year": 2022, "imdbId": "tt11138512"},
-  {"title": "Longlegs", "year": 2024, "imdbId": "tt26250786"},
-  {"title": "Heretic", "year": 2024, "imdbId": "tt25498278"},
-  {"title": "The Watchers", "year": 2024, "imdbId": "tt24873402"},
-  {"title": "Smile", "year": 2022, "imdbId": "tt15474916"},
-  {"title": "The Black Phone", "year": 2021, "imdbId": "tt7144666"},
-  {"title": "Speak No Evil", "year": 2022, "imdbId": "tt15354308"},
-  {"title": "The Killing of a Sacred Deer", "year": 2017, "imdbId": "tt5715874"},
-  {"title": "mother!", "year": 2017, "imdbId": "tt5109784"},
-  {"title": "The Lighthouse", "year": 2019, "imdbId": "tt7984734"},
-  {"title": "Raw", "year": 2016, "imdbId": "tt4954522"},
-  {"title": "Possessor", "year": 2020, "imdbId": "tt5765844"}
+  {
+    "title": "Rosemary's Baby",
+    "year": 1968,
+    "imdbId": "tt0063522"
+  },
+  {
+    "title": "Night of the Living Dead",
+    "year": 1968,
+    "imdbId": "tt0063350"
+  },
+  {
+    "title": "Peeping Tom",
+    "year": 1960,
+    "imdbId": "tt0054167"
+  },
+  {
+    "title": "Eyes Without a Face",
+    "year": 1960,
+    "imdbId": "tt0053459"
+  },
+  {
+    "title": "Repulsion",
+    "year": 1965,
+    "imdbId": "tt0059646"
+  },
+  {
+    "title": "M",
+    "year": 1931,
+    "imdbId": "tt0022100"
+  },
+  {
+    "title": "Eraserhead",
+    "year": 1977,
+    "imdbId": "tt0074486"
+  },
+  {
+    "title": "Blue Velvet",
+    "year": 1986,
+    "imdbId": "tt0090756"
+  },
+  {
+    "title": "The Spirit of the Beehive",
+    "year": 1973,
+    "imdbId": "tt0070040"
+  },
+  {
+    "title": "Stalker",
+    "year": 1979,
+    "imdbId": "tt0079944"
+  },
+  {
+    "title": "Paths of Glory",
+    "year": 1957,
+    "imdbId": "tt0050825"
+  },
+  {
+    "title": "The Night of the Hunter",
+    "year": 1955,
+    "imdbId": "tt0048424"
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "imdbId": "tt0060827"
+  },
+  {
+    "title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles",
+    "year": 1975,
+    "imdbId": "tt0073198"
+  },
+  {
+    "title": "Dekalog",
+    "year": 1988,
+    "imdbId": "tt0092337"
+  },
+  {
+    "title": "Belle de Jour",
+    "year": 1967,
+    "imdbId": "tt0061395"
+  },
+  {
+    "title": "Solaris",
+    "year": 1972,
+    "imdbId": "tt0069293"
+  },
+  {
+    "title": "Ali: Fear Eats the Soul",
+    "year": 1974,
+    "imdbId": "tt0071141"
+  },
+  {
+    "title": "Stranger Than Paradise",
+    "year": 1984,
+    "imdbId": "tt0088184"
+  },
+  {
+    "title": "Blow-Up",
+    "year": 1966,
+    "imdbId": "tt0060176"
+  },
+  {
+    "title": "The Wicker Man",
+    "year": 1973,
+    "imdbId": "tt0070917"
+  },
+  {
+    "title": "Don't Look Now",
+    "year": 1973,
+    "imdbId": "tt0069947"
+  },
+  {
+    "title": "Hour of the Wolf",
+    "year": 1968,
+    "imdbId": "tt0062420"
+  },
+  {
+    "title": "Onibaba",
+    "year": 1964,
+    "imdbId": "tt0058404"
+  },
+  {
+    "title": "Kwaidan",
+    "year": 1964,
+    "imdbId": "tt0058279"
+  },
+  {
+    "title": "Audition",
+    "year": 1999,
+    "imdbId": "tt0235198"
+  },
+  {
+    "title": "Ringu",
+    "year": 1998,
+    "imdbId": "tt0178868"
+  },
+  {
+    "title": "Pulse",
+    "year": 2001,
+    "imdbId": "tt0286751"
+  },
+  {
+    "title": "The Shining",
+    "year": 1980,
+    "imdbId": "tt0081505"
+  },
+  {
+    "title": "The Innocents",
+    "year": 1961,
+    "imdbId": "tt0055018"
+  },
+  {
+    "title": "The Haunting",
+    "year": 1963,
+    "imdbId": "tt0057129"
+  },
+  {
+    "title": "The Tenant",
+    "year": 1976,
+    "imdbId": "tt0074811"
+  },
+  {
+    "title": "Possession",
+    "year": 1981,
+    "imdbId": "tt0082933"
+  },
+  {
+    "title": "Suspiria",
+    "year": 1977,
+    "imdbId": "tt0076786"
+  },
+  {
+    "title": "Inferno",
+    "year": 1980,
+    "imdbId": "tt0081503"
+  },
+  {
+    "title": "The Beyond",
+    "year": 1981,
+    "imdbId": "tt0082307"
+  },
+  {
+    "title": "Hausu",
+    "year": 1977,
+    "imdbId": "tt0076162"
+  },
+  {
+    "title": "The Brood",
+    "year": 1979,
+    "imdbId": "tt0078908"
+  },
+  {
+    "title": "Videodrome",
+    "year": 1983,
+    "imdbId": "tt0086541"
+  },
+  {
+    "title": "Dead Ringers",
+    "year": 1988,
+    "imdbId": "tt0094964"
+  },
+  {
+    "title": "The Fly",
+    "year": 1986,
+    "imdbId": "tt0091064"
+  },
+  {
+    "title": "Re-Animator",
+    "year": 1985,
+    "imdbId": "tt0089885"
+  },
+  {
+    "title": "From Beyond",
+    "year": 1986,
+    "imdbId": "tt0091083"
+  },
+  {
+    "title": "The Thing",
+    "year": 1982,
+    "imdbId": "tt0084787"
+  },
+  {
+    "title": "In the Mouth of Madness",
+    "year": 1994,
+    "imdbId": "tt0110005"
+  },
+  {
+    "title": "Prince of Darkness",
+    "year": 1987,
+    "imdbId": "tt0093790"
+  },
+  {
+    "title": "The Mist",
+    "year": 2007,
+    "imdbId": "tt0884328"
+  },
+  {
+    "title": "Annihilation",
+    "year": 2018,
+    "imdbId": "tt2798920"
+  },
+  {
+    "title": "Hereditary",
+    "year": 2018,
+    "imdbId": "tt7784604"
+  },
+  {
+    "title": "Midsommar",
+    "year": 2019,
+    "imdbId": "tt8772262"
+  },
+  {
+    "title": "The Witch",
+    "year": 2015,
+    "imdbId": "tt4263482"
+  },
+  {
+    "title": "The Babadook",
+    "year": 2014,
+    "imdbId": "tt2321549"
+  },
+  {
+    "title": "It Follows",
+    "year": 2014,
+    "imdbId": "tt3235888"
+  },
+  {
+    "title": "Under the Shadow",
+    "year": 2016,
+    "imdbId": "tt4273292"
+  },
+  {
+    "title": "A Tale of Two Sisters",
+    "year": 2003,
+    "imdbId": "tt0365376"
+  },
+  {
+    "title": "The Wailing",
+    "year": 2016,
+    "imdbId": "tt5215952"
+  },
+  {
+    "title": "His House",
+    "year": 2020,
+    "imdbId": "tt8109848"
+  },
+  {
+    "title": "Saint Maud",
+    "year": 2019,
+    "imdbId": "tt7557108"
+  },
+  {
+    "title": "The Night House",
+    "year": 2020,
+    "imdbId": "tt9304822"
+  },
+  {
+    "title": "Titane",
+    "year": 2021,
+    "imdbId": "tt10944760"
+  },
+  {
+    "title": "Lamb",
+    "year": 2021,
+    "imdbId": "tt12299608"
+  },
+  {
+    "title": "Men",
+    "year": 2022,
+    "imdbId": "tt11280112"
+  },
+  {
+    "title": "The Substance",
+    "year": 2024,
+    "imdbId": "tt17526714"
+  },
+  {
+    "title": "I Saw the TV Glow",
+    "year": 2024,
+    "imdbId": "tt21056886"
+  },
+  {
+    "title": "Barbarian",
+    "year": 2022,
+    "imdbId": "tt15791034"
+  },
+  {
+    "title": "X",
+    "year": 2022,
+    "imdbId": "tt13560574"
+  },
+  {
+    "title": "Pearl",
+    "year": 2022,
+    "imdbId": "tt18925334"
+  },
+  {
+    "title": "Skinamarink",
+    "year": 2022,
+    "imdbId": "tt21382234"
+  },
+  {
+    "title": "Nope",
+    "year": 2022,
+    "imdbId": "tt10954984"
+  },
+  {
+    "title": "Crimes of the Future",
+    "year": 2022,
+    "imdbId": "tt14549466"
+  },
+  {
+    "title": "The Northman",
+    "year": 2022,
+    "imdbId": "tt11138512"
+  },
+  {
+    "title": "Longlegs",
+    "year": 2024,
+    "imdbId": "tt26250786"
+  },
+  {
+    "title": "Heretic",
+    "year": 2024,
+    "imdbId": "tt25498278"
+  },
+  {
+    "title": "The Watchers",
+    "year": 2024,
+    "imdbId": "tt24873402"
+  },
+  {
+    "title": "Smile",
+    "year": 2022,
+    "imdbId": "tt15474916"
+  },
+  {
+    "title": "The Black Phone",
+    "year": 2021,
+    "imdbId": "tt7144666"
+  },
+  {
+    "title": "Speak No Evil",
+    "year": 2022,
+    "imdbId": "tt15354308"
+  },
+  {
+    "title": "The Killing of a Sacred Deer",
+    "year": 2017,
+    "imdbId": "tt5715874"
+  },
+  {
+    "title": "mother!",
+    "year": 2017,
+    "imdbId": "tt5109784"
+  },
+  {
+    "title": "The Lighthouse",
+    "year": 2019,
+    "imdbId": "tt7984734"
+  },
+  {
+    "title": "Raw",
+    "year": 2016,
+    "imdbId": "tt4954522"
+  },
+  {
+    "title": "Possessor",
+    "year": 2020,
+    "imdbId": "tt5765844"
+  },
+  {
+    "title": "Nosferatu",
+    "year": 1922,
+    "imdbId": "tt0013442"
+  },
+  {
+    "title": "The Cabinet of Dr. Caligari",
+    "year": 1920,
+    "imdbId": "tt0010323"
+  },
+  {
+    "title": "Frankenstein",
+    "year": 1931,
+    "imdbId": "tt0021884"
+  },
+  {
+    "title": "Bride of Frankenstein",
+    "year": 1935,
+    "imdbId": "tt0026138"
+  },
+  {
+    "title": "Dracula",
+    "year": 1931,
+    "imdbId": "tt0021814"
+  },
+  {
+    "title": "Freaks",
+    "year": 1932,
+    "imdbId": "tt0022913"
+  },
+  {
+    "title": "Island of Lost Souls",
+    "year": 1932,
+    "imdbId": "tt0023114"
+  },
+  {
+    "title": "The Old Dark House",
+    "year": 1932,
+    "imdbId": "tt0023273"
+  },
+  {
+    "title": "The Mummy",
+    "year": 1932,
+    "imdbId": "tt0023245"
+  },
+  {
+    "title": "King Kong",
+    "year": 1933,
+    "imdbId": "tt0024216"
+  },
+  {
+    "title": "Them",
+    "year": 1954,
+    "imdbId": "tt0047573"
+  },
+  {
+    "title": "Invasion of the Body Snatchers",
+    "year": 1956,
+    "imdbId": "tt0049366"
+  },
+  {
+    "title": "The Fly",
+    "year": 1958,
+    "imdbId": "tt0051622"
+  },
+  {
+    "title": "Village of the Damned",
+    "year": 1960,
+    "imdbId": "tt0054443"
+  }
 ]
