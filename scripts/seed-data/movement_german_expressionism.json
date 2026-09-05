@@ -1,77 +1,102 @@
 [
-  {
-    "title": "The Cabinet of Dr. Caligari",
-    "year": 1920,
-    "imdbId": "tt0010323"
-  },
-  {
-    "title": "Nosferatu",
-    "year": 1922,
-    "imdbId": "tt0013442"
-  },
-  {
-    "title": "The Golem",
-    "year": 1920,
-    "imdbId": "tt0011130"
-  },
-  {
-    "title": "The Hands of Orlac",
-    "year": 1924,
-    "imdbId": "tt0014836"
-  },
-  {
-    "title": "Faust",
-    "year": 1926,
-    "imdbId": "tt0016847"
-  },
-  {
-    "title": "M",
-    "year": 1931,
-    "imdbId": "tt0022100"
-  },
-  {
-    "title": "Metropolis",
-    "year": 1927,
-    "imdbId": "tt0017136"
-  },
-  {
-    "title": "The Last Laugh",
-    "year": 1924,
-    "imdbId": "tt0015005"
-  },
-  {
-    "title": "Pandora's Box",
-    "year": 1929,
-    "imdbId": "tt0020138"
-  },
-  {
-    "title": "Spies",
-    "year": 1928,
-    "imdbId": "tt0019415"
-  },
-  {
-    "title": "The Blue Angel",
-    "year": 1930,
-    "imdbId": "tt0020697"
-  },
-  {
-    "title": "Phantom",
-    "year": 1922,
-    "imdbId": "tt0013485"
-  },
-  {
-    "title": "Warning Shadows",
-    "year": 1923,
-    "imdbId": "tt0014567"
-  },
-  {
-    "title": "Waxworks",
-    "year": 1924,
-    "imdbId": "tt0014586"
-  },
-  {
-    "title": "Dr. Mabuse the Gambler",
-    "year": 1922,
-    "imdbId": "tt0013086"
-  }
+  {"title": "The Cabinet of Dr. Caligari", "year": 1920, "imdbId": "tt0010323"},
+  {"title": "Nosferatu", "year": 1922, "imdbId": "tt0013442"},
+  {"title": "The Golem", "year": 1920, "imdbId": "tt0011130"},
+  {"title": "The Hands of Orlac", "year": 1924, "imdbId": "tt0014836"},
+  {"title": "Faust", "year": 1926, "imdbId": "tt0016847"},
+  {"title": "M", "year": 1931, "imdbId": "tt0022100"},
+  {"title": "Metropolis", "year": 1927, "imdbId": "tt0017136"},
+  {"title": "The Last Laugh", "year": 1924, "imdbId": "tt0015005"},
+  {"title": "Pandora's Box", "year": 1929, "imdbId": "tt0020138"},
+  {"title": "Spies", "year": 1928, "imdbId": "tt0019415"},
+  {"title": "The Blue Angel", "year": 1930, "imdbId": "tt0020697"},
+  {"title": "Phantom", "year": 1922, "imdbId": "tt0013485"},
+  {"title": "Warning Shadows", "year": 1923, "imdbId": "tt0014567"},
+  {"title": "Waxworks", "year": 1924, "imdbId": "tt0014586"},
+  {"title": "Dr. Mabuse the Gambler", "year": 1922, "imdbId": "tt0013086"},
+  {"title": "The Testament of Dr. Mabuse", "year": 1933, "imdbId": "tt0024566"},
+  {"title": "Destiny", "year": 1921, "imdbId": "tt0012494"},
+  {"title": "Die Nibelungen: Siegfried", "year": 1924, "imdbId": "tt0015175"},
+  {"title": "Die Nibelungen: Kriemhild's Revenge", "year": 1924, "imdbId": "tt0015173"},
+  {"title": "Woman in the Moon", "year": 1929, "imdbId": "tt0020495"},
+  {"title": "The Threepenny Opera", "year": 1931, "imdbId": "tt0022673"},
+  {"title": "Diary of a Lost Girl", "year": 1929, "imdbId": "tt0019768"},
+  {"title": "The Joyless Street", "year": 1925, "imdbId": "tt0015906"},
+  {"title": "Sunrise: A Song of Two Humans", "year": 1927, "imdbId": "tt0018455"},
+  {"title": "Tartuffe", "year": 1925, "imdbId": "tt0016468"},
+  {"title": "The Student of Prague", "year": 1926, "imdbId": "tt0017367"},
+  {"title": "Genuine", "year": 1920, "imdbId": "tt0011189"},
+  {"title": "From Morn to Midnight", "year": 1920, "imdbId": "tt0011166"},
+  {"title": "Backstairs", "year": 1921, "imdbId": "tt0011889"},
+  {"title": "The Street", "year": 1923, "imdbId": "tt0014519"},
+  {"title": "Sylvester", "year": 1923, "imdbId": "tt0014555"},
+  {"title": "Variety", "year": 1925, "imdbId": "tt0016520"},
+  {"title": "Algol", "year": 1920, "imdbId": "tt0010665"},
+  {"title": "Raskolnikow", "year": 1923, "imdbId": "tt0014368"},
+  {"title": "Westfront 1918", "year": 1930, "imdbId": "tt0021590"},
+  {"title": "Kameradschaft", "year": 1931, "imdbId": "tt0022152"},
+  {"title": "Berlin: Symphony of a Great City", "year": 1927, "imdbId": "tt0017668"},
+  {"title": "People on Sunday", "year": 1930, "imdbId": "tt0021166"},
+  {"title": "Emil and the Detectives", "year": 1931, "imdbId": "tt0021763"},
+  {"title": "Asphalt", "year": 1929, "imdbId": "tt0019648"},
+  {"title": "Mother Krause's Journey to Happiness", "year": 1929, "imdbId": "tt0020182"},
+  {"title": "The Haunted Castle", "year": 1921, "imdbId": "tt0012220"},
+  {"title": "Danton", "year": 1921, "imdbId": "tt0012082"},
+  {"title": "New Year's Eve", "year": 1924, "imdbId": "tt0015136"},
+  {"title": "The Last Command", "year": 1928, "imdbId": "tt0019024"},
+  {"title": "The Loves of Pharaoh", "year": 1922, "imdbId": "tt0013284"},
+  {"title": "Zur Chronik von Grieshuus", "year": 1925, "imdbId": "tt0016590"},
+  {"title": "Die Weber", "year": 1927, "imdbId": "tt0018504"},
+  {"title": "Tagebuch einer Verlorenen", "year": 1929, "imdbId": "tt0019768"},
+  {"title": "Schatten", "year": 1923, "imdbId": "tt0014519"},
+  {"title": "Vanina", "year": 1922, "imdbId": "tt0013622"},
+  {"title": "The Last Bridge", "year": 1954, "imdbId": "tt0047113"},
+  {"title": "Erdgeist", "year": 1923, "imdbId": "tt0014003"},
+  {"title": "The Mountain Eagle", "year": 1926, "imdbId": "tt0017082"},
+  {"title": "Die Pest in Florenz", "year": 1919, "imdbId": "tt0010476"},
+  {"title": "Nathan the Wise", "year": 1922, "imdbId": "tt0013384"},
+  {"title": "The Golem and the Dancing Girl", "year": 1917, "imdbId": "tt0008177"},
+  {"title": "Homunculus", "year": 1916, "imdbId": "tt0006930"},
+  {"title": "The Golem: How He Came into the World", "year": 1920, "imdbId": "tt0011130"},
+  {"title": "Veritas Vincit", "year": 1919, "imdbId": "tt0010681"},
+  {"title": "Der Brennende Acker", "year": 1922, "imdbId": "tt0012917"},
+  {"title": "The Burning Soil", "year": 1922, "imdbId": "tt0012917"},
+  {"title": "Komödie des Herzens", "year": 1924, "imdbId": "tt0014976"},
+  {"title": "Schloß Vogelöd", "year": 1921, "imdbId": "tt0012569"},
+  {"title": "The Haunted Castle", "year": 1921, "imdbId": "tt0012569"},
+  {"title": "Der Gang in die Nacht", "year": 1921, "imdbId": "tt0012132"},
+  {"title": "Journey into the Night", "year": 1921, "imdbId": "tt0012132"},
+  {"title": "Nosferatu the Vampyre", "year": 1979, "imdbId": "tt0079641"},
+  {"title": "Shadow of the Vampire", "year": 2000, "imdbId": "tt0189998"},
+  {"title": "M - Eine Stadt sucht einen Mörder", "year": 1931, "imdbId": "tt0022100"},
+  {"title": "Das Kabinett des Doktor Caligari", "year": 1920, "imdbId": "tt0010323"},
+  {"title": "Der Golem, wie er in die Welt kam", "year": 1920, "imdbId": "tt0011130"},
+  {"title": "Nosferatu, eine Symphonie des Grauens", "year": 1922, "imdbId": "tt0013442"},
+  {"title": "Spione", "year": 1928, "imdbId": "tt0019415"},
+  {"title": "Frau im Mond", "year": 1929, "imdbId": "tt0020495"},
+  {"title": "Die freudlose Gasse", "year": 1925, "imdbId": "tt0015906"},
+  {"title": "Die Büchse der Pandora", "year": 1929, "imdbId": "tt0020138"},
+  {"title": "Faust – Eine deutsche Volkssage", "year": 1926, "imdbId": "tt0016847"},
+  {"title": "Der blaue Engel", "year": 1930, "imdbId": "tt0020697"},
+  {"title": "Waxworks", "year": 1924, "imdbId": "tt0014586"},
+  {"title": "Dr. Mabuse, der Spieler", "year": 1922, "imdbId": "tt0013086"},
+  {"title": "Das Testament des Dr. Mabuse", "year": 1933, "imdbId": "tt0024566"},
+  {"title": "Die Dreigroschenoper", "year": 1931, "imdbId": "tt0022673"},
+  {"title": "Der Student von Prag", "year": 1926, "imdbId": "tt0017367"},
+  {"title": "The Cabinet of Caligari", "year": 1962, "imdbId": "tt0055831"},
+  {"title": "Sunrise", "year": 1927, "imdbId": "tt0018455"},
+  {"title": "4 Devils", "year": 1928, "imdbId": "tt0018595"},
+  {"title": "The Last Performance", "year": 1929, "imdbId": "tt0020049"},
+  {"title": "Warning Shadows", "year": 1923, "imdbId": "tt0014567"},
+  {"title": "The Informer", "year": 1929, "imdbId": "tt0019966"},
+  {"title": "The Great Gabbo", "year": 1929, "imdbId": "tt0019934"},
+  {"title": "Hintertreppe", "year": 1921, "imdbId": "tt0011889"},
+  {"title": "Die Strasse", "year": 1923, "imdbId": "tt0014519"},
+  {"title": "Sylvester – Tragödie einer Nacht", "year": 1923, "imdbId": "tt0014555"},
+  {"title": "Algol: Tragedy of Power", "year": 1920, "imdbId": "tt0010665"},
+  {"title": "Raskolnikow", "year": 1923, "imdbId": "tt0014368"},
+  {"title": "Kreuzzug des Weibes", "year": 1926, "imdbId": "tt0016987"},
+  {"title": "Asphalt", "year": 1929, "imdbId": "tt0019648"},
+  {"title": "Mutter Krausens Fahrt ins Glück", "year": 1929, "imdbId": "tt0020182"},
+  {"title": "Berlin: Die Sinfonie der Großstadt", "year": 1927, "imdbId": "tt0017668"}
 ]

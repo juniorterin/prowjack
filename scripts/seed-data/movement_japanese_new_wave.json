@@ -1,77 +1,102 @@
 [
-  {
-    "title": "Hiroshima Mon Amour",
-    "year": 1959,
-    "imdbId": "tt0052893"
-  },
-  {
-    "title": "Woman in the Dunes",
-    "year": 1964,
-    "imdbId": "tt0058625"
-  },
-  {
-    "title": "The Man Without a Map",
-    "year": 1968,
-    "imdbId": "tt0203695"
-  },
-  {
-    "title": "Onibaba",
-    "year": 1964,
-    "imdbId": "tt0058430"
-  },
-  {
-    "title": "Kuroneko",
-    "year": 1968,
-    "imdbId": "tt0122136"
-  },
-  {
-    "title": "Double Suicide",
-    "year": 1969,
-    "imdbId": "tt0064513"
-  },
-  {
-    "title": "The Ceremony",
-    "year": 1971,
-    "imdbId": "tt0066785"
-  },
-  {
-    "title": "Boy",
-    "year": 1969,
-    "imdbId": "tt0064519"
-  },
-  {
-    "title": "In the Realm of the Senses",
-    "year": 1976,
-    "imdbId": "tt0074102"
-  },
-  {
-    "title": "Confessions Among Actresses",
-    "year": 1971,
-    "imdbId": "tt0066847"
-  },
-  {
-    "title": "Pastoral: To Die in the Country",
-    "year": 1974,
-    "imdbId": "tt0072096"
-  },
-  {
-    "title": "Throw Away Your Books, Rally in the Streets",
-    "year": 1971,
-    "imdbId": "tt0067865"
-  },
-  {
-    "title": "Funeral Parade of Roses",
-    "year": 1969,
-    "imdbId": "tt0064538"
-  },
-  {
-    "title": "Branded to Kill",
-    "year": 1967,
-    "imdbId": "tt0061452"
-  },
-  {
-    "title": "Tokyo Drifter",
-    "year": 1966,
-    "imdbId": "tt0059827"
-  }
+  {"title": "Woman in the Dunes", "year": 1964, "imdbId": "tt0058625"},
+  {"title": "Onibaba", "year": 1964, "imdbId": "tt0058430"},
+  {"title": "Kuroneko", "year": 1968, "imdbId": "tt0122136"},
+  {"title": "Double Suicide", "year": 1969, "imdbId": "tt0064513"},
+  {"title": "The Ceremony", "year": 1971, "imdbId": "tt0066785"},
+  {"title": "Boy", "year": 1969, "imdbId": "tt0064519"},
+  {"title": "In the Realm of the Senses", "year": 1976, "imdbId": "tt0074102"},
+  {"title": "Pastoral: To Die in the Country", "year": 1974, "imdbId": "tt0072096"},
+  {"title": "Throw Away Your Books, Rally in the Streets", "year": 1971, "imdbId": "tt0067865"},
+  {"title": "Funeral Parade of Roses", "year": 1969, "imdbId": "tt0064538"},
+  {"title": "Branded to Kill", "year": 1967, "imdbId": "tt0061452"},
+  {"title": "Tokyo Drifter", "year": 1966, "imdbId": "tt0059827"},
+  {"title": "Confessions Among Actresses", "year": 1971, "imdbId": "tt0066847"},
+  {"title": "The Man Without a Map", "year": 1968, "imdbId": "tt0203695"},
+  {"title": "Night and Fog in Japan", "year": 1960, "imdbId": "tt0054043"},
+  {"title": "Cruel Story of Youth", "year": 1960, "imdbId": "tt0053701"},
+  {"title": "The Sun's Burial", "year": 1960, "imdbId": "tt0054280"},
+  {"title": "Violence at Noon", "year": 1966, "imdbId": "tt0060919"},
+  {"title": "Death by Hanging", "year": 1968, "imdbId": "tt0062870"},
+  {"title": "Diary of a Shinjuku Thief", "year": 1969, "imdbId": "tt0064524"},
+  {"title": "The Pornographers", "year": 1966, "imdbId": "tt0060646"},
+  {"title": "Insect Woman", "year": 1963, "imdbId": "tt0057131"},
+  {"title": "Intentions of Murder", "year": 1964, "imdbId": "tt0058272"},
+  {"title": "The Profound Desire of the Gods", "year": 1968, "imdbId": "tt0063261"},
+  {"title": "Vengeance Is Mine", "year": 1979, "imdbId": "tt0079950"},
+  {"title": "Eureka", "year": 2000, "imdbId": "tt0247240"},
+  {"title": "Pigs and Battleships", "year": 1961, "imdbId": "tt0055267"},
+  {"title": "Pale Flower", "year": 1964, "imdbId": "tt0058447"},
+  {"title": "Youth of the Beast", "year": 1963, "imdbId": "tt0056799"},
+  {"title": "Gate of Flesh", "year": 1964, "imdbId": "tt0058101"},
+  {"title": "Fighting Elegy", "year": 1966, "imdbId": "tt0060297"},
+  {"title": "Seijun Suzuki's Story of a Prostitute", "year": 1965, "imdbId": "tt0059745"},
+  {"title": "Story of a Prostitute", "year": 1965, "imdbId": "tt0059745"},
+  {"title": "Elegy to Violence", "year": 1966, "imdbId": "tt0060297"},
+  {"title": "The Wicked", "year": 1956, "imdbId": "tt0049738"},
+  {"title": "Crazed Fruit", "year": 1956, "imdbId": "tt0049115"},
+  {"title": "Darkness at Noon", "year": 1956, "imdbId": "tt0049171"},
+  {"title": "Season of the Sun", "year": 1956, "imdbId": "tt0049602"},
+  {"title": "I Am Waiting", "year": 1957, "imdbId": "tt0050620"},
+  {"title": "Rusty Knife", "year": 1958, "imdbId": "tt0052176"},
+  {"title": "The Warped Ones", "year": 1960, "imdbId": "tt0054241"},
+  {"title": "Naked Sun", "year": 1958, "imdbId": "tt0051977"},
+  {"title": "In the Realm of Passion", "year": 1978, "imdbId": "tt0078078"},
+  {"title": "Merry Christmas, Mr. Lawrence", "year": 1983, "imdbId": "tt0085931"},
+  {"title": "Max Mon Amour", "year": 1986, "imdbId": "tt0091492"},
+  {"title": "Taboo", "year": 1999, "imdbId": "tt0218898"},
+  {"title": "Three Resurrected Drunkards", "year": 1968, "imdbId": "tt0063682"},
+  {"title": "The Man Who Left His Will on Film", "year": 1970, "imdbId": "tt0066165"},
+  {"title": "Summer in Narita", "year": 1968, "imdbId": "tt0063530"},
+  {"title": "A Town of Love and Hope", "year": 1959, "imdbId": "tt0053308"},
+  {"title": "The Catch", "year": 1961, "imdbId": "tt0054726"},
+  {"title": "Sing a Song of Sex", "year": 1967, "imdbId": "tt0062451"},
+  {"title": "Japanese Summer: Double Suicide", "year": 1967, "imdbId": "tt0062204"},
+  {"title": "It's Me, Here's My Heart", "year": 1971, "imdbId": "tt0067308"},
+  {"title": "Empire of Passion", "year": 1978, "imdbId": "tt0078078"},
+  {"title": "Ecstasy of the Angels", "year": 1972, "imdbId": "tt0068572"},
+  {"title": "Season of Terror", "year": 1969, "imdbId": "tt0065075"},
+  {"title": "Stray Cat Rock: Sex Hunter", "year": 1970, "imdbId": "tt0224528"},
+  {"title": "Secrets Behind the Wall", "year": 1965, "imdbId": "tt0059627"},
+  {"title": "Red Angel", "year": 1966, "imdbId": "tt0060672"},
+  {"title": "School of the Holy Beast", "year": 1974, "imdbId": "tt0072100"},
+  {"title": "Hanzo the Razor: Sword of Justice", "year": 1972, "imdbId": "tt0068630"},
+  {"title": "Blind Woman's Curse", "year": 1970, "imdbId": "tt0065554"},
+  {"title": "Zigeunerweisen", "year": 1980, "imdbId": "tt0081726"},
+  {"title": "Kohayagawa-ke no aki", "year": 1961, "imdbId": "tt0055032"},
+  {"title": "The Island", "year": 1960, "imdbId": "tt0053970"},
+  {"title": "A Naked Island", "year": 1960, "imdbId": "tt0053970"},
+  {"title": "Children of Hiroshima", "year": 1952, "imdbId": "tt0044505"},
+  {"title": "Human Condition I: No Greater Love", "year": 1959, "imdbId": "tt0052891"},
+  {"title": "Human Condition II: Road to Eternity", "year": 1959, "imdbId": "tt0053013"},
+  {"title": "Human Condition III: A Soldier's Prayer", "year": 1961, "imdbId": "tt0055048"},
+  {"title": "Harakiri", "year": 1962, "imdbId": "tt0056058"},
+  {"title": "The Face of Another", "year": 1966, "imdbId": "tt0060344"},
+  {"title": "The Pitfall", "year": 1962, "imdbId": "tt0055256"},
+  {"title": "Suna no onna", "year": 1964, "imdbId": "tt0058625"},
+  {"title": "The Rite", "year": 1969, "imdbId": "tt0066785"},
+  {"title": "Rebellion", "year": 1967, "imdbId": "tt0062253"},
+  {"title": "Samurai Rebellion", "year": 1967, "imdbId": "tt0062253"},
+  {"title": "Sword of Doom", "year": 1966, "imdbId": "tt0060897"},
+  {"title": "Kill!", "year": 1968, "imdbId": "tt0063142"},
+  {"title": "The Bullet Train", "year": 1975, "imdbId": "tt0073024"},
+  {"title": "The Go Masters", "year": 1982, "imdbId": "tt0082802"},
+  {"title": "Nagisa Oshima: The Catch", "year": 1961, "imdbId": "tt0054726"},
+  {"title": "Orgies of Edo", "year": 1969, "imdbId": "tt0215226"},
+  {"title": "Throw Away Your Books", "year": 1971, "imdbId": "tt0067865"},
+  {"title": "Empire of the Senses", "year": 1976, "imdbId": "tt0074102"},
+  {"title": "The Man Without a Map", "year": 1968, "imdbId": "tt0203695"},
+  {"title": "Pigs and Battleships", "year": 1961, "imdbId": "tt0055267"},
+  {"title": "The Pornographers", "year": 1966, "imdbId": "tt0060646"},
+  {"title": "Kwaidan", "year": 1964, "imdbId": "tt0058279"},
+  {"title": "Demons", "year": 1971, "imdbId": "tt0067076"},
+  {"title": "Hiroshima, Mon Amour", "year": 1959, "imdbId": "tt0052893"},
+  {"title": "Woman of the Dunes", "year": 1964, "imdbId": "tt0058625"},
+  {"title": "Banished Orin", "year": 1977, "imdbId": "tt0075828"},
+  {"title": "Love and Faith", "year": 1978, "imdbId": "tt0078000"},
+  {"title": "Ran", "year": 1985, "imdbId": "tt0089881"},
+  {"title": "The Family Game", "year": 1983, "imdbId": "tt0085706"},
+  {"title": "Muddy River", "year": 1981, "imdbId": "tt0082783"},
+  {"title": "Himatsuri", "year": 1985, "imdbId": "tt0089267"},
+  {"title": "Fire Festival", "year": 1985, "imdbId": "tt0089267"}
 ]

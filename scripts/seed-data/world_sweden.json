@@ -1,17 +1,487 @@
 [
-  {"title": "The Seventh Seal", "year": 1957, "imdbId": "tt0050976"},
-  {"title": "Wild Strawberries", "year": 1957, "imdbId": "tt0050986"},
-  {"title": "Persona", "year": 1966, "imdbId": "tt0060827"},
-  {"title": "Fanny and Alexander", "year": 1982, "imdbId": "tt0083922"},
-  {"title": "Through a Glass Darkly", "year": 1961, "imdbId": "tt0055499"},
-  {"title": "Cries and Whispers", "year": 1972, "imdbId": "tt0069467"},
-  {"title": "My Life as a Dog", "year": 1985, "imdbId": "tt0089547"},
-  {"title": "The Square", "year": 2017, "imdbId": "tt4995790"},
-  {"title": "Force Majeure", "year": 2014, "imdbId": "tt2121382"},
-  {"title": "Let the Right One In", "year": 2008, "imdbId": "tt1139797"},
-  {"title": "Songs from the Second Floor", "year": 2000, "imdbId": "tt0228358"},
-  {"title": "Sawdust and Tinsel", "year": 1953, "imdbId": "tt0046672"},
-  {"title": "The Hour of the Wolf", "year": 1968, "imdbId": "tt0062420"},
-  {"title": "Shame", "year": 1968, "imdbId": "tt0063457"},
-  {"title": "Elvira Madigan", "year": 1967, "imdbId": "tt0061683"}
+  {
+    "title": "The Seventh Seal",
+    "year": 1957,
+    "imdbId": "tt0050976"
+  },
+  {
+    "title": "Wild Strawberries",
+    "year": 1957,
+    "imdbId": "tt0050986"
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "imdbId": "tt0060827"
+  },
+  {
+    "title": "Fanny and Alexander",
+    "year": 1982,
+    "imdbId": "tt0083922"
+  },
+  {
+    "title": "Through a Glass Darkly",
+    "year": 1961,
+    "imdbId": "tt0055499"
+  },
+  {
+    "title": "Cries and Whispers",
+    "year": 1972,
+    "imdbId": "tt0069467"
+  },
+  {
+    "title": "My Life as a Dog",
+    "year": 1985,
+    "imdbId": "tt0089547"
+  },
+  {
+    "title": "The Square",
+    "year": 2017,
+    "imdbId": "tt4995790"
+  },
+  {
+    "title": "Force Majeure",
+    "year": 2014,
+    "imdbId": "tt2121382"
+  },
+  {
+    "title": "Let the Right One In",
+    "year": 2008,
+    "imdbId": "tt1139797"
+  },
+  {
+    "title": "Songs from the Second Floor",
+    "year": 2000,
+    "imdbId": "tt0228358"
+  },
+  {
+    "title": "Sawdust and Tinsel",
+    "year": 1953,
+    "imdbId": "tt0046672"
+  },
+  {
+    "title": "The Hour of the Wolf",
+    "year": 1968,
+    "imdbId": "tt0062420"
+  },
+  {
+    "title": "Shame",
+    "year": 1968,
+    "imdbId": "tt0063457"
+  },
+  {
+    "title": "Elvira Madigan",
+    "year": 1967,
+    "imdbId": "tt0061683"
+  },
+  {
+    "title": "Winter Light",
+    "year": 1963,
+    "imdbId": "tt0057759"
+  },
+  {
+    "title": "The Silence",
+    "year": 1963,
+    "imdbId": "tt0057611"
+  },
+  {
+    "title": "Scenes from a Marriage",
+    "year": 1973,
+    "imdbId": "tt0068759"
+  },
+  {
+    "title": "Autumn Sonata",
+    "year": 1978,
+    "imdbId": "tt0077711"
+  },
+  {
+    "title": "Face to Face",
+    "year": 1976,
+    "imdbId": "tt0074444"
+  },
+  {
+    "title": "The Passion of Anna",
+    "year": 1969,
+    "imdbId": "tt0064748"
+  },
+  {
+    "title": "The Touch",
+    "year": 1971,
+    "imdbId": "tt0067754"
+  },
+  {
+    "title": "A Lesson in Love",
+    "year": 1954,
+    "imdbId": "tt0047108"
+  },
+  {
+    "title": "Smiles of a Summer Night",
+    "year": 1955,
+    "imdbId": "tt0048542"
+  },
+  {
+    "title": "Summer with Monika",
+    "year": 1953,
+    "imdbId": "tt0046615"
+  },
+  {
+    "title": "Summer Interlude",
+    "year": 1951,
+    "imdbId": "tt0044319"
+  },
+  {
+    "title": "Crisis",
+    "year": 1946,
+    "imdbId": "tt0038442"
+  },
+  {
+    "title": "Port of Call",
+    "year": 1948,
+    "imdbId": "tt0040729"
+  },
+  {
+    "title": "Three Strange Loves",
+    "year": 1949,
+    "imdbId": "tt0041984"
+  },
+  {
+    "title": "To Joy",
+    "year": 1950,
+    "imdbId": "tt0042847"
+  },
+  {
+    "title": "Waiting Women",
+    "year": 1952,
+    "imdbId": "tt0045243"
+  },
+  {
+    "title": "A Dream Play",
+    "year": 1992,
+    "imdbId": "tt0104133"
+  },
+  {
+    "title": "After the Rehearsal",
+    "year": 1984,
+    "imdbId": "tt0086946"
+  },
+  {
+    "title": "Saraband",
+    "year": 2003,
+    "imdbId": "tt0388473"
+  },
+  {
+    "title": "You, the Living",
+    "year": 2007,
+    "imdbId": "tt0997181"
+  },
+  {
+    "title": "A Pigeon Sat on a Branch Reflecting on Existence",
+    "year": 2014,
+    "imdbId": "tt2916798"
+  },
+  {
+    "title": "Together",
+    "year": 2000,
+    "imdbId": "tt0220731"
+  },
+  {
+    "title": "Show Me Love",
+    "year": 1998,
+    "imdbId": "tt0131948"
+  },
+  {
+    "title": "Dancer in the Dark",
+    "year": 2000,
+    "imdbId": "tt0168629"
+  },
+  {
+    "title": "The Hunt",
+    "year": 2012,
+    "imdbId": "tt2106476"
+  },
+  {
+    "title": "Melancholia",
+    "year": 2011,
+    "imdbId": "tt1527186"
+  },
+  {
+    "title": "Breaking the Waves",
+    "year": 1996,
+    "imdbId": "tt0115751"
+  },
+  {
+    "title": "The Idiots",
+    "year": 1998,
+    "imdbId": "tt0154421"
+  },
+  {
+    "title": "Celebration",
+    "year": 1998,
+    "imdbId": "tt0154420"
+  },
+  {
+    "title": "Italian for Beginners",
+    "year": 2000,
+    "imdbId": "tt0222736"
+  },
+  {
+    "title": "Mifune's Last Song",
+    "year": 1999,
+    "imdbId": "tt0196117"
+  },
+  {
+    "title": "Open Hearts",
+    "year": 2002,
+    "imdbId": "tt0330600"
+  },
+  {
+    "title": "Dear Wendy",
+    "year": 2005,
+    "imdbId": "tt0392940"
+  },
+  {
+    "title": "The Boss of It All",
+    "year": 2006,
+    "imdbId": "tt0469903"
+  },
+  {
+    "title": "Reconstruction",
+    "year": 2003,
+    "imdbId": "tt0355691"
+  },
+  {
+    "title": "Dogville",
+    "year": 2003,
+    "imdbId": "tt0276919"
+  },
+  {
+    "title": "Manderlay",
+    "year": 2005,
+    "imdbId": "tt0382932"
+  },
+  {
+    "title": "Nymphomaniac",
+    "year": 2013,
+    "imdbId": "tt1937390"
+  },
+  {
+    "title": "Antichrist",
+    "year": 2009,
+    "imdbId": "tt1233070"
+  },
+  {
+    "title": "The Best Intentions",
+    "year": 1992,
+    "imdbId": "tt0103864"
+  },
+  {
+    "title": "Sunday's Children",
+    "year": 1992,
+    "imdbId": "tt0105460"
+  },
+  {
+    "title": "Private Confessions",
+    "year": 1996,
+    "imdbId": "tt0117291"
+  },
+  {
+    "title": "In the Name of the Father",
+    "year": 1993,
+    "imdbId": "tt0107516"
+  },
+  {
+    "title": "The Virgin Spring",
+    "year": 1960,
+    "imdbId": "tt0054063"
+  },
+  {
+    "title": "The Magician",
+    "year": 1958,
+    "imdbId": "tt0051590"
+  },
+  {
+    "title": "Miss Julie",
+    "year": 1951,
+    "imdbId": "tt0043792"
+  },
+  {
+    "title": "One Summer of Happiness",
+    "year": 1951,
+    "imdbId": "tt0043774"
+  },
+  {
+    "title": "Torment",
+    "year": 1944,
+    "imdbId": "tt0037455"
+  },
+  {
+    "title": "The Devil's Eye",
+    "year": 1960,
+    "imdbId": "tt0053741"
+  },
+  {
+    "title": "All These Women",
+    "year": 1964,
+    "imdbId": "tt0057898"
+  },
+  {
+    "title": "The Rite",
+    "year": 1969,
+    "imdbId": "tt0064795"
+  },
+  {
+    "title": "A Serpent's Egg",
+    "year": 1977,
+    "imdbId": "tt0076927"
+  },
+  {
+    "title": "The Lie",
+    "year": 1970,
+    "imdbId": "tt0065789"
+  },
+  {
+    "title": "Miss Smilla's Feeling for Snow",
+    "year": 1997,
+    "imdbId": "tt0117509"
+  },
+  {
+    "title": "The Kingdom",
+    "year": 1994,
+    "imdbId": "tt0108906"
+  },
+  {
+    "title": "Dreaming of Joseph Lees",
+    "year": 1999,
+    "imdbId": "tt0175495"
+  },
+  {
+    "title": "The Girl with the Dragon Tattoo",
+    "year": 2009,
+    "imdbId": "tt1132620"
+  },
+  {
+    "title": "The Girl Who Played with Fire",
+    "year": 2009,
+    "imdbId": "tt1216487"
+  },
+  {
+    "title": "The Girl Who Kicked the Hornet's Nest",
+    "year": 2009,
+    "imdbId": "tt1343097"
+  },
+  {
+    "title": "Everlasting Moments",
+    "year": 2008,
+    "imdbId": "tt0892818"
+  },
+  {
+    "title": "Evil",
+    "year": 2003,
+    "imdbId": "tt0321013"
+  },
+  {
+    "title": "Lilya 4-ever",
+    "year": 2002,
+    "imdbId": "tt0291557"
+  },
+  {
+    "title": "As It Is in Heaven",
+    "year": 2004,
+    "imdbId": "tt0382330"
+  },
+  {
+    "title": "Kopps",
+    "year": 2003,
+    "imdbId": "tt0363082"
+  },
+  {
+    "title": "The Class",
+    "year": 2007,
+    "imdbId": "tt0844286"
+  },
+  {
+    "title": "The Man on the Roof",
+    "year": 1976,
+    "imdbId": "tt0074919"
+  },
+  {
+    "title": "The Laughing Policeman",
+    "year": 1973,
+    "imdbId": "tt0069941"
+  },
+  {
+    "title": "The Terrorists",
+    "year": 1975,
+    "imdbId": "tt0073798"
+  },
+  {
+    "title": "Roseanna",
+    "year": 1967,
+    "imdbId": "tt0061890"
+  },
+  {
+    "title": "The Abominable Snowman",
+    "year": 1951,
+    "imdbId": "tt0042832"
+  },
+  {
+    "title": "The Emigrants",
+    "year": 1971,
+    "imdbId": "tt0067023"
+  },
+  {
+    "title": "The New Land",
+    "year": 1972,
+    "imdbId": "tt0068769"
+  },
+  {
+    "title": "Ronja Rövardotter",
+    "year": 1984,
+    "imdbId": "tt0088105"
+  },
+  {
+    "title": "I Am Curious (Yellow)",
+    "year": 1967,
+    "imdbId": "tt0062188"
+  },
+  {
+    "title": "The Ox",
+    "year": 1991,
+    "imdbId": "tt0102752"
+  },
+  {
+    "title": "Jerusalem",
+    "year": 1996,
+    "imdbId": "tt0116776"
+  },
+  {
+    "title": "A Man Called Ove",
+    "year": 2015,
+    "imdbId": "tt3560657"
+  },
+  {
+    "title": "The 100-Year-Old Man Who Climbed Out the Window and Disappeared",
+    "year": 2013,
+    "imdbId": "tt2113681"
+  },
+  {
+    "title": "Jalla! Jalla!",
+    "year": 2000,
+    "imdbId": "tt0247240"
+  },
+  {
+    "title": "The Adventures of Picasso",
+    "year": 1978,
+    "imdbId": "tt0077344"
+  },
+  {
+    "title": "Pippi Longstocking",
+    "year": 1969,
+    "imdbId": "tt0064737"
+  },
+  {
+    "title": "Zozo",
+    "year": 2005,
+    "imdbId": "tt0417568"
+  }
 ]

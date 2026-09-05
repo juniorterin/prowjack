@@ -17,7 +17,7 @@
   {
     "title": "The Second Mother",
     "year": 2015,
-    "imdbId": "tt28313381"
+    "imdbId": "tt3666024"
   },
   {
     "title": "Neighboring Sounds",
@@ -90,13 +90,378 @@
     "imdbId": "tt0317887"
   },
   {
-    "title": "I Don't Want to Talk About It",
-    "year": 1993,
-    "imdbId": "tt0107034"
-  },
-  {
     "title": "Chronicle of a Summer",
     "year": 1961,
     "imdbId": "tt0054830"
+  },
+  {
+    "title": "O Bandido da Luz Vermelha",
+    "year": 1968,
+    "imdbId": "tt0063060"
+  },
+  {
+    "title": "How Tasty Was My Little Frenchman",
+    "year": 1971,
+    "imdbId": "tt0066864"
+  },
+  {
+    "title": "Deus e o Diabo na Terra do Sol",
+    "year": 1964,
+    "imdbId": "tt0057924"
+  },
+  {
+    "title": "Antonio das Mortes",
+    "year": 1969,
+    "imdbId": "tt0063899"
+  },
+  {
+    "title": "The Fall",
+    "year": 1978,
+    "imdbId": "tt0077614"
+  },
+  {
+    "title": "Quilombo",
+    "year": 1984,
+    "imdbId": "tt0088148"
+  },
+  {
+    "title": "Subway to the Stars",
+    "year": 1987,
+    "imdbId": "tt0094135"
+  },
+  {
+    "title": "Orfeu",
+    "year": 1999,
+    "imdbId": "tt0209220"
+  },
+  {
+    "title": "Me You Them",
+    "year": 2000,
+    "imdbId": "tt0227895"
+  },
+  {
+    "title": "Carandiru",
+    "year": 2003,
+    "imdbId": "tt0326462"
+  },
+  {
+    "title": "The Man Who Copied",
+    "year": 2003,
+    "imdbId": "tt0358383"
+  },
+  {
+    "title": "The Motorcycle Diaries",
+    "year": 2004,
+    "imdbId": "tt0318462"
+  },
+  {
+    "title": "Bus 174",
+    "year": 2002,
+    "imdbId": "tt0340085"
+  },
+  {
+    "title": "Estômago",
+    "year": 2007,
+    "imdbId": "tt1068940"
+  },
+  {
+    "title": "Elite Squad 2",
+    "year": 2010,
+    "imdbId": "tt1555149"
+  },
+  {
+    "title": "Reaching for the Moon",
+    "year": 2013,
+    "imdbId": "tt2105750"
+  },
+  {
+    "title": "Hard Labor",
+    "year": 2011,
+    "imdbId": "tt2070296"
+  },
+  {
+    "title": "The Rival",
+    "year": 2012,
+    "imdbId": "tt2258832"
+  },
+  {
+    "title": "Casa Grande",
+    "year": 2014,
+    "imdbId": "tt3501584"
+  },
+  {
+    "title": "Neon Bull",
+    "year": 2015,
+    "imdbId": "tt4483642"
+  },
+  {
+    "title": "Vazante",
+    "year": 2017,
+    "imdbId": "tt5560386"
+  },
+  {
+    "title": "Gabriel and the Mountain",
+    "year": 2017,
+    "imdbId": "tt6494606"
+  },
+  {
+    "title": "Good Manners",
+    "year": 2017,
+    "imdbId": "tt6575946"
+  },
+  {
+    "title": "The Invisible Life of Eurídice Gusmão",
+    "year": 2019,
+    "imdbId": "tt9196840"
+  },
+  {
+    "title": "Bacurau",
+    "year": 2019,
+    "imdbId": "tt9310940"
+  },
+  {
+    "title": "Divino Amor",
+    "year": 2019,
+    "imdbId": "tt9361050"
+  },
+  {
+    "title": "Swallow",
+    "year": 2019,
+    "imdbId": "tt9198112"
+  },
+  {
+    "title": "Tremor Iê",
+    "year": 2022,
+    "imdbId": "tt14891996"
+  },
+  {
+    "title": "Medida Provisória",
+    "year": 2020,
+    "imdbId": "tt9786724"
+  },
+  {
+    "title": "Seven",
+    "year": 2022,
+    "imdbId": "tt8637428"
+  },
+  {
+    "title": "The Swamp",
+    "year": 2021,
+    "imdbId": "tt15320344"
+  },
+  {
+    "title": "Martinho da Vila: Sorrindo Pros Leão",
+    "year": 2019,
+    "imdbId": "tt9643512"
+  },
+  {
+    "title": "The Edge of Democracy",
+    "year": 2019,
+    "imdbId": "tt9781986"
+  },
+  {
+    "title": "Kleber Mendonça Filho: Uma Visita",
+    "year": 2020,
+    "imdbId": "tt12760628"
+  },
+  {
+    "title": "Bruno Barreto: Uma Questão de Amor",
+    "year": 1978,
+    "imdbId": "tt0077263"
+  },
+  {
+    "title": "Dona Flor and Her Two Husbands",
+    "year": 1976,
+    "imdbId": "tt0074215"
+  },
+  {
+    "title": "Amor Bandido",
+    "year": 1979,
+    "imdbId": "tt0078681"
+  },
+  {
+    "title": "Xica da Silva",
+    "year": 1976,
+    "imdbId": "tt0075423"
+  },
+  {
+    "title": "A Hora e a Vez de Augusto Matraga",
+    "year": 1965,
+    "imdbId": "tt0059375"
+  },
+  {
+    "title": "Os Fuzis",
+    "year": 1964,
+    "imdbId": "tt0058035"
+  },
+  {
+    "title": "O Desafio",
+    "year": 1965,
+    "imdbId": "tt0059175"
+  },
+  {
+    "title": "São Paulo S.A.",
+    "year": 1965,
+    "imdbId": "tt0059601"
+  },
+  {
+    "title": "Garrincha, Alegria do Povo",
+    "year": 1963,
+    "imdbId": "tt0056939"
+  },
+  {
+    "title": "Cabra Marcado para Morrer",
+    "year": 1984,
+    "imdbId": "tt0086982"
+  },
+  {
+    "title": "Iracema",
+    "year": 1975,
+    "imdbId": "tt0073173"
+  },
+  {
+    "title": "Pátio",
+    "year": 1959,
+    "imdbId": "tt0206280"
+  },
+  {
+    "title": "O Padre e a Moça",
+    "year": 1966,
+    "imdbId": "tt0060699"
+  },
+  {
+    "title": "O Leão de Sete Cabeças",
+    "year": 1970,
+    "imdbId": "tt0065901"
+  },
+  {
+    "title": "Glauber Rocha: Claro",
+    "year": 1975,
+    "imdbId": "tt0221613"
+  },
+  {
+    "title": "Age of the Earth",
+    "year": 1980,
+    "imdbId": "tt0080308"
+  },
+  {
+    "title": "Limite",
+    "year": 1931,
+    "imdbId": "tt0022066"
+  },
+  {
+    "title": "Rio, Zona Norte",
+    "year": 1957,
+    "imdbId": "tt0050753"
+  },
+  {
+    "title": "Rio, 40 Graus",
+    "year": 1955,
+    "imdbId": "tt0048552"
+  },
+  {
+    "title": "A Opinião Pública",
+    "year": 1967,
+    "imdbId": "tt0062359"
+  },
+  {
+    "title": "Noite Vazia",
+    "year": 1964,
+    "imdbId": "tt0058392"
+  },
+  {
+    "title": "São Bernardo",
+    "year": 1972,
+    "imdbId": "tt0069318"
+  },
+  {
+    "title": "Memórias do Cárcere",
+    "year": 1984,
+    "imdbId": "tt0087796"
+  },
+  {
+    "title": "Barravento",
+    "year": 1962,
+    "imdbId": "tt0055776"
+  },
+  {
+    "title": "City of Men",
+    "year": 2007,
+    "imdbId": "tt0870995"
+  },
+  {
+    "title": "Seu Jorge: A Vida Como Ela É",
+    "year": 2000,
+    "imdbId": "tt0253291"
+  },
+  {
+    "title": "Linha de Passe",
+    "year": 2008,
+    "imdbId": "tt1167991"
+  },
+  {
+    "title": "Meu Nome Não É Johnny",
+    "year": 2008,
+    "imdbId": "tt1217265"
+  },
+  {
+    "title": "Ó Paí Ó",
+    "year": 2007,
+    "imdbId": "tt0996990"
+  },
+  {
+    "title": "The Middle of the World",
+    "year": 2003,
+    "imdbId": "tt0311475"
+  },
+  {
+    "title": "Olga",
+    "year": 2004,
+    "imdbId": "tt0378789"
+  },
+  {
+    "title": "Bicho de Sete Cabeças",
+    "year": 2001,
+    "imdbId": "tt0280853"
+  },
+  {
+    "title": "Lavoura Arcaica",
+    "year": 2001,
+    "imdbId": "tt0275694"
+  },
+  {
+    "title": "O Primeiro Dia",
+    "year": 1998,
+    "imdbId": "tt0156905"
+  },
+  {
+    "title": "Crede-Mi",
+    "year": 1997,
+    "imdbId": "tt0118964"
+  },
+  {
+    "title": "Anjos do Sol",
+    "year": 2006,
+    "imdbId": "tt0482406"
+  },
+  {
+    "title": "O Cheiro do Ralo",
+    "year": 2006,
+    "imdbId": "tt0467457"
+  },
+  {
+    "title": "Saneamento Básico",
+    "year": 2007,
+    "imdbId": "tt1072395"
+  },
+  {
+    "title": "Contos de Natal",
+    "year": 2007,
+    "imdbId": "tt1225462"
+  },
+  {
+    "title": "Sertão Veredas",
+    "year": 1984,
+    "imdbId": "tt0088204"
   }
 ]

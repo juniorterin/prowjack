@@ -1,32 +1,507 @@
 [
-  {"title": "Breathless", "year": 1960, "imdbId": "tt0053472"},
-  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
-  {"title": "Jules and Jim", "year": 1962, "imdbId": "tt0055032"},
-  {"title": "Cléo from 5 to 7", "year": 1962, "imdbId": "tt0055852"},
-  {"title": "La Règle du jeu", "year": 1939, "imdbId": "tt0031885"},
-  {"title": "Grand Illusion", "year": 1937, "imdbId": "tt0028950"},
-  {"title": "Children of Paradise", "year": 1945, "imdbId": "tt0037674"},
-  {"title": "Contempt", "year": 1963, "imdbId": "tt0057345"},
-  {"title": "Le Samouraï", "year": 1967, "imdbId": "tt0062229"},
-  {"title": "Bob le Flambeur", "year": 1956, "imdbId": "tt0047892"},
-  {"title": "La Haine", "year": 1995, "imdbId": "tt0113247"},
-  {"title": "Playtime", "year": 1967, "imdbId": "tt0062136"},
-  {"title": "Au Hasard Balthazar", "year": 1966, "imdbId": "tt0060138"},
-  {"title": "Pickpocket", "year": 1959, "imdbId": "tt0053168"},
-  {"title": "Eyes Without a Face", "year": 1960, "imdbId": "tt0053459"},
-  {"title": "Hiroshima Mon Amour", "year": 1959, "imdbId": "tt0052893"},
-  {"title": "L'Atalante", "year": 1934, "imdbId": "tt0024844"},
-  {"title": "Pierrot le Fou", "year": 1965, "imdbId": "tt0059592"},
-  {"title": "Last Year at Marienbad", "year": 1961, "imdbId": "tt0054632"},
-  {"title": "A Man Escaped", "year": 1956, "imdbId": "tt0049902"},
-  {"title": "Amelie", "year": 2001, "imdbId": "tt0211915"},
-  {"title": "Blue", "year": 1993, "imdbId": "tt0106365"},
-  {"title": "Three Colors: White", "year": 1994, "imdbId": "tt0111507"},
-  {"title": "Three Colors: Red", "year": 1994, "imdbId": "tt0111495"},
-  {"title": "The Son's Room", "year": 2001, "imdbId": "tt0264472"},
-  {"title": "Portrait of a Lady on Fire", "year": 2019, "imdbId": "tt8613070"},
-  {"title": "Anatomy of a Fall", "year": 2023, "imdbId": "tt17009710"},
-  {"title": "Police", "year": 1985, "imdbId": "tt0089876"},
-  {"title": "Sans Soleil", "year": 1983, "imdbId": "tt0084628"},
-  {"title": "La Jetée", "year": 1962, "imdbId": "tt0056119"}
+  {
+    "title": "Breathless",
+    "year": 1960,
+    "imdbId": "tt0053472"
+  },
+  {
+    "title": "The 400 Blows",
+    "year": 1959,
+    "imdbId": "tt0053198"
+  },
+  {
+    "title": "Jules and Jim",
+    "year": 1962,
+    "imdbId": "tt0055032"
+  },
+  {
+    "title": "Cléo from 5 to 7",
+    "year": 1962,
+    "imdbId": "tt0055852"
+  },
+  {
+    "title": "La Règle du jeu",
+    "year": 1939,
+    "imdbId": "tt0031885"
+  },
+  {
+    "title": "Grand Illusion",
+    "year": 1937,
+    "imdbId": "tt0028950"
+  },
+  {
+    "title": "Children of Paradise",
+    "year": 1945,
+    "imdbId": "tt0037674"
+  },
+  {
+    "title": "Contempt",
+    "year": 1963,
+    "imdbId": "tt0057345"
+  },
+  {
+    "title": "Le Samouraï",
+    "year": 1967,
+    "imdbId": "tt0062229"
+  },
+  {
+    "title": "Bob le Flambeur",
+    "year": 1956,
+    "imdbId": "tt0047892"
+  },
+  {
+    "title": "La Haine",
+    "year": 1995,
+    "imdbId": "tt0113247"
+  },
+  {
+    "title": "Playtime",
+    "year": 1967,
+    "imdbId": "tt0062136"
+  },
+  {
+    "title": "Au Hasard Balthazar",
+    "year": 1966,
+    "imdbId": "tt0060138"
+  },
+  {
+    "title": "Pickpocket",
+    "year": 1959,
+    "imdbId": "tt0053168"
+  },
+  {
+    "title": "Eyes Without a Face",
+    "year": 1960,
+    "imdbId": "tt0053459"
+  },
+  {
+    "title": "Hiroshima Mon Amour",
+    "year": 1959,
+    "imdbId": "tt0052893"
+  },
+  {
+    "title": "L'Atalante",
+    "year": 1934,
+    "imdbId": "tt0024844"
+  },
+  {
+    "title": "Pierrot le Fou",
+    "year": 1965,
+    "imdbId": "tt0059592"
+  },
+  {
+    "title": "Last Year at Marienbad",
+    "year": 1961,
+    "imdbId": "tt0054632"
+  },
+  {
+    "title": "A Man Escaped",
+    "year": 1956,
+    "imdbId": "tt0049902"
+  },
+  {
+    "title": "Amelie",
+    "year": 2001,
+    "imdbId": "tt0211915"
+  },
+  {
+    "title": "Blue",
+    "year": 1993,
+    "imdbId": "tt0106365"
+  },
+  {
+    "title": "Three Colors: White",
+    "year": 1994,
+    "imdbId": "tt0111507"
+  },
+  {
+    "title": "Three Colors: Red",
+    "year": 1994,
+    "imdbId": "tt0111495"
+  },
+  {
+    "title": "The Son's Room",
+    "year": 2001,
+    "imdbId": "tt0264472"
+  },
+  {
+    "title": "Portrait of a Lady on Fire",
+    "year": 2019,
+    "imdbId": "tt8613070"
+  },
+  {
+    "title": "Anatomy of a Fall",
+    "year": 2023,
+    "imdbId": "tt17009710"
+  },
+  {
+    "title": "Police",
+    "year": 1985,
+    "imdbId": "tt0089876"
+  },
+  {
+    "title": "Sans Soleil",
+    "year": 1983,
+    "imdbId": "tt0084628"
+  },
+  {
+    "title": "La Jetée",
+    "year": 1962,
+    "imdbId": "tt0056119"
+  },
+  {
+    "title": "Mon Oncle",
+    "year": 1958,
+    "imdbId": "tt0051888"
+  },
+  {
+    "title": "Mr. Hulot's Holiday",
+    "year": 1953,
+    "imdbId": "tt0046268"
+  },
+  {
+    "title": "Traffic",
+    "year": 1971,
+    "imdbId": "tt0067765"
+  },
+  {
+    "title": "The Umbrellas of Cherbourg",
+    "year": 1964,
+    "imdbId": "tt0058450"
+  },
+  {
+    "title": "The Young Girls of Rochefort",
+    "year": 1967,
+    "imdbId": "tt0062357"
+  },
+  {
+    "title": "Masculin Féminin",
+    "year": 1966,
+    "imdbId": "tt0060676"
+  },
+  {
+    "title": "Band of Outsiders",
+    "year": 1964,
+    "imdbId": "tt0057869"
+  },
+  {
+    "title": "My Night at Maud's",
+    "year": 1969,
+    "imdbId": "tt0065772"
+  },
+  {
+    "title": "Claire's Knee",
+    "year": 1970,
+    "imdbId": "tt0065463"
+  },
+  {
+    "title": "Céline and Julie Go Boating",
+    "year": 1974,
+    "imdbId": "tt0071267"
+  },
+  {
+    "title": "The Mother and the Whore",
+    "year": 1973,
+    "imdbId": "tt0070070"
+  },
+  {
+    "title": "Murmur of the Heart",
+    "year": 1971,
+    "imdbId": "tt0067237"
+  },
+  {
+    "title": "Lacombe, Lucien",
+    "year": 1974,
+    "imdbId": "tt0071574"
+  },
+  {
+    "title": "The Wild Child",
+    "year": 1970,
+    "imdbId": "tt0066630"
+  },
+  {
+    "title": "Day for Night",
+    "year": 1973,
+    "imdbId": "tt0069946"
+  },
+  {
+    "title": "Story of Women",
+    "year": 1988,
+    "imdbId": "tt0096335"
+  },
+  {
+    "title": "Shoah",
+    "year": 1985,
+    "imdbId": "tt0090015"
+  },
+  {
+    "title": "Night and Fog",
+    "year": 1956,
+    "imdbId": "tt0048434"
+  },
+  {
+    "title": "The Round-Up",
+    "year": 1969,
+    "imdbId": "tt0064705"
+  },
+  {
+    "title": "Z",
+    "year": 1969,
+    "imdbId": "tt0065566"
+  },
+  {
+    "title": "The Battle of Algiers",
+    "year": 1966,
+    "imdbId": "tt0058946"
+  },
+  {
+    "title": "The Return of Martin Guerre",
+    "year": 1982,
+    "imdbId": "tt0084456"
+  },
+  {
+    "title": "Diva",
+    "year": 1981,
+    "imdbId": "tt0082269"
+  },
+  {
+    "title": "Betty Blue",
+    "year": 1986,
+    "imdbId": "tt0090563"
+  },
+  {
+    "title": "The Big Blue",
+    "year": 1988,
+    "imdbId": "tt0095250"
+  },
+  {
+    "title": "Léon: The Professional",
+    "year": 1994,
+    "imdbId": "tt0110413"
+  },
+  {
+    "title": "La Femme Nikita",
+    "year": 1990,
+    "imdbId": "tt0100263"
+  },
+  {
+    "title": "Subway",
+    "year": 1985,
+    "imdbId": "tt0090154"
+  },
+  {
+    "title": "Diabolique",
+    "year": 1955,
+    "imdbId": "tt0046911"
+  },
+  {
+    "title": "Rififi",
+    "year": 1955,
+    "imdbId": "tt0048021"
+  },
+  {
+    "title": "Pepe le Moko",
+    "year": 1937,
+    "imdbId": "tt0029142"
+  },
+  {
+    "title": "La Bête Humaine",
+    "year": 1938,
+    "imdbId": "tt0029958"
+  },
+  {
+    "title": "Zero for Conduct",
+    "year": 1933,
+    "imdbId": "tt0024610"
+  },
+  {
+    "title": "L'Age d'Or",
+    "year": 1930,
+    "imdbId": "tt0020669"
+  },
+  {
+    "title": "Un Chien Andalou",
+    "year": 1929,
+    "imdbId": "tt0020530"
+  },
+  {
+    "title": "Napoleon",
+    "year": 1927,
+    "imdbId": "tt0018192"
+  },
+  {
+    "title": "Voyage to Italy",
+    "year": 1954,
+    "imdbId": "tt0047896"
+  },
+  {
+    "title": "Vivre Sa Vie",
+    "year": 1962,
+    "imdbId": "tt0056663"
+  },
+  {
+    "title": "2 or 3 Things I Know About Her",
+    "year": 1967,
+    "imdbId": "tt0061370"
+  },
+  {
+    "title": "Weekend",
+    "year": 1967,
+    "imdbId": "tt0062473"
+  },
+  {
+    "title": "Alphaville",
+    "year": 1965,
+    "imdbId": "tt0058898"
+  },
+  {
+    "title": "Nouvelle Vague",
+    "year": 1990,
+    "imdbId": "tt0100492"
+  },
+  {
+    "title": "Irma Vep",
+    "year": 1996,
+    "imdbId": "tt0116841"
+  },
+  {
+    "title": "Wild at Heart",
+    "year": 1984,
+    "imdbId": "tt0088414"
+  },
+  {
+    "title": "L'Humanité",
+    "year": 1999,
+    "imdbId": "tt0199694"
+  },
+  {
+    "title": "Rosetta",
+    "year": 1999,
+    "imdbId": "tt0200071"
+  },
+  {
+    "title": "Cache",
+    "year": 2005,
+    "imdbId": "tt0387898"
+  },
+  {
+    "title": "The Piano Teacher",
+    "year": 2001,
+    "imdbId": "tt0254686"
+  },
+  {
+    "title": "Code Unknown",
+    "year": 2000,
+    "imdbId": "tt0212188"
+  },
+  {
+    "title": "Time of the Wolf",
+    "year": 2003,
+    "imdbId": "tt0337574"
+  },
+  {
+    "title": "White Material",
+    "year": 2009,
+    "imdbId": "tt1135952"
+  },
+  {
+    "title": "35 Shots of Rum",
+    "year": 2008,
+    "imdbId": "tt1176423"
+  },
+  {
+    "title": "The Intruder",
+    "year": 2004,
+    "imdbId": "tt0387764"
+  },
+  {
+    "title": "Jeanne Dielman",
+    "year": 1975,
+    "imdbId": "tt0073198"
+  },
+  {
+    "title": "News from Home",
+    "year": 1977,
+    "imdbId": "tt0076385"
+  },
+  {
+    "title": "I Can't Sleep",
+    "year": 1994,
+    "imdbId": "tt0110109"
+  },
+  {
+    "title": "Beau Travail",
+    "year": 1999,
+    "imdbId": "tt0209933"
+  },
+  {
+    "title": "Trouble Every Day",
+    "year": 2001,
+    "imdbId": "tt0266469"
+  },
+  {
+    "title": "In the Shadow of Women",
+    "year": 2015,
+    "imdbId": "tt4624096"
+  },
+  {
+    "title": "A Tale of Springtime",
+    "year": 1990,
+    "imdbId": "tt0100318"
+  },
+  {
+    "title": "Full Moon in Paris",
+    "year": 1984,
+    "imdbId": "tt0088025"
+  },
+  {
+    "title": "The Green Ray",
+    "year": 1986,
+    "imdbId": "tt0091233"
+  },
+  {
+    "title": "Boyfriends and Girlfriends",
+    "year": 1987,
+    "imdbId": "tt0093093"
+  },
+  {
+    "title": "The Earrings of Madame de...",
+    "year": 1953,
+    "imdbId": "tt0045600"
+  },
+  {
+    "title": "Lola Montès",
+    "year": 1955,
+    "imdbId": "tt0048449"
+  },
+  {
+    "title": "Diary of a Country Priest",
+    "year": 1951,
+    "imdbId": "tt0043476"
+  },
+  {
+    "title": "Mouchette",
+    "year": 1967,
+    "imdbId": "tt0061994"
+  },
+  {
+    "title": "Four Nights of a Dreamer",
+    "year": 1971,
+    "imdbId": "tt0066878"
+  },
+  {
+    "title": "A Gentle Woman",
+    "year": 1969,
+    "imdbId": "tt0064225"
+  },
+  {
+    "title": "My Dinner with André",
+    "year": 1981,
+    "imdbId": "tt0082783"
+  },
+  {
+    "title": "Scenes from a Marriage",
+    "year": 1973,
+    "imdbId": "tt0068759"
+  }
 ]

@@ -1,32 +1,497 @@
 [
-  {"title": "Seven Samurai", "year": 1954, "imdbId": "tt0047478"},
-  {"title": "Tokyo Story", "year": 1953, "imdbId": "tt0046438"},
-  {"title": "Rashomon", "year": 1950, "imdbId": "tt0042876"},
-  {"title": "Ikiru", "year": 1952, "imdbId": "tt0044741"},
-  {"title": "Ugetsu", "year": 1953, "imdbId": "tt0046478"},
-  {"title": "Ran", "year": 1985, "imdbId": "tt0089881"},
-  {"title": "Yojimbo", "year": 1961, "imdbId": "tt0055630"},
-  {"title": "Throne of Blood", "year": 1957, "imdbId": "tt0050613"},
-  {"title": "High and Low", "year": 1963, "imdbId": "tt0057565"},
-  {"title": "Sansho the Bailiff", "year": 1954, "imdbId": "tt0047445"},
-  {"title": "Late Spring", "year": 1949, "imdbId": "tt0041154"},
-  {"title": "An Autumn Afternoon", "year": 1962, "imdbId": "tt0056444"},
-  {"title": "In the Mood for Love", "year": 2000, "imdbId": "tt0118694"},
-  {"title": "Chungking Express", "year": 1994, "imdbId": "tt0109424"},
-  {"title": "Godzilla", "year": 1954, "imdbId": "tt0047034"},
-  {"title": "Harakiri", "year": 1962, "imdbId": "tt0056058"},
-  {"title": "Onibaba", "year": 1964, "imdbId": "tt0058477"},
-  {"title": "Woman in the Dunes", "year": 1964, "imdbId": "tt0058625"},
-  {"title": "Kuroneko", "year": 1968, "imdbId": "tt0063659"},
-  {"title": "Kwaidan", "year": 1964, "imdbId": "tt0058279"},
-  {"title": "Double Suicide", "year": 1969, "imdbId": "tt0064513"},
-  {"title": "The Human Condition I", "year": 1959, "imdbId": "tt0052971"},
-  {"title": "Conflagration", "year": 1958, "imdbId": "tt0051832"},
-  {"title": "Fires on the Plain", "year": 1959, "imdbId": "tt0052760"},
-  {"title": "Memories of Murder", "year": 2003, "imdbId": "tt0353969"},
-  {"title": "Parasite", "year": 2019, "imdbId": "tt6751668"},
-  {"title": "Oldboy", "year": 2003, "imdbId": "tt0364569"},
-  {"title": "Drive My Car", "year": 2021, "imdbId": "tt14039582"},
-  {"title": "A Brighter Summer Day", "year": 1991, "imdbId": "tt0101985"},
-  {"title": "Yi Yi", "year": 2000, "imdbId": "tt0244316"}
+  {
+    "title": "Seven Samurai",
+    "year": 1954,
+    "imdbId": "tt0047478"
+  },
+  {
+    "title": "Tokyo Story",
+    "year": 1953,
+    "imdbId": "tt0046438"
+  },
+  {
+    "title": "Rashomon",
+    "year": 1950,
+    "imdbId": "tt0042876"
+  },
+  {
+    "title": "Ikiru",
+    "year": 1952,
+    "imdbId": "tt0044741"
+  },
+  {
+    "title": "Ugetsu",
+    "year": 1953,
+    "imdbId": "tt0046478"
+  },
+  {
+    "title": "Ran",
+    "year": 1985,
+    "imdbId": "tt0089881"
+  },
+  {
+    "title": "Yojimbo",
+    "year": 1961,
+    "imdbId": "tt0055630"
+  },
+  {
+    "title": "Throne of Blood",
+    "year": 1957,
+    "imdbId": "tt0050613"
+  },
+  {
+    "title": "High and Low",
+    "year": 1963,
+    "imdbId": "tt0057565"
+  },
+  {
+    "title": "Sansho the Bailiff",
+    "year": 1954,
+    "imdbId": "tt0047445"
+  },
+  {
+    "title": "Late Spring",
+    "year": 1949,
+    "imdbId": "tt0041154"
+  },
+  {
+    "title": "An Autumn Afternoon",
+    "year": 1962,
+    "imdbId": "tt0056444"
+  },
+  {
+    "title": "Godzilla",
+    "year": 1954,
+    "imdbId": "tt0047034"
+  },
+  {
+    "title": "Harakiri",
+    "year": 1962,
+    "imdbId": "tt0056058"
+  },
+  {
+    "title": "Onibaba",
+    "year": 1964,
+    "imdbId": "tt0058477"
+  },
+  {
+    "title": "Woman in the Dunes",
+    "year": 1964,
+    "imdbId": "tt0058625"
+  },
+  {
+    "title": "Kuroneko",
+    "year": 1968,
+    "imdbId": "tt0063659"
+  },
+  {
+    "title": "Kwaidan",
+    "year": 1964,
+    "imdbId": "tt0058279"
+  },
+  {
+    "title": "Double Suicide",
+    "year": 1969,
+    "imdbId": "tt0064513"
+  },
+  {
+    "title": "The Human Condition I",
+    "year": 1959,
+    "imdbId": "tt0052971"
+  },
+  {
+    "title": "Conflagration",
+    "year": 1958,
+    "imdbId": "tt0051832"
+  },
+  {
+    "title": "Fires on the Plain",
+    "year": 1959,
+    "imdbId": "tt0052760"
+  },
+  {
+    "title": "Drive My Car",
+    "year": 2021,
+    "imdbId": "tt14039582"
+  },
+  {
+    "title": "Floating Weeds",
+    "year": 1959,
+    "imdbId": "tt0052776"
+  },
+  {
+    "title": "Early Summer",
+    "year": 1951,
+    "imdbId": "tt0043400"
+  },
+  {
+    "title": "Good Morning",
+    "year": 1959,
+    "imdbId": "tt0052882"
+  },
+  {
+    "title": "The Life of Oharu",
+    "year": 1952,
+    "imdbId": "tt0044903"
+  },
+  {
+    "title": "Sanshiro Sugata",
+    "year": 1943,
+    "imdbId": "tt0036500"
+  },
+  {
+    "title": "The Hidden Fortress",
+    "year": 1958,
+    "imdbId": "tt0051808"
+  },
+  {
+    "title": "Dersu Uzala",
+    "year": 1975,
+    "imdbId": "tt0072948"
+  },
+  {
+    "title": "Kagemusha",
+    "year": 1980,
+    "imdbId": "tt0081486"
+  },
+  {
+    "title": "Red Beard",
+    "year": 1965,
+    "imdbId": "tt0059543"
+  },
+  {
+    "title": "One Wonderful Sunday",
+    "year": 1947,
+    "imdbId": "tt0039691"
+  },
+  {
+    "title": "The Quiet Duel",
+    "year": 1949,
+    "imdbId": "tt0041857"
+  },
+  {
+    "title": "Stray Dog",
+    "year": 1949,
+    "imdbId": "tt0041778"
+  },
+  {
+    "title": "Sanjuro",
+    "year": 1962,
+    "imdbId": "tt0056443"
+  },
+  {
+    "title": "The Lower Depths",
+    "year": 1957,
+    "imdbId": "tt0050561"
+  },
+  {
+    "title": "The Bad Sleep Well",
+    "year": 1960,
+    "imdbId": "tt0053590"
+  },
+  {
+    "title": "Spring Snow",
+    "year": 2005,
+    "imdbId": "tt0413432"
+  },
+  {
+    "title": "Tokyo Twilight",
+    "year": 1957,
+    "imdbId": "tt0051099"
+  },
+  {
+    "title": "Equinox Flower",
+    "year": 1958,
+    "imdbId": "tt0051674"
+  },
+  {
+    "title": "Early Autumn",
+    "year": 1961,
+    "imdbId": "tt0054681"
+  },
+  {
+    "title": "The Flavor of Green Tea over Rice",
+    "year": 1952,
+    "imdbId": "tt0044726"
+  },
+  {
+    "title": "A Story of Floating Weeds",
+    "year": 1934,
+    "imdbId": "tt0025775"
+  },
+  {
+    "title": "The Funeral",
+    "year": 1984,
+    "imdbId": "tt0087471"
+  },
+  {
+    "title": "A-Ge-Man: Tales of a Golden Geisha",
+    "year": 1990,
+    "imdbId": "tt0098888"
+  },
+  {
+    "title": "Tampopo",
+    "year": 1985,
+    "imdbId": "tt0090237"
+  },
+  {
+    "title": "The Eel",
+    "year": 1997,
+    "imdbId": "tt0119349"
+  },
+  {
+    "title": "Vengeance Is Mine",
+    "year": 1979,
+    "imdbId": "tt0079994"
+  },
+  {
+    "title": "The Pornographers",
+    "year": 1966,
+    "imdbId": "tt0060901"
+  },
+  {
+    "title": "The Ceremony",
+    "year": 1971,
+    "imdbId": "tt0067326"
+  },
+  {
+    "title": "Death by Hanging",
+    "year": 1968,
+    "imdbId": "tt0063105"
+  },
+  {
+    "title": "Boy",
+    "year": 1969,
+    "imdbId": "tt0064437"
+  },
+  {
+    "title": "In the Realm of the Senses",
+    "year": 1976,
+    "imdbId": "tt0074102"
+  },
+  {
+    "title": "Merry Christmas, Mr. Lawrence",
+    "year": 1983,
+    "imdbId": "tt0085933"
+  },
+  {
+    "title": "Taboo",
+    "year": 1999,
+    "imdbId": "tt0216724"
+  },
+  {
+    "title": "Street of Shame",
+    "year": 1956,
+    "imdbId": "tt0049453"
+  },
+  {
+    "title": "A Geisha",
+    "year": 1953,
+    "imdbId": "tt0045833"
+  },
+  {
+    "title": "Princess Yang Kwei-fei",
+    "year": 1955,
+    "imdbId": "tt0047373"
+  },
+  {
+    "title": "The Gate of Hell",
+    "year": 1953,
+    "imdbId": "tt0045879"
+  },
+  {
+    "title": "The Burmese Harp",
+    "year": 1956,
+    "imdbId": "tt0049136"
+  },
+  {
+    "title": "The Island",
+    "year": 1960,
+    "imdbId": "tt0053822"
+  },
+  {
+    "title": "An Actor's Revenge",
+    "year": 1963,
+    "imdbId": "tt0057018"
+  },
+  {
+    "title": "The Face of Another",
+    "year": 1966,
+    "imdbId": "tt0059536"
+  },
+  {
+    "title": "Pastoral: To Die in the Country",
+    "year": 1974,
+    "imdbId": "tt0071867"
+  },
+  {
+    "title": "House",
+    "year": 1977,
+    "imdbId": "tt0076162"
+  },
+  {
+    "title": "Rikyu",
+    "year": 1989,
+    "imdbId": "tt0097942"
+  },
+  {
+    "title": "Like Water for Chocolate",
+    "year": 1992,
+    "imdbId": "tt0103994"
+  },
+  {
+    "title": "Sonatine",
+    "year": 1993,
+    "imdbId": "tt0108122"
+  },
+  {
+    "title": "Hana-Bi",
+    "year": 1997,
+    "imdbId": "tt0119250"
+  },
+  {
+    "title": "Violent Cop",
+    "year": 1989,
+    "imdbId": "tt0098530"
+  },
+  {
+    "title": "Boiling Point",
+    "year": 1990,
+    "imdbId": "tt0099328"
+  },
+  {
+    "title": "Kids Return",
+    "year": 1996,
+    "imdbId": "tt0116891"
+  },
+  {
+    "title": "Zatoichi",
+    "year": 2003,
+    "imdbId": "tt0363226"
+  },
+  {
+    "title": "Dolls",
+    "year": 2002,
+    "imdbId": "tt0330229"
+  },
+  {
+    "title": "Brother",
+    "year": 2000,
+    "imdbId": "tt0222873"
+  },
+  {
+    "title": "Audition",
+    "year": 1999,
+    "imdbId": "tt0235198"
+  },
+  {
+    "title": "Ichi the Killer",
+    "year": 2001,
+    "imdbId": "tt0296042"
+  },
+  {
+    "title": "Gozu",
+    "year": 2003,
+    "imdbId": "tt0360797"
+  },
+  {
+    "title": "Confessions",
+    "year": 2010,
+    "imdbId": "tt1590089"
+  },
+  {
+    "title": "Nobody Knows",
+    "year": 2004,
+    "imdbId": "tt0362245"
+  },
+  {
+    "title": "Still Walking",
+    "year": 2008,
+    "imdbId": "tt1171701"
+  },
+  {
+    "title": "Like Father, Like Son",
+    "year": 2013,
+    "imdbId": "tt2697820"
+  },
+  {
+    "title": "Shoplifters",
+    "year": 2018,
+    "imdbId": "tt8075192"
+  },
+  {
+    "title": "After Life",
+    "year": 1998,
+    "imdbId": "tt0165078"
+  },
+  {
+    "title": "Maborosi",
+    "year": 1995,
+    "imdbId": "tt0113852"
+  },
+  {
+    "title": "Distance",
+    "year": 2001,
+    "imdbId": "tt0268218"
+  },
+  {
+    "title": "Hana",
+    "year": 2006,
+    "imdbId": "tt0465580"
+  },
+  {
+    "title": "Our Little Sister",
+    "year": 2015,
+    "imdbId": "tt3915320"
+  },
+  {
+    "title": "The Truth",
+    "year": 2019,
+    "imdbId": "tt8612990"
+  },
+  {
+    "title": "Spirited Away",
+    "year": 2001,
+    "imdbId": "tt0245429"
+  },
+  {
+    "title": "Princess Mononoke",
+    "year": 1997,
+    "imdbId": "tt0119698"
+  },
+  {
+    "title": "Grave of the Fireflies",
+    "year": 1988,
+    "imdbId": "tt0095327"
+  },
+  {
+    "title": "My Neighbor Totoro",
+    "year": 1988,
+    "imdbId": "tt0096283"
+  },
+  {
+    "title": "Nausicaä of the Valley of the Wind",
+    "year": 1984,
+    "imdbId": "tt0087544"
+  },
+  {
+    "title": "Akira",
+    "year": 1988,
+    "imdbId": "tt0094625"
+  },
+  {
+    "title": "Perfect Blue",
+    "year": 1997,
+    "imdbId": "tt0156887"
+  },
+  {
+    "title": "Pale Flower",
+    "year": 1964,
+    "imdbId": "tt0058463"
+  },
+  {
+    "title": "Tokyo Drifter",
+    "year": 1966,
+    "imdbId": "tt0061135"
+  }
 ]

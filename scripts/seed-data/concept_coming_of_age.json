@@ -1,102 +1,84 @@
 [
-  {
-    "title": "The 400 Blows",
-    "year": 1959,
-    "imdbId": "tt0053198"
-  },
-  {
-    "title": "Boyhood",
-    "year": 2014,
-    "imdbId": "tt1302006"
-  },
-  {
-    "title": "My Life as a Dog",
-    "year": 1985,
-    "imdbId": "tt0089606"
-  },
-  {
-    "title": "Stand by Me",
-    "year": 1986,
-    "imdbId": "tt0092005"
-  },
-  {
-    "title": "Moonlight",
-    "year": 2016,
-    "imdbId": "tt4975722"
-  },
-  {
-    "title": "Y tu mamá también",
-    "year": 2001,
-    "imdbId": "tt0245574"
-  },
-  {
-    "title": "Call Me by Your Name",
-    "year": 2017,
-    "imdbId": "tt5726616"
-  },
-  {
-    "title": "Dazed and Confused",
-    "year": 1993,
-    "imdbId": "tt0106677"
-  },
-  {
-    "title": "Rushmore",
-    "year": 1998,
-    "imdbId": "tt0128445"
-  },
-  {
-    "title": "Au Revoir les Enfants",
-    "year": 1987,
-    "imdbId": "tt0092593"
-  },
-  {
-    "title": "Gregory's Girl",
-    "year": 1980,
-    "imdbId": "tt0082477"
-  },
-  {
-    "title": "Beasts of the Southern Wild",
-    "year": 2012,
-    "imdbId": "tt2125435"
-  },
-  {
-    "title": "The Perks of Being a Wallflower",
-    "year": 2012,
-    "imdbId": "tt1659337"
-  },
-  {
-    "title": "Sixteen Candles",
-    "year": 1984,
-    "imdbId": "tt0088128"
-  },
-  {
-    "title": "Booksmart",
-    "year": 2019,
-    "imdbId": "tt1489887"
-  },
-  {
-    "title": "Lady Bird",
-    "year": 2017,
-    "imdbId": "tt4925292"
-  },
-  {
-    "title": "Pather Panchali",
-    "year": 1955,
-    "imdbId": "tt0048473"
-  },
-  {
-    "title": "Shoeshine",
-    "year": 1946,
-    "imdbId": "tt0038878"
-  },
-  {
-    "title": "Cleo from 5 to 7",
-    "year": 1962,
-    "imdbId": "tt0055852"
-  },
-  {
-    "title": "The Breakfast Club",
-    "year": 1985,
-    "imdbId": "tt0088847"
-  }
+  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
+  {"title": "Boyhood", "year": 2014, "imdbId": "tt1302006"},
+  {"title": "My Life as a Dog", "year": 1985, "imdbId": "tt0089606"},
+  {"title": "Stand by Me", "year": 1986, "imdbId": "tt0092005"},
+  {"title": "Moonlight", "year": 2016, "imdbId": "tt4975722"},
+  {"title": "Y tu mamá también", "year": 2001, "imdbId": "tt0245574"},
+  {"title": "Call Me by Your Name", "year": 2017, "imdbId": "tt5726616"},
+  {"title": "Dazed and Confused", "year": 1993, "imdbId": "tt0106677"},
+  {"title": "Rushmore", "year": 1998, "imdbId": "tt0128445"},
+  {"title": "Au Revoir les Enfants", "year": 1987, "imdbId": "tt0092593"},
+  {"title": "Gregory's Girl", "year": 1980, "imdbId": "tt0082477"},
+  {"title": "Beasts of the Southern Wild", "year": 2012, "imdbId": "tt2125435"},
+  {"title": "The Perks of Being a Wallflower", "year": 2012, "imdbId": "tt1659337"},
+  {"title": "Sixteen Candles", "year": 1984, "imdbId": "tt0088128"},
+  {"title": "Booksmart", "year": 2019, "imdbId": "tt1489887"},
+  {"title": "Lady Bird", "year": 2017, "imdbId": "tt4925292"},
+  {"title": "Pather Panchali", "year": 1955, "imdbId": "tt0048473"},
+  {"title": "Shoeshine", "year": 1946, "imdbId": "tt0038878"},
+  {"title": "Cleo from 5 to 7", "year": 1962, "imdbId": "tt0055852"},
+  {"title": "The Breakfast Club", "year": 1985, "imdbId": "tt0088847"},
+  {"title": "Ferris Bueller's Day Off", "year": 1986, "imdbId": "tt0091042"},
+  {"title": "Pretty in Pink", "year": 1986, "imdbId": "tt0091790"},
+  {"title": "Some Kind of Wonderful", "year": 1987, "imdbId": "tt0094006"},
+  {"title": "Say Anything...", "year": 1989, "imdbId": "tt0098258"},
+  {"title": "Dead Poets Society", "year": 1989, "imdbId": "tt0097165"},
+  {"title": "Pump Up the Volume", "year": 1990, "imdbId": "tt0100402"},
+  {"title": "Reality Bites", "year": 1994, "imdbId": "tt0110950"},
+  {"title": "Clueless", "year": 1995, "imdbId": "tt0112697"},
+  {"title": "Empire Records", "year": 1995, "imdbId": "tt0112950"},
+  {"title": "Submarine", "year": 2010, "imdbId": "tt1440292"},
+  {"title": "The Spectacular Now", "year": 2013, "imdbId": "tt1714204"},
+  {"title": "The Kings of Summer", "year": 2013, "imdbId": "tt2179116"},
+  {"title": "The Edge of Seventeen", "year": 2016, "imdbId": "tt1878870"},
+  {"title": "Eighth Grade", "year": 2018, "imdbId": "tt7014006"},
+  {"title": "Mid90s", "year": 2018, "imdbId": "tt7740510"},
+  {"title": "Never Rarely Sometimes Always", "year": 2020, "imdbId": "tt8978788"},
+  {"title": "Minari", "year": 2020, "imdbId": "tt10633456"},
+  {"title": "The Half of It", "year": 2020, "imdbId": "tt10078722"},
+  {"title": "Aftersun", "year": 2022, "imdbId": "tt19764935"},
+  {"title": "The Fabelmans", "year": 2022, "imdbId": "tt14208870"},
+  {"title": "Petite Maman", "year": 2021, "imdbId": "tt13105566"},
+  {"title": "C'mon C'mon", "year": 2021, "imdbId": "tt11394180"},
+  {"title": "After Yang", "year": 2021, "imdbId": "tt8633464"},
+  {"title": "Now and Then", "year": 1995, "imdbId": "tt0114011"},
+  {"title": "Mud", "year": 2012, "imdbId": "tt1935179"},
+  {"title": "Short Term 12", "year": 2013, "imdbId": "tt2370248"},
+  {"title": "Fish Tank", "year": 2009, "imdbId": "tt1232776"},
+  {"title": "An Education", "year": 2009, "imdbId": "tt1174732"},
+  {"title": "Never Let Me Go", "year": 2010, "imdbId": "tt1334260"},
+  {"title": "The Diary of a Teenage Girl", "year": 2015, "imdbId": "tt3655726"},
+  {"title": "Girlhood", "year": 2014, "imdbId": "tt3430328"},
+  {"title": "Tomboy", "year": 2011, "imdbId": "tt1592503"},
+  {"title": "Water Lilies", "year": 2007, "imdbId": "tt0489099"},
+  {"title": "Blue Is the Warmest Colour", "year": 2013, "imdbId": "tt2278871"},
+  {"title": "Portrait of a Lady on Fire", "year": 2019, "imdbId": "tt8613070"},
+  {"title": "Pariah", "year": 2011, "imdbId": "tt1839914"},
+  {"title": "The Kids Are All Right", "year": 2010, "imdbId": "tt0842926"},
+  {"title": "Beautiful Boy", "year": 2018, "imdbId": "tt1226837"},
+  {"title": "Ben Is Back", "year": 2018, "imdbId": "tt7349952"},
+  {"title": "Rocks", "year": 2019, "imdbId": "tt9687596"},
+  {"title": "Saint Frances", "year": 2019, "imdbId": "tt8923958"},
+  {"title": "Skate Kitchen", "year": 2018, "imdbId": "tt6905668"},
+  {"title": "Give Me Liberty", "year": 2019, "imdbId": "tt9620022"},
+  {"title": "Quo Vadis, Aida?", "year": 2020, "imdbId": "tt10288566"},
+  {"title": "Licorice Pizza", "year": 2021, "imdbId": "tt11271038"},
+  {"title": "Benedetta", "year": 2021, "imdbId": "tt8398600"},
+  {"title": "The Worst Person in the World", "year": 2021, "imdbId": "tt10745502"},
+  {"title": "Hit the Road", "year": 2021, "imdbId": "tt14538646"},
+  {"title": "The Swimmers", "year": 2022, "imdbId": "tt12804912"},
+  {"title": "Decision to Leave", "year": 2022, "imdbId": "tt12477480"},
+  {"title": "Corsage", "year": 2022, "imdbId": "tt11138642"},
+  {"title": "EO", "year": 2022, "imdbId": "tt14919986"},
+  {"title": "Argentina, 1985", "year": 2022, "imdbId": "tt17351924"},
+  {"title": "Armageddon Time", "year": 2022, "imdbId": "tt12375860"},
+  {"title": "Broker", "year": 2022, "imdbId": "tt14218750"},
+  {"title": "Happening", "year": 2021, "imdbId": "tt13822030"},
+  {"title": "Parallel Mothers", "year": 2021, "imdbId": "tt12493604"},
+  {"title": "The Lost Daughter", "year": 2021, "imdbId": "tt11564570"},
+  {"title": "Brighton Rock", "year": 1947, "imdbId": "tt0039232"},
+  {"title": "Zero de Conduite", "year": 1933, "imdbId": "tt0024884"},
+  {"title": "Allemagne Année 90 Neuf Zéro", "year": 1991, "imdbId": "tt0108316"},
+  {"title": "A Nos Amours", "year": 1983, "imdbId": "tt0085670"}
 ]

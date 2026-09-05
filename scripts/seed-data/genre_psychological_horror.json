@@ -1,22 +1,497 @@
 [
-  {"title": "Rosemary's Baby", "year": 1968, "imdbId": "tt0063522"},
-  {"title": "The Shining", "year": 1980, "imdbId": "tt0081505"},
-  {"title": "Black Swan", "year": 2010, "imdbId": "tt0947798"},
-  {"title": "Repulsion", "year": 1965, "imdbId": "tt0059646"},
-  {"title": "Persona", "year": 1966, "imdbId": "tt0060827"},
-  {"title": "Psycho", "year": 1960, "imdbId": "tt0054215"},
-  {"title": "Peeping Tom", "year": 1960, "imdbId": "tt0054167"},
-  {"title": "The Tenant", "year": 1976, "imdbId": "tt0074811"},
-  {"title": "Get Out", "year": 2017, "imdbId": "tt5052448"},
-  {"title": "Hereditary", "year": 2018, "imdbId": "tt7784604"},
-  {"title": "Suspiria", "year": 1977, "imdbId": "tt0076786"},
-  {"title": "The Silence of the Lambs", "year": 1991, "imdbId": "tt0102926"},
-  {"title": "Hour of the Wolf", "year": 1968, "imdbId": "tt0062420"},
-  {"title": "A Tale of Two Sisters", "year": 2003, "imdbId": "tt0365376"},
-  {"title": "Caché", "year": 2005, "imdbId": "tt0387898"},
-  {"title": "The Others", "year": 2001, "imdbId": "tt0230600"},
-  {"title": "The Lighthouse", "year": 2019, "imdbId": "tt7984734"},
-  {"title": "Enemy", "year": 2013, "imdbId": "tt2316411"},
-  {"title": "mother!", "year": 2017, "imdbId": "tt5109784"},
-  {"title": "Midsommar", "year": 2019, "imdbId": "tt8772262"}
+  {
+    "title": "Rosemary's Baby",
+    "year": 1968,
+    "imdbId": "tt0063522"
+  },
+  {
+    "title": "The Shining",
+    "year": 1980,
+    "imdbId": "tt0081505"
+  },
+  {
+    "title": "Black Swan",
+    "year": 2010,
+    "imdbId": "tt0947798"
+  },
+  {
+    "title": "Repulsion",
+    "year": 1965,
+    "imdbId": "tt0059646"
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "imdbId": "tt0060827"
+  },
+  {
+    "title": "Psycho",
+    "year": 1960,
+    "imdbId": "tt0054215"
+  },
+  {
+    "title": "Peeping Tom",
+    "year": 1960,
+    "imdbId": "tt0054167"
+  },
+  {
+    "title": "The Tenant",
+    "year": 1976,
+    "imdbId": "tt0074811"
+  },
+  {
+    "title": "Get Out",
+    "year": 2017,
+    "imdbId": "tt5052448"
+  },
+  {
+    "title": "Hereditary",
+    "year": 2018,
+    "imdbId": "tt7784604"
+  },
+  {
+    "title": "Suspiria",
+    "year": 1977,
+    "imdbId": "tt0076786"
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "imdbId": "tt0102926"
+  },
+  {
+    "title": "Hour of the Wolf",
+    "year": 1968,
+    "imdbId": "tt0062420"
+  },
+  {
+    "title": "A Tale of Two Sisters",
+    "year": 2003,
+    "imdbId": "tt0365376"
+  },
+  {
+    "title": "Caché",
+    "year": 2005,
+    "imdbId": "tt0387898"
+  },
+  {
+    "title": "The Others",
+    "year": 2001,
+    "imdbId": "tt0230600"
+  },
+  {
+    "title": "The Lighthouse",
+    "year": 2019,
+    "imdbId": "tt7984734"
+  },
+  {
+    "title": "Enemy",
+    "year": 2013,
+    "imdbId": "tt2316411"
+  },
+  {
+    "title": "mother!",
+    "year": 2017,
+    "imdbId": "tt5109784"
+  },
+  {
+    "title": "Midsommar",
+    "year": 2019,
+    "imdbId": "tt8772262"
+  },
+  {
+    "title": "The Babadook",
+    "year": 2014,
+    "imdbId": "tt2321549"
+  },
+  {
+    "title": "It Follows",
+    "year": 2014,
+    "imdbId": "tt3235888"
+  },
+  {
+    "title": "The Witch",
+    "year": 2015,
+    "imdbId": "tt4263482"
+  },
+  {
+    "title": "Annihilation",
+    "year": 2018,
+    "imdbId": "tt2798920"
+  },
+  {
+    "title": "Us",
+    "year": 2019,
+    "imdbId": "tt6772232"
+  },
+  {
+    "title": "Under the Skin",
+    "year": 2013,
+    "imdbId": "tt1441395"
+  },
+  {
+    "title": "A Cure for Wellness",
+    "year": 2016,
+    "imdbId": "tt4731136"
+  },
+  {
+    "title": "The Skin I Live In",
+    "year": 2011,
+    "imdbId": "tt1189073"
+  },
+  {
+    "title": "Antichrist",
+    "year": 2009,
+    "imdbId": "tt0870984"
+  },
+  {
+    "title": "The Piano Teacher",
+    "year": 2001,
+    "imdbId": "tt0254686"
+  },
+  {
+    "title": "Eyes Wide Shut",
+    "year": 1999,
+    "imdbId": "tt0120663"
+  },
+  {
+    "title": "Blue Velvet",
+    "year": 1986,
+    "imdbId": "tt0090756"
+  },
+  {
+    "title": "Mulholland Drive",
+    "year": 2001,
+    "imdbId": "tt0166924"
+  },
+  {
+    "title": "Lost Highway",
+    "year": 1997,
+    "imdbId": "tt0116922"
+  },
+  {
+    "title": "Eraserhead",
+    "year": 1977,
+    "imdbId": "tt0074486"
+  },
+  {
+    "title": "Jacob's Ladder",
+    "year": 1990,
+    "imdbId": "tt0099871"
+  },
+  {
+    "title": "Don't Look Now",
+    "year": 1973,
+    "imdbId": "tt0069947"
+  },
+  {
+    "title": "Session 9",
+    "year": 2001,
+    "imdbId": "tt0261983"
+  },
+  {
+    "title": "Bug",
+    "year": 2006,
+    "imdbId": "tt0455760"
+  },
+  {
+    "title": "Take Shelter",
+    "year": 2011,
+    "imdbId": "tt1675192"
+  },
+  {
+    "title": "Snowpiercer",
+    "year": 2013,
+    "imdbId": "tt1706620"
+  },
+  {
+    "title": "Frailty",
+    "year": 2001,
+    "imdbId": "tt0264616"
+  },
+  {
+    "title": "Misery",
+    "year": 1990,
+    "imdbId": "tt0100157"
+  },
+  {
+    "title": "Cape Fear",
+    "year": 1991,
+    "imdbId": "tt0101540"
+  },
+  {
+    "title": "The Hand That Rocks the Cradle",
+    "year": 1992,
+    "imdbId": "tt0104389"
+  },
+  {
+    "title": "Single White Female",
+    "year": 1992,
+    "imdbId": "tt0105414"
+  },
+  {
+    "title": "Fatal Attraction",
+    "year": 1987,
+    "imdbId": "tt0093010"
+  },
+  {
+    "title": "Dressed to Kill",
+    "year": 1980,
+    "imdbId": "tt0080661"
+  },
+  {
+    "title": "Sisters",
+    "year": 1972,
+    "imdbId": "tt0070439"
+  },
+  {
+    "title": "The Brood",
+    "year": 1979,
+    "imdbId": "tt0078908"
+  },
+  {
+    "title": "Audition",
+    "year": 1999,
+    "imdbId": "tt0235198"
+  },
+  {
+    "title": "Pulse",
+    "year": 2001,
+    "imdbId": "tt0286751"
+  },
+  {
+    "title": "Dark Water",
+    "year": 2002,
+    "imdbId": "tt0312451"
+  },
+  {
+    "title": "Oldboy",
+    "year": 2003,
+    "imdbId": "tt0364569"
+  },
+  {
+    "title": "I Saw the Devil",
+    "year": 2010,
+    "imdbId": "tt1588170"
+  },
+  {
+    "title": "A Tale of Two Sisters",
+    "year": 2003,
+    "imdbId": "tt0365376"
+  },
+  {
+    "title": "The Wailing",
+    "year": 2016,
+    "imdbId": "tt5215952"
+  },
+  {
+    "title": "Ringu",
+    "year": 1998,
+    "imdbId": "tt0178868"
+  },
+  {
+    "title": "Ju-On: The Grudge",
+    "year": 2002,
+    "imdbId": "tt0364385"
+  },
+  {
+    "title": "Pulse",
+    "year": 2001,
+    "imdbId": "tt0286751"
+  },
+  {
+    "title": "Noroi: The Curse",
+    "year": 2005,
+    "imdbId": "tt0831177"
+  },
+  {
+    "title": "Kwaidan",
+    "year": 1964,
+    "imdbId": "tt0058279"
+  },
+  {
+    "title": "Onibaba",
+    "year": 1964,
+    "imdbId": "tt0058404"
+  },
+  {
+    "title": "Kuroneko",
+    "year": 1968,
+    "imdbId": "tt0063546"
+  },
+  {
+    "title": "Hausu",
+    "year": 1977,
+    "imdbId": "tt0076162"
+  },
+  {
+    "title": "The Eye",
+    "year": 2002,
+    "imdbId": "tt0313252"
+  },
+  {
+    "title": "Dumplings",
+    "year": 2004,
+    "imdbId": "tt0476823"
+  },
+  {
+    "title": "A Serbian Film",
+    "year": 2010,
+    "imdbId": "tt1273235"
+  },
+  {
+    "title": "Raw",
+    "year": 2016,
+    "imdbId": "tt4954522"
+  },
+  {
+    "title": "Titane",
+    "year": 2021,
+    "imdbId": "tt10944760"
+  },
+  {
+    "title": "Climax",
+    "year": 2018,
+    "imdbId": "tt7513246"
+  },
+  {
+    "title": "Revenge",
+    "year": 2017,
+    "imdbId": "tt5969934"
+  },
+  {
+    "title": "Possession",
+    "year": 1981,
+    "imdbId": "tt0082933"
+  },
+  {
+    "title": "Funny Games",
+    "year": 1997,
+    "imdbId": "tt0119167"
+  },
+  {
+    "title": "The White Ribbon",
+    "year": 2009,
+    "imdbId": "tt1130884"
+  },
+  {
+    "title": "Dogtooth",
+    "year": 2009,
+    "imdbId": "tt1379182"
+  },
+  {
+    "title": "The Killing of a Sacred Deer",
+    "year": 2017,
+    "imdbId": "tt5715874"
+  },
+  {
+    "title": "The Favourite",
+    "year": 2018,
+    "imdbId": "tt5765446"
+  },
+  {
+    "title": "Hereditary",
+    "year": 2018,
+    "imdbId": "tt7784604"
+  },
+  {
+    "title": "Midsommar",
+    "year": 2019,
+    "imdbId": "tt8772262"
+  },
+  {
+    "title": "The Lighthouse",
+    "year": 2019,
+    "imdbId": "tt7984734"
+  },
+  {
+    "title": "Saint Maud",
+    "year": 2019,
+    "imdbId": "tt7557108"
+  },
+  {
+    "title": "His House",
+    "year": 2020,
+    "imdbId": "tt8109848"
+  },
+  {
+    "title": "The Night House",
+    "year": 2020,
+    "imdbId": "tt9304822"
+  },
+  {
+    "title": "Relic",
+    "year": 2020,
+    "imdbId": "tt9620288"
+  },
+  {
+    "title": "The Card Counter",
+    "year": 2021,
+    "imdbId": "tt10196266"
+  },
+  {
+    "title": "Lamb",
+    "year": 2021,
+    "imdbId": "tt12299608"
+  },
+  {
+    "title": "Men",
+    "year": 2022,
+    "imdbId": "tt11280112"
+  },
+  {
+    "title": "Crimes of the Future",
+    "year": 2022,
+    "imdbId": "tt14549466"
+  },
+  {
+    "title": "Barbarian",
+    "year": 2022,
+    "imdbId": "tt15791034"
+  },
+  {
+    "title": "Pearl",
+    "year": 2022,
+    "imdbId": "tt18925334"
+  },
+  {
+    "title": "The Menu",
+    "year": 2022,
+    "imdbId": "tt9764362"
+  },
+  {
+    "title": "The Substance",
+    "year": 2024,
+    "imdbId": "tt17526714"
+  },
+  {
+    "title": "I Saw the TV Glow",
+    "year": 2024,
+    "imdbId": "tt21056886"
+  },
+  {
+    "title": "Longlegs",
+    "year": 2024,
+    "imdbId": "tt26250786"
+  },
+  {
+    "title": "Heretic",
+    "year": 2024,
+    "imdbId": "tt25498278"
+  },
+  {
+    "title": "Smile",
+    "year": 2022,
+    "imdbId": "tt15474916"
+  },
+  {
+    "title": "Speak No Evil",
+    "year": 2022,
+    "imdbId": "tt15354308"
+  },
+  {
+    "title": "The Black Phone",
+    "year": 2021,
+    "imdbId": "tt7144666"
+  }
 ]

@@ -1,27 +1,577 @@
 [
-  {"title": "Bicycle Thieves", "year": 1948, "imdbId": "tt0040522"},
-  {"title": "8½", "year": 1963, "imdbId": "tt0056801"},
-  {"title": "La Dolce Vita", "year": 1960, "imdbId": "tt0053779"},
-  {"title": "L'Avventura", "year": 1960, "imdbId": "tt0053619"},
-  {"title": "The Leopard", "year": 1963, "imdbId": "tt0057091"},
-  {"title": "La Strada", "year": 1954, "imdbId": "tt0047528"},
-  {"title": "Amarcord", "year": 1973, "imdbId": "tt0071129"},
-  {"title": "Viridiana", "year": 1961, "imdbId": "tt0055601"},
-  {"title": "Rome, Open City", "year": 1945, "imdbId": "tt0038890"},
-  {"title": "The Battle of Algiers", "year": 1966, "imdbId": "tt0058946"},
-  {"title": "Contempt", "year": 1963, "imdbId": "tt0057345"},
-  {"title": "The Good, the Bad and the Ugly", "year": 1966, "imdbId": "tt0060196"},
-  {"title": "Once Upon a Time in the West", "year": 1968, "imdbId": "tt0064116"},
-  {"title": "Rocco and His Brothers", "year": 1960, "imdbId": "tt0054152"},
-  {"title": "Il Posto", "year": 1961, "imdbId": "tt0055245"},
-  {"title": "Cabiria", "year": 1957, "imdbId": "tt0050229"},
-  {"title": "The Conformist", "year": 1970, "imdbId": "tt0065571"},
-  {"title": "Blow-Up", "year": 1966, "imdbId": "tt0060176"},
-  {"title": "L'Eclisse", "year": 1962, "imdbId": "tt0056736"},
-  {"title": "Suspiria", "year": 1977, "imdbId": "tt0076786"},
-  {"title": "Umberto D.", "year": 1952, "imdbId": "tt0044848"},
-  {"title": "Belle de Jour", "year": 1967, "imdbId": "tt0061395"},
-  {"title": "The Tree of Wooden Clogs", "year": 1978, "imdbId": "tt0077742"},
-  {"title": "Il Grido", "year": 1957, "imdbId": "tt0049578"},
-  {"title": "Cinema Paradiso", "year": 1988, "imdbId": "tt0095765"}
+  {
+    "title": "Bicycle Thieves",
+    "year": 1948,
+    "imdbId": "tt0040522"
+  },
+  {
+    "title": "8½",
+    "year": 1963,
+    "imdbId": "tt0056801"
+  },
+  {
+    "title": "La Dolce Vita",
+    "year": 1960,
+    "imdbId": "tt0053779"
+  },
+  {
+    "title": "L'Avventura",
+    "year": 1960,
+    "imdbId": "tt0053619"
+  },
+  {
+    "title": "The Leopard",
+    "year": 1963,
+    "imdbId": "tt0057091"
+  },
+  {
+    "title": "La Strada",
+    "year": 1954,
+    "imdbId": "tt0047528"
+  },
+  {
+    "title": "Amarcord",
+    "year": 1973,
+    "imdbId": "tt0071129"
+  },
+  {
+    "title": "Rome, Open City",
+    "year": 1945,
+    "imdbId": "tt0038890"
+  },
+  {
+    "title": "The Battle of Algiers",
+    "year": 1966,
+    "imdbId": "tt0058946"
+  },
+  {
+    "title": "The Good, the Bad and the Ugly",
+    "year": 1966,
+    "imdbId": "tt0060196"
+  },
+  {
+    "title": "Once Upon a Time in the West",
+    "year": 1968,
+    "imdbId": "tt0064116"
+  },
+  {
+    "title": "Rocco and His Brothers",
+    "year": 1960,
+    "imdbId": "tt0054152"
+  },
+  {
+    "title": "Il Posto",
+    "year": 1961,
+    "imdbId": "tt0055245"
+  },
+  {
+    "title": "The Conformist",
+    "year": 1970,
+    "imdbId": "tt0065571"
+  },
+  {
+    "title": "Blow-Up",
+    "year": 1966,
+    "imdbId": "tt0060176"
+  },
+  {
+    "title": "L'Eclisse",
+    "year": 1962,
+    "imdbId": "tt0056736"
+  },
+  {
+    "title": "Suspiria",
+    "year": 1977,
+    "imdbId": "tt0076786"
+  },
+  {
+    "title": "Umberto D.",
+    "year": 1952,
+    "imdbId": "tt0044848"
+  },
+  {
+    "title": "The Tree of Wooden Clogs",
+    "year": 1978,
+    "imdbId": "tt0077742"
+  },
+  {
+    "title": "Il Grido",
+    "year": 1957,
+    "imdbId": "tt0049578"
+  },
+  {
+    "title": "Cinema Paradiso",
+    "year": 1988,
+    "imdbId": "tt0095765"
+  },
+  {
+    "title": "Il Generale della Rovere",
+    "year": 1959,
+    "imdbId": "tt0052809"
+  },
+  {
+    "title": "Paisan",
+    "year": 1946,
+    "imdbId": "tt0038823"
+  },
+  {
+    "title": "Germany Year Zero",
+    "year": 1948,
+    "imdbId": "tt0040393"
+  },
+  {
+    "title": "Stromboli",
+    "year": 1950,
+    "imdbId": "tt0042835"
+  },
+  {
+    "title": "Europa '51",
+    "year": 1952,
+    "imdbId": "tt0044674"
+  },
+  {
+    "title": "Journey to Italy",
+    "year": 1954,
+    "imdbId": "tt0047896"
+  },
+  {
+    "title": "Nights of Cabiria",
+    "year": 1957,
+    "imdbId": "tt0050229"
+  },
+  {
+    "title": "La Notte",
+    "year": 1961,
+    "imdbId": "tt0055193"
+  },
+  {
+    "title": "Red Desert",
+    "year": 1964,
+    "imdbId": "tt0058335"
+  },
+  {
+    "title": "Zabriskie Point",
+    "year": 1970,
+    "imdbId": "tt0066378"
+  },
+  {
+    "title": "The Passenger",
+    "year": 1975,
+    "imdbId": "tt0073580"
+  },
+  {
+    "title": "Identification of a Woman",
+    "year": 1982,
+    "imdbId": "tt0084052"
+  },
+  {
+    "title": "The Spider's Stratagem",
+    "year": 1970,
+    "imdbId": "tt0066389"
+  },
+  {
+    "title": "The Tragedy of a Ridiculous Man",
+    "year": 1981,
+    "imdbId": "tt0083016"
+  },
+  {
+    "title": "1900",
+    "year": 1976,
+    "imdbId": "tt0073949"
+  },
+  {
+    "title": "Last Tango in Paris",
+    "year": 1972,
+    "imdbId": "tt0070849"
+  },
+  {
+    "title": "The Dreamers",
+    "year": 2003,
+    "imdbId": "tt0309987"
+  },
+  {
+    "title": "Fists in the Pocket",
+    "year": 1965,
+    "imdbId": "tt0059241"
+  },
+  {
+    "title": "China Is Near",
+    "year": 1967,
+    "imdbId": "tt0061513"
+  },
+  {
+    "title": "Salò, or the 120 Days of Sodom",
+    "year": 1975,
+    "imdbId": "tt0073650"
+  },
+  {
+    "title": "The Gospel According to St. Matthew",
+    "year": 1964,
+    "imdbId": "tt0058245"
+  },
+  {
+    "title": "Accattone",
+    "year": 1961,
+    "imdbId": "tt0054692"
+  },
+  {
+    "title": "Mamma Roma",
+    "year": 1962,
+    "imdbId": "tt0056329"
+  },
+  {
+    "title": "Teorema",
+    "year": 1968,
+    "imdbId": "tt0063678"
+  },
+  {
+    "title": "Medea",
+    "year": 1969,
+    "imdbId": "tt0064700"
+  },
+  {
+    "title": "The Hawks and the Sparrows",
+    "year": 1966,
+    "imdbId": "tt0060638"
+  },
+  {
+    "title": "Once Upon a Time in America",
+    "year": 1984,
+    "imdbId": "tt0087843"
+  },
+  {
+    "title": "A Fistful of Dollars",
+    "year": 1964,
+    "imdbId": "tt0058461"
+  },
+  {
+    "title": "For a Few Dollars More",
+    "year": 1965,
+    "imdbId": "tt0059578"
+  },
+  {
+    "title": "Duck, You Sucker!",
+    "year": 1971,
+    "imdbId": "tt0067563"
+  },
+  {
+    "title": "The Life and Death of Colonel Blimp",
+    "year": 1943,
+    "imdbId": "tt0036112"
+  },
+  {
+    "title": "Fellini Satyricon",
+    "year": 1969,
+    "imdbId": "tt0064649"
+  },
+  {
+    "title": "Juliet of the Spirits",
+    "year": 1965,
+    "imdbId": "tt0059406"
+  },
+  {
+    "title": "The Clowns",
+    "year": 1970,
+    "imdbId": "tt0065639"
+  },
+  {
+    "title": "Casanova",
+    "year": 1976,
+    "imdbId": "tt0074228"
+  },
+  {
+    "title": "Orchestra Rehearsal",
+    "year": 1978,
+    "imdbId": "tt0078119"
+  },
+  {
+    "title": "And the Ship Sails On",
+    "year": 1983,
+    "imdbId": "tt0085404"
+  },
+  {
+    "title": "Ginger and Fred",
+    "year": 1986,
+    "imdbId": "tt0091142"
+  },
+  {
+    "title": "Intervista",
+    "year": 1987,
+    "imdbId": "tt0093327"
+  },
+  {
+    "title": "The Flowers of St. Francis",
+    "year": 1950,
+    "imdbId": "tt0042445"
+  },
+  {
+    "title": "Il Bidone",
+    "year": 1955,
+    "imdbId": "tt0047977"
+  },
+  {
+    "title": "Variety Lights",
+    "year": 1950,
+    "imdbId": "tt0043134"
+  },
+  {
+    "title": "The White Sheik",
+    "year": 1952,
+    "imdbId": "tt0044837"
+  },
+  {
+    "title": "I Vitelloni",
+    "year": 1953,
+    "imdbId": "tt0046521"
+  },
+  {
+    "title": "Il Sorpasso",
+    "year": 1962,
+    "imdbId": "tt0056466"
+  },
+  {
+    "title": "Investigation of a Citizen Above Suspicion",
+    "year": 1970,
+    "imdbId": "tt0065777"
+  },
+  {
+    "title": "The Working Class Goes to Heaven",
+    "year": 1971,
+    "imdbId": "tt0067625"
+  },
+  {
+    "title": "Hands over the City",
+    "year": 1963,
+    "imdbId": "tt0057089"
+  },
+  {
+    "title": "Salvatore Giuliano",
+    "year": 1962,
+    "imdbId": "tt0056452"
+  },
+  {
+    "title": "Rome Armed to the Teeth",
+    "year": 1976,
+    "imdbId": "tt0075191"
+  },
+  {
+    "title": "The Hound of the Baskervilles",
+    "year": 1978,
+    "imdbId": "tt0079435"
+  },
+  {
+    "title": "Life is Beautiful",
+    "year": 1997,
+    "imdbId": "tt0118799"
+  },
+  {
+    "title": "The Son's Room",
+    "year": 2001,
+    "imdbId": "tt0264472"
+  },
+  {
+    "title": "The Great Beauty",
+    "year": 2013,
+    "imdbId": "tt2358891"
+  },
+  {
+    "title": "Youth",
+    "year": 2015,
+    "imdbId": "tt3312830"
+  },
+  {
+    "title": "Consequences of Love",
+    "year": 2004,
+    "imdbId": "tt0398883"
+  },
+  {
+    "title": "Il Divo",
+    "year": 2008,
+    "imdbId": "tt1023893"
+  },
+  {
+    "title": "Gomorrah",
+    "year": 2008,
+    "imdbId": "tt0929425"
+  },
+  {
+    "title": "The Caiman",
+    "year": 2006,
+    "imdbId": "tt0429240"
+  },
+  {
+    "title": "Pinocchio",
+    "year": 2019,
+    "imdbId": "tt7335388"
+  },
+  {
+    "title": "Happy as Lazzaro",
+    "year": 2018,
+    "imdbId": "tt7462410"
+  },
+  {
+    "title": "The Wonders",
+    "year": 2014,
+    "imdbId": "tt3488120"
+  },
+  {
+    "title": "Story of My Wife",
+    "year": 2021,
+    "imdbId": "tt11281984"
+  },
+  {
+    "title": "America, America",
+    "year": 1963,
+    "imdbId": "tt0056802"
+  },
+  {
+    "title": "The Damned",
+    "year": 1969,
+    "imdbId": "tt0064439"
+  },
+  {
+    "title": "Death in Venice",
+    "year": 1971,
+    "imdbId": "tt0066956"
+  },
+  {
+    "title": "Ludwig",
+    "year": 1973,
+    "imdbId": "tt0070323"
+  },
+  {
+    "title": "Conversation Piece",
+    "year": 1974,
+    "imdbId": "tt0071353"
+  },
+  {
+    "title": "Innocent",
+    "year": 1976,
+    "imdbId": "tt0074791"
+  },
+  {
+    "title": "Nostalghia",
+    "year": 1983,
+    "imdbId": "tt0086032"
+  },
+  {
+    "title": "The Sacrifice",
+    "year": 1986,
+    "imdbId": "tt0091670"
+  },
+  {
+    "title": "Padre Padrone",
+    "year": 1977,
+    "imdbId": "tt0076359"
+  },
+  {
+    "title": "The Night of the Shooting Stars",
+    "year": 1982,
+    "imdbId": "tt0082629"
+  },
+  {
+    "title": "Kaos",
+    "year": 1984,
+    "imdbId": "tt0087526"
+  },
+  {
+    "title": "Good Morning, Babylon",
+    "year": 1987,
+    "imdbId": "tt0093129"
+  },
+  {
+    "title": "La Terra Trema",
+    "year": 1948,
+    "imdbId": "tt0040823"
+  },
+  {
+    "title": "Ossessione",
+    "year": 1943,
+    "imdbId": "tt0036163"
+  },
+  {
+    "title": "Miracle in Milan",
+    "year": 1951,
+    "imdbId": "tt0043808"
+  },
+  {
+    "title": "Two Cents Worth of Hope",
+    "year": 1952,
+    "imdbId": "tt0045247"
+  },
+  {
+    "title": "Senso",
+    "year": 1954,
+    "imdbId": "tt0047527"
+  },
+  {
+    "title": "Big Deal on Madonna Street",
+    "year": 1958,
+    "imdbId": "tt0051819"
+  },
+  {
+    "title": "Il Bell Antonio",
+    "year": 1960,
+    "imdbId": "tt0053594"
+  },
+  {
+    "title": "Seduced and Abandoned",
+    "year": 1964,
+    "imdbId": "tt0058402"
+  },
+  {
+    "title": "Divorce Italian Style",
+    "year": 1961,
+    "imdbId": "tt0054891"
+  },
+  {
+    "title": "Swept Away",
+    "year": 1974,
+    "imdbId": "tt0072247"
+  },
+  {
+    "title": "Love and Anarchy",
+    "year": 1973,
+    "imdbId": "tt0070348"
+  },
+  {
+    "title": "Seven Beauties",
+    "year": 1975,
+    "imdbId": "tt0073747"
+  },
+  {
+    "title": "A Special Day",
+    "year": 1977,
+    "imdbId": "tt0076496"
+  },
+  {
+    "title": "We All Loved Each Other So Much",
+    "year": 1974,
+    "imdbId": "tt0072313"
+  },
+  {
+    "title": "The Night Porter",
+    "year": 1974,
+    "imdbId": "tt0071914"
+  },
+  {
+    "title": "The Best of Youth",
+    "year": 2003,
+    "imdbId": "tt0346808"
+  },
+  {
+    "title": "Il Capitale Umano",
+    "year": 2013,
+    "imdbId": "tt2937642"
+  },
+  {
+    "title": "Suburra",
+    "year": 2015,
+    "imdbId": "tt3872154"
+  },
+  {
+    "title": "Black Mass",
+    "year": 1969,
+    "imdbId": "tt0064395"
+  }
 ]

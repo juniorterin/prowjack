@@ -1,102 +1,86 @@
 [
-  {
-    "title": "Stalker",
-    "year": 1979,
-    "imdbId": "tt0079944"
-  },
-  {
-    "title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles",
-    "year": 1975,
-    "imdbId": "tt0073198"
-  },
-  {
-    "title": "Sátántangó",
-    "year": 1994,
-    "imdbId": "tt0111341"
-  },
-  {
-    "title": "The Turin Horse",
-    "year": 2011,
-    "imdbId": "tt1316540"
-  },
-  {
-    "title": "Goodbye, Dragon Inn",
-    "year": 2003,
-    "imdbId": "tt0377556"
-  },
-  {
-    "title": "Beau Travail",
-    "year": 1999,
-    "imdbId": "tt0209933"
-  },
-  {
-    "title": "Tropical Malady",
-    "year": 2004,
-    "imdbId": "tt0381668"
-  },
-  {
-    "title": "Uncle Boonmee Who Can Recall His Past Lives",
-    "year": 2010,
-    "imdbId": "tt1598642"
-  },
-  {
-    "title": "Nostalghia",
-    "year": 1983,
-    "imdbId": "tt0086022"
-  },
-  {
-    "title": "Caché",
-    "year": 2005,
-    "imdbId": "tt0387898"
-  },
-  {
-    "title": "The Son's Room",
-    "year": 2001,
-    "imdbId": "tt0264472"
-  },
-  {
-    "title": "Yi Yi",
-    "year": 2000,
-    "imdbId": "tt0244316"
-  },
-  {
-    "title": "Chantal Akerman's D'Est",
-    "year": 1993,
-    "imdbId": "tt0108538"
-  },
-  {
-    "title": "Once Upon a Time in Anatolia",
-    "year": 2011,
-    "imdbId": "tt1827487"
-  },
-  {
-    "title": "A Brighter Summer Day",
-    "year": 1991,
-    "imdbId": "tt0101985"
-  },
-  {
-    "title": "Elephant",
-    "year": 2003,
-    "imdbId": "tt0363519"
-  },
-  {
-    "title": "4 Months, 3 Weeks and 2 Days",
-    "year": 2007,
-    "imdbId": "tt1032536"
-  },
-  {
-    "title": "The White Ribbon",
-    "year": 2009,
-    "imdbId": "tt1130884"
-  },
-  {
-    "title": "Still Life",
-    "year": 2006,
-    "imdbId": "tt0799773"
-  },
-  {
-    "title": "River of Grass",
-    "year": 1994,
-    "imdbId": "tt0110950"
-  }
+  {"title": "Stalker", "year": 1979, "imdbId": "tt0079944"},
+  {"title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles", "year": 1975, "imdbId": "tt0073198"},
+  {"title": "Sátántangó", "year": 1994, "imdbId": "tt0111341"},
+  {"title": "The Turin Horse", "year": 2011, "imdbId": "tt1316540"},
+  {"title": "Goodbye, Dragon Inn", "year": 2003, "imdbId": "tt0377556"},
+  {"title": "Beau Travail", "year": 1999, "imdbId": "tt0209933"},
+  {"title": "Tropical Malady", "year": 2004, "imdbId": "tt0381668"},
+  {"title": "Uncle Boonmee Who Can Recall His Past Lives", "year": 2010, "imdbId": "tt1598642"},
+  {"title": "Nostalghia", "year": 1983, "imdbId": "tt0086022"},
+  {"title": "Caché", "year": 2005, "imdbId": "tt0387898"},
+  {"title": "The Son's Room", "year": 2001, "imdbId": "tt0264472"},
+  {"title": "Yi Yi", "year": 2000, "imdbId": "tt0244316"},
+  {"title": "Chantal Akerman's D'Est", "year": 1993, "imdbId": "tt0108538"},
+  {"title": "Once Upon a Time in Anatolia", "year": 2011, "imdbId": "tt1827487"},
+  {"title": "A Brighter Summer Day", "year": 1991, "imdbId": "tt0101985"},
+  {"title": "Elephant", "year": 2003, "imdbId": "tt0363519"},
+  {"title": "4 Months, 3 Weeks and 2 Days", "year": 2007, "imdbId": "tt1032536"},
+  {"title": "The White Ribbon", "year": 2009, "imdbId": "tt1130884"},
+  {"title": "Still Life", "year": 2006, "imdbId": "tt0799773"},
+  {"title": "River of Grass", "year": 1994, "imdbId": "tt0110950"},
+  {"title": "Mirror", "year": 1975, "imdbId": "tt0072443"},
+  {"title": "The Sacrifice", "year": 1986, "imdbId": "tt0091670"},
+  {"title": "Andrei Rublev", "year": 1966, "imdbId": "tt0060107"},
+  {"title": "Werckmeister Harmonies", "year": 2000, "imdbId": "tt0249241"},
+  {"title": "Landscape in the Mist", "year": 1988, "imdbId": "tt0095657"},
+  {"title": "The Weeping Meadow", "year": 2004, "imdbId": "tt0390384"},
+  {"title": "Eternity and a Day", "year": 1998, "imdbId": "tt0169546"},
+  {"title": "The Suspended Step of the Stork", "year": 1991, "imdbId": "tt0103107"},
+  {"title": "Ulysses' Gaze", "year": 1995, "imdbId": "tt0114880"},
+  {"title": "Three Colors: Blue", "year": 1993, "imdbId": "tt0106848"},
+  {"title": "Au Hasard Balthazar", "year": 1966, "imdbId": "tt0060138"},
+  {"title": "Diary of a Country Priest", "year": 1951, "imdbId": "tt0043283"},
+  {"title": "The Devil, Probably", "year": 1977, "imdbId": "tt0075689"},
+  {"title": "Lancelot du Lac", "year": 1974, "imdbId": "tt0071783"},
+  {"title": "L'Argent", "year": 1983, "imdbId": "tt0085404"},
+  {"title": "Mouchette", "year": 1967, "imdbId": "tt0062057"},
+  {"title": "A Gentle Woman", "year": 1969, "imdbId": "tt0064069"},
+  {"title": "Ordet", "year": 1955, "imdbId": "tt0048374"},
+  {"title": "Gertrud", "year": 1964, "imdbId": "tt0058119"},
+  {"title": "Day of Wrath", "year": 1943, "imdbId": "tt0035854"},
+  {"title": "Paterson", "year": 2016, "imdbId": "tt5247022"},
+  {"title": "Dead Man", "year": 1995, "imdbId": "tt0112817"},
+  {"title": "Ghost Dog: The Way of the Samurai", "year": 1999, "imdbId": "tt0165798"},
+  {"title": "Permanent Vacation", "year": 1980, "imdbId": "tt0081352"},
+  {"title": "Down by Law", "year": 1986, "imdbId": "tt0090982"},
+  {"title": "Mystery Train", "year": 1989, "imdbId": "tt0097940"},
+  {"title": "Coffee and Cigarettes", "year": 2003, "imdbId": "tt0274085"},
+  {"title": "Broken Flowers", "year": 2005, "imdbId": "tt0412019"},
+  {"title": "The Limits of Control", "year": 2009, "imdbId": "tt1135952"},
+  {"title": "Only Lovers Left Alive", "year": 2013, "imdbId": "tt1714915"},
+  {"title": "Long Day's Journey into Night", "year": 2018, "imdbId": "tt7638070"},
+  {"title": "Cemetery of Splendour", "year": 2015, "imdbId": "tt4699710"},
+  {"title": "Mekong Hotel", "year": 2012, "imdbId": "tt2383490"},
+  {"title": "Syndromes and a Century", "year": 2006, "imdbId": "tt0832579"},
+  {"title": "Blissfully Yours", "year": 2002, "imdbId": "tt0345456"},
+  {"title": "Mysterious Object at Noon", "year": 2000, "imdbId": "tt0276471"},
+  {"title": "First Reformed", "year": 2017, "imdbId": "tt5649108"},
+  {"title": "Silence", "year": 2016, "imdbId": "tt0490215"},
+  {"title": "Of Gods and Men", "year": 2010, "imdbId": "tt1588678"},
+  {"title": "The Straight Story", "year": 1999, "imdbId": "tt0166896"},
+  {"title": "Into Great Silence", "year": 2005, "imdbId": "tt0478150"},
+  {"title": "Leviathan", "year": 2012, "imdbId": "tt2556240"},
+  {"title": "Stray Dogs", "year": 2013, "imdbId": "tt2871514"},
+  {"title": "The Assassin", "year": 2015, "imdbId": "tt2258858"},
+  {"title": "Mountains May Depart", "year": 2015, "imdbId": "tt4540364"},
+  {"title": "Ash Is Purest White", "year": 2018, "imdbId": "tt8399960"},
+  {"title": "The Wild Goose Lake", "year": 2019, "imdbId": "tt10234852"},
+  {"title": "A Sun", "year": 2019, "imdbId": "tt10574608"},
+  {"title": "The Cloud-Capped Star", "year": 1960, "imdbId": "tt0053614"},
+  {"title": "Subarnarekha", "year": 1965, "imdbId": "tt0059619"},
+  {"title": "Apur Sansar", "year": 1959, "imdbId": "tt0052584"},
+  {"title": "Aparajito", "year": 1956, "imdbId": "tt0049946"},
+  {"title": "Pather Panchali", "year": 1955, "imdbId": "tt0048473"},
+  {"title": "Charulata", "year": 1964, "imdbId": "tt0058021"},
+  {"title": "The World of Apu", "year": 1959, "imdbId": "tt0052584"},
+  {"title": "Distant", "year": 2002, "imdbId": "tt0347200"},
+  {"title": "Three Monkeys", "year": 2008, "imdbId": "tt1124937"},
+  {"title": "Winter Sleep", "year": 2014, "imdbId": "tt3781512"},
+  {"title": "The Wild Pear Tree", "year": 2018, "imdbId": "tt7407796"},
+  {"title": "About Dry Grasses", "year": 2023, "imdbId": "tt27083830"},
+  {"title": "Nuri Bilge Ceylan's Dry Summer", "year": 1964, "imdbId": "tt0059616"},
+  {"title": "In a Better World", "year": 2010, "imdbId": "tt1340076"},
+  {"title": "Force Majeure", "year": 2014, "imdbId": "tt2534380"},
+  {"title": "The Hunt", "year": 2012, "imdbId": "tt2106476"}
 ]

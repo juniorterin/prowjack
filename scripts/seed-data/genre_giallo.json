@@ -1,77 +1,103 @@
 [
-  {
-    "title": "Deep Red",
-    "year": 1975,
-    "imdbId": "tt0073582"
-  },
-  {
-    "title": "Suspiria",
-    "year": 1977,
-    "imdbId": "tt0076786"
-  },
-  {
-    "title": "Tenebrae",
-    "year": 1982,
-    "imdbId": "tt0084777"
-  },
-  {
-    "title": "The Bird with the Crystal Plumage",
-    "year": 1970,
-    "imdbId": "tt0065458"
-  },
-  {
-    "title": "Don't Torture a Duckling",
-    "year": 1972,
-    "imdbId": "tt0068138"
-  },
-  {
-    "title": "Phenomena",
-    "year": 1985,
-    "imdbId": "tt0089949"
-  },
-  {
-    "title": "Four Flies on Grey Velvet",
-    "year": 1971,
-    "imdbId": "tt0066735"
-  },
-  {
-    "title": "The Cat o' Nine Tails",
-    "year": 1971,
-    "imdbId": "tt0066967"
-  },
-  {
-    "title": "Blood and Black Lace",
-    "year": 1964,
-    "imdbId": "tt0057913"
-  },
-  {
-    "title": "Inferno",
-    "year": 1980,
-    "imdbId": "tt0081503"
-  },
-  {
-    "title": "What Have You Done to Solange?",
-    "year": 1972,
-    "imdbId": "tt5752306"
-  },
-  {
-    "title": "Your Vice Is a Locked Room and Only I Have the Key",
-    "year": 1972,
-    "imdbId": "tt0069436"
-  },
-  {
-    "title": "The House with Laughing Windows",
-    "year": 1976,
-    "imdbId": "tt0074287"
-  },
-  {
-    "title": "Short Night of Glass Dolls",
-    "year": 1971,
-    "imdbId": "tt0067701"
-  },
-  {
-    "title": "A Bay of Blood",
-    "year": 1971,
-    "imdbId": "tt0067119"
-  }
+  {"title": "Deep Red", "year": 1975, "imdbId": "tt0073582"},
+  {"title": "Suspiria", "year": 1977, "imdbId": "tt0076786"},
+  {"title": "Tenebrae", "year": 1982, "imdbId": "tt0084777"},
+  {"title": "The Bird with the Crystal Plumage", "year": 1970, "imdbId": "tt0065458"},
+  {"title": "Don't Torture a Duckling", "year": 1972, "imdbId": "tt0068138"},
+  {"title": "Phenomena", "year": 1985, "imdbId": "tt0089949"},
+  {"title": "Four Flies on Grey Velvet", "year": 1971, "imdbId": "tt0066735"},
+  {"title": "The Cat o' Nine Tails", "year": 1971, "imdbId": "tt0066967"},
+  {"title": "Blood and Black Lace", "year": 1964, "imdbId": "tt0057913"},
+  {"title": "Inferno", "year": 1980, "imdbId": "tt0081503"},
+  {"title": "What Have You Done to Solange?", "year": 1972, "imdbId": "tt5752306"},
+  {"title": "Your Vice Is a Locked Room and Only I Have the Key", "year": 1972, "imdbId": "tt0069436"},
+  {"title": "The House with Laughing Windows", "year": 1976, "imdbId": "tt0074287"},
+  {"title": "Short Night of Glass Dolls", "year": 1971, "imdbId": "tt0067701"},
+  {"title": "A Bay of Blood", "year": 1971, "imdbId": "tt0067119"},
+  {"title": "Opera", "year": 1987, "imdbId": "tt0093629"},
+  {"title": "The Beyond", "year": 1981, "imdbId": "tt0082307"},
+  {"title": "City of the Living Dead", "year": 1980, "imdbId": "tt0080491"},
+  {"title": "Don't Look Now", "year": 1973, "imdbId": "tt0069947"},
+  {"title": "The Girl Who Knew Too Much", "year": 1963, "imdbId": "tt0057128"},
+  {"title": "Lizard in a Woman's Skin", "year": 1971, "imdbId": "tt0067095"},
+  {"title": "All the Colors of the Dark", "year": 1972, "imdbId": "tt0068193"},
+  {"title": "Death Walks on High Heels", "year": 1971, "imdbId": "tt0067101"},
+  {"title": "The Strange Vice of Mrs. Wardh", "year": 1971, "imdbId": "tt0067706"},
+  {"title": "Torso", "year": 1973, "imdbId": "tt0070763"},
+  {"title": "The New York Ripper", "year": 1982, "imdbId": "tt0084286"},
+  {"title": "Seven Notes in Black", "year": 1977, "imdbId": "tt0076523"},
+  {"title": "The Case of the Scorpion's Tail", "year": 1971, "imdbId": "tt0066672"},
+  {"title": "Spasmo", "year": 1974, "imdbId": "tt0072318"},
+  {"title": "Bay of Blood", "year": 1971, "imdbId": "tt0067119"},
+  {"title": "The Perfume of the Lady in Black", "year": 1974, "imdbId": "tt0071911"},
+  {"title": "Strip Nude for Your Killer", "year": 1975, "imdbId": "tt0074010"},
+  {"title": "What Have You Done to Solange?", "year": 1972, "imdbId": "tt5752306"},
+  {"title": "Who Saw Her Die?", "year": 1972, "imdbId": "tt0069490"},
+  {"title": "The Black Belly of the Tarantula", "year": 1971, "imdbId": "tt0066617"},
+  {"title": "The Fifth Cord", "year": 1971, "imdbId": "tt0066749"},
+  {"title": "Knife of Ice", "year": 1972, "imdbId": "tt0068912"},
+  {"title": "The Case of the Bloody Iris", "year": 1972, "imdbId": "tt0068203"},
+  {"title": "Trauma", "year": 1993, "imdbId": "tt0108382"},
+  {"title": "Sleepless", "year": 2001, "imdbId": "tt0220885"},
+  {"title": "Mother of Tears", "year": 2007, "imdbId": "tt0808209"},
+  {"title": "Demons", "year": 1985, "imdbId": "tt0089012"},
+  {"title": "Stagefright", "year": 1987, "imdbId": "tt0094163"},
+  {"title": "Murder Rock", "year": 1984, "imdbId": "tt0087877"},
+  {"title": "The Killer Must Kill Again", "year": 1975, "imdbId": "tt0073259"},
+  {"title": "Autopsy", "year": 1975, "imdbId": "tt0072720"},
+  {"title": "Death Walks at Midnight", "year": 1972, "imdbId": "tt0067102"},
+  {"title": "The Red Queen Kills Seven Times", "year": 1972, "imdbId": "tt0069282"},
+  {"title": "Phantom of Death", "year": 1988, "imdbId": "tt0095939"},
+  {"title": "A Blade in the Dark", "year": 1983, "imdbId": "tt0085141"},
+  {"title": "Delirium", "year": 1987, "imdbId": "tt0092875"},
+  {"title": "The Whip and the Body", "year": 1963, "imdbId": "tt0057526"},
+  {"title": "Kill Baby Kill", "year": 1966, "imdbId": "tt0060624"},
+  {"title": "The Mask of Satan", "year": 1960, "imdbId": "tt0053649"},
+  {"title": "Bay of Blood", "year": 1971, "imdbId": "tt0067119"},
+  {"title": "The Body", "year": 1974, "imdbId": "tt0070855"},
+  {"title": "Schock", "year": 1977, "imdbId": "tt0076570"},
+  {"title": "The Psychic", "year": 1977, "imdbId": "tt0074957"},
+  {"title": "Rings of Fear", "year": 1978, "imdbId": "tt0075706"},
+  {"title": "Seven Blood-Stained Orchids", "year": 1972, "imdbId": "tt0069374"},
+  {"title": "The Pyjama Girl Case", "year": 1977, "imdbId": "tt0076480"},
+  {"title": "Eyeball", "year": 1975, "imdbId": "tt0073083"},
+  {"title": "Hatchet for the Honeymoon", "year": 1970, "imdbId": "tt0065736"},
+  {"title": "The Iguana with the Tongue of Fire", "year": 1971, "imdbId": "tt0066876"},
+  {"title": "So Sweet... So Perverse", "year": 1969, "imdbId": "tt0065215"},
+  {"title": "The Scorpion with Two Tails", "year": 1982, "imdbId": "tt0084542"},
+  {"title": "Nothing Underneath", "year": 1985, "imdbId": "tt0089884"},
+  {"title": "Dial: Help", "year": 1988, "imdbId": "tt0095009"},
+  {"title": "Formula for a Murder", "year": 1985, "imdbId": "tt0089291"},
+  {"title": "Giallo", "year": 2009, "imdbId": "tt1219289"},
+  {"title": "Tenebrae", "year": 1982, "imdbId": "tt0084777"},
+  {"title": "Solamente Nero", "year": 1978, "imdbId": "tt0078337"},
+  {"title": "The Church", "year": 1989, "imdbId": "tt0096930"},
+  {"title": "Cemetery Man", "year": 1994, "imdbId": "tt0109592"},
+  {"title": "Zombie", "year": 1979, "imdbId": "tt0079546"},
+  {"title": "House by the Cemetery", "year": 1981, "imdbId": "tt0082511"},
+  {"title": "The Beyond", "year": 1981, "imdbId": "tt0082307"},
+  {"title": "Darkness", "year": 1993, "imdbId": "tt0106744"},
+  {"title": "The Black Cat", "year": 1981, "imdbId": "tt0082236"},
+  {"title": "Paura nella città dei morti viventi", "year": 1980, "imdbId": "tt0080491"},
+  {"title": "The Sect", "year": 1991, "imdbId": "tt0103101"},
+  {"title": "La Terza Madre", "year": 2007, "imdbId": "tt0808209"},
+  {"title": "Absurd", "year": 1981, "imdbId": "tt0082176"},
+  {"title": "Nightmare City", "year": 1980, "imdbId": "tt0081175"},
+  {"title": "Cut and Run", "year": 1985, "imdbId": "tt0088904"},
+  {"title": "Cannibal Holocaust", "year": 1980, "imdbId": "tt0078935"},
+  {"title": "Eaten Alive!", "year": 1980, "imdbId": "tt0082323"},
+  {"title": "Burial Ground", "year": 1981, "imdbId": "tt0082385"},
+  {"title": "Zombie 3", "year": 1988, "imdbId": "tt0096594"},
+  {"title": "Night of the Seagulls", "year": 1975, "imdbId": "tt0074867"},
+  {"title": "Eyeball", "year": 1975, "imdbId": "tt0073083"},
+  {"title": "The Living Dead at Manchester Morgue", "year": 1974, "imdbId": "tt0072220"},
+  {"title": "Twitch of the Death Nerve", "year": 1971, "imdbId": "tt0067119"},
+  {"title": "Suspiria", "year": 2018, "imdbId": "tt1034415"},
+  {"title": "Berberian Sound Studio", "year": 2012, "imdbId": "tt2223996"},
+  {"title": "The Editor", "year": 2014, "imdbId": "tt3553580"},
+  {"title": "Amer", "year": 2009, "imdbId": "tt1312527"},
+  {"title": "The Strange Color of Your Body's Tears", "year": 2013, "imdbId": "tt2375692"},
+  {"title": "Lost Souls", "year": 1989, "imdbId": "tt0097856"},
+  {"title": "Ghosthouse", "year": 1988, "imdbId": "tt0095282"},
+  {"title": "Dario Argento's Dracula", "year": 2012, "imdbId": "tt1542752"}
 ]

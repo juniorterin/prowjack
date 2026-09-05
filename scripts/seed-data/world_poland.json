@@ -60,9 +60,354 @@
     "imdbId": "tt0058882"
   },
   {
-    "title": "Andrzej Wajda's Kanal",
+    "title": "Kanal",
     "year": 1957,
     "imdbId": "tt0050550"
+  },
+  {
+    "title": "Man of Iron",
+    "year": 1981,
+    "imdbId": "tt0082852"
+  },
+  {
+    "title": "Man of Marble",
+    "year": 1977,
+    "imdbId": "tt0076273"
+  },
+  {
+    "title": "The Wedding",
+    "year": 1972,
+    "imdbId": "tt0069524"
+  },
+  {
+    "title": "Everything for Sale",
+    "year": 1969,
+    "imdbId": "tt0064207"
+  },
+  {
+    "title": "Landscape After Battle",
+    "year": 1970,
+    "imdbId": "tt0065940"
+  },
+  {
+    "title": "The Conductor",
+    "year": 1980,
+    "imdbId": "tt0080581"
+  },
+  {
+    "title": "Danton",
+    "year": 1983,
+    "imdbId": "tt0085333"
+  },
+  {
+    "title": "Korczak",
+    "year": 1990,
+    "imdbId": "tt0099845"
+  },
+  {
+    "title": "The Young Girls of Wilko",
+    "year": 1979,
+    "imdbId": "tt0079869"
+  },
+  {
+    "title": "Without Anesthesia",
+    "year": 1978,
+    "imdbId": "tt0078391"
+  },
+  {
+    "title": "Chronicle of Amorous Accidents",
+    "year": 1986,
+    "imdbId": "tt0090879"
+  },
+  {
+    "title": "A Love in Germany",
+    "year": 1983,
+    "imdbId": "tt0085710"
+  },
+  {
+    "title": "Generation",
+    "year": 1955,
+    "imdbId": "tt0048028"
+  },
+  {
+    "title": "Lotna",
+    "year": 1959,
+    "imdbId": "tt0053063"
+  },
+  {
+    "title": "The Ashes",
+    "year": 1965,
+    "imdbId": "tt0058953"
+  },
+  {
+    "title": "The Birch Wood",
+    "year": 1970,
+    "imdbId": "tt0067261"
+  },
+  {
+    "title": "Innocent Sorcerers",
+    "year": 1960,
+    "imdbId": "tt0054042"
+  },
+  {
+    "title": "Barrier",
+    "year": 1966,
+    "imdbId": "tt0059996"
+  },
+  {
+    "title": "Walkover",
+    "year": 1965,
+    "imdbId": "tt0059913"
+  },
+  {
+    "title": "Identification Marks: None",
+    "year": 1965,
+    "imdbId": "tt0059295"
+  },
+  {
+    "title": "Hands Up!",
+    "year": 1967,
+    "imdbId": "tt0061673"
+  },
+  {
+    "title": "The Structure of Crystal",
+    "year": 1969,
+    "imdbId": "tt0064928"
+  },
+  {
+    "title": "Illumination",
+    "year": 1973,
+    "imdbId": "tt0070162"
+  },
+  {
+    "title": "The Constant Factor",
+    "year": 1980,
+    "imdbId": "tt0080614"
+  },
+  {
+    "title": "The Contract",
+    "year": 1980,
+    "imdbId": "tt0080619"
+  },
+  {
+    "title": "Austeria",
+    "year": 1982,
+    "imdbId": "tt0083534"
+  },
+  {
+    "title": "Interrogation",
+    "year": 1982,
+    "imdbId": "tt0084059"
+  },
+  {
+    "title": "Blind Chance",
+    "year": 1987,
+    "imdbId": "tt0092437"
+  },
+  {
+    "title": "No End",
+    "year": 1985,
+    "imdbId": "tt0089680"
+  },
+  {
+    "title": "Short Film About Killing",
+    "year": 1988,
+    "imdbId": "tt0095992"
+  },
+  {
+    "title": "Short Film About Love",
+    "year": 1988,
+    "imdbId": "tt0095974"
+  },
+  {
+    "title": "Unquiet Mind",
+    "year": 1991,
+    "imdbId": "tt0103374"
+  },
+  {
+    "title": "Mother Joan of the Angels",
+    "year": 1961,
+    "imdbId": "tt0055047"
+  },
+  {
+    "title": "How to Be Loved",
+    "year": 1963,
+    "imdbId": "tt0057054"
+  },
+  {
+    "title": "The Noose",
+    "year": 1958,
+    "imdbId": "tt0052159"
+  },
+  {
+    "title": "The Real End of the Great War",
+    "year": 1957,
+    "imdbId": "tt0050736"
+  },
+  {
+    "title": "Eve Wants to Sleep",
+    "year": 1957,
+    "imdbId": "tt0050596"
+  },
+  {
+    "title": "Bad Luck",
+    "year": 1960,
+    "imdbId": "tt0053749"
+  },
+  {
+    "title": "Night Train",
+    "year": 1959,
+    "imdbId": "tt0053148"
+  },
+  {
+    "title": "Pharaoh",
+    "year": 1966,
+    "imdbId": "tt0060674"
+  },
+  {
+    "title": "The Doll",
+    "year": 1968,
+    "imdbId": "tt0062833"
+  },
+  {
+    "title": "Rejs",
+    "year": 1970,
+    "imdbId": "tt0066177"
+  },
+  {
+    "title": "How Far from Here, How Near",
+    "year": 1971,
+    "imdbId": "tt0067099"
+  },
+  {
+    "title": "The Hourglass Sanatorium",
+    "year": 1973,
+    "imdbId": "tt0070195"
+  },
+  {
+    "title": "Kung-fu",
+    "year": 1979,
+    "imdbId": "tt0079646"
+  },
+  {
+    "title": "The Trap",
+    "year": 1997,
+    "imdbId": "tt0120197"
+  },
+  {
+    "title": "Quo Vadis",
+    "year": 2001,
+    "imdbId": "tt0253861"
+  },
+  {
+    "title": "Schindler's List",
+    "year": 1993,
+    "imdbId": "tt0108052"
+  },
+  {
+    "title": "Pan Tadeusz",
+    "year": 1999,
+    "imdbId": "tt0188886"
+  },
+  {
+    "title": "Fire and Sword",
+    "year": 1999,
+    "imdbId": "tt0186812"
+  },
+  {
+    "title": "Colonel Wolodyjowski",
+    "year": 1969,
+    "imdbId": "tt0064426"
+  },
+  {
+    "title": "The Deluge",
+    "year": 1974,
+    "imdbId": "tt0071411"
+  },
+  {
+    "title": "Katyn",
+    "year": 2007,
+    "imdbId": "tt0817680"
+  },
+  {
+    "title": "The Pianist",
+    "year": 2002,
+    "imdbId": "tt0253474"
+  },
+  {
+    "title": "The Ghost Writer",
+    "year": 2010,
+    "imdbId": "tt1139328"
+  },
+  {
+    "title": "Repulsion",
+    "year": 1965,
+    "imdbId": "tt0059646"
+  },
+  {
+    "title": "Cul-de-sac",
+    "year": 1966,
+    "imdbId": "tt0060452"
+  },
+  {
+    "title": "The Fearless Vampire Killers",
+    "year": 1967,
+    "imdbId": "tt0061529"
+  },
+  {
+    "title": "Rosemary's Baby",
+    "year": 1968,
+    "imdbId": "tt0063522"
+  },
+  {
+    "title": "Chinatown",
+    "year": 1974,
+    "imdbId": "tt0071315"
+  },
+  {
+    "title": "The Tenant",
+    "year": 1976,
+    "imdbId": "tt0075234"
+  },
+  {
+    "title": "Tess",
+    "year": 1979,
+    "imdbId": "tt0079946"
+  },
+  {
+    "title": "Frantic",
+    "year": 1988,
+    "imdbId": "tt0095174"
+  },
+  {
+    "title": "Bitter Moon",
+    "year": 1992,
+    "imdbId": "tt0103937"
+  },
+  {
+    "title": "Death and the Maiden",
+    "year": 1994,
+    "imdbId": "tt0109579"
+  },
+  {
+    "title": "The Ninth Gate",
+    "year": 1999,
+    "imdbId": "tt0142688"
+  },
+  {
+    "title": "Oliver Twist",
+    "year": 2005,
+    "imdbId": "tt0380510"
+  },
+  {
+    "title": "Essential Killing",
+    "year": 2010,
+    "imdbId": "tt1555273"
+  },
+  {
+    "title": "In Darkness",
+    "year": 2011,
+    "imdbId": "tt1723811"
   },
   {
     "title": "Walesa: Man of Hope",
@@ -70,8 +415,73 @@
     "imdbId": "tt2113820"
   },
   {
-    "title": "Man of Iron",
-    "year": 1981,
-    "imdbId": "tt0082852"
+    "title": "Aftermath",
+    "year": 2012,
+    "imdbId": "tt2074153"
+  },
+  {
+    "title": "Loving Vincent",
+    "year": 2017,
+    "imdbId": "tt3262342"
+  },
+  {
+    "title": "Corpus Christi",
+    "year": 2019,
+    "imdbId": "tt8863278"
+  },
+  {
+    "title": "Mr. Jones",
+    "year": 2019,
+    "imdbId": "tt8816892"
+  },
+  {
+    "title": "Sweat",
+    "year": 2020,
+    "imdbId": "tt10666588"
+  },
+  {
+    "title": "Never Gonna Snow Again",
+    "year": 2020,
+    "imdbId": "tt11444312"
+  },
+  {
+    "title": "Leave No Traces",
+    "year": 2021,
+    "imdbId": "tt12867696"
+  },
+  {
+    "title": "EO",
+    "year": 2022,
+    "imdbId": "tt14358792"
+  },
+  {
+    "title": "Spoor",
+    "year": 2017,
+    "imdbId": "tt5532084"
+  },
+  {
+    "title": "Demon",
+    "year": 2015,
+    "imdbId": "tt3712758"
+  },
+  {
+    "title": "The Last Family",
+    "year": 2016,
+    "imdbId": "tt5215958"
+  },
+  {
+    "title": "Prime Time",
+    "year": 2021,
+    "imdbId": "tt10327826"
+  },
+  {
+    "title": "The Silent Twins",
+    "year": 2022,
+    "imdbId": "tt12573238"
+  },
+  {
+    "title": "Broad Peak",
+    "year": 2022,
+    "imdbId": "tt13055404"
   }
 ]

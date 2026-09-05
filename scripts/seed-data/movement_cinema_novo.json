@@ -1,77 +1,102 @@
 [
-  {
-    "title": "Black God, White Devil",
-    "year": 1964,
-    "imdbId": "tt0057582"
-  },
-  {
-    "title": "Terra em Transe",
-    "year": 1967,
-    "imdbId": "tt0062374"
-  },
-  {
-    "title": "Deus e o Diabo na Terra do Sol",
-    "year": 1964,
-    "imdbId": "tt0057582"
-  },
-  {
-    "title": "O Pagador de Promessas",
-    "year": 1962,
-    "imdbId": "tt0056252"
-  },
-  {
-    "title": "Vidas Secas",
-    "year": 1963,
-    "imdbId": "tt0057697"
-  },
-  {
-    "title": "Macunaíma",
-    "year": 1969,
-    "imdbId": "tt0064649"
-  },
-  {
-    "title": "O Dragão da Maldade contra o Santo Guerreiro",
-    "year": 1969,
-    "imdbId": "tt0064282"
-  },
-  {
-    "title": "Os Fuzis",
-    "year": 1964,
-    "imdbId": "tt0058122"
-  },
-  {
-    "title": "Porto das Caixas",
-    "year": 1962,
-    "imdbId": "tt0056283"
-  },
-  {
-    "title": "Barravento",
-    "year": 1962,
-    "imdbId": "tt0055767"
-  },
-  {
-    "title": "Ganga Zumba",
-    "year": 1963,
-    "imdbId": "tt0057088"
-  },
-  {
-    "title": "O Desafio",
-    "year": 1965,
-    "imdbId": "tt0059019"
-  },
-  {
-    "title": "Garrincha, Alegria do Povo",
-    "year": 1963,
-    "imdbId": "tt0057079"
-  },
-  {
-    "title": "A Grande Cidade",
-    "year": 1966,
-    "imdbId": "tt0060473"
-  },
-  {
-    "title": "O Bandido da Luz Vermelha",
-    "year": 1968,
-    "imdbId": "tt0062810"
-  }
+  {"title": "Black God, White Devil", "year": 1964, "imdbId": "tt0057582"},
+  {"title": "Terra em Transe", "year": 1967, "imdbId": "tt0062374"},
+  {"title": "O Pagador de Promessas", "year": 1962, "imdbId": "tt0056252"},
+  {"title": "Vidas Secas", "year": 1963, "imdbId": "tt0057697"},
+  {"title": "Macunaíma", "year": 1969, "imdbId": "tt0064649"},
+  {"title": "O Dragão da Maldade contra o Santo Guerreiro", "year": 1969, "imdbId": "tt0064282"},
+  {"title": "Os Fuzis", "year": 1964, "imdbId": "tt0058122"},
+  {"title": "Porto das Caixas", "year": 1962, "imdbId": "tt0056283"},
+  {"title": "Barravento", "year": 1962, "imdbId": "tt0055767"},
+  {"title": "Ganga Zumba", "year": 1963, "imdbId": "tt0057088"},
+  {"title": "O Desafio", "year": 1965, "imdbId": "tt0059019"},
+  {"title": "Garrincha, Alegria do Povo", "year": 1963, "imdbId": "tt0057079"},
+  {"title": "A Grande Cidade", "year": 1966, "imdbId": "tt0060473"},
+  {"title": "O Bandido da Luz Vermelha", "year": 1968, "imdbId": "tt0062810"},
+  {"title": "Entranced Earth", "year": 1967, "imdbId": "tt0062374"},
+  {"title": "Rio, 40 Graus", "year": 1955, "imdbId": "tt0048568"},
+  {"title": "Rio, Zona Norte", "year": 1957, "imdbId": "tt0050814"},
+  {"title": "Mandacaru Vermelho", "year": 1961, "imdbId": "tt0055105"},
+  {"title": "Os Cafajestes", "year": 1962, "imdbId": "tt0055883"},
+  {"title": "O Assalto ao Trem Pagador", "year": 1962, "imdbId": "tt0055722"},
+  {"title": "Cinco Vezes Favela", "year": 1962, "imdbId": "tt0055872"},
+  {"title": "Maioria Absoluta", "year": 1964, "imdbId": "tt0155837"},
+  {"title": "A Falecida", "year": 1965, "imdbId": "tt0059151"},
+  {"title": "O Alienista", "year": 1970, "imdbId": "tt0065476"},
+  {"title": "Fome de Amor", "year": 1968, "imdbId": "tt0063002"},
+  {"title": "A Hora e a Vez de Augusto Matraga", "year": 1966, "imdbId": "tt0060418"},
+  {"title": "O Padre e a Moça", "year": 1966, "imdbId": "tt0060604"},
+  {"title": "O Bravo Guerreiro", "year": 1968, "imdbId": "tt0063010"},
+  {"title": "Capitu", "year": 1968, "imdbId": "tt0062890"},
+  {"title": "Pindorama", "year": 1971, "imdbId": "tt0067398"},
+  {"title": "Como Era Gostoso o Meu Francês", "year": 1971, "imdbId": "tt0066827"},
+  {"title": "How Tasty Was My Little Frenchman", "year": 1971, "imdbId": "tt0066827"},
+  {"title": "O Amuleto de Ogum", "year": 1974, "imdbId": "tt0071288"},
+  {"title": "Tenda dos Milagres", "year": 1977, "imdbId": "tt0076792"},
+  {"title": "Bye Bye Brasil", "year": 1979, "imdbId": "tt0078844"},
+  {"title": "Cabra Marcado para Morrer", "year": 1984, "imdbId": "tt0087021"},
+  {"title": "Twenty Years Later", "year": 1984, "imdbId": "tt0087021"},
+  {"title": "A Hora da Estrela", "year": 1985, "imdbId": "tt0089253"},
+  {"title": "The Hour of the Star", "year": 1985, "imdbId": "tt0089253"},
+  {"title": "Pixote", "year": 1980, "imdbId": "tt0081509"},
+  {"title": "Iracema", "year": 1974, "imdbId": "tt0152040"},
+  {"title": "O Cangaceiro", "year": 1953, "imdbId": "tt0045677"},
+  {"title": "O Cangaceiro", "year": 1953, "imdbId": "tt0045677"},
+  {"title": "Limite", "year": 1931, "imdbId": "tt0022204"},
+  {"title": "A Marvada Carne", "year": 1985, "imdbId": "tt0089649"},
+  {"title": "Deus e o Diabo na Terra do Sol", "year": 1964, "imdbId": "tt0057582"},
+  {"title": "O Povo Brasileiro", "year": 1973, "imdbId": "tt0154059"},
+  {"title": "O Homem do Pau Brasil", "year": 1982, "imdbId": "tt0082736"},
+  {"title": "Lúcio Flávio", "year": 1977, "imdbId": "tt0076396"},
+  {"title": "Lucio Flavio: The Passenger of Agony", "year": 1977, "imdbId": "tt0076396"},
+  {"title": "Doña Flor and Her Two Husbands", "year": 1976, "imdbId": "tt0074266"},
+  {"title": "Dona Flor e Seus Dois Maridos", "year": 1976, "imdbId": "tt0074266"},
+  {"title": "O Beijo no Asfalto", "year": 1981, "imdbId": "tt0082170"},
+  {"title": "Eles Não Usam Black-Tie", "year": 1981, "imdbId": "tt0082433"},
+  {"title": "They Don't Wear Black Tie", "year": 1981, "imdbId": "tt0082433"},
+  {"title": "O Homem Que Virou Suco", "year": 1980, "imdbId": "tt0081299"},
+  {"title": "Eu Sei Que Vou Te Amar", "year": 1986, "imdbId": "tt0091072"},
+  {"title": "Noite Vazia", "year": 1964, "imdbId": "tt0058383"},
+  {"title": "São Paulo, S/A", "year": 1965, "imdbId": "tt0059682"},
+  {"title": "O Caso Morel", "year": 1973, "imdbId": "tt0069813"},
+  {"title": "Morte e Vida Severina", "year": 1977, "imdbId": "tt0186249"},
+  {"title": "O Recado das Ilhas", "year": 1971, "imdbId": "tt0231003"},
+  {"title": "O Signo do Caos", "year": 2003, "imdbId": "tt0362581"},
+  {"title": "Aviões de Combate", "year": 1970, "imdbId": "tt0066189"},
+  {"title": "A Rainha Diaba", "year": 1974, "imdbId": "tt0072055"},
+  {"title": "Sinhá Moça", "year": 1953, "imdbId": "tt0046344"},
+  {"title": "Assalto ao Banco Central", "year": 2011, "imdbId": "tt1634106"},
+  {"title": "Nelson Rodrigues, o Eterno Retorno", "year": 2003, "imdbId": "tt0370298"},
+  {"title": "Memórias do Cárcere", "year": 1984, "imdbId": "tt0087704"},
+  {"title": "Memories of Prison", "year": 1984, "imdbId": "tt0087704"},
+  {"title": "O Beijo da Mulher Aranha", "year": 1985, "imdbId": "tt0089011"},
+  {"title": "Kiss of the Spider Woman", "year": 1985, "imdbId": "tt0089011"},
+  {"title": "Quilombo", "year": 1984, "imdbId": "tt0088058"},
+  {"title": "Gaijin: Os Caminhos da Liberdade", "year": 1980, "imdbId": "tt0080833"},
+  {"title": "Gaijin – Roads to Freedom", "year": 1980, "imdbId": "tt0080833"},
+  {"title": "Lição de Amor", "year": 1975, "imdbId": "tt0073453"},
+  {"title": "Lesson of Love", "year": 1975, "imdbId": "tt0073453"},
+  {"title": "O Lobisomem", "year": 1975, "imdbId": "tt0073491"},
+  {"title": "A Queda", "year": 1978, "imdbId": "tt0077932"},
+  {"title": "Ladrões de Cinema", "year": 1977, "imdbId": "tt0076291"},
+  {"title": "Rio Babilônia", "year": 1982, "imdbId": "tt0084609"},
+  {"title": "Novas Diretrizes em Tempos de Paz", "year": 1983, "imdbId": "tt0085957"},
+  {"title": "O Beijo no Asfalto", "year": 1981, "imdbId": "tt0082170"},
+  {"title": "A Mulher do Desejo", "year": 1975, "imdbId": "tt0073573"},
+  {"title": "Xica da Silva", "year": 1976, "imdbId": "tt0075574"},
+  {"title": "Ajuricaba, o Rebelde da Amazônia", "year": 1977, "imdbId": "tt0075461"},
+  {"title": "A Idade da Terra", "year": 1980, "imdbId": "tt0080661"},
+  {"title": "The Age of the Earth", "year": 1980, "imdbId": "tt0080661"},
+  {"title": "Chuvas de Verão", "year": 1978, "imdbId": "tt0077252"},
+  {"title": "Summer Showers", "year": 1978, "imdbId": "tt0077252"},
+  {"title": "Brasil Ano 2000", "year": 1969, "imdbId": "tt0064440"},
+  {"title": "Os Inconfidentes", "year": 1972, "imdbId": "tt0068869"},
+  {"title": "Sertão", "year": 1963, "imdbId": "tt0057657"},
+  {"title": "Cangaceiro", "year": 1953, "imdbId": "tt0045677"},
+  {"title": "Um Dia na Vida", "year": 1962, "imdbId": "tt0060893"},
+  {"title": "Ganga Zumba", "year": 1963, "imdbId": "tt0057088"},
+  {"title": "A Faca de Dois Gumes", "year": 1989, "imdbId": "tt0097313"},
+  {"title": "O Retrato de Dorian Gray", "year": 1970, "imdbId": "tt0066338"},
+  {"title": "Cronica de uma Morte Anunciada", "year": 1987, "imdbId": "tt0092736"},
+  {"title": "Aguinaldo", "year": 1970, "imdbId": "tt0067879"}
 ]
