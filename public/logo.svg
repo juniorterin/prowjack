@@ -1,42 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="256" height="256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <clipPath id="sq"><rect x="46" y="46" width="420" height="420" rx="10"/></clipPath>
+    <!-- Gradiente azul fundo estilo Netscape -->
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a3a8c"/>
+      <stop offset="100%" stop-color="#0a1a5c"/>
+    </linearGradient>
+    <!-- Gradiente branco-azul da letra T -->
+    <linearGradient id="t-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="40%"  stop-color="#c8d8ff"/>
+      <stop offset="100%" stop-color="#8aaaf0"/>
+    </linearGradient>
+    <!-- Gradiente do meteoro laranja -->
+    <linearGradient id="meteor-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#ffcc44" stop-opacity="0.8"/>
+      <stop offset="60%"  stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#ff4400" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <!-- ── fragmento de cartaz — quadrado levemente girado, como um recorte colado -->
-  <g transform="rotate(-4 256 256)">
-    <rect x="42" y="42" width="428" height="428" rx="10" fill="#241c14"/>
-    <rect x="46" y="46" width="420" height="420" rx="10" fill="#e9dfc7"/>
+  <!-- Fundo azul escuro com bordas arredondadas (ícone quadrado) -->
+  <rect width="64" height="64" rx="6" fill="url(#bg-grad)"/>
 
-    <g clip-path="url(#sq)">
-      <!-- raios, irrompendo do canto inferior-esquerdo -->
-      <path d="M72,452 L-49.6,-237.4 L85.6,-247.9 Z" fill="#c9973f"/>
-      <path d="M72,452 L220.2,-232.1 L349.3,-190.8 Z" fill="#c9973f"/>
-      <path d="M72,452 L467.9,-125.3 L571.8,-38.2 Z" fill="#c9973f"/>
-      <path d="M72,452 L656.8,67.3 L720.0,187.3 Z" fill="#c9973f"/>
-      <path d="M72,452 L758.9,317.1 L772.0,452.0 Z" fill="#c9973f"/>
+  <!-- Estrelas de fundo -->
+  <circle cx="8"  cy="10" r="0.8" fill="#ffffff" opacity="0.7"/>
+  <circle cx="18" cy="5"  r="0.6" fill="#ffffff" opacity="0.5"/>
+  <circle cx="50" cy="8"  r="0.8" fill="#ffffff" opacity="0.7"/>
+  <circle cx="58" cy="18" r="0.6" fill="#ffffff" opacity="0.6"/>
+  <circle cx="56" cy="4"  r="0.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="6"  cy="50" r="0.7" fill="#ffffff" opacity="0.4"/>
+  <circle cx="12" cy="30" r="0.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="55" cy="50" r="0.8" fill="#ffffff" opacity="0.6"/>
+  <circle cx="42" cy="57" r="0.6" fill="#ffffff" opacity="0.5"/>
+  <circle cx="28" cy="58" r="0.5" fill="#ffffff" opacity="0.4"/>
+  <circle cx="38" cy="14" r="0.6" fill="#ffffff" opacity="0.5"/>
 
-      <!-- bobina/olho — anel em petróleo desbotado, girado, como uma lente de cinema -->
-      <g transform="rotate(3 256 246)">
-        <circle cx="256" cy="246" r="146" fill="none" stroke="#3c6e6a" stroke-width="34"/>
-        <circle cx="256" cy="246" r="60" fill="#e9dfc7" stroke="#241c14" stroke-width="5"/>
-        <circle cx="256" cy="246" r="22" fill="#241c14"/>
-      </g>
+  <!-- Letra T — estilo Netscape (bold, limpa) -->
+  <!-- Barra horizontal do T -->
+  <rect x="11" y="14" width="42" height="10" rx="1" fill="url(#t-grad)"/>
+  <!-- Haste vertical do T -->
+  <rect x="27" y="24" width="10" height="28" rx="1" fill="url(#t-grad)"/>
 
-      <!-- cunha vermelha atravessando — referência direta à "Beat the Whites with the Red Wedge" -->
-      <polygon points="-20,300 300,-20 400,60 60,400" fill="#a8352a"/>
-
-      <!-- sombra de dobra, canto inferior direito -->
-      <polygon points="466,466 466,392 392,466" fill="#241c14" opacity="0.14"/>
-    </g>
-
-    <rect x="46" y="46" width="420" height="420" rx="10" fill="none" stroke="#241c14" stroke-width="7"/>
-  </g>
-
-  <!-- ── selo colado — tira de estêncil com o T, num ângulo próprio -->
-  <g transform="rotate(-9 372 378)">
-    <rect x="300" y="340" width="150" height="76" fill="#241c14"/>
-    <rect x="300" y="340" width="150" height="76" fill="none" stroke="#e9dfc7" stroke-width="3"/>
-    <text x="375" y="394" font-family="Oswald, Arial, sans-serif" font-weight="700" font-size="52" fill="#e9dfc7" text-anchor="middle">T</text>
-  </g>
+  <!-- Meteoro passando diagonalmente (canto sup-dir → inf-esq), estilo Netscape -->
+  <line x1="62" y1="4" x2="14" y2="52" stroke="url(#meteor-grad)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Núcleo brilhante do meteoro -->
+  <circle cx="46" cy="20" r="2.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="46" cy="20" r="1.2" fill="#ffdd88"/>
+  <!-- Cauda menor -->
+  <line x1="62" y1="4" x2="50" y2="16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
 </svg>

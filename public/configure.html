@@ -93,20 +93,38 @@
   .hint { font-size: 13px; color: #444; }
   .field-note { font-size: 13px; color: #444; margin-bottom: 10px; }
 
-  /* ── Inputs ──────────────────────────────── */
+  /* ── Inputs Win95 ───────────────────────── */
   label.lbl {
     display: block; font-size: 14px; font-weight: 700; color: #000080;
     text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px;
   }
-  input[type="text"], input[type="number"], textarea, select {
-    background: #ffffff; border: 2px inset #808080; color: #000000;
+  input[type="text"], input[type="number"], textarea {
+    background: #ffffff;
+    border-top: 2px solid #808080; border-left: 2px solid #808080;
+    border-bottom: 2px solid #ffffff; border-right: 2px solid #ffffff;
+    color: #000000;
     font-family: 'Comic Sans MS', Verdana; font-size: 15px;
-    padding: 7px 10px; outline: none; width: 100%;
+    padding: 5px 8px; outline: none; width: 100%;
   }
-  input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
-    border-color: #000080; box-shadow: 0 0 4px #000080;
+  input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    outline: 1px dotted #000080;
   }
-  select { cursor: pointer; }
+  /* Select Win95 — dropdown com seta clássica */
+  select {
+    appearance: none; -webkit-appearance: none;
+    background: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='100%25'%3E%3Crect x='0' y='0' width='17' height='100%25' fill='%23c0c0c0'/%3E%3Crect x='0' y='0' width='1' height='100%25' fill='%23808080'/%3E%3Cpolygon points='3,6 14,6 8.5,13' fill='%23000000'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    background-size: 17px 100%;
+    padding-right: 22px;
+    border-top: 2px solid #808080; border-left: 2px solid #808080;
+    border-bottom: 2px solid #ffffff; border-right: 2px solid #ffffff;
+    color: #000000; cursor: pointer;
+    font-family: 'Comic Sans MS', Verdana; font-size: 15px;
+    padding: 5px 22px 5px 8px; outline: none; width: 100%;
+  }
+  select:focus { outline: 1px dotted #000080; }
   select option { background: #fff; color: #000; }
 
   /* ── Chips ───────────────────────────────── */
@@ -349,25 +367,11 @@
   <div class="gifs-bar">
     <img src="https://web.archive.org/web/20091021165527/http://geocities.com/Area51/Labyrinth/7730/star.gif" alt="" width="24" height="24" onerror="this.style.display='none'">
   </div>
-  <!-- Logo cromado estilo Netscape -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64">
-    <defs>
-      <linearGradient id="chrome-cfg" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%"   stop-color="#ffffff"/>
-        <stop offset="20%"  stop-color="#c0c0c0"/>
-        <stop offset="45%"  stop-color="#606060"/>
-        <stop offset="70%"  stop-color="#c0c0c0"/>
-        <stop offset="100%" stop-color="#404040"/>
-      </linearGradient>
-      <filter id="sh-cfg">
-        <feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="#000080" flood-opacity="0.7"/>
-      </filter>
-    </defs>
-    <text x="8" y="54" font-family="Times New Roman, Times, serif" font-size="56" font-weight="900"
-      fill="url(#chrome-cfg)" filter="url(#sh-cfg)" letter-spacing="-2">TorrESMIN</text>
-  </svg>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <img src="/logo.svg" alt="TorrESMIN" width="56" height="56" style="image-rendering:pixelated;">
+    <span style="font-family:'Comic Sans MS',Verdana;font-size:32px;font-weight:900;color:#000080;text-shadow:2px 2px #ffffff,3px 3px #808080;">TorrESMIN</span>
+  </div>
   <div class="gifs-bar">
-    <!-- GIF animado construção -->
     <img src="https://web.archive.org/web/20091022054512/http://geocities.com/TimesSquare/Arcade/3726/undconst.gif" alt="Under Construction" width="80" height="36" onerror="this.style.display='none'">
     <img src="https://web.archive.org/web/20090830050558/http://www.geocities.com/Heartland/Estates/1328/images/film.gif" alt="" width="32" height="32" onerror="this.style.display='none'">
   </div>
