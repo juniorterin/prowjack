@@ -1,14 +1,52 @@
 [
-  {"title": "2001: A Space Odyssey", "year": 1968, "imdbId": "tt0062622"},
-  {"title": "A Clockwork Orange", "year": 1971, "imdbId": "tt0066921"},
-  {"title": "The Shining", "year": 1980, "imdbId": "tt0081505"},
-  {"title": "Dr. Strangelove", "year": 1964, "imdbId": "tt0057012"},
-  {"title": "Full Metal Jacket", "year": 1987, "imdbId": "tt0093058"},
-  {"title": "Barry Lyndon", "year": 1975, "imdbId": "tt0072684"},
-  {"title": "Paths of Glory", "year": 1957, "imdbId": "tt0050825"},
-  {"title": "Eyes Wide Shut", "year": 1999, "imdbId": "tt0120663"},
-  {"title": "Lolita", "year": 1962, "imdbId": "tt0056193"},
-  {"title": "Spartacus", "year": 1960, "imdbId": "tt0054331"},
-  {"title": "The Killing", "year": 1956, "imdbId": "tt0049406"},
-  {"title": "Paths of Glory", "year": 1957, "imdbId": "tt0050825"}
+  {
+    "title": "2001: A Space Odyssey",
+    "year": 1968,
+    "imdbId": "tt0062622"
+  },
+  {
+    "title": "A Clockwork Orange",
+    "year": 1971,
+    "imdbId": "tt0066921"
+  },
+  {
+    "title": "The Shining",
+    "year": 1980,
+    "imdbId": "tt0081505"
+  },
+  {
+    "title": "Dr. Strangelove",
+    "year": 1964,
+    "imdbId": "tt0057012"
+  },
+  {
+    "title": "Full Metal Jacket",
+    "year": 1987,
+    "imdbId": "tt0093058"
+  },
+  {
+    "title": "Barry Lyndon",
+    "year": 1975,
+    "imdbId": "tt0072684"
+  },
+  {
+    "title": "Eyes Wide Shut",
+    "year": 1999,
+    "imdbId": "tt0120663"
+  },
+  {
+    "title": "Lolita",
+    "year": 1962,
+    "imdbId": "tt0056193"
+  },
+  {
+    "title": "Spartacus",
+    "year": 1960,
+    "imdbId": "tt0054331"
+  },
+  {
+    "title": "The Killing",
+    "year": 1956,
+    "imdbId": "tt0049406"
+  }
 ]

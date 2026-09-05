@@ -190,86 +190,6 @@
     "imdbId": "tt0131948"
   },
   {
-    "title": "Dancer in the Dark",
-    "year": 2000,
-    "imdbId": "tt0168629"
-  },
-  {
-    "title": "The Hunt",
-    "year": 2012,
-    "imdbId": "tt2106476"
-  },
-  {
-    "title": "Melancholia",
-    "year": 2011,
-    "imdbId": "tt1527186"
-  },
-  {
-    "title": "Breaking the Waves",
-    "year": 1996,
-    "imdbId": "tt0115751"
-  },
-  {
-    "title": "The Idiots",
-    "year": 1998,
-    "imdbId": "tt0154421"
-  },
-  {
-    "title": "Celebration",
-    "year": 1998,
-    "imdbId": "tt0154420"
-  },
-  {
-    "title": "Italian for Beginners",
-    "year": 2000,
-    "imdbId": "tt0222736"
-  },
-  {
-    "title": "Mifune's Last Song",
-    "year": 1999,
-    "imdbId": "tt0196117"
-  },
-  {
-    "title": "Open Hearts",
-    "year": 2002,
-    "imdbId": "tt0330600"
-  },
-  {
-    "title": "Dear Wendy",
-    "year": 2005,
-    "imdbId": "tt0392940"
-  },
-  {
-    "title": "The Boss of It All",
-    "year": 2006,
-    "imdbId": "tt0469903"
-  },
-  {
-    "title": "Reconstruction",
-    "year": 2003,
-    "imdbId": "tt0355691"
-  },
-  {
-    "title": "Dogville",
-    "year": 2003,
-    "imdbId": "tt0276919"
-  },
-  {
-    "title": "Manderlay",
-    "year": 2005,
-    "imdbId": "tt0382932"
-  },
-  {
-    "title": "Nymphomaniac",
-    "year": 2013,
-    "imdbId": "tt1937390"
-  },
-  {
-    "title": "Antichrist",
-    "year": 2009,
-    "imdbId": "tt1233070"
-  },
-  {
     "title": "The Best Intentions",
     "year": 1992,
     "imdbId": "tt0103864"
@@ -283,11 +203,6 @@
     "title": "Private Confessions",
     "year": 1996,
     "imdbId": "tt0117291"
-  },
-  {
-    "title": "In the Name of the Father",
-    "year": 1993,
-    "imdbId": "tt0107516"
   },
   {
     "title": "The Virgin Spring",
@@ -345,16 +260,6 @@
     "imdbId": "tt0117509"
   },
   {
-    "title": "The Kingdom",
-    "year": 1994,
-    "imdbId": "tt0108906"
-  },
-  {
-    "title": "Dreaming of Joseph Lees",
-    "year": 1999,
-    "imdbId": "tt0175495"
-  },
-  {
     "title": "The Girl with the Dragon Tattoo",
     "year": 2009,
     "imdbId": "tt1132620"
@@ -395,19 +300,9 @@
     "imdbId": "tt0363082"
   },
   {
-    "title": "The Class",
-    "year": 2007,
-    "imdbId": "tt0844286"
-  },
-  {
     "title": "The Man on the Roof",
     "year": 1976,
     "imdbId": "tt0074919"
-  },
-  {
-    "title": "The Laughing Policeman",
-    "year": 1973,
-    "imdbId": "tt0069941"
   },
   {
     "title": "The Terrorists",
@@ -483,11 +378,5 @@
     "title": "Zozo",
     "year": 2005,
     "imdbId": "tt0417568"
-  },
-  {"title": "The Emigrants", "year": 1971, "imdbId": "tt0067023"},
-  {"title": "The New Land", "year": 1972, "imdbId": "tt0068769"},
-  {"title": "Ronja Rövardotter", "year": 1984, "imdbId": "tt0088105"},
-  {"title": "I Am Curious (Yellow)", "year": 1967, "imdbId": "tt0062188"},
-  {"title": "The Ox", "year": 1991, "imdbId": "tt0102752"},
-  {"title": "Jerusalem", "year": 1996, "imdbId": "tt0116776"}
+  }
 ]

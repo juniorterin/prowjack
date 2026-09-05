@@ -1,106 +1,312 @@
 [
-  {"title": "Breathless", "year": 1960, "imdbId": "tt0053472"},
-  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
-  {"title": "Jules and Jim", "year": 1962, "imdbId": "tt0055032"},
-  {"title": "Hiroshima Mon Amour", "year": 1959, "imdbId": "tt0052893"},
-  {"title": "Cléo from 5 to 7", "year": 1962, "imdbId": "tt0055852"},
-  {"title": "Contempt", "year": 1963, "imdbId": "tt0057345"},
-  {"title": "Band of Outsiders", "year": 1964, "imdbId": "tt0057869"},
-  {"title": "Pierrot le Fou", "year": 1965, "imdbId": "tt0059592"},
-  {"title": "Masculine Feminine", "year": 1966, "imdbId": "tt0060490"},
-  {"title": "2 or 3 Things I Know About Her", "year": 1967, "imdbId": "tt0061597"},
-  {"title": "Last Year at Marienbad", "year": 1961, "imdbId": "tt0054632"},
-  {"title": "Shoot the Piano Player", "year": 1960, "imdbId": "tt0054280"},
-  {"title": "My Life to Live", "year": 1962, "imdbId": "tt0056432"},
-  {"title": "Weekend", "year": 1967, "imdbId": "tt0062485"},
-  {"title": "La Collectionneuse", "year": 1967, "imdbId": "tt0061495"},
-  {"title": "Le Beau Serge", "year": 1958, "imdbId": "tt0051488"},
-  {"title": "The Cousins", "year": 1959, "imdbId": "tt0052698"},
-  {"title": "Paris Belongs to Us", "year": 1961, "imdbId": "tt0053963"},
-  {"title": "Daisies", "year": 1966, "imdbId": "tt0060959"},
-  {"title": "The Soft Skin", "year": 1964, "imdbId": "tt0058458"},
-  {"title": "Stolen Kisses", "year": 1968, "imdbId": "tt0063681"},
-  {"title": "Le Signe du Lion", "year": 1962, "imdbId": "tt0053279"},
-  {"title": "La Chinoise", "year": 1967, "imdbId": "tt0061604"},
-  {"title": "A Woman Is a Woman", "year": 1961, "imdbId": "tt0055359"},
-  {"title": "Alphaville", "year": 1965, "imdbId": "tt0058898"},
-  {"title": "The Married Woman", "year": 1964, "imdbId": "tt0058310"},
-  {"title": "Une femme est une femme", "year": 1961, "imdbId": "tt0055359"},
-  {"title": "Made in U.S.A.", "year": 1966, "imdbId": "tt0060597"},
-  {"title": "Muriel, or the Time of Return", "year": 1963, "imdbId": "tt0057297"},
-  {"title": "The Wild Child", "year": 1970, "imdbId": "tt0066284"},
-  {"title": "Bed and Board", "year": 1970, "imdbId": "tt0065562"},
-  {"title": "Small Change", "year": 1976, "imdbId": "tt0075297"},
-  {"title": "Love at Twenty", "year": 1962, "imdbId": "tt0056166"},
-  {"title": "Claire's Knee", "year": 1970, "imdbId": "tt0065359"},
-  {"title": "My Night at Maud's", "year": 1969, "imdbId": "tt0064612"},
-  {"title": "The Bakery Girl of Monceau", "year": 1963, "imdbId": "tt0056920"},
-  {"title": "Suzanne's Career", "year": 1963, "imdbId": "tt0057568"},
-  {"title": "Love in the Afternoon", "year": 1972, "imdbId": "tt0069016"},
-  {"title": "The Aviator's Wife", "year": 1981, "imdbId": "tt0081813"},
-  {"title": "Le Genou de Claire", "year": 1970, "imdbId": "tt0065359"},
-  {"title": "Lola", "year": 1961, "imdbId": "tt0054946"},
-  {"title": "The Umbrellas of Cherbourg", "year": 1964, "imdbId": "tt0058450"},
-  {"title": "The Young Girls of Rochefort", "year": 1967, "imdbId": "tt0062084"},
-  {"title": "Donkey Skin", "year": 1970, "imdbId": "tt0065563"},
-  {"title": "Bay of Angels", "year": 1963, "imdbId": "tt0056815"},
-  {"title": "The Umbrellas of Cherbourg", "year": 1964, "imdbId": "tt0058450"},
-  {"title": "Le Bonheur", "year": 1965, "imdbId": "tt0058984"},
-  {"title": "Vagabond", "year": 1985, "imdbId": "tt0090075"},
-  {"title": "One Sings, the Other Doesn't", "year": 1977, "imdbId": "tt0076413"},
-  {"title": "Daguerréotypes", "year": 1976, "imdbId": "tt0074459"},
-  {"title": "The Gleaners and I", "year": 2000, "imdbId": "tt0247380"},
-  {"title": "Paris vu par...", "year": 1965, "imdbId": "tt0059584"},
-  {"title": "Six in Paris", "year": 1965, "imdbId": "tt0059584"},
-  {"title": "The Beautiful Troublemaker", "year": 1991, "imdbId": "tt0101760"},
-  {"title": "Bed and Board", "year": 1970, "imdbId": "tt0065562"},
-  {"title": "The Story of Adele H.", "year": 1975, "imdbId": "tt0073744"},
-  {"title": "Day for Night", "year": 1973, "imdbId": "tt0070699"},
-  {"title": "Two English Girls", "year": 1971, "imdbId": "tt0067713"},
-  {"title": "Mississippi Mermaid", "year": 1969, "imdbId": "tt0064685"},
-  {"title": "The Bride Wore Black", "year": 1968, "imdbId": "tt0063068"},
-  {"title": "Shoot the Piano Player", "year": 1960, "imdbId": "tt0054280"},
-  {"title": "The 400 Blows", "year": 1959, "imdbId": "tt0053198"},
-  {"title": "Les Mistons", "year": 1957, "imdbId": "tt0050744"},
-  {"title": "Paris nous appartient", "year": 1961, "imdbId": "tt0053963"},
-  {"title": "L'Amour fou", "year": 1969, "imdbId": "tt0064589"},
-  {"title": "Céline and Julie Go Boating", "year": 1974, "imdbId": "tt0071267"},
-  {"title": "Out 1", "year": 1971, "imdbId": "tt0067881"},
-  {"title": "The Nun", "year": 1966, "imdbId": "tt0060816"},
-  {"title": "Les Bonnes Femmes", "year": 1960, "imdbId": "tt0053599"},
-  {"title": "Les Biches", "year": 1968, "imdbId": "tt0062967"},
-  {"title": "The Unfaithful Wife", "year": 1969, "imdbId": "tt0063880"},
-  {"title": "This Man Must Die", "year": 1969, "imdbId": "tt0064943"},
-  {"title": "Le Boucher", "year": 1970, "imdbId": "tt0065454"},
-  {"title": "Les Carabiniers", "year": 1963, "imdbId": "tt0056942"},
-  {"title": "Every Man for Himself", "year": 1980, "imdbId": "tt0080778"},
-  {"title": "Vivre sa vie", "year": 1962, "imdbId": "tt0056432"},
-  {"title": "A bout de souffle", "year": 1960, "imdbId": "tt0053472"},
-  {"title": "L'Eclipse", "year": 1962, "imdbId": "tt0055897"},
-  {"title": "Red Desert", "year": 1964, "imdbId": "tt0058661"},
-  {"title": "Blow-Up", "year": 1966, "imdbId": "tt0060176"},
-  {"title": "Muriel", "year": 1963, "imdbId": "tt0057297"},
-  {"title": "Je t'aime je t'aime", "year": 1968, "imdbId": "tt0063099"},
-  {"title": "Stavisky", "year": 1974, "imdbId": "tt0072238"},
-  {"title": "Providence", "year": 1977, "imdbId": "tt0076615"},
-  {"title": "The War Is Over", "year": 1966, "imdbId": "tt0060969"},
-  {"title": "Night and Fog in Japan", "year": 1960, "imdbId": "tt0054043"},
-  {"title": "La Femme infidèle", "year": 1969, "imdbId": "tt0063880"},
-  {"title": "Le Mépris", "year": 1963, "imdbId": "tt0057345"},
-  {"title": "Bande à part", "year": 1964, "imdbId": "tt0057869"},
-  {"title": "Chronique d'un été", "year": 1961, "imdbId": "tt0054777"},
-  {"title": "L'Immortelle", "year": 1963, "imdbId": "tt0057185"},
-  {"title": "Trans-Europ-Express", "year": 1966, "imdbId": "tt0061119"},
-  {"title": "The Man Who Lies", "year": 1968, "imdbId": "tt0063271"},
-  {"title": "Suzanne Simonin, la Religieuse de Denis Diderot", "year": 1966, "imdbId": "tt0060816"},
-  {"title": "A bout portant", "year": 1960, "imdbId": "tt0053472"},
-  {"title": "The Green Ray", "year": 1986, "imdbId": "tt0091456"},
-  {"title": "Pauline at the Beach", "year": 1983, "imdbId": "tt0086022"},
-  {"title": "Full Moon in Paris", "year": 1984, "imdbId": "tt0087497"},
-  {"title": "Le Rayon vert", "year": 1986, "imdbId": "tt0091456"},
-  {"title": "Four Adventures of Reinette and Mirabelle", "year": 1987, "imdbId": "tt0093021"},
-  {"title": "Boyfriends and Girlfriends", "year": 1987, "imdbId": "tt0092604"},
-  {"title": "A Tale of Springtime", "year": 1990, "imdbId": "tt0100407"},
-  {"title": "A Summer's Tale", "year": 1996, "imdbId": "tt0117413"},
-  {"title": "An Autumn Tale", "year": 1998, "imdbId": "tt0124316"}
+  {
+    "title": "The 400 Blows",
+    "year": 1959,
+    "imdbId": "tt0053198"
+  },
+  {
+    "title": "Jules and Jim",
+    "year": 1962,
+    "imdbId": "tt0055032"
+  },
+  {
+    "title": "Hiroshima Mon Amour",
+    "year": 1959,
+    "imdbId": "tt0052893"
+  },
+  {
+    "title": "Cléo from 5 to 7",
+    "year": 1962,
+    "imdbId": "tt0055852"
+  },
+  {
+    "title": "Contempt",
+    "year": 1963,
+    "imdbId": "tt0057345"
+  },
+  {
+    "title": "Band of Outsiders",
+    "year": 1964,
+    "imdbId": "tt0057869"
+  },
+  {
+    "title": "Pierrot le Fou",
+    "year": 1965,
+    "imdbId": "tt0059592"
+  },
+  {
+    "title": "Masculine Feminine",
+    "year": 1966,
+    "imdbId": "tt0060490"
+  },
+  {
+    "title": "2 or 3 Things I Know About Her",
+    "year": 1967,
+    "imdbId": "tt0061597"
+  },
+  {
+    "title": "Last Year at Marienbad",
+    "year": 1961,
+    "imdbId": "tt0054632"
+  },
+  {
+    "title": "Shoot the Piano Player",
+    "year": 1960,
+    "imdbId": "tt0054280"
+  },
+  {
+    "title": "My Life to Live",
+    "year": 1962,
+    "imdbId": "tt0056432"
+  },
+  {
+    "title": "Weekend",
+    "year": 1967,
+    "imdbId": "tt0062485"
+  },
+  {
+    "title": "La Collectionneuse",
+    "year": 1967,
+    "imdbId": "tt0061495"
+  },
+  {
+    "title": "Le Beau Serge",
+    "year": 1958,
+    "imdbId": "tt0051488"
+  },
+  {
+    "title": "The Cousins",
+    "year": 1959,
+    "imdbId": "tt0052698"
+  },
+  {
+    "title": "Paris Belongs to Us",
+    "year": 1961,
+    "imdbId": "tt0053963"
+  },
+  {
+    "title": "The Soft Skin",
+    "year": 1964,
+    "imdbId": "tt0058458"
+  },
+  {
+    "title": "Stolen Kisses",
+    "year": 1968,
+    "imdbId": "tt0063681"
+  },
+  {
+    "title": "Le Signe du Lion",
+    "year": 1962,
+    "imdbId": "tt0053279"
+  },
+  {
+    "title": "La Chinoise",
+    "year": 1967,
+    "imdbId": "tt0061604"
+  },
+  {
+    "title": "A Woman Is a Woman",
+    "year": 1961,
+    "imdbId": "tt0055359"
+  },
+  {
+    "title": "Alphaville",
+    "year": 1965,
+    "imdbId": "tt0058898"
+  },
+  {
+    "title": "The Married Woman",
+    "year": 1964,
+    "imdbId": "tt0058310"
+  },
+  {
+    "title": "Made in U.S.A.",
+    "year": 1966,
+    "imdbId": "tt0060597"
+  },
+  {
+    "title": "Muriel, or the Time of Return",
+    "year": 1963,
+    "imdbId": "tt0057297"
+  },
+  {
+    "title": "The Wild Child",
+    "year": 1970,
+    "imdbId": "tt0066284"
+  },
+  {
+    "title": "Bed and Board",
+    "year": 1970,
+    "imdbId": "tt0065562"
+  },
+  {
+    "title": "Love at Twenty",
+    "year": 1962,
+    "imdbId": "tt0056166"
+  },
+  {
+    "title": "Claire's Knee",
+    "year": 1970,
+    "imdbId": "tt0065359"
+  },
+  {
+    "title": "My Night at Maud's",
+    "year": 1969,
+    "imdbId": "tt0064612"
+  },
+  {
+    "title": "The Bakery Girl of Monceau",
+    "year": 1963,
+    "imdbId": "tt0056920"
+  },
+  {
+    "title": "Suzanne's Career",
+    "year": 1963,
+    "imdbId": "tt0057568"
+  },
+  {
+    "title": "Love in the Afternoon",
+    "year": 1972,
+    "imdbId": "tt0069016"
+  },
+  {
+    "title": "Lola",
+    "year": 1961,
+    "imdbId": "tt0054946"
+  },
+  {
+    "title": "The Umbrellas of Cherbourg",
+    "year": 1964,
+    "imdbId": "tt0058450"
+  },
+  {
+    "title": "The Young Girls of Rochefort",
+    "year": 1967,
+    "imdbId": "tt0062084"
+  },
+  {
+    "title": "Donkey Skin",
+    "year": 1970,
+    "imdbId": "tt0065563"
+  },
+  {
+    "title": "Bay of Angels",
+    "year": 1963,
+    "imdbId": "tt0056815"
+  },
+  {
+    "title": "Le Bonheur",
+    "year": 1965,
+    "imdbId": "tt0058984"
+  },
+  {
+    "title": "Paris vu par...",
+    "year": 1965,
+    "imdbId": "tt0059584"
+  },
+  {
+    "title": "Day for Night",
+    "year": 1973,
+    "imdbId": "tt0070699"
+  },
+  {
+    "title": "Two English Girls",
+    "year": 1971,
+    "imdbId": "tt0067713"
+  },
+  {
+    "title": "Mississippi Mermaid",
+    "year": 1969,
+    "imdbId": "tt0064685"
+  },
+  {
+    "title": "The Bride Wore Black",
+    "year": 1968,
+    "imdbId": "tt0063068"
+  },
+  {
+    "title": "Les Mistons",
+    "year": 1957,
+    "imdbId": "tt0050744"
+  },
+  {
+    "title": "L'Amour fou",
+    "year": 1969,
+    "imdbId": "tt0064589"
+  },
+  {
+    "title": "Céline and Julie Go Boating",
+    "year": 1974,
+    "imdbId": "tt0071267"
+  },
+  {
+    "title": "Out 1",
+    "year": 1971,
+    "imdbId": "tt0067881"
+  },
+  {
+    "title": "The Nun",
+    "year": 1966,
+    "imdbId": "tt0060816"
+  },
+  {
+    "title": "Les Bonnes Femmes",
+    "year": 1960,
+    "imdbId": "tt0053599"
+  },
+  {
+    "title": "Les Biches",
+    "year": 1968,
+    "imdbId": "tt0062967"
+  },
+  {
+    "title": "The Unfaithful Wife",
+    "year": 1969,
+    "imdbId": "tt0063880"
+  },
+  {
+    "title": "This Man Must Die",
+    "year": 1969,
+    "imdbId": "tt0064943"
+  },
+  {
+    "title": "Le Boucher",
+    "year": 1970,
+    "imdbId": "tt0065454"
+  },
+  {
+    "title": "Les Carabiniers",
+    "year": 1963,
+    "imdbId": "tt0056942"
+  },
+  {
+    "title": "Je t'aime je t'aime",
+    "year": 1968,
+    "imdbId": "tt0063099"
+  },
+  {
+    "title": "The War Is Over",
+    "year": 1966,
+    "imdbId": "tt0060969"
+  },
+  {
+    "title": "Chronique d'un été",
+    "year": 1961,
+    "imdbId": "tt0054777"
+  },
+  {
+    "title": "L'Immortelle",
+    "year": 1963,
+    "imdbId": "tt0057185"
+  },
+  {
+    "title": "Trans-Europ-Express",
+    "year": 1966,
+    "imdbId": "tt0061119"
+  },
+  {
+    "title": "The Man Who Lies",
+    "year": 1968,
+    "imdbId": "tt0063271"
+  }
 ]
